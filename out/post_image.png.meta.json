@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 2ND, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "RESEARCH",
+  "headline": "THE REAL TEST STARTS OUTSIDE",
+  "place": "TRAVIS COUNTY",
+  "coordinates": "30°17′N · 97°44′W",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "21c729b37a8d69f7f7cbc813cea3f44c8d6b3858314dd8e704ff30ee5b58304c",
+  "prompt_sha256": "2bd89ee410078ab2c84b8f01b2903277b895459b57f4c09b3a61f61a43f5070b",
+  "rendered_at_utc": "2026-09-02T23:07:36.000070+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 360,
+    "total_chars": 2340,
+    "hook_chars": 160,
+    "hashtags": [
+      "#TexasAI",
+      "#TexasResearch",
+      "#ResponsibleAI"
+    ],
+    "tag_line": "#TexasAI #TexasResearch #ResponsibleAI"
+  }
+}

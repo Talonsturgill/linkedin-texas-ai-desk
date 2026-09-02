@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: Create an original editorial illustration about a Texas robotics research center choosing long-term, accountable deployments in real human environments instead of a sealed laboratory demonstration.
+Scene/backdrop: An abstracted Central Texas research campus at dusk opening into three connected everyday rooms, a home, a rehabilitation space, and a public commons, rendered without identifiable institutions or people.
+Subject: One compact, friendly assistive mobile robot crosses a transparent threshold from a controlled geometric lab into the three lived environments. A visible amber path loops back from each room to a central consent switch and observation ledger, suggesting mutual adaptation, human authority, and evidence over time.
+Style/medium: Sophisticated cut-paper and screenprint editorial illustration with tactile paper grain, layered limestone shapes, restrained technical drafting marks, and magazine-quality art direction.
+Composition/framing: One focal threshold in the middle, strong left-to-right movement, uncluttered top 18 percent and bottom 30 percent for later typography, full bleed square composition.
+Lighting/mood: Central Texas dusk, careful, humane, investigative, and quietly ambitious rather than spectacular.
+Color palette: near-black plum, deep violet, limestone cream, caliche tan, muted bluebonnet, mesquite green, and one restrained dusk-gold path.
+Constraints: 1:1 square, 1080 by 1080 or larger, no words, no letters, no numbers, no logos, no seals, no watermarks, no interface panels, no portrait or likeness, no medical symbols, and no false institutional insignia.
+Avoid: humanoid spectacle, menacing robots, glowing brains, circuit-board faces, neon cyberpunk, generic handshakes, boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, state outlines, and decorative red urgency.
