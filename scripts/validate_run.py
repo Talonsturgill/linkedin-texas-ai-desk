@@ -147,10 +147,12 @@ def validate(out_dir: Path) -> dict:
         errors.append("selected_decision needs a corroborating source")
     else:
         for index, source in enumerate(corroborators, start=1):
-            validate_source(
-                source, f"selected_decision corroborating source {index}", errors,
-                independent=True,
-            )
+            validate_source(source, f"selected_decision corroborating source {index}", errors)
+        if not any(
+            isinstance(source, dict) and source.get("independent_of_subject") is True
+            for source in corroborators
+        ):
+            errors.append("selected_decision needs an independent corroborating source")
         source_urls = [str(row.get("url", "")) for row in corroborators if isinstance(row, dict)]
         if isinstance(primary, dict) and primary.get("url") in source_urls:
             errors.append("primary and corroborating source URLs must differ")
