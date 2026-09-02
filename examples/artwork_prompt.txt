@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: Create an original editorial illustration about Texas institutions moving artificial intelligence from laboratory promise into accountable real-world operations.
+Scene/backdrop: A dusk-toned Central Texas civic and research landscape, abstracted rather than literal, with limestone architecture, a distant low-slung research campus, dry prairie textures, and one precise glowing path connecting a controlled lab environment to an operating public facility.
+Subject: The central visual metaphor is a transparent geometric test chamber opening into a real operational field, with measured signal lines becoming physical pathways and inspection markers. No people or portrait likenesses.
+Style/medium: Sophisticated cut-paper and screenprint editorial illustration with tactile paper grain, restrained architectural geometry, subtle ink misregistration, and magazine-quality art direction.
+Composition/framing: One strong focal point near the center, richly detailed middle field, generous visually quiet dark band across the top 18 percent and bottom 30 percent for typography to be added later. Full bleed, balanced square composition.
+Lighting/mood: Big Bend dusk atmosphere, rigorous and expectant rather than futuristic spectacle.
+Color palette: near-black plum, deep violet, limestone cream, caliche tan, restrained rust, muted bluebonnet, and a small dusk-gold signal accent.
+Constraints: 1:1 square, 1080 by 1080 or larger, absolutely no words, no letters, no numbers, no logos, no seals, no watermarks, no user interface, no maps, no state outline, no generated portrait or likeness.
+Avoid: boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, generic glowing brains, circuit-board faces, robots, handshakes, neon cyberpunk, corporate stock imagery, and decorative red urgency.

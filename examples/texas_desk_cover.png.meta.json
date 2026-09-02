@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 2ND, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "RESEARCH",
+  "headline": "FROM LAB PROOF TO TEXAS PRACTICE",
+  "place": "CENTRAL TEXAS",
+  "coordinates": "",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "07e68ec77df32fa53d4bd2869448ebf962e2ba50d412464ac305160779b3cebd",
+  "prompt_sha256": "9092a270e589533ee0ecc94048cd6a4572f4d14de133330cd375066d7a76d8ba",
+  "rendered_at_utc": "2026-09-02T22:54:57.938431+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}

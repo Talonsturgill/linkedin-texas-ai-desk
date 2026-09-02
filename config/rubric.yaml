@@ -1,0 +1,34 @@
+rubric:
+  ship_threshold: 8.0
+  max_editor_cycles: 3
+  max_score_cycles: 2
+  hard_fail_checks:
+    - name: "identity_and_texas_tie"
+      rule: "Full name, current role, organization, and specific Texas tie appear in the post."
+    - name: "recent_decision_and_owner"
+      rule: "A specific in-window decision and evidence that the subject made or owns it are present."
+    - name: "primary_plus_independent"
+      rule: "The decision has a fetched primary source and at least one fetched independent corroborator."
+    - name: "fact_trace"
+      rule: "Every factual claim and numeral traces to the dossier."
+    - name: "not_a_puff_piece"
+      rule: "Biography is at most two sentences and the post does independent analytical work."
+    - name: "political_neutrality"
+      rule: "No candidate, party, campaign, or ballot-measure advocacy or ranking. Public-policy coverage is neutral on the preferred outcome."
+    - name: "linkedin_constraints"
+      rule: "350 to 475 body words, at most 3000 total characters, exactly three approved hashtags, no links in body."
+    - name: "house_style"
+      rule: "No banned punctuation, curly quotes, emoji, first person, or banned phrases."
+    - name: "no_invented_quotes"
+      rule: "Any quote matches a verbatim quote and source URL in the dossier."
+  criteria:
+    - {name: "Hook strength", weight: 0.10}
+    - {name: "Subject and decision significance for Texas", weight: 0.16}
+    - {name: "Identity and decision fidelity", weight: 0.14}
+    - {name: "Source quality and independence", weight: 0.14}
+    - {name: "Structural read", weight: 0.13}
+    - {name: "Concrete next check", weight: 0.08}
+    - {name: "Texas AI Docket voice", weight: 0.10}
+    - {name: "LinkedIn readability", weight: 0.06}
+    - {name: "Specific engagement question", weight: 0.04}
+    - {name: "Credibility and proportionality", weight: 0.05}

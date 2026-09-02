@@ -1,0 +1,69 @@
+source_policy:
+  primary_required: true
+  independent_corroborator_required: true
+  fetched_pages_only: true
+  search_snippets_are_sources: false
+  syndicated_reprints_are_independent: false
+  subject_controlled_posts: >
+    A named executive's first-person post may establish that the executive announced a decision.
+    It does not independently corroborate the decision or its consequence.
+  access_rule: >
+    Respect robots rules, paywalls, and access controls. If a source cannot be read, mark the gap
+    and choose another candidate rather than inferring its contents.
+
+seed_sources:
+  texas_docket:
+    - {url: "https://texasaidocket.com/record/", outlet: "Texas AI Docket", credibility: "curated-index"}
+    - {url: "https://texasaidocket.com/sources/", outlet: "Texas AI Docket source index", credibility: "curated-index"}
+  state_and_regulatory:
+    - {url: "https://capitol.texas.gov", outlet: "Texas Legislature Online", credibility: "primary"}
+    - {url: "https://www.sos.state.tx.us/texreg/", outlet: "Texas Register", credibility: "primary"}
+    - {url: "https://www.puc.texas.gov", outlet: "Public Utility Commission of Texas", credibility: "primary"}
+    - {url: "https://interchange.puc.texas.gov", outlet: "PUCT Interchange", credibility: "primary"}
+    - {url: "https://www.ercot.com", outlet: "ERCOT", credibility: "primary"}
+    - {url: "https://comptroller.texas.gov", outlet: "Texas Comptroller", credibility: "primary"}
+    - {url: "https://www.twdb.texas.gov", outlet: "Texas Water Development Board", credibility: "primary"}
+    - {url: "https://www.tceq.texas.gov", outlet: "Texas Commission on Environmental Quality", credibility: "primary"}
+    - {url: "https://www.txdot.gov", outlet: "Texas Department of Transportation", credibility: "primary"}
+    - {url: "https://tea.texas.gov", outlet: "Texas Education Agency", credibility: "primary"}
+    - {url: "https://dir.texas.gov", outlet: "Texas Department of Information Resources", credibility: "primary"}
+  federal_and_company:
+    - {url: "https://www.sec.gov/edgar/search/", outlet: "SEC EDGAR", credibility: "primary"}
+    - {url: "https://sam.gov", outlet: "SAM.gov", credibility: "primary"}
+    - {url: "https://www.usaspending.gov", outlet: "USAspending.gov", credibility: "primary"}
+    - {url: "https://www.energy.gov", outlet: "U.S. Department of Energy", credibility: "primary"}
+    - {url: "https://www.nsf.gov/awardsearch/", outlet: "National Science Foundation awards", credibility: "primary"}
+  universities:
+    - {url: "https://news.utexas.edu", outlet: "UT Austin News", credibility: "primary"}
+    - {url: "https://today.tamu.edu", outlet: "Texas A&M Today", credibility: "primary"}
+    - {url: "https://news.rice.edu", outlet: "Rice News", credibility: "primary"}
+    - {url: "https://stories.uh.edu", outlet: "University of Houston", credibility: "primary"}
+    - {url: "https://www.ttu.edu/now/", outlet: "Texas Tech Now", credibility: "primary"}
+    - {url: "https://www.utep.edu/newsfeed/", outlet: "UTEP Newsfeed", credibility: "primary"}
+    - {url: "https://news.unt.edu", outlet: "UNT News", credibility: "primary"}
+  independent_reporting:
+    - {url: "https://www.texastribune.org", outlet: "The Texas Tribune", credibility: "high"}
+    - {url: "https://www.kut.org", outlet: "KUT", credibility: "high"}
+    - {url: "https://www.keranews.org", outlet: "KERA", credibility: "high"}
+    - {url: "https://www.houstonpublicmedia.org", outlet: "Houston Public Media", credibility: "high"}
+    - {url: "https://sanantonioreport.org", outlet: "San Antonio Report", credibility: "high"}
+    - {url: "https://www.dallasnews.com", outlet: "The Dallas Morning News", credibility: "high"}
+    - {url: "https://www.houstonchronicle.com", outlet: "Houston Chronicle", credibility: "high"}
+    - {url: "https://www.statesman.com", outlet: "Austin American-Statesman", credibility: "high"}
+    - {url: "https://www.expressnews.com", outlet: "San Antonio Express-News", credibility: "high"}
+    - {url: "https://communityimpact.com", outlet: "Community Impact", credibility: "medium"}
+    - {url: "https://www.reuters.com", outlet: "Reuters", credibility: "high"}
+    - {url: "https://apnews.com", outlet: "Associated Press", credibility: "high"}
+    - {url: "https://www.utilitydive.com", outlet: "Utility Dive", credibility: "high"}
+    - {url: "https://www.datacenterdynamics.com", outlet: "Data Center Dynamics", credibility: "high"}
+    - {url: "https://www.govtech.com", outlet: "Government Technology", credibility: "high"}
+
+discovery:
+  enabled: true
+  rule: >
+    Credible sources outside this list are allowed. Record why they are credible, who controls
+    them, whether they are independent of the subject, and which exact claim they support.
+  geographic_balance: >
+    Search statewide. Include Austin, Dallas-Fort Worth, Houston, San Antonio, El Paso, the Rio
+    Grande Valley, the Panhandle, the Permian Basin, Central Texas, East Texas, and rural regions
+    as the subject matter warrants. Do not force a region into a story with no real connection.

@@ -1,0 +1,139 @@
+brand:
+  name: "Texas AI Docket"
+  wordmark: "TEXAS AI DOCKET"
+  column: "Texas Desk"
+  canonical_url: "https://texasaidocket.com"
+  audience: >
+    Texans who follow policy, infrastructure, technology, energy, water, research, capital,
+    procurement, and the companies building here. They are sophisticated, busy, and likely to
+    notice when a county, grid, agency, deadline, or decision owner is wrong.
+  worldview: >
+    Texas first and AI first at the same time. Show how a decision could help Texas win, name
+    what must be true for that upside to reach Texans, and measure the costs that land on people
+    who did not have a seat at the table.
+  voice:
+    one_line: >
+      Analytical, specific, structural, plainspoken, fair, and plainly interested in Texas
+      doing well. Write like a legislative analyst who grew up here and read the filing.
+    do:
+      - "Lead with the named person and the decision, not a biography."
+      - "Name the entity, place, date, document, and consequence."
+      - "Explain what alternative the decision owner could have chosen."
+      - "Show what to watch next and when it becomes measurable."
+      - "Take an evidence-led view of business and operational execution."
+      - "For public policy, explain sourced tradeoffs neutrally and evaluate process or implementation only."
+      - "Say which Texas. Do not let Austin stand in for the state."
+    dont:
+      - "No first person in published copy."
+      - "No candidate, party, campaign, or ballot-measure advocacy."
+      - "No predictions stated as facts."
+      - "No press-release superlatives."
+      - "No performed Texas idiom or tourist imagery."
+      - "Never invent a quote, number, person, role, date, or decision."
+
+platform:
+  surface: "LinkedIn"
+  body_words: [350, 475]
+  total_chars_max: 3000
+  hook_chars_max: 210
+  hashtag_count: 3
+  links_in_body: false
+  ends_with: "specific engagement question, then hashtag line"
+
+house_rules:
+  date_format: "Month first with ordinal and year, for example September 2nd, 2026."
+  punctuation:
+    forbidden: ["—", "–", "--", ":", ";"]
+    quotes: "straight quotes only"
+    emojis: false
+  first_person: false
+  paragraph_sentences: [1, 4]
+  numbers: "Every numeral in post copy must already appear in the verified dossier."
+  sources: "Every factual claim must trace to a fetched source."
+
+banned_phrases:
+  - "game-changer"
+  - "revolutionize"
+  - "disrupt"
+  - "synergy"
+  - "leverage"
+  - "deep dive"
+  - "let's dive in"
+  - "buckle up"
+  - "in a world where"
+  - "imagine if"
+  - "it's no secret that"
+  - "at its core"
+  - "the truth is"
+  - "make no mistake"
+  - "let's be clear"
+  - "here's the thing"
+  - "that said"
+  - "worth noting"
+  - "pave the way"
+  - "double-edged"
+  - "at the intersection of"
+  - "isn't just"
+  - "key takeaway"
+  - "thought leadership"
+  - "transformative"
+  - "visionary"
+  - "trailblazer"
+  - "everything's bigger in Texas"
+  - "deep in the heart of"
+  - "don't mess with"
+  - "the Lone Star State is no stranger to"
+  - "yeehaw"
+  - "howdy folks"
+  - "saddle up"
+  - "wild west"
+  - "oil-rich Texas"
+
+hashtags:
+  whitelist:
+    - "#TexasAI"
+    - "#TexasDataCenters"
+    - "#TexasGrid"
+    - "#TexasWater"
+    - "#TexasInnovation"
+    - "#TexasStartups"
+    - "#TexasResearch"
+    - "#TexasWorkforce"
+    - "#TexasManufacturing"
+    - "#AIInfrastructure"
+    - "#ResponsibleAI"
+    - "#ERCOT"
+    - "#PUCT"
+    - "#AustinTech"
+    - "#DallasTech"
+    - "#HoustonTech"
+    - "#SanAntonioTech"
+    - "#ElPasoTech"
+
+visual:
+  wordmark: "TEXAS AI DOCKET"
+  mark: "single solid five-pointed Lone Star"
+  kicker: "TEXAS DESK"
+  role_labels: ["FOUNDER", "OPERATOR", "PUBLIC", "RESEARCH"]
+  rule: >
+    The story's real Texas place and industry drive the image. No boots, hats, generic state
+    silhouettes, derricks, rodeo typography, or decorative red urgency.
+  palette:
+    night: "#08060F"
+    deep: "#0F0C1C"
+    panel: "#191530"
+    line: "#2B2447"
+    caliche: "#E4D8C3"
+    limestone: "#EDE6D6"
+    dust: "#C9B393"
+    rust: "#8C5A3C"
+    dusk_ember: "#B4664F"
+    dusk_gold: "#E0956A"
+    bluebonnet: "#4E5FA8"
+    mesquite: "#6E7A5A"
+    flag_red_reserved: "#BF0A30"
+    flag_blue: "#00205B"
+    flag_white: "#FFFFFF"
+  type:
+    display: "Fraunces"
+    mono: "JetBrains Mono"

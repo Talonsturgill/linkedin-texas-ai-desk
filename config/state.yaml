@@ -1,0 +1,15 @@
+brand_name: "Texas AI Docket"
+column_name: "Texas Desk"
+kicker: "TEXAS DESK"
+motto: "decisions, not biographies"
+byline: ""
+timezone: "America/Chicago"
+decision_window_days: 60
+broadening_window_days: 90
+subject_cooldown_days: 21
+branch_prefix: "codex/texas-desk"
+repository: "Talonsturgill/linkedin-texas-ai-desk"
+draft_subject: "Texas AI Docket — Texas Desk Draft — {date}"
+no_target_subject: "Texas AI Docket — Texas Desk — No Target — {date}"
+recipient_source: "gmail_profile"
+artifact_size: [1080, 1080]

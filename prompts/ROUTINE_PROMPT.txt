@@ -1,0 +1,5 @@
+Run today's complete Texas Desk workflow from this repository. Read AGENTS.md and
+prompts/texas_desk_routine.md in full, then follow the versioned routine exactly. Use the current
+America/Chicago date. Save or update the finished Gmail draft but never send it. Never post to
+LinkedIn. If the master prompt is missing, the repository is dirty, or a required connector is
+unavailable, surface the exact failure in the scheduled-task result rather than improvising.
