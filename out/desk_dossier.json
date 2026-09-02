@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-02",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Joydeep Biswas",
+    "role": "Associate Professor and director of the Center for Human and Robot Co-Adaptation",
+    "organization": "University of Texas at Austin",
+    "role_category": "research",
+    "texas_tie": "Biswas is a UT Austin computer science faculty member and will direct a center led from Austin in Travis County.",
+    "place_label": "TRAVIS COUNTY",
+    "coordinates": "30°17′N · 97°44′W",
+    "role_source": {
+      "url": "https://www.cs.utexas.edu/people/faculty-researchers/joydeep-biswas",
+      "title": "Joydeep Biswas",
+      "publisher": "UT Austin Computer Science",
+      "source_type": "institutional_profile",
+      "fetched_at_utc": "2026-09-02T22:45:00Z"
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "As principal investigator and center director, Joydeep Biswas committed the funded Center for Human and Robot Co-Adaptation to real-world robot deployments through the participatory HERO Facility Network rather than laboratory-only evaluation.",
+    "decision_anchor": "real-world robot deployments",
+    "date": "2026-08-25",
+    "owner_evidence": "The NSF award record names Joydeep Biswas as principal investigator, and UT Austin identifies him as the leader of the awarded team and director of the center.",
+    "alternative_available": "The conventional approach described by UT Austin was controlled-environment testing judged by task completion. The funded design instead uses long-term deployments in everyday settings.",
+    "ai_nexus": "The center combines artificial intelligence, robotics, machine perception, planning, human factors, and long-term robot adaptation.",
+    "texas_consequence": "UT Austin leads the center, Texas Advanced Computing Center supplies simulation and machine-learning capacity, and Austin-hosted HERO sites will put community participation, safety, consent, and opt-out procedures into the research design.",
+    "next_check": "The next measurable proof is the center's first public Texas HERO site roster together with the consent, opt-out, incident, and shutdown procedures that govern those deployments.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://api.nsf.gov/services/v1/awards/2535195.json",
+      "title": "Award 2535195, STC Center for Human and Robot Co-Adaptation",
+      "publisher": "U.S. National Science Foundation",
+      "published_at": "2026-08-25",
+      "source_type": "primary",
+      "independent_of_subject": true,
+      "fetched_at_utc": "2026-09-02T22:42:00Z",
+      "claims_supported": [
+        "award identifier and date",
+        "principal investigator",
+        "University of Texas at Austin as recipient",
+        "estimated award amount and project dates",
+        "three research threads",
+        "HERO Facility Network deployment design"
+      ]
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://texaspolitics.com/2026/08/28/ut-austin-recieves-30-million-nsf-award-to-advance-human-robot-tech/",
+        "title": "UT Austin Receives $30 Million NSF Award to Advance Human-Robot Tech",
+        "publisher": "Texas Politics",
+        "published_at": "2026-08-28",
+        "source_type": "independent_reporting",
+        "independent_of_subject": true,
+        "fetched_at_utc": "2026-09-02T22:37:00Z",
+        "claims_supported": [
+          "five-year award",
+          "UT Austin leadership",
+          "focus on robots adapting to people and changing environments",
+          "possible homes, hospitals, workplaces, and public-space applications"
+        ]
+      },
+      {
+        "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
+        "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together",
+        "publisher": "UT News",
+        "published_at": "2026-08-27",
+        "source_type": "institutional_announcement",
+        "independent_of_subject": false,
+        "fetched_at_utc": "2026-09-02T22:35:00Z",
+        "claims_supported": [
+          "Biswas as center director",
+          "six-university collaboration",
+          "HERO everyday deployment settings",
+          "community input and internal ethics board",
+          "Texas Advanced Computing Center role"
+        ]
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "sharp",
+    "evidence_for": [
+      "The proposal binds the research to long-term operating environments instead of demonstrations alone.",
+      "The design includes community participation, an internal ethics board, and planned consent and opt-out procedures.",
+      "The center has a named director, an official award record, a funded start date, and a multi-institution facility network."
+    ],
+    "evidence_against": [
+      "The public materials do not yet identify the Texas HERO sites or publish their operating safeguards.",
+      "The award and announcement establish a research design, not evidence that long-term deployments are safe or effective.",
+      "Industry partners supply platforms and infrastructure, which makes clear evaluation rules important."
+    ],
+    "structural_read": "The center's important choice is to make real operating environments part of the evidence system. That raises the quality of the research question while moving consent, incident reporting, and shutdown authority from side issues into core infrastructure.",
+    "forward_implication": "Texas can become a useful test bed for assistive robotics if the center publishes enough operational evidence for patients, workers, residents, and other institutions to judge the deployments rather than asking them to trust the award announcement.",
+    "conflict_screen": "clear"
+  },
+  "required_post_phrases": [
+    "Joydeep Biswas",
+    "real-world robot deployments"
+  ],
+  "verified_facts": [
+    {
+      "claim": "The NSF award record is dated August 25th, 2026, names Joydeep Biswas as principal investigator, names the University of Texas at Austin as recipient, and lists an estimated total award amount of $29,999,998.",
+      "source_urls": [
+        "https://api.nsf.gov/services/v1/awards/2535195.json"
+      ]
+    },
+    {
+      "claim": "UT Austin says Biswas will lead the awarded team and serve as center director.",
+      "source_urls": [
+        "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/"
+      ]
+    },
+    {
+      "claim": "The center's research will use the HERO Facility Network in residential, commercial, health-care, and other everyday environments.",
+      "source_urls": [
+        "https://api.nsf.gov/services/v1/awards/2535195.json",
+        "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/"
+      ]
+    },
+    {
+      "claim": "UT Austin says community members can influence deployments and an internal ethics board will develop consent and opt-out procedures.",
+      "source_urls": [
+        "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/"
+      ]
+    },
+    {
+      "claim": "Texas Advanced Computing Center will provide simulation, machine learning, data storage, and digital-twin capacity for the work.",
+      "source_urls": [
+        "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/"
+      ]
+    },
+    {
+      "claim": "Independent reporting describes a $30 million, five-year award led by UT Austin and focused on robots adapting to people and changing environments.",
+      "source_urls": [
+        "https://texaspolitics.com/2026/08/28/ut-austin-recieves-30-million-nsf-award-to-advance-human-robot-tech/"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Baker Shogry",
+      "decision": "Raise expansion capital for Light",
+      "drop_reason": "The decision's direct AI nexus was speculative rather than established.",
+      "sources": [
+        {
+          "url": "https://www.axios.com/2026/09/01/light-power-series-a-energy-demand-renewables",
+          "title": "Power upstart Light snags $46 million for expansion",
+          "publisher": "Axios"
+        }
+      ]
+    },
+    {
+      "subject": "David Berry",
+      "decision": "Enter a national data-center development partnership with NVIDIA",
+      "drop_reason": "The announcement did not establish a specific Texas project consequence.",
+      "sources": [
+        {
+          "url": "https://www.cloverleafinfra.com/newsroom/cloverleaf-infrastructure-forms-strategic-partnership-with-nvidia-to-accelerate-data-center-infrastructure-development",
+          "title": "Cloverleaf Infrastructure Forms Strategic Partnership with NVIDIA",
+          "publisher": "Cloverleaf Infrastructure"
+        }
+      ]
+    }
+  ]
+}

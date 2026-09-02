@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "ship": true,
+  "weighted_total": 8.83,
+  "threshold": 8.0,
+  "hard_failures": [],
+  "hard_fail_results": [
+    {"name": "identity_and_texas_tie", "pass": true},
+    {"name": "recent_decision_and_owner", "pass": true},
+    {"name": "primary_plus_independent", "pass": true},
+    {"name": "fact_trace", "pass": true},
+    {"name": "not_a_puff_piece", "pass": true},
+    {"name": "political_neutrality", "pass": true},
+    {"name": "linkedin_constraints", "pass": true},
+    {"name": "house_style", "pass": true},
+    {"name": "no_invented_quotes", "pass": true}
+  ],
+  "criteria": [
+    {"name": "Hook strength", "weight": 0.1, "score": 9.0, "notes": "Names the subject, choice, and scale immediately."},
+    {"name": "Subject and decision significance for Texas", "weight": 0.16, "score": 9.0, "notes": "Connects a funded Austin-led center to real operating environments."},
+    {"name": "Identity and decision fidelity", "weight": 0.14, "score": 9.0, "notes": "NSF and UT records align on PI, director, recipient, and design."},
+    {"name": "Source quality and independence", "weight": 0.14, "score": 8.5, "notes": "Official award plus institutional detail and independent reporting."},
+    {"name": "Structural read", "weight": 0.13, "score": 9.0, "notes": "Shows why deployment design changes both evidence and governance."},
+    {"name": "Concrete next check", "weight": 0.08, "score": 8.0, "notes": "Requests a site roster and operating safeguards, though no release date is public."},
+    {"name": "Texas AI Docket voice", "weight": 0.1, "score": 9.0, "notes": "Texas-first, specific, fair, and evidence-led."},
+    {"name": "LinkedIn readability", "weight": 0.06, "score": 9.0, "notes": "Short paragraphs and a clear progression from choice to proof."},
+    {"name": "Specific engagement question", "weight": 0.04, "score": 8.5, "notes": "Asks about a concrete disclosure before deployment."},
+    {"name": "Credibility and proportionality", "weight": 0.05, "score": 9.0, "notes": "Separates the funded design from unproven deployment results."}
+  ]
+}
