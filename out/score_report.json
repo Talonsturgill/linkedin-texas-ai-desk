@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "editor_cycle": 1,
+  "score_cycle": 1,
+  "threshold": 8.0,
+  "ship": true,
+  "hard_failures": [],
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "passed": true,
+      "notes": "Identity, current title and Buda facility are in copy and sourced."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "passed": true,
+      "notes": "July 14 financing is within 60 days; direct owner post confirms control."
+    },
+    {
+      "name": "primary_plus_independent",
+      "passed": true,
+      "notes": "Complete company release and independent Inc. interview fetched."
+    },
+    {
+      "name": "fact_trace",
+      "passed": true,
+      "notes": "All copy assertions mapped to dossier; numeral gate passes."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "passed": true,
+      "notes": "No biography beyond current role; execution tradeoff is explicit."
+    },
+    {
+      "name": "political_neutrality",
+      "passed": true,
+      "notes": "Private capital and operations coverage, with no political advocacy."
+    },
+    {
+      "name": "linkedin_constraints",
+      "passed": true,
+      "notes": "Deterministic report passes word, character and hashtag limits."
+    },
+    {
+      "name": "house_style",
+      "passed": true,
+      "notes": "Deterministic style report passes."
+    },
+    {
+      "name": "no_invented_quotes",
+      "passed": true,
+      "notes": "No direct quotations in published copy."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 9,
+      "notes": "Named funding decision leads into a concrete delivered-job test."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 9,
+      "notes": "Buda operations and Central Texas field work connect AI capital to local work."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "Financing date separated from prior business-model choice; title and owner directly sourced."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "Company release plus original Inc. interview; local release-derived reporting labelled."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 9,
+      "notes": "Explains feedback benefits and crew, equipment and deadline obligations."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 8,
+      "notes": "Founder supplies October deployment target; Texas outcome audit is an explicit editorial check."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 9,
+      "notes": "Plain analytical voice, restrained claims, no biography padding."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 9,
+      "notes": "368 words and 2329 characters, with short paragraphs."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 9,
+      "notes": "Asks what delivered-job evidence would justify a repeat customer."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 9,
+      "notes": "No productivity promises; target and measured results separated."
+    }
+  ],
+  "weighted_total": 8.92
+}
