@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 3RD, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "Build robots. Deliver the job.",
+  "place": "BUDA, TEXAS",
+  "coordinates": "",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "8c53e5039e60c2110f56fb8640eb3eb05c6bfbc6e4779720691933ba6c877847",
+  "prompt_sha256": "df58b70c80d32c6179aaa463c7d2d1fee533e295208bbf59015205294d1eb1fa",
+  "rendered_at_utc": "2026-09-03T12:10:59.125846+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}

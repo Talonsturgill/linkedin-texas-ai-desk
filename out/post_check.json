@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 368,
+    "total_chars": 2329,
+    "hook_chars": 137,
+    "hashtags": [
+      "#TexasAI",
+      "#TexasStartups",
+      "#TexasWorkforce"
+    ],
+    "tag_line": "#TexasAI #TexasStartups #TexasWorkforce"
+  }
+}

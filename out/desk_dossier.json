@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-03",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Noah Schochet",
+    "role": "CEO and cofounder",
+    "organization": "TerraFirma",
+    "role_category": "founder",
+    "texas_tie": "Construction robotics headquarters in Buda and company-reported earthworks jobs in Central Texas.",
+    "place_label": "BUDA, TEXAS",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond",
+      "title": "TerraFirma Raises $115M to Accelerate Construction on Earth and Beyond",
+      "publisher": "TerraFirma via Business Wire, readable Wedbush syndication",
+      "source_type": "primary",
+      "claims_supported": [
+        "July 14 financing announcement includes $100 million Series A.",
+        "Schochet is CEO and cofounder.",
+        "Funds expand technical and construction teams; AI planning, remote operation and machinery are integrated.",
+        "Company reports work in North Austin, Spicewood and New Braunfels."
+      ],
+      "fetched_at_utc": "2026-09-03T12:08:03.589375+00:00",
+      "independent_of_subject": false,
+      "independence_note": "Company-authored release. Hosting on a third-party site does not make it independent.",
+      "published_at": "2026-07-14"
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Noah Schochet announced financing including a $100 million Series A to expand TerraFirma technical and construction teams and its semi-autonomous equipment, scaling its existing model of building technology and performing construction jobs.",
+    "decision_anchor": "$100 million Series A",
+    "date": "2026-07-14",
+    "owner_evidence": "Company release names Schochet CEO; his own public financing post commits funds to deployments; Inc. directly interviews him on the business model.",
+    "alternative_available": "Operate as a technology supplier to other contractors, a market route documented by Inc.; the chosen contractor model already existed before the financing.",
+    "ai_nexus": "AI planning software and supervised robotic heavy equipment are developed together with field operations.",
+    "texas_consequence": "Buda technical and field teams can expand; Texas customers would need evidence that automated earthworks improve delivered projects. Hiring and savings are not treated as realized.",
+    "next_check": "Check the founder-stated end-of-October 2026 fleet deployment goal. Then seek completed Texas job cost, schedule and intervention records; this second check is editorial, with no invented publication date.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond",
+      "title": "TerraFirma Raises $115M to Accelerate Construction on Earth and Beyond",
+      "publisher": "TerraFirma via Business Wire, readable Wedbush syndication",
+      "source_type": "primary",
+      "claims_supported": [
+        "July 14 financing announcement includes $100 million Series A.",
+        "Schochet is CEO and cofounder.",
+        "Funds expand technical and construction teams; AI planning, remote operation and machinery are integrated.",
+        "Company reports work in North Austin, Spicewood and New Braunfels."
+      ],
+      "fetched_at_utc": "2026-09-03T12:08:03.589375+00:00",
+      "independent_of_subject": false,
+      "independence_note": "Company-authored release. Hosting on a third-party site does not make it independent.",
+      "published_at": "2026-07-14"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.inc.com/georgia-fearn/this-startup-says-1-worker-can-do-the-work-of-5-investors-just-bet-100-million-on-it/91374308",
+        "title": "This Startup Says 1 Worker Can Do the Work of 5. Investors Just Bet $100 Million on It",
+        "publisher": "Inc., Georgia Fearn",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "Financing corroboration.",
+          "Original Schochet interview establishes contractor model and retained human backup.",
+          "Reporter identifies crew, equipment and deadline obligations."
+        ],
+        "fetched_at_utc": "2026-09-03T12:08:03.698038+00:00",
+        "independent_of_subject": true,
+        "independence_note": "Mansueto Ventures publication; independently authored article includes direct interview answers to Inc., beyond release material. Performance statements remain subject claims.",
+        "published_at": "2026-07-15"
+      },
+      {
+        "url": "https://www.haysfreepress.com/article/26591,former-spacex-engineers-open-terrafirma-headquarters-in-buda",
+        "title": "Former SpaceX engineers open TerraFirma headquarters in Buda",
+        "publisher": "Hays Free Press, Lance Winter",
+        "source_type": "local_reporting_release_derived",
+        "claims_supported": [
+          "July 10 Buda opening; research, design, testing and outdoor equipment trial space."
+        ],
+        "fetched_at_utc": "2026-09-03T12:08:03.706108+00:00",
+        "independent_of_subject": false,
+        "independence_note": "Local publisher is separate, but article relies on Buda EDC release and supplied photographs; not used to satisfy independent-corroboration gate.",
+        "published_at": "2026-07-22"
+      },
+      {
+        "url": "https://www.linkedin.com/posts/noahschochet_today-were-announcing-that-terrafirma-has-activity-7482803235041198080-HjDI",
+        "title": "TerraFirma financing and fleet deployment announcement",
+        "publisher": "Noah Schochet, public LinkedIn post",
+        "source_type": "primary_subject_statement",
+        "claims_supported": [
+          "Direct ownership of financing and deployment strategy.",
+          "End-of-October 2026 target spans three continents."
+        ],
+        "fetched_at_utc": "2026-09-03T12:08:03.706120+00:00",
+        "independent_of_subject": false,
+        "independence_note": "Subject-controlled. Relative page date is not used to date the decision; company release provides July 14 date. Target and performance are claims, not achieved results."
+      },
+      {
+        "url": "https://siliconangle.com/2026/07/14/construction-automation-startup-terrafirma-raises-115m/",
+        "title": "Construction automation startup TerraFirma raises $115M",
+        "publisher": "SiliconANGLE, Maria Deutscher",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "July 14 announcement date and $100 million Series A corroboration.",
+          "Remote operation and planning software described."
+        ],
+        "fetched_at_utc": "2026-09-03T12:08:03.706124+00:00",
+        "independent_of_subject": true,
+        "independence_note": "Separate technology newsroom, original byline and analysis; funding facts trace to release. Inc. original interview supplies stronger independence.",
+        "published_at": "2026-07-14"
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "Funding supports both equipment development and the field teams that generate practical feedback.",
+      "A real Buda facility grounds the expansion in Texas."
+    ],
+    "evidence_against": [
+      "Human backup remains part of the system.",
+      "Sources do not establish independently measured Texas job savings or safety improvements."
+    ],
+    "structural_read": "Owning the construction contract tightens the feedback loop and concentrates delivery obligations in the same company.",
+    "forward_implication": "Fleet deployment and repeat customer outcomes should test operational progress; capital raised does not establish execution quality.",
+    "conflict_screen": "clear",
+    "conflict_screen_note": "No payment, sponsorship or editorial relationship was supplied or identified. Investor and economic-development statements are treated as interested evidence; no investment recommendation or public-policy endorsement."
+  },
+  "required_post_phrases": [
+    "Noah Schochet",
+    "$100 million Series A",
+    "Buda"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Schochet is TerraFirma CEO and cofounder; the July 14th, 2026 announcement includes a $100 million Series A.",
+      "source_urls": [
+        "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond",
+        "https://www.inc.com/georgia-fearn/this-startup-says-1-worker-can-do-the-work-of-5-investors-just-bet-100-million-on-it/91374308",
+        "https://siliconangle.com/2026/07/14/construction-automation-startup-terrafirma-raises-115m/"
+      ]
+    },
+    {
+      "claim": "Funds are intended for engineering, manufacturing, operations, construction and semi-autonomous systems.",
+      "source_urls": [
+        "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond",
+        "https://www.linkedin.com/posts/noahschochet_today-were-announcing-that-terrafirma-has-activity-7482803235041198080-HjDI"
+      ]
+    },
+    {
+      "claim": "The Buda headquarters opened July 10th, 2026, with research, design, testing and outdoor trial space.",
+      "source_urls": [
+        "https://www.haysfreepress.com/article/26591,former-spacex-engineers-open-terrafirma-headquarters-in-buda"
+      ]
+    },
+    {
+      "claim": "TerraFirma describes AI preconstruction software, a remote center and converted heavy equipment.",
+      "source_urls": [
+        "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond"
+      ]
+    },
+    {
+      "claim": "North Austin, Spicewood and New Braunfels projects are reported by the company, not independently audited here.",
+      "source_urls": [
+        "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond"
+      ]
+    },
+    {
+      "claim": "Inc. directly interviewed Schochet about performing construction with internal technology and retaining human backup.",
+      "source_urls": [
+        "https://www.inc.com/georgia-fearn/this-startup-says-1-worker-can-do-the-work-of-5-investors-just-bet-100-million-on-it/91374308"
+      ]
+    },
+    {
+      "claim": "Technology supply to other contractors is an available market model; Inc. describes remote equipment vendors alongside TerraFirma.",
+      "source_urls": [
+        "https://www.inc.com/georgia-fearn/this-startup-says-1-worker-can-do-the-work-of-5-investors-just-bet-100-million-on-it/91374308"
+      ]
+    },
+    {
+      "claim": "Inc. identifies field data benefits and the burden of managing crews, machinery and deadlines.",
+      "source_urls": [
+        "https://www.inc.com/georgia-fearn/this-startup-says-1-worker-can-do-the-work-of-5-investors-just-bet-100-million-on-it/91374308"
+      ]
+    },
+    {
+      "claim": "Schochet states a target for fleets on three continents by the end of October 2026; achievement is unverified.",
+      "source_urls": [
+        "https://www.linkedin.com/posts/noahschochet_today-were-announcing-that-terrafirma-has-activity-7482803235041198080-HjDI"
+      ]
+    },
+    {
+      "claim": "None of the reviewed pages supplies a complete independent Texas job comparison covering final cost, schedule, safety and interventions.",
+      "source_urls": [
+        "https://investor.wedbush.com/wedbush/article/bizwire-2026-7-14-terrafirma-raises-115m-to-accelerate-construction-on-earth-and-beyond",
+        "https://www.inc.com/georgia-fearn/this-startup-says-1-worker-can-do-the-work-of-5-investors-just-bet-100-million-on-it/91374308",
+        "https://www.haysfreepress.com/article/26591,former-spacex-engineers-open-terrafirma-headquarters-in-buda",
+        "https://www.linkedin.com/posts/noahschochet_today-were-announcing-that-terrafirma-has-activity-7482803235041198080-HjDI",
+        "https://siliconangle.com/2026/07/14/construction-automation-startup-terrafirma-raises-115m/"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "CEO/cofounder identity corroborated by company release and independent interview.",
+    "recent_decision": "Financing announcement is 51 days before run; no older strategy adoption is misdated as new.",
+    "decision_owner": "Personal financing statement plus CEO interview, not title alone.",
+    "texas_ai_consequence": "Buda facility and named Central Texas field work connect AI robotics to local construction.",
+    "primary_source": "Complete release and public owner post were fetched this run.",
+    "independent_corroboration": "Inc. conducts its own interview. Reprints and investor statements do not count.",
+    "position_or_accountability_read": "Mixed execution assessment separates feedback benefits from project-delivery risk and evidence gaps.",
+    "not_recent_repeat": "Fetched run history contains only Joydeep Biswas on September 2; no Schochet subject or decision match.",
+    "conflict_clear": "No known editorial conflict; interested claims labelled explicitly.",
+    "political_neutrality": "Private financing/operations story; no electoral or policy advocacy or ranking."
+  },
+  "challenge_pass": [
+    "Current title supported in fetched sources; no contradictory role change found in current search.",
+    "July 14 dates financing, not the initial choice to become a contractor.",
+    "Hays states founding in 2023 while primary says 2024; founding year omitted.",
+    "Release calls company Austin-based, local report documents Buda opening; post states the specific reported facility event.",
+    "Promotional productivity multipliers and global fleet rankings omitted.",
+    "October goal attributed to founder and explicitly not treated as delivery proof.",
+    "Full project outcome comparison absent from fetched corpus, rather than a claim none exists anywhere."
+  ],
+  "visual_facts": {
+    "setting": "Central Texas earthworks, Buda-area construction robotics context",
+    "objects": [
+      "retrofitted excavator",
+      "graded earth"
+    ],
+    "image_is_metaphor": true,
+    "constraints": "No actual site or equipment-model identification, no invented insignia, no person likeness; omit unverified coordinates."
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Chad V. Seely",
+      "decision": "Operationally owns ERCOT implementation of the data-center verification audit: develop and issue RFIs to provisionally qualified Batch Zero loads, target a December 10 audit report, and implement conditional classification and data-cure exceptions while the study schedule is reassessed.",
+      "drop_reason": "Viable reserve; selected founder has direct owner financing statement and original interview with fewer unresolved primary-document access gaps. No policy quality ranking.",
+      "sources": [
+        {
+          "url": "https://www.ercot.com/services/comm/mkt_notices/M-A080326-02",
+          "title": "PUC Approval of Good Cause Exceptions Relating To Batch Zero Process",
+          "publisher": "ERCOT",
+          "published_at": "2026-08-21",
+          "fetched": true,
+          "evidence": "Confirms August 10 exception request and August 20 order granting deadline relief, conditional base-load inclusion in August/November stability assessments, and equal 24-day cure time after late deficiency notices. Plans conditional classification by August 31."
+        },
+        {
+          "url": "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/",
+          "title": "ERCOT aims to complete Texas governor’s data center audit by December",
+          "publisher": "Utility Dive",
+          "published_at": "2026-08-21",
+          "fetched": true,
+          "independent_of_subject": true,
+          "evidence": "Robert Walton reports August 20 PUCT meeting, names Seely and directly attributes RFI timing and December 10 report goal, plus his statement April 9 2027 study deadline will not be met. Reports risk to future forecast/reliability work."
+        }
+      ]
+    },
+    {
+      "subject": "Nish Vora",
+      "decision": "Gradiant accepted an integrated turnkey potable-water and wastewater contract engineered for zero surface-water discharge. Vora is quoted as owning delivery.",
+      "drop_reason": "Undisclosed site/customer, no demonstrated available alternative or dated delivery check.",
+      "sources": [
+        {
+          "url": "https://gradiant.com/press-release/gradiant-secures-water-contract-hyperscaler-ai-data-center-west-texas/",
+          "title": "Gradiant Secures Major Water Contract for Hyperscaler AI Data Center Campus in West Texas",
+          "publisher": "Gradiant",
+          "published_at": "2026-09-02",
+          "fetched": true
+        },
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/gradiant-to-deliver-hypersolved-water-treatment-system-for-west-texas-data-center/",
+          "title": "Gradiant to deliver HyperSolved water treatment system for West Texas data center",
+          "publisher": "Data Center Dynamics",
+          "published_at": "2026-09-02",
+          "fetched": true,
+          "independent_of_subject": true,
+          "evidence": "Bylined article confirms deal and unnamed customer, describes integrated platform and cites DCD prior Houston R&D facility visit, but project claims rely on company announcement."
+        }
+      ]
+    },
+    {
+      "subject": "Habeeb Olufowobi",
+      "decision": "Lead Real-Time Trust and Resilience for AI-Driven EPICS Scientific Workflows, a DOE Genesis Phase I research project building a monitored checkpoint between AI outputs and scientific controls.",
+      "drop_reason": "Viable research reserve; founder chosen for direct commercial delivery consequences and stronger documentation of an existing alternative. Research schedule contains a source typo and outcome remains proposed.",
+      "sources": [
+        {
+          "url": "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/faculty-directory",
+          "title": "Computer Science and Engineering Faculty",
+          "publisher": "UT Arlington",
+          "source_type": "primary",
+          "fetched": true,
+          "evidence": "Current directory explicitly lists Habeeb Olufowobi, Assistant Professor; research includes security and machine learning."
+        },
+        {
+          "url": "https://www.uta.edu/news/news-releases/2026/07/22/uta-selected-for-land-mark-doe-ai-initiative",
+          "title": "UTA selected for landmark DOE AI initiative",
+          "publisher": "UT Arlington",
+          "published_at": "2026-07-22",
+          "source_type": "primary",
+          "fetched": true,
+          "evidence": "Names project and leader; describes real-time trust layer, human supervision, EPICS compatibility and two graduate students. Does not substantiate completed deployment."
+        },
+        {
+          "url": "https://science.osti.gov/-/media/funding/pdf/Awards-Lists/2026/GM-RFA-Awards-List.pdf",
+          "title": "Genesis Mission RFA awards list",
+          "publisher": "US Department of Energy",
+          "published_at": "2026-07-22",
+          "source_type": "primary",
+          "fetched": true,
+          "evidence": "Page six names Olufowobi PI, exact title and UTA in Arlington TX. General disclaimer says selection for negotiations is not a funding commitment."
+        },
+        {
+          "url": "https://www.opencampus.org/2026/07/22/uta-leads-750k-project-to-reduce-ai-risks-in-scientific-experiments/",
+          "title": "UTA leads $750K project to reduce AI risks in scientific experiments",
+          "publisher": "Fort Worth Report via Open Campus",
+          "published_at": "2026-07-22",
+          "source_type": "independent_reporting",
+          "fetched": true,
+          "independent_of_subject": true,
+          "evidence": "Dang Le reports direct email interview, $750K total/$500K UTA/$250K partners, completed negotiations and approved budget. Explains Phase II as subject's success criterion. This is original reporting republished by newsroom partner, not release syndication. UTA financially supports FWR higher-ed coverage; disclosure explicitly guarantees editorial independence. Count original and republisher as one source."
+        }
+      ]
+    },
+    {
+      "subject": "Amy N. Kelley",
+      "decision": "Appointment as internal CIO responsible for DIR AI and internal IT divisions.",
+      "drop_reason": "Fetched evidence establishes appointment and remit, but no concrete AI implementation choice she made or documented alternative; do not turn title into decision.",
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/posts/dirisit-leadership-share-7497671228221083648-v4SL/",
+          "title": "DIR welcomes Amy N. Kelley",
+          "publisher": "Texas Department of Information Resources",
+          "source_type": "primary"
+        },
+        {
+          "url": "https://statescoop.com/texas-internal-cio-lead-ai-dir/",
+          "title": "Texas names new internal CIO to lead AI efforts for state tech agency",
+          "publisher": "StateScoop",
+          "source_type": "independent_reporting"
+        }
+      ]
+    },
+    {
+      "subject": "Sindhu Menon",
+      "decision": "Harris County AI review process and planned countywide posture.",
+      "drop_reason": "July 17 reporting describes ongoing work, not a precise in-window decision; current leadership page and services page do not establish a dated new choice.",
+      "sources": [
+        {
+          "url": "https://www.govtech.com/security/pragmatic-tech-ai-moving-forward-in-harris-county-texas",
+          "title": "Pragmatic Tech: AI Moving Forward in Harris County, Texas",
+          "publisher": "Government Technology"
+        },
+        {
+          "url": "https://hcus.harriscountytx.gov/About-Us/Leadership",
+          "title": "Leadership",
+          "publisher": "Harris County Universal Services"
+        }
+      ]
+    },
+    {
+      "subject": "Jade DeKinder",
+      "decision": "Renaming two McCombs masters programs to include AI.",
+      "drop_reason": "Primary documents announcement but broader search found release-derived coverage rather than independently reported decision evidence; approval dates not separately established.",
+      "sources": [
+        {
+          "url": "https://news.mccombs.utexas.edu/news/mccombs-m-s-programs-get-new-names/",
+          "title": "McCombs M.S. Programs Get New Names",
+          "publisher": "UT Austin McCombs"
+        }
+      ]
+    },
+    {
+      "subject": "THECB AI code of ethics decision owner not established",
+      "decision": "July 22 adoption of agency AI code.",
+      "drop_reason": "Board action and code corroborated, but fetched materials do not tie the implementation choice to a sufficiently evidenced individual owner.",
+      "sources": [
+        {
+          "url": "https://reportcenter.highered.texas.gov/meeting/board-agendas/quarterly-board-agenda-july-2026/",
+          "title": "Quarterly Board Agenda July 2026",
+          "publisher": "THECB"
+        },
+        {
+          "url": "https://insider.govtech.com/texas/news/texas-higher-education-board-adopts-ai-code-of-ethics",
+          "title": "Texas Higher Education Board Adopts AI Code of Ethics",
+          "publisher": "Government Technology"
+        }
+      ]
+    }
+  ],
+  "research_coverage": {
+    "lanes": [
+      "founder",
+      "operator",
+      "public",
+      "research"
+    ],
+    "window_start": "2026-07-05",
+    "window_end": "2026-09-03",
+    "broadened": false,
+    "selection_rationale": "Strongest combined direct owner evidence, original independent interview, available market alternative and tangible Texas operating context. Operator and research reserves retained as editorial alternatives, with no electoral or policy ranking."
+  }
+}
