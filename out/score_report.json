@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "editor_cycle": 1,
+  "score_cycle": 1,
+  "threshold": 8.0,
+  "ship": true,
+  "hard_failures": [],
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "passed": true,
+      "notes": "Kidd's current district role and San Antonio implementation responsibility appear in the copy and fetched sources."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "passed": true,
+      "notes": "Northside's August 27th commitment is inside the window; Kidd is described only as the operational owner."
+    },
+    {
+      "name": "primary_plus_independent",
+      "passed": true,
+      "notes": "Northside's complete staff newsletter and bylined San Antonio Report coverage republished by Texas Public Radio were fetched."
+    },
+    {
+      "name": "fact_trace",
+      "passed": true,
+      "notes": "Every factual assertion and numeral maps to the dossier; the deterministic post gate passes."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "passed": true,
+      "notes": "Biography is limited to current responsibility; the copy centers implementation gaps and measurable checks."
+    },
+    {
+      "name": "political_neutrality",
+      "passed": true,
+      "notes": "The post evaluates process and disclosure without endorsing or opposing public-school AI use."
+    },
+    {
+      "name": "linkedin_constraints",
+      "passed": true,
+      "notes": "The report records 367 body words, 2,451 total characters and exactly three approved hashtags."
+    },
+    {
+      "name": "house_style",
+      "passed": true,
+      "notes": "The deterministic gate found no forbidden punctuation, first person, emoji or banned phrasing."
+    },
+    {
+      "name": "no_invented_quotes",
+      "passed": true,
+      "notes": "The published copy contains no direct quotations."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 9,
+      "notes": "The opening names Kidd, the exact decision and the central controlled-access mechanism."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 9,
+      "notes": "The implementation touches 13,000 employees serving 97,600 students across 133 San Antonio schools."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "Current title and rollout responsibility are sourced, with operational ownership distinguished from sole authorization."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "The district primary record is paired with independent, bylined nonprofit local reporting and direct implementation detail."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 9,
+      "notes": "The post explains how central access changes accountability while leaving multi-tool governance and human review unresolved."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 9,
+      "notes": "October supplies a near-term launch check; June 2028 creates a later continuity and cost checkpoint."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 9,
+      "notes": "The copy is plain, place-specific, source-conscious and focused on a decision rather than biography."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 9,
+      "notes": "Short paragraphs carry one idea each and the post remains comfortably inside platform limits."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 9,
+      "notes": "The final question asks readers to choose a concrete October implementation measure."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 9,
+      "notes": "Safety and privacy are labelled as pre-launch claims, and missing detailed rules are published as gaps."
+    }
+  ],
+  "weighted_total": 9.0
+}

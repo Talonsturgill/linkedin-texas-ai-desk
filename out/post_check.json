@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 367,
+    "total_chars": 2451,
+    "hook_chars": 205,
+    "hashtags": [
+      "#TexasAI",
+      "#ResponsibleAI",
+      "#SanAntonioTech"
+    ],
+    "tag_line": "#TexasAI #ResponsibleAI #SanAntonioTech"
+  }
+}

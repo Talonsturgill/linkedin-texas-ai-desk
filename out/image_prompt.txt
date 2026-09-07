@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: an editorial visual metaphor for Northside Independent School District placing one managed access gate around several AI tools already used by staff
+Scene/backdrop: an empty San Antonio public-school media center after hours, rendered as a truthful composite setting rather than a specific campus interior
+Subject: one translucent architectural gate organizes many unmarked lesson papers and folders into orderly trays on a teacher worktable, showing central access and accountable flow without depicting software
+Style/medium: tactile cut-paper editorial collage with subtle screenprint grain and precise architectural depth
+Composition/framing: one clear gate and worktable focal point in the middle third, generous quiet dark bands at top and bottom for later typography, square composition
+Lighting/mood: calm late-evening institutional light, careful and watchful rather than futuristic or celebratory
+Color palette: night #08060F, deep #0F0C1C, panel #191530, caliche #E4D8C3, bluebonnet #4E5FA8, mesquite #6E7A5A
+Constraints: square, no words, no letters, no numbers, no logos, no watermarks, no UI, no legible documents, no people, no children, no generated portrait or likeness of Leann Kidd, no claim that a specific Northside campus is shown
+Avoid: boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, generic glowing brains, circuit-board faces, handshakes, red used as decoration, classroom clip art, vendor branding, futuristic holograms

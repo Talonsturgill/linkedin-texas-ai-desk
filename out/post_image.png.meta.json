@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 6TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "PUBLIC",
+  "headline": "ONE MANAGED FRONT DOOR",
+  "place": "SAN ANTONIO",
+  "coordinates": "",
+  "style_family": "deterministic dusk fallback",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "fallback",
+    "deterministic typography overlay"
+  ],
+  "source": "fallback",
+  "seed": 1701,
+  "base_sha256": "035142f02b87097ecfb60e62e8d4d00285fdba848fed6db3e489082c9102bc44",
+  "prompt_sha256": "a7cffc8554b0581aec6979fdb9cd8f3393626a2f0cd79eb59baae78a7e39de89",
+  "rendered_at_utc": "2026-09-07T02:24:52.145026+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}
