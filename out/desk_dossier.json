@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-06",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Leann Kidd",
+    "role": "Executive Director of Technology Services",
+    "organization": "Northside Independent School District",
+    "role_category": "public",
+    "texas_tie": "Operational technology leader for Northside Independent School District in San Antonio",
+    "place_label": "SAN ANTONIO",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://www.nisd.net/district/cabinet",
+      "title": "Superintendent's Cabinet",
+      "publisher": "Northside Independent School District"
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Northside Independent School District publicly committed to launch a districtwide, centrally managed ChatGPT environment for staff in October 2026 while retaining Gemini as an approved option.",
+    "decision_anchor": "launch a districtwide managed ChatGPT environment for staff",
+    "date": "2026-08-27",
+    "owner_evidence": "Northside identifies Leann Kidd as the executive director who leads teams implementing education technology. Independent reporting quotes Kidd describing the October systemwide rollout, existing staff training, portal access, district management, privacy considerations, and a slower process for any student-facing access.",
+    "alternative_available": "Continue the existing mix of individual ChatGPT for Teachers accounts, Gemini Notebook, MagicSchool AI, and staff training without adding a districtwide managed ChatGPT environment. Northside instead chose a centrally managed environment while keeping Gemini available.",
+    "ai_nexus": "The decision governs staff access to a generative AI system, administrative controls, training, data governance, and possible future student-facing access.",
+    "texas_consequence": "The rollout will be available to 13,000 employees serving 97,600 students across 133 Northside schools. The October implementation will determine whether district controls, staff training, human review, and privacy practices operate as described before any broader student access is considered.",
+    "next_check": "At the October 2026 launch, verify portal and sign-on access, role controls, written data-handling rules, human review, training completion, usage measurement, and incident escalation. Before free access ends in June 2028, look for a published renewal, replacement, or exit plan.",
+    "public_policy_or_electoral": true,
+    "primary_source": {
+      "url": "https://www.nisd.net/newsletter/152716",
+      "title": "August 27, 2026 Staff Newsletter",
+      "publisher": "Northside Independent School District",
+      "published_at": "2026-08-27",
+      "source_type": "primary",
+      "claims_supported": [
+        "Northside will launch a K-12 ChatGPT environment for staff in October.",
+        "The district describes the environment as a controlled space with district controls intended to support FERPA, COPPA, and local data-governance responsibilities.",
+        "Gemini remains an approved tool alongside the planned ChatGPT environment.",
+        "More rollout information was promised for the following month."
+      ],
+      "fetched_at_utc": "2026-09-07T02:19:32Z"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai",
+        "title": "Northside ISD joins list of school districts partnering with OpenAI",
+        "publisher": "Texas Public Radio and San Antonio Report",
+        "published_at": "2026-08-26",
+        "source_type": "independent_reporting",
+        "independent_of_subject": true,
+        "independence_note": "Xochilt Garcia reported and bylined the story for the nonprofit San Antonio Report, republished by Texas Public Radio. It includes direct interviews and independently states the district scale, rollout status, existing tool mix, and October milestone.",
+        "claims_supported": [
+          "Kidd is Northside's executive director of technology services and described the districtwide implementation.",
+          "Northside serves 97,600 students across 133 schools with 13,000 employees.",
+          "More than half of staff had already used AI, with individual ChatGPT accounts, Gemini Notebook, and MagicSchool AI among the existing tools.",
+          "The district planned an October systemwide launch accessible to all staff and manageable by Northside.",
+          "Kidd described staff training on prompts, bias, privacy, ethics, and etiquette.",
+          "Kidd said districtwide student access would not be immediate.",
+          "The program's free access for schools is scheduled to end in June 2028."
+        ],
+        "fetched_at_utc": "2026-09-07T02:19:32Z"
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "neutral_accountability",
+    "assessment": "not_applicable",
+    "evidence_for": [
+      "Northside has named an October launch, a district portal path, central management, retained tool choice, staff training topics, and a separate slower process for possible student access.",
+      "The managed environment replaces part of a fragmented status quo in which staff already use several AI tools and some hold individual accounts."
+    ],
+    "evidence_against": [
+      "The fetched sources do not publish the district's detailed data-retention rules, model settings, access logs, incident process, training completion measures, or usage outcomes.",
+      "Privacy and safety benefits are district and vendor descriptions ahead of launch, not independently measured results."
+    ],
+    "structural_read": "Central management moves part of AI governance from individual staff choices into district-controlled access, but the decision keeps a multi-tool environment and therefore does not make training, human review, or data handling uniform by itself.",
+    "forward_implication": "The October launch should make controls and adoption observable. The June 2028 end of free access creates a later budget and continuity decision that the current records do not resolve.",
+    "conflict_screen": "clear",
+    "conflict_screen_note": "No payment, sponsorship, employment, vendor relationship, or editorial conflict was supplied or identified. Northside and OpenAI safety claims are attributed and treated as claims pending implementation evidence."
+  },
+  "required_post_phrases": [
+    "Leann Kidd",
+    "launch a districtwide managed ChatGPT environment for staff"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Leann Kidd is Northside Independent School District's Executive Director of Technology Services and leads teams that implement education technology.",
+      "source_urls": [
+        "https://www.nisd.net/district/cabinet",
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "Northside's August 27th, 2026 staff newsletter says the district will launch a K-12 ChatGPT environment for staff in October.",
+      "source_urls": [
+        "https://www.nisd.net/newsletter/152716"
+      ]
+    },
+    {
+      "claim": "Northside describes the planned environment as centrally controlled and intended to support FERPA, COPPA, and district data-governance responsibilities.",
+      "source_urls": [
+        "https://www.nisd.net/newsletter/152716"
+      ]
+    },
+    {
+      "claim": "Northside will retain Gemini as an approved option alongside the planned ChatGPT environment.",
+      "source_urls": [
+        "https://www.nisd.net/newsletter/152716"
+      ]
+    },
+    {
+      "claim": "Northside serves 97,600 students across 133 schools with 13,000 employees.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "Kidd said more than half of Northside staff had already used AI and identified individual ChatGPT accounts, Gemini Notebook, and MagicSchool AI in the existing tool mix.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "Kidd described staff training that covers prompting, bias, privacy, ethics, and etiquette.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "Northside has an AI task force whose members discuss AI and make policy recommendations.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "The planned staff environment is expected to launch in October 2026 through Northside's application portal and be manageable by the district.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai",
+        "https://www.nisd.net/newsletter/152716"
+      ]
+    },
+    {
+      "claim": "Kidd said Northside would not immediately allow districtwide student access even if the product later offered it.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "Independent reporting says the free school access period ends in June 2028.",
+      "source_urls": [
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    },
+    {
+      "claim": "The fetched sources do not publish detailed Northside rules for data retention, access logs, incident escalation, training completion, or measured usage outcomes.",
+      "source_urls": [
+        "https://www.nisd.net/newsletter/152716",
+        "https://www.tpr.org/education/2026-08-26/northside-isd-joins-list-of-school-districts-partnering-with-openai"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "Current district leadership page and independent reporting identify Kidd and her role.",
+    "recent_decision": "The district's August 27th announcement is ten days before the run date and sets an October launch.",
+    "decision_owner": "Kidd's implementation remit and detailed public description establish operational ownership without claiming she alone authorized the district decision.",
+    "texas_ai_consequence": "The staff-only rollout covers a named San Antonio district, 13,000 employees, 133 schools, and work serving 97,600 students.",
+    "primary_source": "Northside's complete staff newsletter was fetched in this run.",
+    "independent_corroboration": "A bylined San Antonio Report story republished by Texas Public Radio was fetched and independently describes the decision and its implementation.",
+    "position_or_accountability_read": "The analysis identifies implementation checks without endorsing or opposing the tool choice.",
+    "not_recent_repeat": "History scan contains only Joydeep Biswas and Noah Schochet; Kidd and this decision are new.",
+    "conflict_clear": "No editorial relationship or conflict was identified; vendor and district claims are labelled.",
+    "political_neutrality": "The coverage evaluates public implementation and disclosure, with no candidate, party, campaign, ballot measure, or preferred policy outcome."
+  },
+  "challenge_pass": [
+    "Current title and implementation responsibility were checked against Northside's current cabinet page and independent reporting.",
+    "The decision date is the district's public August 27th commitment, not an invented date for internal deliberation.",
+    "Kidd is described as the operational owner, not the sole authorizer of a districtwide decision.",
+    "The product is for staff at launch. Existing limited high-school AI use is not presented as districtwide ChatGPT student access.",
+    "The independent source is a bylined nonprofit-news report and not a district, vendor, or syndicated company release.",
+    "The alternative is bounded to the documented existing mix of individual and district-approved tools.",
+    "Privacy and safety language is attributed to the district or vendor and is not treated as verified performance.",
+    "The selected subject and decision do not appear in the fetched Texas Desk history.",
+    "The framing asks for controls, evidence, and continuity planning without taking a position for or against public-school AI adoption."
+  ],
+  "visual_facts": {
+    "setting": "An empty public-school media center in San Antonio after hours",
+    "objects": [
+      "teacher worktable",
+      "unmarked lesson papers",
+      "translucent architectural gate",
+      "organized filing trays"
+    ],
+    "image_is_metaphor": true,
+    "constraints": "No people or likenesses, no school or vendor logos, no readable text, no interface, no student data, and no claim that a specific Northside campus interior is shown."
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Dave Clark",
+      "decision": "Relocate Auger's corporate headquarters and customer-facing expansion to Dallas while retaining its Bellevue engineering office.",
+      "drop_reason": "Strong founder candidate, but the Northside rollout has a nearer public implementation checkpoint and a more direct consequence for a named Texas institution.",
+      "sources": [
+        {
+          "url": "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/",
+          "title": "Dave and Leigh Anne Clark Are Back in Dallas and They're Bringing Their $150 Million Startup With Them",
+          "publisher": "D Magazine and D CEO"
+        },
+        {
+          "url": "https://www.geekwire.com/2026/this-former-amazon-exec-is-moving-his-startups-hq-to-texas-and-he-has-a-few-notes-for-seattle/",
+          "title": "This former Amazon exec is moving his startup's HQ to Texas",
+          "publisher": "GeekWire"
+        }
+      ]
+    },
+    {
+      "subject": "Mike Novogratz",
+      "decision": "Acquire approximately 500 acres in McGregor for Galaxy's second Texas AI and HPC data-center campus.",
+      "drop_reason": "Strong operator candidate with completed land acquisition and independent scrutiny, but first power is not expected until 2028 while Northside's October launch offers the nearer measurable test.",
+      "sources": [
+        {
+          "url": "https://investor.galaxy.com/node/11531/pdf",
+          "title": "Galaxy Expands Data Center Footprint with Acquisition of 500 Acre Campus in McGregor, Texas",
+          "publisher": "Galaxy Digital Inc."
+        },
+        {
+          "url": "https://www.datacenterknowledge.com/data-center-construction/galaxy-s-500-acre-texas-ai-campus-reflects-new-grid-model",
+          "title": "Galaxy's 500-Acre Texas AI Data Center Reflects New Grid Model",
+          "publisher": "Data Center Knowledge"
+        }
+      ]
+    },
+    {
+      "subject": "Maytal Dahan",
+      "decision": "Operationally lead the Texas portal contribution to the new NSF National Artificial Intelligence Research Resource Operations Center.",
+      "drop_reason": "Strong research candidate, but independent reporting corroborates the center and TACC partnership more clearly than Dahan's individual implementation choice.",
+      "sources": [
+        {
+          "url": "https://www.nsf.gov/cise/updates/nsf-establishes-operations-center-national-artificial",
+          "title": "NSF establishes operations center for the National Artificial Intelligence Research Resource",
+          "publisher": "U.S. National Science Foundation"
+        },
+        {
+          "url": "https://www.meritalk.com/articles/nsf-launches-operations-center-for-national-ai-research-resource/",
+          "title": "NSF Launches Operations Center for National AI Research Resource",
+          "publisher": "MeriTalk"
+        }
+      ]
+    }
+  ]
+}
