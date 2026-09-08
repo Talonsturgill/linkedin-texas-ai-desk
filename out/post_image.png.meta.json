@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 8TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "THE TWO CITY SWITCH",
+  "place": "DALLAS",
+  "coordinates": "",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "404ba9cb2ddfec1d9801bc60efb1dfd92fca29489a9383c3ff1e225771b71019",
+  "prompt_sha256": "5dbd65c5279db3e87e966aa43304416f7e5e8598442b19dc1a79a5bac5c306d1",
+  "rendered_at_utc": "2026-09-08T14:46:04.842104+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}
