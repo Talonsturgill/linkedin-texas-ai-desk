@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-08",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Dave Clark",
+    "role": "Founder and CEO",
+    "organization": "Auger",
+    "role_category": "founder",
+    "texas_tie": "Founder and CEO moving Auger's headquarters and customer-facing expansion to North Dallas",
+    "place_label": "DALLAS",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://auger.com/about/",
+      "title": "About",
+      "publisher": "Auger"
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Dave Clark chose to move Auger's headquarters from the Seattle area to Dallas, placing customer-facing teams and part of the science organization in Dallas while retaining and expanding the technical operation in Bellevue.",
+    "decision_anchor": "move Auger's headquarters to Dallas",
+    "date": "2026-08-10",
+    "owner_evidence": "D Magazine's original interview records Clark explaining why he and co-founder Leigh Anne Clark chose Dallas for the go-to-market and customer phase. GeekWire separately identifies him as Auger's co-founder and CEO, calls the relocation his decision, and reports his plan to retain and expand the Bellevue engineering office.",
+    "alternative_available": "Keep the headquarters, customer management, and go-to-market buildout with the established technical organization in the Seattle area. Clark instead chose a two-city structure that puts the headquarters and customer-facing expansion in Dallas while preserving the Bellevue engineering base.",
+    "ai_nexus": "Auger describes its product as an autonomous operating system for supply chains. D Magazine reports that the software connects fragmented enterprise systems so AI can make and execute routine inventory, vendor, and shipping decisions while people handle more complicated problems.",
+    "texas_consequence": "North Dallas becomes the corporate headquarters and the base for customer-facing, go-to-market, supply-chain, solutions, and some science roles. D Magazine reported an opening team of about a dozen with a plan to grow to roughly 30 by the end of 2026, while GeekWire reported about 15 people and a plan to add another 20 to 30 by the middle of 2027.",
+    "next_check": "At the end of 2026, verify whether the Dallas office reaches roughly 30 employees, whether Auger's public company profiles identify Dallas as headquarters, and whether hiring actually spans customer-facing and science roles. By the middle of 2027, compare the separate GeekWire hiring target with actual Dallas staffing.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/",
+      "title": "Dave and Leigh Anne Clark Are Back in Dallas and They're Bringing Their $150 Million Startup With Them",
+      "publisher": "D Magazine and D CEO",
+      "published_at": "2026-08-10",
+      "source_type": "primary_interview",
+      "claims_supported": [
+        "Dave Clark is Auger's co-founder and CEO.",
+        "Clark chose Dallas for the headquarters, go-to-market work, customer management, supply-chain talent, customer proximity, and central location.",
+        "The Seattle-area technical operation remains in place.",
+        "The North Dallas headquarters was expected to open with about a dozen employees and grow to roughly 30 by year-end.",
+        "Auger did not seek state or local incentives for the relocation.",
+        "Auger's software connects fragmented supply-chain systems and uses AI to make and execute routine decisions."
+      ],
+      "fetched_at_utc": "2026-09-08T14:37:05Z"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.geekwire.com/2026/this-former-amazon-exec-is-moving-his-startups-hq-to-texas-and-he-has-a-few-notes-for-seattle/",
+        "title": "This former Amazon exec is moving his startup's HQ to Texas, and he has a few notes for Seattle",
+        "publisher": "GeekWire",
+        "published_at": "2026-08-12",
+        "source_type": "independent_reporting",
+        "independent_of_subject": true,
+        "independence_note": "GeekWire is an independent technology-news outlet. Todd Bishop conducted a separate interview with Clark and reported the two-city operating plan, staffing, and decision rationale.",
+        "claims_supported": [
+          "Auger moved its headquarters to Dallas while retaining a major engineering office in Bellevue.",
+          "Clark made the decision based on the company's current talent and customer needs.",
+          "The Dallas office had about 15 people and a plan to add another 20 to 30 by the middle of 2027.",
+          "The Bellevue office had about 115 people and was expected to keep growing.",
+          "Auger's software integrates AI into supply-chain automation."
+        ],
+        "fetched_at_utc": "2026-09-08T14:37:05Z"
+      },
+      {
+        "url": "https://www.linkedin.com/company/augerinc",
+        "title": "Auger company page and Dallas update",
+        "publisher": "Auger on LinkedIn",
+        "source_type": "subject_controlled_announcement",
+        "independent_of_subject": false,
+        "claims_supported": [
+          "Auger opened a Dallas office for customer-facing teams and part of its science organization.",
+          "The company said its technical organization remains in the Seattle area.",
+          "The company page describes Auger as an autonomous operating system for supply-chain operations.",
+          "The fetched profile metadata still listed Bellevue as headquarters."
+        ],
+        "fetched_at_utc": "2026-09-08T14:37:05Z"
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "The two-city plan assigns different work to different labor markets instead of treating the move as a symbolic headquarters swap.",
+      "Dallas has a named office, identified role families, two independently reported staffing milestones, and no reported state or local incentive dependency.",
+      "Bellevue remains the large technical base, reducing the risk of discarding the engineering organization already built there."
+    ],
+    "evidence_against": [
+      "The staffing plan is still a forecast, and the two independent reports describe different starting counts and growth horizons.",
+      "Auger's fetched LinkedIn profile metadata still listed Bellevue as headquarters even though the company posted about the Dallas opening and linked both relocation stories.",
+      "The fetched sources do not yet show whether splitting customer, science, and technical teams across two cities improves execution or recreates the coordination cost Auger says its product removes."
+    ],
+    "structural_read": "This is less a simple headquarters relocation than a division of labor. Clark is concentrating customer access and applied supply-chain talent in Dallas while keeping the engineering system in Bellevue. The decision tests whether an AI company can organize around two distinct labor markets without creating a new internal coordination layer.",
+    "forward_implication": "If the Dallas hiring and role split become real, North Texas gains an operating center for applied supply-chain AI rather than a mailing address. If the public headquarters label, staffing, and science roles do not converge, the move will have outrun the organization behind it.",
+    "conflict_screen": "clear",
+    "conflict_screen_note": "No payment, sponsorship, employment, customer, investor, or editorial relationship was supplied or identified. Company product claims are attributed and are not treated as measured performance."
+  },
+  "required_post_phrases": [
+    "Dave Clark",
+    "move Auger's headquarters to Dallas"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Auger's current company page identifies Dave Clark as founder and CEO.",
+      "source_urls": [
+        "https://auger.com/about/"
+      ]
+    },
+    {
+      "claim": "D Magazine reported on August 10th, 2026 that Auger's headquarters was moving to Dallas.",
+      "source_urls": [
+        "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/"
+      ]
+    },
+    {
+      "claim": "Clark told D Magazine that Auger started its technical organization in the Seattle area and chose Dallas for the go-to-market and customer-management phase.",
+      "source_urls": [
+        "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/"
+      ]
+    },
+    {
+      "claim": "GeekWire independently reported that Auger moved its headquarters to Dallas while retaining and expanding a major Bellevue engineering office.",
+      "source_urls": [
+        "https://www.geekwire.com/2026/this-former-amazon-exec-is-moving-his-startups-hq-to-texas-and-he-has-a-few-notes-for-seattle/"
+      ]
+    },
+    {
+      "claim": "Auger's company update says the Dallas office will house customer-facing teams and part of its science organization while the technical organization remains in Seattle.",
+      "source_urls": [
+        "https://www.linkedin.com/company/augerinc"
+      ]
+    },
+    {
+      "claim": "D Magazine reported that the North Dallas headquarters would open with about a dozen employees and grow to roughly 30 by the end of 2026, mainly in go-to-market and solutions roles.",
+      "source_urls": [
+        "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/"
+      ]
+    },
+    {
+      "claim": "GeekWire reported about 15 Dallas employees and a plan to add another 20 to 30 by the middle of 2027.",
+      "source_urls": [
+        "https://www.geekwire.com/2026/this-former-amazon-exec-is-moving-his-startups-hq-to-texas-and-he-has-a-few-notes-for-seattle/"
+      ]
+    },
+    {
+      "claim": "D Magazine reported that Auger did not seek state or local incentives for the relocation.",
+      "source_urls": [
+        "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/",
+        "https://www.geekwire.com/2026/this-former-amazon-exec-is-moving-his-startups-hq-to-texas-and-he-has-a-few-notes-for-seattle/"
+      ]
+    },
+    {
+      "claim": "Auger says it builds an autonomous operating system for supply chains, and D Magazine reports that its AI can make and execute routine inventory, vendor, and shipping decisions.",
+      "source_urls": [
+        "https://auger.com/",
+        "https://www.dmagazine.com/business-economy/2026/08/dave-and-leigh-anne-clark-are-back-in-dallas-auger/"
+      ]
+    },
+    {
+      "claim": "The fetched Auger LinkedIn profile metadata still listed Bellevue as headquarters while the company update announced the Dallas office and linked the relocation reports.",
+      "source_urls": [
+        "https://www.linkedin.com/company/augerinc"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "Auger's current About page and both independent interviews identify Dave Clark as founder and CEO.",
+    "recent_decision": "The relocation was reported and explained on August 10th and August 12th, 2026, inside the 60-day window.",
+    "decision_owner": "Clark gave two direct interviews explaining the chosen two-city structure and the talent logic behind it.",
+    "texas_ai_consequence": "Dallas becomes the headquarters and base for customer-facing and some science roles at an applied supply-chain AI company, with measurable staffing targets.",
+    "primary_source": "D Magazine's complete original interview with the decision owner was fetched in this run.",
+    "independent_corroboration": "GeekWire's separate original interview and reporting were fetched and independently corroborate the relocation, staffing, and retained Bellevue operation.",
+    "position_or_accountability_read": "The analysis tests the stated division of labor against actual staffing, public headquarters metadata, and cross-office execution.",
+    "not_recent_repeat": "History scan lists only Joydeep Biswas, Noah Schochet, and Leann Kidd; Clark and this decision have not been selected in a prior run.",
+    "conflict_clear": "No editorial relationship or conflict was identified, and company product claims remain attributed.",
+    "political_neutrality": "The post covers a private business decision and omits the separate political claims in the GeekWire interview."
+  },
+  "challenge_pass": [
+    "Clark's current founder and CEO role was checked against Auger's current About page and both independent interviews.",
+    "The decision is a completed headquarters relocation with an open Dallas office, not only an aspiration.",
+    "The August 10th date is the public disclosure date supported by the first original report, not an invented internal deliberation date.",
+    "Clark's ownership is supported by his direct explanation of the chosen operating split and by GeekWire's separate interview.",
+    "The AI nexus is Auger's operating product, not a generic claim that every supply-chain software company is an AI company.",
+    "The alternative is bounded to keeping the headquarters and commercial buildout with the established Seattle-area technical operation.",
+    "The two independent outlets conducted separate interviews and are not company releases or syndicated copies.",
+    "The fetched company profile's Bellevue headquarters metadata is preserved as a gap rather than ignored.",
+    "The differing Dallas staffing baselines and horizons are both disclosed rather than blended into one unsupported promise.",
+    "The selected subject and decision clear the 21-day cooldown and permanent subject-decision history block.",
+    "Political commentary in the GeekWire interview is excluded because it is not necessary to assess the business execution choice."
+  ],
+  "visual_facts": {
+    "setting": "A North Dallas logistics operations floor after dusk, interpreted as an editorial cutaway rather than a specific Auger office",
+    "objects": [
+      "warehouse aisles",
+      "freight pallets",
+      "route lines",
+      "a central switching junction",
+      "distant glass office geometry"
+    ],
+    "image_is_metaphor": true,
+    "constraints": "No people or likenesses, no company or customer logos, no readable text, no interface, no map labels, and no claim that the pictured interior is Auger's actual office."
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Anthropic Central Texas infrastructure owner not publicly identified",
+      "decision": "Pursue an additional data-center campus near Cedar Creek in Bastrop County.",
+      "drop_reason": "The project was still described as under discussion and the fetched reporting did not identify a named human who made or operationally owns the Texas site decision.",
+      "sources": [
+        {
+          "url": "https://www.axios.com/local/austin/2026/08/26/anthropic-texas-data-centers-bastrop-rockdale",
+          "title": "Anthropic looks to build data centers in Texas",
+          "publisher": "Axios Austin"
+        }
+      ]
+    },
+    {
+      "subject": "Kerri Holt",
+      "decision": "Sponsor Houston ISD's proposed artificial-intelligence board policy for second reading.",
+      "drop_reason": "The agenda record names a sponsor but records no final action and does not establish that Holt made or operationally owns the district policy decision.",
+      "sources": [
+        {
+          "url": "https://houstonisd.legistar.com/LegislationDetail.aspx?GUID=F8831844-4095-44CD-9942-D532E4688A17&ID=8165352&Options=&Search=",
+          "title": "Approval To Establish Board Policy CQD(LOCAL), Technology Resources: Artificial Intelligence, Second Reading",
+          "publisher": "Houston Independent School District Legistar"
+        }
+      ]
+    },
+    {
+      "subject": "Volkan Isler",
+      "decision": "Lead SAFE-BOLT and build a specialized testbed for force-aware bimanual robots in scientific laboratories.",
+      "drop_reason": "The DOE award record and UT page establish a real research program, but the Clark decision has stronger independent reporting, a clearer completed operating choice, and nearer Texas staffing checks.",
+      "sources": [
+        {
+          "url": "https://www.cs.utexas.edu/news/2026/ut-computer-science-wins-doe-genesis-mission-award-bring-autonomous-robotics-scientific",
+          "title": "UT Computer Science Wins DOE Genesis Mission Award to Bring Autonomous Robotics to Scientific Research",
+          "publisher": "The University of Texas at Austin Department of Computer Science"
+        },
+        {
+          "url": "https://www.energy.gov/documents/genesis-mission-rfa-awards-list",
+          "title": "Genesis Mission RFA Awards List",
+          "publisher": "U.S. Department of Energy"
+        }
+      ]
+    },
+    {
+      "subject": "Ben Lamm",
+      "decision": "Raise new capital for Astromech's predictive-biology AI platform.",
+      "drop_reason": "Independent reports described the financing, but no fetched company filing or complete subject-controlled financing announcement established the transaction as primary evidence.",
+      "sources": [
+        {
+          "url": "https://www.dmagazine.com/business-economy/2026/08/ben-lamm-astromech-new-valuation-raise/",
+          "title": "Ben Lamm's Other AI Tech Startup Valued at $3.8 Billion After Latest Raise",
+          "publisher": "D Magazine"
+        },
+        {
+          "url": "https://siliconangle.com/2026/08/20/astromech-raises-20m-to-build-a-biological-operating-system-that-can-forecast-evolutionary-change/",
+          "title": "Astromech raises $20M to build a biological operating system that can forecast evolutionary change",
+          "publisher": "SiliconANGLE"
+        }
+      ]
+    }
+  ]
+}

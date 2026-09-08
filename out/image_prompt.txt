@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: portray a company splitting one operating system across two complementary talent centers through a single physical freight-switching junction that sends warm routes toward a customer hub while cool routes continue toward an engineering workshop
+Scene/backdrop: a North Dallas logistics operations floor after dusk, rendered as an invented editorial cutaway with warehouse aisles, freight pallets, route markings, a distant glass office volume, and restrained industrial geometry
+Subject: one central mechanical routing junction organizing multiple physical supply-chain paths without screens or interface graphics
+Style/medium: sophisticated cut-paper editorial collage with screenprinted ink texture, shallow architectural depth, crisp geometric shadows, and visible paper fibers
+Composition/framing: one low central focal junction, clear branching paths through the middle, generous dark quiet bands across the top and bottom for later typography, no important detail near the edges
+Lighting/mood: measured dusk light with calm operational focus, credible and analytical rather than triumphant or dramatic
+Color palette: night #08060F, deep #0F0C1C, limestone #EDE6D6, dust #C9B393, dusk gold #E0956A, bluebonnet #4E5FA8
+Constraints: square, no words, no letters, no numbers, no logos, no watermarks, no UI, no maps, no people, and no generated portrait or likeness of Dave Clark
+Avoid: boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, generic glowing brains, circuit-board faces, handshakes, red decoration, futuristic holograms, readable labels, brand marks, and literal company offices

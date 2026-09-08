@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "editor_cycle": 1,
+  "score_cycle": 1,
+  "threshold": 8.0,
+  "ship": true,
+  "hard_failures": [],
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "passed": true,
+      "notes": "Clark's current founder and CEO role and the North Dallas headquarters decision appear in the copy and fetched sources."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "passed": true,
+      "notes": "The August 10th disclosure is inside the 60-day window, and Clark explained the choice in two separate interviews."
+    },
+    {
+      "name": "primary_plus_independent",
+      "passed": true,
+      "notes": "D Magazine's original decision-owner interview is paired with a separately reported GeekWire interview and a subject-controlled company update."
+    },
+    {
+      "name": "fact_trace",
+      "passed": true,
+      "notes": "Every factual assertion and numeral maps to the dossier, and the deterministic post gate passes."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "passed": true,
+      "notes": "Biography is limited to one role sentence; the copy tests the operating split, staffing claims, and public metadata."
+    },
+    {
+      "name": "political_neutrality",
+      "passed": true,
+      "notes": "The post covers a private operating decision and excludes the unrelated political commentary in the GeekWire interview."
+    },
+    {
+      "name": "linkedin_constraints",
+      "passed": true,
+      "notes": "The report records 379 body words, 2,426 total characters, a 158-character hook, and exactly three approved hashtags."
+    },
+    {
+      "name": "house_style",
+      "passed": true,
+      "notes": "The deterministic gate found no forbidden punctuation, first person, emoji, links, or banned phrasing."
+    },
+    {
+      "name": "no_invented_quotes",
+      "passed": true,
+      "notes": "The published copy contains no direct quotations."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 9.0,
+      "notes": "The opening names Clark, the exact decision, its date, and the two-city operating tension."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 8.5,
+      "notes": "The move places an applied supply-chain AI headquarters and planned customer and science hiring in North Dallas."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9.2,
+      "notes": "Clark's current role and decision ownership are current, direct, and independently corroborated."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 9.0,
+      "notes": "Two independent outlets conducted separate interviews, and the company update confirms the operating split while exposing a metadata lag."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 9.2,
+      "notes": "The post identifies the move as a division of labor across two talent markets and names the new coordination risk."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 9.0,
+      "notes": "The year-end check joins staffing, role mix, and public headquarters metadata in one measurable test."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 9.0,
+      "notes": "The copy is place-specific, plainspoken, evidence-led, and focused on the decision rather than biography."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 9.0,
+      "notes": "Short paragraphs carry one claim or analytical step and remain comfortably inside platform limits."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 9.0,
+      "notes": "The final question asks which year-end evidence would distinguish an operating move from an address change."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 8.8,
+      "notes": "The staffing discrepancy and stale company metadata are visible, and no product or relocation outcome is treated as proven."
+    }
+  ],
+  "weighted_total": 8.964
+}
