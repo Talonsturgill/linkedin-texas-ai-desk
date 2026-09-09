@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: Create an editorial metaphor for outright land control arriving before an AI campus exists. Show one caliche-gold rectangular parcel locking like a keystone into a dark industrial network, with the parcel edge crisp and owned while the future compute side remains deliberately incomplete.
+Scene/backdrop: A stylized aerial landscape near Rockdale in Milam County, Texas, with an undeveloped greenfield parcel beside an established transmission corridor and restrained substation geometry. Keep the horizon low and abstract rather than depicting a literal site plan.
+Subject: The acquired parcel is the single focal point. One side connects cleanly to existing energy infrastructure. The other side dissolves into a sparse modular grid that suggests optional future compute without showing a completed data center.
+Style/medium: Hand-cut paper relief combined with screenprinted editorial inks, tactile fibers, precise geometric edges, subtle registration texture, sophisticated magazine illustration rather than photorealism.
+Composition/framing: Square composition with one strong central parcel and diagonal energy route, clear depth, no people, and generous quiet dark bands at the top and bottom for later deterministic typography.
+Lighting/mood: Analytical dusk light with calm tension, conveying a disciplined capital commitment whose operating outcome remains unproved.
+Color palette: Night black, deep violet, caliche, dust, dusk gold, and one restrained bluebonnet accent.
+Constraints: Square, no words, no letters, no numbers, no logos, no watermarks, no user interface, no generated portrait or likeness, no literal site map, and no unsupported building, cooling system, or infrastructure claim.
+Avoid: Boots, cowboy hats, longhorns, tourist Texas silhouettes, oil derricks, generic glowing brains, circuit-board faces, server racks as spectacle, handshakes, people, decorative red, corporate marks, readable signage, and a finished campus.
