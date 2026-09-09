@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-09",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Michael Potter",
+    "role": "Chief Financial Officer",
+    "organization": "Bitdeer Technologies Group",
+    "role_category": "operator",
+    "texas_tie": "The finance executive publicly responsible for explaining Bitdeer's completed land-control decision beside its Rockdale facility in Milam County",
+    "place_label": "MILAM COUNTY",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://bitdeer.gcs-web.com/management-team",
+      "title": "Management Team",
+      "publisher": "Bitdeer Technologies Group"
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Bitdeer completed a fee simple purchase of approximately 200 acres of greenfield property beside its existing Rockdale facility in Milam County for approximately $100 million in cash, giving the company outright site control for a possible AI and high-performance computing expansion while it maintains existing Bitcoin mining operations.",
+    "decision_anchor": "fee simple purchase of 200 acres in Milam County",
+    "date": "2026-09-01",
+    "owner_evidence": "Bitdeer's current management page identifies Michael Potter as chief financial officer. The acquisition exhibit filed with the SEC names Potter as the executive explaining the completed cash purchase, its financing and development logic, the alternative lease-renewal risk, and the choice to put powered land under direct company control. The sources do not disclose the company's internal approval process, so the dossier treats Potter as the public operational owner of the finance and site-control case rather than claiming that he approved the transaction alone.",
+    "alternative_available": "Continue relying on leased land near the existing Rockdale operation and accept renewal risk, or defer outright site control until an AI tenant, financing package, or additional power allocation was secured. Potter instead defended a completed cash purchase that gives Bitdeer fee simple control before those later milestones are disclosed.",
+    "ai_nexus": "The SEC-filed exhibit says the parcel is expected to support development and financing of AI and high-performance computing infrastructure alongside Bitdeer's existing operations. It also says the company builds AI computational infrastructure and offers cloud capabilities for customers with high demand for artificial intelligence.",
+    "texas_consequence": "The transaction places approximately 200 more acres under Bitdeer's control beside its Rockdale facility in Milam County. The company says the combined sites currently feature approximately 563 MW of interconnected grid capacity, existing plans expected to scale to 742 MW, and a dedicated water supply. The immediate consequence is control over an infrastructure option; the sources do not yet show a tenant, construction start, new power allocation, or operating AI data center on the new parcel.",
+    "next_check": "The next Bitdeer SEC filing or monthly production and operations update should be checked for a named AI tenant, project financing, a construction milestone, an additional power allocation, or a parcel-specific development schedule at Rockdale.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://bitdeer.gcs-web.com/node/9796/html",
+      "title": "Form 6-K and Exhibit 99.1, Bitdeer Announces Acquisition of 200 Acres Near Rockdale Facility in Milam County, Texas to Support AI/HPC Infrastructure Development",
+      "publisher": "Bitdeer Technologies Group filing with the U.S. Securities and Exchange Commission",
+      "published_at": "2026-09-02",
+      "source_type": "primary_regulatory_filing",
+      "claims_supported": [
+        "Bitdeer completed the approximately $100 million cash purchase of approximately 200 acres in Milam County on September 1st, 2026.",
+        "The parcel is near Bitdeer's existing Rockdale facility and is expected to support AI and high-performance computing infrastructure.",
+        "The Milam County sites have approximately 563 MW of interconnected capacity, existing plans expected to scale to 742 MW, and a dedicated water supply.",
+        "Outright ownership removes lease-renewal risk and permits existing Bitcoin mining to continue while the new property is developed.",
+        "The filing contains forward-looking qualifications for development plans and additional power capacity.",
+        "Michael Potter is identified as Bitdeer's chief financial officer and explains the finance and site-control rationale."
+      ],
+      "fetched_at_utc": "2026-09-09T11:12:55Z"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/",
+        "title": "Bitdeer buys 200 acres in Milam County, Texas, to expand AI and HPC data center",
+        "publisher": "Data Center Dynamics",
+        "published_at": "2026-09-04",
+        "source_type": "independent_reporting",
+        "independent_of_subject": true,
+        "independence_note": "Data Center Dynamics is an editorial trade publication independent of Bitdeer. Matthew Gooding separately reported the cash purchase, the former Alcoa property context, the existing Rockdale operation, capacity figures, and Potter's stated lease-risk rationale.",
+        "claims_supported": [
+          "Bitdeer paid $100 million for a 200-acre parcel beside its Rockdale data center.",
+          "The parcel was formerly part of a larger Alcoa aluminum smelting property.",
+          "Bitdeer described the parcel as supporting AI and high-performance computing expansion.",
+          "The existing and planned Texas capacity figures are 563 MW and 742 MW.",
+          "Michael Potter is Bitdeer's chief financial officer and publicly framed outright ownership as eliminating lease-renewal risk."
+        ],
+        "fetched_at_utc": "2026-09-09T11:12:55Z"
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "The completed cash purchase converts lease-renewal risk into fee simple site control before development financing is sought.",
+      "The parcel sits beside an existing Rockdale operation with interconnected capacity and established transmission and substation infrastructure.",
+      "Bitdeer reported the acquisition in a signed SEC filing, making the transaction and its stated rationale part of the company's investor disclosure record."
+    ],
+    "evidence_against": [
+      "The filing does not identify an AI tenant, financing package, construction start, new power allocation, or operating date for an AI facility on the parcel.",
+      "The 742 MW figure combines existing and pipeline capacity and must not be presented as current operating AI load.",
+      "The company discloses a dedicated water supply but not its volume, cooling design, or parcel-specific water demand."
+    ],
+    "structural_read": "The transaction buys control over an infrastructure option rather than a finished AI campus. Potter's case is that fee simple land beside an already connected industrial site improves financeability and scheduling. The unresolved test is whether that optionality becomes a tenant-backed, powered project rather than land banking beside a cryptomining operation.",
+    "forward_implication": "If a tenant, financing, power allocation, and construction milestone follow, the purchase will look like disciplined predevelopment for Texas AI infrastructure. If those disclosures do not follow, the transaction remains expensive control over possible future capacity rather than operating compute.",
+    "conflict_screen": "clear",
+    "conflict_screen_note": "No payment, sponsorship, employment, customer, investor, or editorial relationship was supplied or identified. Company claims about future development and power are labeled as plans, not measured results."
+  },
+  "required_post_phrases": [
+    "Michael Potter",
+    "fee simple purchase of 200 acres in Milam County"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Bitdeer's current management page identifies Michael Potter as chief financial officer.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/management-team"
+      ]
+    },
+    {
+      "claim": "Bitdeer's September 2nd, 2026 Form 6-K includes a September 1st exhibit reporting the completed acquisition.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html"
+      ]
+    },
+    {
+      "claim": "Bitdeer completed an approximately $100 million cash purchase of approximately 200 acres of greenfield property in Milam County.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html",
+        "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/"
+      ]
+    },
+    {
+      "claim": "The acquired parcel is near Bitdeer's existing Rockdale facility and is expected to support AI and high-performance computing infrastructure.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html",
+        "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/"
+      ]
+    },
+    {
+      "claim": "The company reports approximately 563 MW of interconnected capacity at its Milam County sites with existing plans expected to scale to 742 MW.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html",
+        "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/"
+      ]
+    },
+    {
+      "claim": "The company reports a dedicated water supply at the Milam County sites but does not disclose volume or cooling design in the acquisition filing.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html"
+      ]
+    },
+    {
+      "claim": "Potter said outright ownership eliminates the renewal risk associated with a lease and permits existing Bitcoin mining to continue during development.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html",
+        "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/"
+      ]
+    },
+    {
+      "claim": "Data Center Dynamics reports that the parcel was formerly part of a larger Alcoa aluminum smelting property.",
+      "source_urls": [
+        "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/"
+      ]
+    },
+    {
+      "claim": "Neither fetched source identifies an AI tenant, parcel-specific financing, construction start, new power allocation, or operating date for an AI facility on the new parcel.",
+      "source_urls": [
+        "https://bitdeer.gcs-web.com/node/9796/html",
+        "https://www.datacenterdynamics.com/en/news/bitdeer-buys-200-acres-in-milam-county-texas-to-expand-ai-and-hpc-data-center/"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "Bitdeer's current management page and acquisition filing identify Michael Potter as chief financial officer.",
+    "recent_decision": "The acquisition exhibit is dated September 1st, 2026, eight days before the run date and inside the 60-day window.",
+    "decision_owner": "Potter is the current finance executive named in the SEC-filed acquisition exhibit to explain the completed cash purchase and its land-control rationale. The dossier does not claim undisclosed sole approval authority.",
+    "texas_ai_consequence": "The purchase secures land beside the Rockdale facility for possible AI and high-performance computing development in Milam County, with disclosed grid and water context.",
+    "primary_source": "The signed Form 6-K and acquisition exhibit were fetched in this run.",
+    "independent_corroboration": "Data Center Dynamics independently reported the transaction, property history, facility context, capacity figures, and Potter's rationale.",
+    "position_or_accountability_read": "The analysis separates completed site control from the still-undisclosed tenant, financing, construction, power, and operating milestones.",
+    "not_recent_repeat": "The history scan lists Dave Clark, Leann Kidd, Noah Schochet, and Joydeep Biswas. Potter and this acquisition do not appear in prior runs.",
+    "conflict_clear": "No editorial relationship was identified, and forward-looking company claims remain labeled as plans.",
+    "political_neutrality": "The selected decision is a private infrastructure transaction and the post contains no electoral or partisan advocacy."
+  },
+  "challenge_pass": [
+    "Potter's current chief financial officer role was checked against Bitdeer's management page and the SEC-filed acquisition exhibit.",
+    "The transaction is a completed cash acquisition, not only a plan or announcement.",
+    "The decision date comes from the dated acquisition exhibit and falls inside the 60-day window.",
+    "The owner claim is limited to Potter's public operational ownership of the finance and site-control case and does not invent internal approval authority.",
+    "The AI nexus is stated in the SEC-filed purpose for the property rather than inferred from generic data-center demand.",
+    "The real alternative is grounded in Potter's explicit statement that outright ownership removes lease-renewal risk.",
+    "Data Center Dynamics is independent of Bitdeer even though it attributes company claims to Bitdeer's filing.",
+    "The 742 MW figure is labeled as existing and pipeline capacity rather than operating AI load.",
+    "The absence of a tenant, financing package, construction start, new power allocation, and operating date is preserved as an evidence gap.",
+    "The selected subject and decision clear the 21-day cooldown and permanent subject-decision blocklist.",
+    "No public-policy or electoral judgment is required for the execution assessment."
+  ],
+  "visual_facts": {
+    "setting": "A stylized aerial industrial landscape near Rockdale in Milam County, using the acquired greenfield parcel and adjacent transmission infrastructure as a decision metaphor rather than a literal site rendering",
+    "objects": [
+      "a caliche-toned rectangular parcel",
+      "an established transmission corridor",
+      "substation geometry",
+      "a dark modular compute grid",
+      "one boundary line locking into the existing industrial network"
+    ],
+    "image_is_metaphor": true,
+    "constraints": "No people or likenesses, no Bitdeer or Alcoa logos, no readable text, no literal site plan, no unsupported cooling system, and no claim that the depicted structures exist on the new parcel."
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Baker Shogry",
+      "decision": "Raise a $46 million Series A for Light and expand the retail-electricity platform beyond Texas.",
+      "drop_reason": "The fetched independent report says Light had only begun talking with data-center developers. It did not establish a completed AI decision or a concrete Texas AI consequence, and no fetched primary financing announcement closed that gap.",
+      "sources": [
+        {
+          "url": "https://www.axios.com/2026/09/01/light-power-series-a-energy-demand-renewables",
+          "title": "Power upstart Light snags $46 million for expansion",
+          "publisher": "Axios"
+        }
+      ]
+    },
+    {
+      "subject": "Greg Abbott",
+      "decision": "Direct the PUCT and ERCOT to audit data centers in the interconnection process before projects advance.",
+      "drop_reason": "The public decision has primary and independent support, but it is entangled with an active gubernatorial campaign and requires neutral-accountability treatment. Potter's newer completed transaction offers a tighter operational unit and a more immediate test of site-control execution without electoral context.",
+      "sources": [
+        {
+          "url": "https://gov.texas.gov/news/post/governor-abbott-directs-comprehensive-data-center-audit",
+          "title": "Governor Abbott Directs Comprehensive Data Center Audit",
+          "publisher": "Office of the Texas Governor"
+        },
+        {
+          "url": "https://www.texastribune.org/2026/08/14/texas-data-center-approval-pause-ercot-power-grid/",
+          "title": "Texas will audit up to 300 projects, mostly data centers, after Gov. Greg Abbott's order",
+          "publisher": "The Texas Tribune"
+        }
+      ]
+    },
+    {
+      "subject": "Rebecca Richards-Kortum",
+      "decision": "Use new Hill Prizes funding to optimize Access BreastDX and conduct translational studies for rural clinics and mobile mammography programs.",
+      "drop_reason": "Rice News supplied a specific research decision and Texas consequence, but the only second fetched account was a republication of Rice's release through EurekAlert and therefore did not satisfy independent corroboration.",
+      "sources": [
+        {
+          "url": "https://news.rice.edu/news/2026/rice360-project-aims-bring-faster-breast-cancer-diagnosis-rural-texas",
+          "title": "Rice360 project aims to bring faster breast cancer diagnosis to rural Texas",
+          "publisher": "Rice University"
+        },
+        {
+          "url": "https://www.eurekalert.org/news-releases/1141459",
+          "title": "Rice360 project aims to bring faster breast cancer diagnosis to rural Texas",
+          "publisher": "EurekAlert, republishing Rice University"
+        }
+      ]
+    },
+    {
+      "subject": "John Belizaire",
+      "decision": "Complete Soluna's purchase of 397 acres in Briscoe County for the planned Project Dorothy 3 AI computing campus.",
+      "drop_reason": "The transaction has a named CEO, a completed primary source, and independent trade reporting, but the September 1st Bitdeer purchase is newer and has the stronger investor-filing trail for evaluating a completed capital and site-control decision.",
+      "sources": [
+        {
+          "url": "https://www.solunacomputing.com/news/dorothy-3-land-purchase/",
+          "title": "Soluna Closes Purchase of 397 Acres for Project Dorothy",
+          "publisher": "Soluna Holdings"
+        },
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/soluna-acquires-397-acre-plot-in-briscoe-county-texas-for-project-dorothy-3-data-center/",
+          "title": "Soluna acquires 397-acre plot in Briscoe County, Texas, for Project Dorothy 3 data center",
+          "publisher": "Data Center Dynamics"
+        }
+      ]
+    }
+  ]
+}
