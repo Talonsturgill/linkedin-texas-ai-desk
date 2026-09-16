@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-16",
+  "score_cycle": 1,
+  "threshold": 8.0,
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "pass": true,
+      "notes": "Pat Becker, co-founder, TAR, Austin and West Texas explicit."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "pass": true,
+      "notes": "September 10th, 2026 allocation; public co-founder explanation supports shared operational ownership."
+    },
+    {
+      "name": "primary_plus_independent",
+      "pass": true,
+      "notes": "Company release plus Catherine Boudreau original email interview."
+    },
+    {
+      "name": "fact_trace",
+      "pass": true,
+      "notes": "Post claim map and eight verified fact records; all numerals sourced."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "pass": true,
+      "notes": "One biography sentence; conditional execution assessment and evidence gaps."
+    },
+    {
+      "name": "political_neutrality",
+      "pass": true,
+      "notes": "No electoral subject, endorsement or preferred policy position."
+    },
+    {
+      "name": "linkedin_constraints",
+      "pass": true,
+      "notes": "Deterministic check passed."
+    },
+    {
+      "name": "house_style",
+      "pass": true,
+      "notes": "Deterministic check passed."
+    },
+    {
+      "name": "no_invented_quotes",
+      "pass": true,
+      "notes": "No quotations in final copy."
+    }
+  ],
+  "hard_failures": [],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 8.8,
+      "notes": "Decision-led hook names the person, place and test."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 9.1,
+      "notes": "Specific West Texas manufacturing and AI power consequence."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9.2,
+      "notes": "Uses verified co-founder title and announcement date; no sole-signatory claim."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 9.0,
+      "notes": "Fetched company release and original independent email reporting; operations are unverified."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 9.0,
+      "notes": "Explains handoffs versus concentrated execution risk and solar/storage versus gas constraints."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 9.2,
+      "notes": "September plant milestone plus explicit proposed field-performance checks."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 9.0,
+      "notes": "Plain, place-specific and proportionate; no unsupported local quantities."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 8.9,
+      "notes": "381 words, short paragraphs and 2326 total characters."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 8.8,
+      "notes": "Asks which operating evidence the company should publish first."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 9.1,
+      "notes": "Clearly separates funding, build target and proof; preserves unnamed customer and unanswered pipeline."
+    }
+  ],
+  "weighted_total": 9.031,
+  "ship": true
+}

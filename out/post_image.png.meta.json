@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 16TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "Off-grid power needs proof",
+  "place": "WEST TEXAS",
+  "coordinates": "",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "512009c3ed052aba973aa3a14d9ebc05680dfac9259bbe80c12a09d0a8da7ca0",
+  "prompt_sha256": "5662f3123c8a26e54d8457edd5e717510aa04e9c3bf70798a29a2ecde69237c2",
+  "rendered_at_utc": "2026-09-16T08:08:50.694714+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}

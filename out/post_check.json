@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 381,
+    "total_chars": 2326,
+    "hook_chars": 151,
+    "hashtags": [
+      "#TexasAI",
+      "#AIInfrastructure",
+      "#TexasManufacturing"
+    ],
+    "tag_line": "#TexasAI #AIInfrastructure #TexasManufacturing"
+  }
+}

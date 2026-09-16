@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-16",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Pat Becker",
+    "role": "Co-founder",
+    "organization": "TAR",
+    "role_category": "founder",
+    "texas_tie": "Austin headquarters and West Texas power manufacturing and deployment",
+    "place_label": "WEST TEXAS",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://markets.financialcontent.com/prnews.pressrelease/article/bizwire-2026-9-10-tar-raises-120-million-series-a-at-a-1-billion-valuation-led-by-spark-capital-to-build-off-grid-power-for-ai",
+      "title": "TAR Raises $120 Million Series A to Build Off-Grid Power for AI",
+      "publisher": "TAR via Business Wire, syndicated by FinancialContent",
+      "published_at": "2026-09-10",
+      "source_type": "primary",
+      "independent_of_subject": false,
+      "fetched_at": "2026-09-16",
+      "claims_supported": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "provenance": "Company-authored release. Syndication does not make it independent. Original Business Wire page did not open; this complete company-authored Business Wire syndication was fetched."
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "TAR announced funding to expand its internally managed off-grid AI power delivery and West Texas manufacturing.",
+    "decision_anchor": "off-grid AI power",
+    "date": "2026-09-10",
+    "owner_evidence": "F3: Becker personally explains the delivery model; co-founder accountability is shared, not exclusive.",
+    "alternative_available": "F3: distribute delivery stages across separate firms. F7: competing off-grid builders rely more heavily on gas. Neither is presented as a rejected bid.",
+    "ai_nexus": "F2-F4: power and manufacturing for AI data centers.",
+    "texas_consequence": "F1-F4: West Texas manufacturing/logistics and power deployment, with Austin headquarters growth. No county, local hiring count or customer identity established.",
+    "next_check": "F5: September factory completion, followed by editor-proposed reporting on field operation, uptime, gas use and delivered cost. No customer commissioning date is claimed.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://markets.financialcontent.com/prnews.pressrelease/article/bizwire-2026-9-10-tar-raises-120-million-series-a-at-a-1-billion-valuation-led-by-spark-capital-to-build-off-grid-power-for-ai",
+      "title": "TAR Raises $120 Million Series A to Build Off-Grid Power for AI",
+      "publisher": "TAR via Business Wire, syndicated by FinancialContent",
+      "published_at": "2026-09-10",
+      "source_type": "primary",
+      "independent_of_subject": false,
+      "fetched_at": "2026-09-16",
+      "claims_supported": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "provenance": "Company-authored release. Syndication does not make it independent. Original Business Wire page did not open; this complete company-authored Business Wire syndication was fetched."
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.latitudemedia.com/news/tar-aims-to-build-off-grid-power-for-data-centers-in-just-six-months/",
+        "title": "TAR aims to build off-grid power for data centers in just six months",
+        "publisher": "Latitude Media",
+        "published_at": "2026-09-14",
+        "source_type": "independent_reporting",
+        "independent_of_subject": true,
+        "fetched_at": "2026-09-16",
+        "claims_supported": [
+          "F5",
+          "F6",
+          "F7",
+          "F8"
+        ],
+        "provenance": "Catherine Boudreau conducted fresh email interviews, tested execution assumptions and reported unanswered pipeline questions. Independently edited reporting, not a release reprint; founder performance claims remain attributed."
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "F3: one accountable delivery chain could reduce coordination delays.",
+      "F4-F5: a factory milestone makes part of the plan testable soon."
+    ],
+    "evidence_against": [
+      "F7-F8: land/capital requirements and equipment constraints remain.",
+      "F6: customer identity and future pipeline remain undisclosed."
+    ],
+    "structural_read": "Editorial inference: integrating delivery may remove handoffs while concentrating execution risk. Raising capital does not verify performance.",
+    "forward_implication": "Editorial test: distinguish factory completion from customer service performance. Request field evidence rather than treating a build target as achieved.",
+    "conflict_screen": "clear",
+    "conflict_screen_note": "No sponsorship, payment, affiliate arrangement or editorial relationship with the subject is disclosed in the repository contracts or this task; sources are classified by control. Coverage concerns private execution, with no investment or political recommendation."
+  },
+  "required_post_phrases": [
+    "Pat Becker",
+    "off-grid AI power",
+    "West Texas"
+  ],
+  "verified_facts": [
+    {
+      "id": "F1",
+      "claim": "Pat Becker is a TAR co-founder. TAR is headquartered in Austin, with manufacturing in West Texas.",
+      "source_urls": [
+        "https://markets.financialcontent.com/prnews.pressrelease/article/bizwire-2026-9-10-tar-raises-120-million-series-a-at-a-1-billion-valuation-led-by-spark-capital-to-build-off-grid-power-for-ai"
+      ]
+    },
+    {
+      "id": "F2",
+      "claim": "On September 10th, 2026, TAR announced a $120 million Series A led by Spark Capital for office growth, West Texas manufacturing/logistics expansion and ongoing deployments.",
+      "source_urls": [
+        "https://markets.financialcontent.com/prnews.pressrelease/article/bizwire-2026-9-10-tar-raises-120-million-series-a-at-a-1-billion-valuation-led-by-spark-capital-to-build-off-grid-power-for-ai"
+      ]
+    },
+    {
+      "id": "F3",
+      "claim": "TAR describes controlling site selection, design, procurement, construction, commissioning and operation, in place of coordinating those stages across third parties; Becker publicly explains this choice.",
+      "source_urls": [
+        "https://markets.financialcontent.com/prnews.pressrelease/article/bizwire-2026-9-10-tar-raises-120-million-series-a-at-a-1-billion-valuation-led-by-spark-capital-to-build-off-grid-power-for-ai"
+      ]
+    },
+    {
+      "id": "F4",
+      "claim": "The company says TAR Terminal One is being finished in West Texas and an AI cloud deployment is underway.",
+      "source_urls": [
+        "https://markets.financialcontent.com/prnews.pressrelease/article/bizwire-2026-9-10-tar-raises-120-million-series-a-at-a-1-billion-valuation-led-by-spark-capital-to-build-off-grid-power-for-ai"
+      ]
+    },
+    {
+      "id": "F5",
+      "claim": "The founders told Latitude they target builds in under six months; the first West Texas plant was expected to finish in September 2026.",
+      "source_urls": [
+        "https://www.latitudemedia.com/news/tar-aims-to-build-off-grid-power-for-data-centers-in-just-six-months/"
+      ]
+    },
+    {
+      "id": "F6",
+      "claim": "Latitude reports a West Texas cloud project whose customer remains unnamed; no future project pipeline was supplied in response to its questions.",
+      "source_urls": [
+        "https://www.latitudemedia.com/news/tar-aims-to-build-off-grid-power-for-data-centers-in-just-six-months/"
+      ]
+    },
+    {
+      "id": "F7",
+      "claim": "TAR plans excess solar and storage with emergency gas backup. The founders say the planned energy mix depends on location and sunlight. Existing competing off-grid projects use more gas.",
+      "source_urls": [
+        "https://www.latitudemedia.com/news/tar-aims-to-build-off-grid-power-for-data-centers-in-just-six-months/"
+      ]
+    },
+    {
+      "id": "F8",
+      "claim": "Latitude identifies the land/capital cost of extra renewables and continuing equipment lead times. Founders contrast this with fuel and pipeline exposure.",
+      "source_urls": [
+        "https://www.latitudemedia.com/news/tar-aims-to-build-off-grid-power-for-data-centers-in-just-six-months/"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "F1; co-founder title reverified in September sources.",
+    "recent_decision": "September 10 announcement is six days before the run. Earlier founding is not the selected action.",
+    "decision_owner": "F3; public explanation establishes operational ownership, without asserting Becker alone signed financing.",
+    "texas_ai_consequence": "F1-F4; location and AI use explicit.",
+    "primary_source": "Full company-authored release fetched, not a search snippet.",
+    "independent_corroboration": "Original Latitude email reporting; not company-controlled syndication.",
+    "position_or_accountability_read": "Mixed execution assessment distinguishes disclosed commitment, promised timing and missing operational proof.",
+    "not_recent_repeat": "Fresh scan of five remote profile branches contains neither Pat Becker nor TAR; no subject-decision repeat.",
+    "conflict_clear": "No disclosed editorial or commercial conflict found within available task evidence; no claim of exhaustive personal-interest knowledge.",
+    "political_neutrality": "No election, party, candidate, policy endorsement or investment recommendation."
+  },
+  "challenge_pass": {
+    "identity": "Verified co-founder, not assumed CEO.",
+    "decision_not_announcement_only": "Specific capital allocation and delivery model; announcement date used, not an invented closing date.",
+    "timing": "Six-day age in 60-day window.",
+    "texas_and_ai": "Explicit AI power deployment/manufacturing in West Texas; no invented county.",
+    "independence": "Fresh questions and answers plus missing-pipeline disclosure establish original reporting; operating results still unverified.",
+    "alternative": "Third-party coordination described in primary; gas-heavy designs documented by independent reporter.",
+    "repeat": "Fresh history checked from origin run branches.",
+    "neutrality": "Private operational tradeoff; no directional political judgment.",
+    "rejecting_editor_review": "Separate scout/editor found no material unsupported post claim. Planned gas mix wording clarified in F7; research-lane evidence finalized before commitment."
+  },
+  "visual_facts": {
+    "place": "West Texas, exact site undisclosed",
+    "supported_elements": [
+      "modular solar generation",
+      "battery storage",
+      "manufacturing and testing before deployment",
+      "AI data center power demand"
+    ],
+    "conceptual_only": "Illustrate a modular power unit leaving a factory test bay; do not depict an actual named site, logo or as-built facility.",
+    "omit": [
+      "unverified coordinates",
+      "specific county",
+      "portraits",
+      "installed-capacity numbers",
+      "claims of gas-free operation"
+    ]
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Chris Sestito",
+      "decision": "HiddenLayer September 2 funding for agent security",
+      "drop_reason": "Viable backup; TAR has a more specific Texas physical consequence and dated next check.",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/hiddenlayer-raises-100m-series-b-to-advance-trustworthy-ai-302867783.html",
+          "title": "HiddenLayer Series B announcement",
+          "publisher": "HiddenLayer via PR Newswire"
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+          "title": "HiddenLayer funding interview",
+          "publisher": "TechCrunch"
+        }
+      ]
+    },
+    {
+      "subject": "Ryan Walsh",
+      "decision": "Memorial Hermann Epic patient-result notes",
+      "drop_reason": "Pilot dates to December 2025; exact recent expansion decision unestablished. Fetched secondary article expressly derives from company release, so independent corroboration fails.",
+      "sources": [
+        {
+          "url": "https://memorialhermann.org/about-us/newsroom/press-releases/epics-ai-tool-helps-patients-understand-test-results",
+          "title": "Epic AI test-result notes",
+          "publisher": "Memorial Hermann"
+        },
+        {
+          "url": "https://dailyaibrief.com/news/memorial-hermann-uses-epic-ai-explain-test-results-YUj9PZEX",
+          "title": "Memorial Hermann Uses Epic AI to Explain Test Results",
+          "publisher": "AI Brief"
+        }
+      ]
+    },
+    {
+      "subject": "Harrison Keller",
+      "decision": "UNT September 8 AI college announcement",
+      "drop_reason": "Public scout could not establish sufficiently precise personal decision ownership and independent corroboration beyond statement-derived core claims.",
+      "sources": [
+        {
+          "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
+          "title": "UNT AI and analytics gift announcement",
+          "publisher": "UNT"
+        },
+        {
+          "url": "https://www.keranews.org/education/2026-09-09/unt-alumnus-and-spouse-give-20-million-to-create-new-college-centered-on-ai",
+          "title": "UNT AI college gift reporting",
+          "publisher": "KERA / Denton Record-Chronicle"
+        }
+      ]
+    },
+    {
+      "subject": "Jun Lou",
+      "decision": "Lead the four-year READINESS cloud-accessible autonomous materials laboratory, integrating robotics, AI and digital twins",
+      "drop_reason": "Independent corroboration gate fails. Strong primary alone is insufficient.",
+      "sources": [
+        {
+          "url": "https://news.rice.edu/news/2026/accelerating-discovery-rice-receives-nearly-20m-nsf-award-ai-powered-materials-laboratory",
+          "title": "Lead the four-year READINESS cloud-accessible autonomous materials laboratory, integrating robotics, AI and digital twins source",
+          "publisher": "Rice University"
+        },
+        {
+          "url": "https://houston.innovationmap.com/rice-19m-nsf-grant-readiness-2677651123.html",
+          "title": "Lead the four-year READINESS cloud-accessible autonomous materials laboratory, integrating robotics, AI and digital twins source",
+          "publisher": "InnovationMap"
+        }
+      ]
+    },
+    {
+      "subject": "Dhireesha Kudithipudi",
+      "decision": "Design Genesis on-device continual-learning chip with integrated algorithm/hardware approach",
+      "drop_reason": "Specific in-window decision not verified; announcement describes years of prior research. Discovery search found matching Genesis paper dated September6 2025, so July2026 article cannot safely date design choice.",
+      "sources": [
+        {
+          "url": "https://news.utsa.edu/2026/07/genesis-the-ai-chip-that-doesnt-forget/",
+          "title": "Design Genesis on-device continual-learning chip with integrated algorithm/hardware approach source",
+          "publisher": "University of Texas at San Antonio"
+        },
+        {
+          "url": "https://sanantonioreport.org/ut-san-antonio-researchers-genesis-2-0-ai-catastrophic-forgetting/",
+          "title": "Design Genesis on-device continual-learning chip with integrated algorithm/hardware approach source",
+          "publisher": "San Antonio Report"
+        }
+      ]
+    }
+  ],
+  "research_coverage": {
+    "founder": "Delegated scout; TAR and HiddenLayer fetched.",
+    "operator": "Lead editor; Ryan Walsh dropped on date and independence gates. FuelCell lead also lacked strong independent decision corroboration.",
+    "public": "Delegated scout; Keller and Miles evidence gaps.",
+    "research": "Delegated scout; Jun Lou failed independent corroboration and Dhireesha Kudithipudi lacked a newly dated decision. Habeeb Olufowobi retained only as reserve requiring funding-disclosure review; TAR offers stronger near-term Texas consequence."
+  },
+  "post_claim_map": {
+    "paragraphs_1_3": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "paragraph_4": "editorial inference from F3; conditional, not measured result",
+    "paragraph_5": [
+      "F7",
+      "F8"
+    ],
+    "paragraph_6": [
+      "F1",
+      "F4",
+      "F5"
+    ],
+    "paragraph_7": [
+      "F3",
+      "F6",
+      "F8"
+    ],
+    "paragraph_8": "F5 plus proposed editorial checks, not claimed results",
+    "paragraph_9": "engagement question, not factual assertion"
+  },
+  "evidence_limits": [
+    "No direct customer or performance audit obtained.",
+    "No verified exact site, commissioning date, gas share or measured cost disclosed in fetched sources.",
+    "Funding is not proof of finished manufacturing or live power."
+  ],
+  "artwork_review": {
+    "source": "imagegen",
+    "attempts": 2,
+    "attempt_1": "Rejected: excessive photorealism could imply documentary site evidence.",
+    "attempt_2": "Accepted: clear cut-paper illustration of a conceptual factory-to-field assembly; no text, logos, people or place-specific claims.",
+    "headline": "Off-grid power needs proof",
+    "metaphor_disclosure": "Conceptual illustration, not actual TAR equipment or facility design."
+  }
+}
