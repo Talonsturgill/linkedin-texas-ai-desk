@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: Show incompatible construction records becoming one usable job record. A small set of offset, folded paper strips align into one clear timber-frame house outline, an editorial metaphor for Scaffold's seed-funded expansion of AI coordination across existing construction systems.
+Scene/backdrop: Austin residential homebuilding as a conceptual material world. Abstract limestone-colored ground plane and timber framing, without an identifiable address, actual site, skyline or landmark.
+Subject: One elegant open house frame assembled from interlocking paper ribbons; a few offset ribbons approach the same shared structure. Existing pieces fit together, conveying coordination and human-readable order. This is conceptual art, not a literal building plan or a software screenshot.
+Style/medium: Tactile cut-paper editorial illustration with restrained screenprint grain, flat planes and carefully drawn timber geometry. Clearly illustrated, not photorealistic or a glossy 3D rendering.
+Composition/framing: Square. One bold focal structure centered between 24 and 61 percent of image height, taking most of the middle width. Top 20 percent and bottom 35 percent are quiet dark fields reserved for later publication typography. Maintain strong thumbnail hierarchy and generous breathing room.
+Lighting/mood: Calm late-day side light, precise and grounded, without triumphant spectacle or disaster cues.
+Color palette: Night #08060F, deep #0F0C1C, limestone #EDE6D6, dust #C9B393, dusk gold #E0956A, muted blue #4E5FA8. Six inks only, no decorative red.
+Constraints: Square raster, no words, no letters, no numbers, no logos, no watermarks, no UI, no written markings on the papers, no portrait or likeness, no people, no actual customer assets, no claims of verified performance. Keep structural lines simple and physically legible within the conceptual paper medium.
+Avoid: Boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, generic glowing brains, circuit-board faces, handshakes, currency, fireworks, extra buildings, busy background, photorealism and decorative red.
