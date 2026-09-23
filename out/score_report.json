@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-23",
+  "cycle": 1,
+  "threshold": 8.0,
+  "weighted_total": 8.455,
+  "ship": true,
+  "hard_failures": [],
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "passed": true,
+      "notes": "Current CEO role and Austin expansion; San Antonio background labeled."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "passed": true,
+      "notes": "September 15 personally bylined funding announcement, distinct from old architecture."
+    },
+    {
+      "name": "primary_plus_independent",
+      "passed": true,
+      "notes": "Primary fetched plus named HousingWire reporter original interview."
+    },
+    {
+      "name": "fact_trace",
+      "passed": true,
+      "notes": "Numerals and factual statements traced to dossier; analysis separated from claims."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "passed": true,
+      "notes": "Zero biography beyond role; implementation and audit limits central."
+    },
+    {
+      "name": "political_neutrality",
+      "passed": true,
+      "notes": "No electoral or party content or policy preference."
+    },
+    {
+      "name": "linkedin_constraints",
+      "passed": true,
+      "notes": "383 body words, 2418 total characters, three approved tags."
+    },
+    {
+      "name": "house_style",
+      "passed": true,
+      "notes": "Deterministic gate and additional personal prose scan pass."
+    },
+    {
+      "name": "no_invented_quotes",
+      "passed": true,
+      "notes": "No direct quotations in post."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 8.5,
+      "notes": "Named financing and adoption-cost hook in 182 characters."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 8,
+      "notes": "Specific Austin jobs and San Antonio use case; no statewide outcome inflated."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "Role, date and decision preserved; product architecture identified as existing."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 8.5,
+      "notes": "Bylined primary plus original interview; performance unverified independently."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 8.5,
+      "notes": "Cross-system design assessed against implementation and error-handling burden."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 8,
+      "notes": "Hiring and first sixty-day customer review are measurable, but no promised public deadline."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 8.5,
+      "notes": "Plain, fair operational assessment tied to Texas."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 8.5,
+      "notes": "383 words and short paragraphs in 2418 characters."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 8,
+      "notes": "Asks Texas trades for evidence needed to expand adoption."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 9,
+      "notes": "Funding precision and vendor evidence limits preserved."
+    }
+  ],
+  "independent_editor_review": {
+    "result": "pass",
+    "mandatory_repairs": [],
+    "post_sha256": "b78c133da5630fa3dd0049201fd4d883e2183444327e19954319ad9de0b242d9",
+    "note": "Separate rejecting review confirmed source fidelity, ownership, neutrality and uncertainty."
+  }
+}
