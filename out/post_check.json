@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 395,
+    "total_chars": 2506,
+    "hook_chars": 178,
+    "hashtags": [
+      "#TexasAI",
+      "#TexasStartups",
+      "#DallasTech"
+    ],
+    "tag_line": "#TexasAI #TexasStartups #DallasTech"
+  }
+}

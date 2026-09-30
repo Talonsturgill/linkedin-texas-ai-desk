@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "SEPTEMBER 30TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "The hotel is the test",
+  "place": "DALLAS",
+  "coordinates": "",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "b486da4bfb7ddc16a3d7bcbb55e59fa6b9e1c1f9c8217929a878251cb16d6ec7",
+  "prompt_sha256": "8b64d7b8f732de6bcf55667ea212a9a93040844211684681375a29544592c16b",
+  "rendered_at_utc": "2026-09-30T11:51:37.250031+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}

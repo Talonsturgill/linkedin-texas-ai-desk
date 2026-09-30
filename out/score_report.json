@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-30",
+  "editor_cycle": 1,
+  "score_cycle": 1,
+  "threshold": 8.0,
+  "hard_failures": [],
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "passed": true,
+      "notes": "Founder/CEO, AI Hospitality Group and Dallas appear in copy."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "passed": true,
+      "notes": "September 21 launch and founder ownership verified by issuer and interviews."
+    },
+    {
+      "name": "primary_plus_independent",
+      "passed": true,
+      "notes": "Fetched issuer release plus original Hotel Dive and Hotel Business interviews."
+    },
+    {
+      "name": "fact_trace",
+      "passed": true,
+      "notes": "Facts and numerals traced; analysis separated from prospective results."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "passed": true,
+      "notes": "Copy assesses workforce costs, deployment gaps and missing performance audit."
+    },
+    {
+      "name": "political_neutrality",
+      "passed": true,
+      "notes": "Private operational assessment without electoral or policy advocacy."
+    },
+    {
+      "name": "linkedin_constraints",
+      "passed": true,
+      "notes": "Deterministic copy gate passes word, character, hook and hashtag constraints."
+    },
+    {
+      "name": "house_style",
+      "passed": true,
+      "notes": "Deterministic house-style check and personal prose scan pass."
+    },
+    {
+      "name": "no_invented_quotes",
+      "passed": true,
+      "notes": "No quotation used in the post."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 8.5,
+      "notes": "Names owner, operating obligation and guest-service test."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 7.5,
+      "notes": "Dallas capital and business-model choice are concrete; no Texas hotel deployment verified."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "Current role, launch date and stated licensing alternative trace to fetched evidence."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 9,
+      "notes": "Primary release plus separate original interviews; operating gains remain executive claims."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 8.5,
+      "notes": "Connects operational control with workforce and service responsibilities."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 8.5,
+      "notes": "First takeovers and baseline results form a useful check; no promised reporting date."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 8,
+      "notes": "Plain operational analysis with explicit limits."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 8.5,
+      "notes": "Short paragraphs, readable language and platform limits."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 8,
+      "notes": "Specific owner-diligence question tied to the first operating review."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 9,
+      "notes": "Preserves prospective spending, pilot geography and audit gaps."
+    }
+  ],
+  "weighted_total": 8.435,
+  "ship": true,
+  "editor_note": "Independent challenge required precision repairs to capital-use tense and pilot geography; repaired before artwork. Performance remains unaudited."
+}

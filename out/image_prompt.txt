@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: Show a hotel reception desk as a cutaway balancing human service above with an intricate working mechanism below, a metaphor for a Dallas startup taking responsibility for hotel operations using AI.
+Scene/backdrop: Abstract contemporary hospitality interior grounded in the Dallas company's industry, not a depiction of any real hotel or Texas pilot. Quiet deep-violet surroundings and warm limestone counter.
+Subject: One sculptural brass hotel service bell is the focal point on a clean reception counter. Beneath the counter, an elegant system of interlocking paper ledgers and mechanical linkages converges directly under the bell, conveying coordinated back-office work supporting the service obligation above. Conceptual, not a literal technical schematic. No people.
+Style/medium: Sophisticated hand-pulled linocut and screenprint editorial illustration, confident carved shapes, tactile ink and paper grain, restrained dimensional shadows. Visibly illustrated, not photorealistic or a 3D render.
+Composition/framing: Square 1:1. Counter and bell occupy the middle between 30 and 55 percent height; exposed mechanism ends by 64 percent. One clear focal point with generous dark quiet bands across the top 22 percent and bottom 34 percent for later exact publication typography. Strong thumbnail silhouette.
+Lighting/mood: Warm, measured and analytical; the bell and the supporting system feel consequential without triumph or alarm.
+Color palette: Night #08060F, deep violet #191530, limestone #EDE6D6, dust #C9B393, dusk gold #E0956A, muted blue #4E5FA8.
+Constraints: Square raster. No words, no letters, no numbers, no logos, no watermarks, no UI, no chart, no portrait or likeness, no map or skyline. Ledger sheets are completely blank. Do not add typography.
+Avoid: Boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, generic glowing brains, circuit-board faces, handshakes, robots, and red decoration. No fabricated specific property or location.
