@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 373,
+    "total_chars": 2443,
+    "hook_chars": 121,
+    "hashtags": [
+      "#TexasAI",
+      "#TexasDataCenters",
+      "#AIInfrastructure"
+    ],
+    "tag_line": "#TexasAI #TexasDataCenters #AIInfrastructure"
+  }
+}

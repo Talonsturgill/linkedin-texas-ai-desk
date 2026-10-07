@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-07",
+  "cycle": 1,
+  "threshold": 8.0,
+  "weighted_total": 8.8,
+  "ship": true,
+  "hard_failures": [],
+  "hard_fail_checks": [
+    {
+      "name": "identity_and_texas_tie",
+      "passed": true,
+      "notes": "Full name, CEO role, Fermi Inc., Texas Panhandle and Carson County named."
+    },
+    {
+      "name": "recent_decision_and_owner",
+      "passed": true,
+      "notes": "September 22 disclosed signed amendment and explicit CEO ownership."
+    },
+    {
+      "name": "primary_plus_independent",
+      "passed": true,
+      "notes": "Current-run issuer/SEC evidence and original American Buildout/FinanceFeeds analysis."
+    },
+    {
+      "name": "fact_trace",
+      "passed": true,
+      "notes": "Each factual passage linked in dossier; numerals verified; analysis labeled."
+    },
+    {
+      "name": "not_a_puff_piece",
+      "passed": true,
+      "notes": "No biography; alternatives, funding conditions and execution gaps dominate."
+    },
+    {
+      "name": "political_neutrality",
+      "passed": true,
+      "notes": "No electoral, policy preference, stock trade or shareholder-vote recommendation."
+    },
+    {
+      "name": "linkedin_constraints",
+      "passed": true,
+      "notes": "Deterministic report passes length, hook, final question and approved tags."
+    },
+    {
+      "name": "house_style",
+      "passed": true,
+      "notes": "Punctuation, first-person, banned phrases and personal whole-word prose scan pass."
+    },
+    {
+      "name": "no_invented_quotes",
+      "passed": true,
+      "notes": "Post contains no quotations."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 8.6,
+      "notes": "Names the owner and exact extension with a clear next date."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 8.8,
+      "notes": "Specific Carson County tenant and public ground-lease exposure."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 9.1,
+      "notes": "Separates disclosure date, original lease, extension and future delivery."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 8.5,
+      "notes": "Issuer and SEC evidence plus two independent document analyses; no private guaranty inspection."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 8.8,
+      "notes": "Links added negotiating time to funding and ground-lease conditions."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 9.2,
+      "notes": "October closing disclosure with specific executed or waived items."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 8.8,
+      "notes": "Plain operational language with a mixed assessment and scoped gaps."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 8.7,
+      "notes": "Short paragraphs; copy passes all platform limits."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 8.4,
+      "notes": "Requests observable closing evidence rather than a general AI opinion."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 9.0,
+      "notes": "Avoids output, revenue or completion claims beyond reviewed evidence."
+    }
+  ],
+  "editor_note": "Separate source challenge passed after a filing-summary precision edit; residual guaranty and funding gaps retained.",
+  "post_sha256": "aa201e75e57ab882ab7321482c3a52dcc544e825216d06c5f6c2a60fdbe25a87"
+}
