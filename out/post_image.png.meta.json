@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "OCTOBER 7TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "OPERATOR",
+  "headline": "More time for TensorWave",
+  "place": "CARSON COUNTY",
+  "coordinates": "",
+  "style_family": "story-specific generated editorial art",
+  "palette": [
+    "#08060F",
+    "#0F0C1C",
+    "#F6F1E4",
+    "#C9B393",
+    "#E0956A"
+  ],
+  "hue_family": "story-derived over Big Bend dusk furniture",
+  "composition": "generated full-bleed focal field with fixed top and bottom type bands",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "imagegen",
+    "deterministic typography overlay"
+  ],
+  "source": "imagegen",
+  "seed": "imagegen-managed",
+  "base_sha256": "8e982c216d6ba0db9a473f26f379d211ba7075af2f90d95ae12126dd55e234dd",
+  "prompt_sha256": "0ef4e1c95d3453bdf1bed3fac50f7dc2feb2040848ecb00c849dad809c062689",
+  "rendered_at_utc": "2026-10-07T08:11:10.003855+00:00",
+  "canvas": [
+    1080,
+    1080
+  ]
+}

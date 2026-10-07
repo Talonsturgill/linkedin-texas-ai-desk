@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: square LinkedIn editorial cover background
+Primary request: A visual metaphor for Fermi extending the TensorWave lease-closing deadline while guaranty and funding conditions remain unresolved. A long blank folded-paper span slides forward from a solid footing but still stops visibly short of the opposite footing, leaving a small clear gap. Extra reach has not yet made a connection.
+Scene/backdrop: A freestanding editorial scale-model sculpture on a broad flat caliche-colored surface, with the low open horizon of the Texas Panhandle. Conceptual scene, not an actual depiction of Project Matador or its site plan.
+Subject: One finely crafted telescoping span made of thick blank cream paper, with visible folded edges and sliding overlap. Two simple solid footings. The open air gap is the focal event. No buildings, no turbines, no operating equipment, no claim of completed infrastructure.
+Style/medium: Tactile hand-cut paper editorial sculpture with dry gouache texture, crisp dimensional folds and carefully directed long shadows. Illustrated realism rather than a photograph.
+Composition/framing: Square canvas. Low three-quarter view. The sculpture crosses the central horizontal field between 25 and 60 percent of image height; the unclosed gap reads immediately. Generous quiet bands in the top 20 percent and bottom 35 percent for later publication type. One focal point, restrained depth, no scattered props.
+Lighting/mood: Side-lit late dusk, measured and unresolved, a warm rim on the paper edge with a cool shadow beneath the gap.
+Color palette: Deep indigo #0F0C1C, muted blue #4E5FA8, limestone #EDE6D6, caliche #E4D8C3 and dusk gold #E0956A.
+Constraints: Square raster, no words, no letters, no numbers, no logos, no watermarks, no UI, no portrait or likeness. Keep the paper absolutely blank. Both footings sit on the same level, with no cliffs or canyon. The span remains unconnected.
+Avoid: Boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks, generic glowing brains, circuit-board faces, handshakes, decorative red, chains, padlocks, charts, calendar pages and printed paper marks.
