@@ -1,5 +1,9 @@
 # Claude migration test, October 9th, 2026
 
+The earlier ImageGen limitation below is historical. The user subsequently authorized original
+code-authored artwork. See [coded artwork verification](coded_art_2026-10-09.md) for the replacement
+path, acceptance examples, and current verification.
+
 The first manual run used Haiku 5.5 at High effort and completed an editorial no-target
 package at `ed1cd2b0962f12345bbf8be516e8aee4270b1c1d` on
 `codex/texas-desk-2026-10-09` ([draft PR 10](https://github.com/Talonsturgill/linkedin-texas-ai-desk/pull/10)).

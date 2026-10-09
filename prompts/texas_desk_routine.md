@@ -37,8 +37,8 @@ in Texas.
    `September 2nd, 2026`.
 3. Resolve the attached checkout with `git rev-parse --show-toplevel`; do not search a Mac path
    in cloud. Confirm the Git remote, GitHub authentication, Gmail create/update/readback, web
-   access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing Pillow
-   or numpy from `requirements.txt`) without printing credentials. Discover only
+   access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing Pillow,
+   numpy, or PyYAML from `requirements.txt`) without printing credentials. Discover only
    tools needed by this routine. Before marking Gmail available, resolve the connected recipient
    from its profile. If that connector has no profile tool, use its own authenticated `viewUrl`
    metadata from a read-only draft listing with an email-valued `authuser`. Never infer the
@@ -219,10 +219,12 @@ Invoke the repository skill `$texas-desk-artwork`. This is mandatory for a profi
    within the attempt budget, updates the renderer, dossier and base hashes, recomposes
    `out/post_image.png` and its sidecar, writes `out/thumb_300.png`, and resets any visual review
    whose pixels changed. It never marks a check true.
-4. Inspect it. Make one targeted regeneration only if a concrete visual defect exists.
-5. Apply exact publication typography with the skill's compositor to create
-   `out/post_image.png` and `out/post_image.png.meta.json`.
-6. Inspect the final cover at full size and thumbnail size, then run the skill's QA command.
+4. Inspect the completed cover and thumbnail. Make one targeted repair and rebuild only if a
+   concrete visual defect exists. The build already applies publication typography.
+5. Record the real visual review against the current base and final image hashes in the direction
+   manifest. Check every required visual criterion and describe the actual final pixels.
+6. Run the skill's QA and artwork gate commands. Never recompose after recording the review without
+   checking the new output and its hashes again.
 
 Two failed renders, or an exhausted attempt budget, mean needs-attention. Preserve the verified
 dossier and report the failure in the unsent status draft; do not ship substitute artwork.

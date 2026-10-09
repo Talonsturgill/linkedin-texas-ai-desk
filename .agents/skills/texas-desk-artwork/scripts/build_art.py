@@ -39,8 +39,11 @@ def pending_review() -> dict:
 
 def build(story: Path, usage: Path, limit: int = ATTEMPT_LIMIT) -> dict:
     attempt = record_attempt(usage, limit)
-    result = subprocess.run([sys.executable, "-I", "artwork.py", "--out", "art_base.png"],
-                            cwd=story, capture_output=True, text=True, timeout=240)
+    try:
+        result = subprocess.run([sys.executable, "-I", "artwork.py", "--out", "art_base.png"],
+                                cwd=story, capture_output=True, text=True, timeout=240)
+    except subprocess.TimeoutExpired as exc:
+        raise RuntimeError(f"artwork.py exceeded 240 seconds on attempt {attempt}") from exc
     if result.returncode != 0 or not (story / "art_base.png").is_file():
         raise RuntimeError(f"artwork.py failed on attempt {attempt}: {result.stderr[-300:]}")
     base_sha = gate.sha256_file(story / "art_base.png")

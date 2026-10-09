@@ -14,7 +14,8 @@ headline. Historical ImageGen covers remain as honest legacy examples and are ne
 1. Read `out/final_post.md`, `out/desk_dossier.json`, `config/brand.yaml`, and
    `references/acceptance.md`. Pick the decision's physical mechanism and one medium that suits it.
 2. Choose a style family, composition, material, light model, and palette from the vocabularies in
-   `scripts/art_gate.py`. The three visual anchors must each bind to a verbatim dossier
+   `references/vocabulary.json`. Inspect recent directions before choosing; fetch dated artifact
+   branches as the routine requires. The three visual anchors must each bind to a verbatim dossier
    `verified_facts` claim and its fetched source URL. Respect gaps: draw no unverified property,
    campus, output figure, or completed step.
 3. Author `out/artwork.py` (per story) from `scripts/art_kit.py` primitives; see
@@ -66,4 +67,4 @@ headline. Historical ImageGen covers remain as honest legacy examples and are ne
 - `references/drawing-recipes.md` primitives and recipes (read before drawing).
 - `references/visual-system.md` brand palette and Texas-specific rules.
 - `references/vocabulary.json` registered style, composition, material and light names with definitions.
-- `assets/` is not used; the brand fonts live in the repository's `assets/fonts` with a checksum manifest.
+- Brand fonts live in the repository's `assets/fonts` with a checksum manifest.

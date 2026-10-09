@@ -32,8 +32,13 @@ def main() -> int:
     except RuntimeError as exc:
         print(json.dumps({"ok": False, "error": str(exc)}))
         return 3
-    result = subprocess.run([sys.executable, "-I", "artwork.py", "--out", args.out],
-                            cwd=workdir, capture_output=True, text=True, timeout=240)
+    try:
+        result = subprocess.run([sys.executable, "-I", "artwork.py", "--out", args.out],
+                                cwd=workdir, capture_output=True, text=True, timeout=240)
+    except subprocess.TimeoutExpired:
+        print(json.dumps({"ok": False, "attempt": attempt, "limit": args.limit,
+                          "error": "artwork.py exceeded 240 seconds"}))
+        return 1
     target = workdir / args.out
     ok = result.returncode == 0 and target.is_file()
     size = None

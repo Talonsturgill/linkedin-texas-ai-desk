@@ -22,7 +22,7 @@ REQUIREMENTS = ROOT / "requirements.txt"
 def ensure_dependencies() -> list[str]:
     """Import Pillow and numpy; install from requirements.txt if either is missing."""
     missing = []
-    for module in ("PIL", "numpy"):
+    for module in ("PIL", "numpy", "yaml"):
         try:
             importlib.import_module(module)
         except ImportError:

@@ -150,6 +150,9 @@ def load_history(repo: Path, run_date: str, exclude_branch: str | None = None) -
     Same-day earlier runs with numeric suffixes (-2 ... -10) are included and sorted numerically.
     The current run's branch is excluded by name. Any failing git read raises HistoryError.
     """
+    if exclude_branch is None:
+        current = _git(repo, "symbolic-ref", "--quiet", "--short", "HEAD")
+        exclude_branch = current.decode().strip() if current else None
     refs = _git(repo, "for-each-ref", "--format=%(refname)",
                 "refs/remotes/origin/codex/texas-desk-*", required=True).decode()
     entries = []
@@ -161,6 +164,15 @@ def load_history(repo: Path, run_date: str, exclude_branch: str | None = None) -
         branch = ref.removeprefix("refs/remotes/origin/")
         if date > run_date or branch == exclude_branch:
             continue
+        # Honest no-target artifacts have a dossier and deliberately have no cover.
+        dossier_raw = _git(repo, "show", f"{ref}:out/desk_dossier.json")
+        if dossier_raw:
+            try:
+                historical_dossier = json.loads(dossier_raw)
+            except (ValueError, UnicodeError) as exc:
+                raise HistoryError(f"invalid history dossier at {ref}") from exc
+            if historical_dossier.get("no_target_this_cycle") is True:
+                continue
         png = _git(repo, "show", f"{ref}:out/post_image.png", required=True)
         meta_raw = _git(repo, "show", f"{ref}:out/post_image.png.meta.json")
         manifest_raw = _git(repo, "show", f"{ref}:out/art_direction.json")
@@ -301,10 +313,13 @@ def recompute_base(out_dir: Path) -> str | None:
     """Re-render artwork.py in isolated mode and return the new base hash, or None on failure."""
     with tempfile.TemporaryDirectory() as temporary:
         target = Path(temporary) / "base.png"
-        result = subprocess.run(
-            [sys.executable, "-I", "artwork.py", "--out", str(target)],
-            cwd=out_dir, capture_output=True, timeout=240,
-        )
+        try:
+            result = subprocess.run(
+                [sys.executable, "-I", "artwork.py", "--out", str(target)],
+                cwd=out_dir, capture_output=True, timeout=240,
+            )
+        except subprocess.TimeoutExpired:
+            return None
         if result.returncode != 0 or not target.is_file():
             return None
         return sha256_file(target)
@@ -419,7 +434,7 @@ def validate_art(out_dir: Path, dossier: dict, date: str, column: str, *,
         if checks.get(key) is not True:
             errors.append(f"visual review check not passed: {key}")
 
-    if recompute and not any(e.startswith("stale provenance") for e in errors):
+    if recompute and not errors:
         rebuilt = recompute_base(out_dir)
         if rebuilt is None:
             errors.append("artwork.py failed to re-render during recomputation")

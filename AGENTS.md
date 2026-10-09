@@ -52,7 +52,7 @@ system fonts. No external home-directory validator is required.
 
 For Claude cloud, read `CLAUDE.md` and `config/runtime.json`. Verify required capabilities
 before research with `scripts/runtime_check.py`, using the `coded_art` state from
-`python3 scripts/art_smoke.py` (it repairs missing Pillow or numpy from `requirements.txt` and
+`python3 scripts/art_smoke.py` (it repairs missing Pillow, numpy, or PyYAML from `requirements.txt` and
 renders a verified smoke image). A failed render after the two-attempt budget is needs-attention.
 Artwork is original code-authored per story (`out/artwork.py`), never a shared template. Use the
 attached Git checkout instead of a hard-coded local path. Read each contract once and keep tool output compact.

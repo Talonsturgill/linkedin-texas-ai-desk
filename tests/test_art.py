@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -57,12 +58,12 @@ class KitTests(unittest.TestCase):
                 self.assertGreater(len(set(image.convert("RGB").getdata())), 100)
 
     def test_clean_bootstrap_copy_renders_without_local_state(self) -> None:
-        """A fresh checkout has no .local, out, or fonts; the smoke check must still pass."""
+        """A fresh checkout has no local state; committed brand fonts remain available."""
         with tempfile.TemporaryDirectory() as temporary:
             clone = Path(temporary) / "repo"
             shutil.copytree(
                 ROOT, clone,
-                ignore=shutil.ignore_patterns(".local", "out", "fonts", "__pycache__", ".git", "examples"),
+                ignore=shutil.ignore_patterns(".local", "out", "__pycache__", ".git", "examples"),
             )
             result = subprocess.run(
                 [sys.executable, str(clone / "scripts/art_smoke.py")],
@@ -72,6 +73,7 @@ class KitTests(unittest.TestCase):
             report = json.loads(result.stdout.strip().splitlines()[-1])
             self.assertEqual(report["coded_art"], "available")
             self.assertEqual(report["size"], [128, 128])
+            self.assertTrue((clone / "assets/fonts/Fraunces.ttf").is_file())
 
 
 class GateTests(unittest.TestCase):
@@ -322,6 +324,7 @@ class HistoryOrderingTests(unittest.TestCase):
     def _repo_with_refs(self, names: list[tuple[str, str]]) -> Path:
         repo = Path(tempfile.mkdtemp()) / "repo"
         repo.mkdir()
+        self.addCleanup(shutil.rmtree, repo.parent)
         env = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.com",
                "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.com", "PATH": "/usr/bin:/bin"}
 
@@ -335,8 +338,14 @@ class HistoryOrderingTests(unittest.TestCase):
         for ref_branch, source in names:
             git("checkout", "-q", "-B", ref_branch, "main")
             (repo / "out").mkdir(exist_ok=True)
-            for filename in ("post_image.png", "post_image.png.meta.json", "art_direction.json"):
-                shutil.copy(EX / source / filename, repo / "out" / filename)
+            if source in {"no_target", "missing_profile_image"}:
+                (repo / "out/desk_dossier.json").write_text(json.dumps({
+                    "no_target_this_cycle": source == "no_target",
+                    "run_date": ref_branch.removeprefix("codex/texas-desk-")[:10],
+                }))
+            else:
+                for filename in ("post_image.png", "post_image.png.meta.json", "art_direction.json"):
+                    shutil.copy(EX / source / filename, repo / "out" / filename)
             git("add", "-f", "out")
             git("commit", "-q", "-m", ref_branch)
             git("update-ref", f"refs/remotes/origin/{ref_branch}", "HEAD")
@@ -363,10 +372,54 @@ class HistoryOrderingTests(unittest.TestCase):
         window, previous = gate.select_history(history, "2026-10-07")
         self.assertEqual(previous["suffix"], 10)
 
+    def test_no_target_branches_are_skipped_without_hiding_profile_failures(self) -> None:
+        repo = self._repo_with_refs([
+            ("codex/texas-desk-2026-10-07", STORIES[0]),
+            ("codex/texas-desk-2026-10-09", "no_target"),
+        ])
+        history = gate.load_history(repo, "2026-10-09")
+        self.assertEqual(len(history), 1)
+        self.assertEqual(history[0]["date"], "2026-10-07")
+        broken = self._repo_with_refs([
+            ("codex/texas-desk-2026-10-09", "missing_profile_image"),
+        ])
+        with self.assertRaises(gate.HistoryError):
+            gate.load_history(broken, "2026-10-09")
+
+    def test_current_branch_is_excluded_without_explicit_override(self) -> None:
+        branch = "codex/texas-desk-2026-10-07-2"
+        repo = self._repo_with_refs([
+            ("codex/texas-desk-2026-10-07", STORIES[0]), (branch, STORIES[1]),
+        ])
+        subprocess.run(["git", "-C", str(repo), "checkout", "-q", branch], check=True)
+        history = gate.load_history(repo, "2026-10-07")
+        self.assertEqual(len(history), 1)
+        self.assertFalse(history[0]["ref"].endswith(branch))
+
+    def test_vocabulary_supports_a_full_daily_fortnight(self) -> None:
+        vocabulary = json.loads((SCRIPTS.parent / "references/vocabulary.json").read_text())
+        self.assertGreaterEqual(len(vocabulary["style_families"]), 16)
+        self.assertGreaterEqual(len(vocabulary["compositions"]), 16)
+
     def test_unreadable_history_fails_closed(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             with self.assertRaises(gate.HistoryError):
                 gate.load_history(Path(temporary), "2026-10-09")
+
+
+class TimeoutTests(unittest.TestCase):
+    def test_recompute_timeout_fails_closed(self) -> None:
+        with patch.object(gate.subprocess, "run", side_effect=subprocess.TimeoutExpired("artwork.py", 240)):
+            self.assertIsNone(gate.recompute_base(EX / STORIES[0]))
+
+    def test_build_timeout_is_counted_and_reported(self) -> None:
+        import build_art
+        with tempfile.TemporaryDirectory() as temporary:
+            usage = Path(temporary) / "usage.json"
+            with patch.object(build_art.subprocess, "run", side_effect=subprocess.TimeoutExpired("artwork.py", 240)):
+                with self.assertRaisesRegex(RuntimeError, "exceeded 240 seconds on attempt 1"):
+                    build_art.build(EX / STORIES[0], usage)
+            self.assertEqual(json.loads(usage.read_text())["art_attempts"], 1)
 
 
 class BuildOrderTests(unittest.TestCase):

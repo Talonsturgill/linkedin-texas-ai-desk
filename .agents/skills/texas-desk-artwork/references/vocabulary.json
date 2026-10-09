@@ -14,7 +14,11 @@
     "enamel_still_life": "lit enamel and brass objects arranged as a still life",
     "gouache_flat": "matte opaque color fields with soft edges",
     "stipple_engraving": "dot and line engraving built from fine marks",
-    "collage_torn_paper": "torn-edge paper pieces over a ground"
+    "collage_torn_paper": "torn-edge paper pieces over a ground",
+    "woven_tapestry": "interlocking colored threads whose crossings define recognizable objects",
+    "stained_glass": "faceted translucent panes separated by dark structural seams",
+    "screenprint_silhouette": "bold layered silhouettes with deliberate negative space and ink texture",
+    "embossed_metal": "raised and recessed metal forms modeled with opposing edge highlights"
   },
   "compositions": {
     "horizon_split": "a single horizon line dividing ground from sky",
@@ -28,7 +32,12 @@
     "frieze_horizontal": "a long horizontal band of linked figures",
     "diagonal_cascade": "forms descending along one diagonal",
     "scatter_field": "irregular objects distributed across the field",
-    "inset_cutaway": "a circular or rectangular cut revealing interior parts"
+    "inset_cutaway": "a circular or rectangular cut revealing interior parts",
+    "exploded_assembly": "separated parts along a shared axis revealing how an object works",
+    "nested_thresholds": "successive doorways or frames reveal an action at the deepest opening",
+    "off_center_counterweight": "two unequal masses balance around an off-center pivot",
+    "overhead_workbench": "recognizable tools and work pieces arranged in a top-down working scene",
+    "spiral_progression": "forms wind around an open center with a clear beginning and end"
   },
   "materials": {
     "matte_lacquer": "matte painted surfaces with soft sheen",
