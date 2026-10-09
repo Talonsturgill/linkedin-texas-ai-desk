@@ -8,7 +8,7 @@
     "web",
     "coded_art"
   ],
-  "max_search_queries": 16,
+  "max_search_queries": 24,
   "max_source_fetches": 24,
   "max_candidates": 6,
   "max_score_cycles": 2,

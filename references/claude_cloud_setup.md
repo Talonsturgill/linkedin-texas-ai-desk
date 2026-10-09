@@ -6,7 +6,8 @@ Auto-fix pull requests off. The existing schedule is Wednesday at 4:04 AM Easter
 
 Use Custom network access with the exact public hosts in `config/claude_source_domains.txt`.
 Keep "Also include default list of common package managers" enabled for dependencies, GitHub,
-and immutable image verification. The list covers the source catalog and ordinary www redirects;
+and immutable image verification. The list covers the source catalog, ordinary www redirects, public release wires, and reviewed
+hosts identified during the live test;
 it does not grant unrestricted internet access. No secrets or credentials are required for coded
 artwork. Keep `CLAUDE_CODE_EFFORT_LEVEL=medium` in the environment; project settings also request
 medium effort. Record any mismatch in the actual session control rather than claiming a measured

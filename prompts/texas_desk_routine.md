@@ -71,6 +71,10 @@ in Texas.
    exact fetched branch instead and record its contract commit in the local runtime receipt.
    Create a unique branch named `codex/texas-desk-YYYY-MM-DD`, adding `-2`,
    `-3`, and so on when that name already exists locally or remotely.
+   The release branch is only the contract source: never use it as the run's working branch.
+   Run `git switch -c <UNIQUE_DATED_BRANCH> <EXACT_RELEASE_REF>` before history or discovery,
+   then verify `git branch --show-current`. No profile or no-target delivery may omit its
+   dated artifact branch, artifact commit, and push verification.
 5. Fetch remote run branches, then build the history file:
 
    ```bash
@@ -114,6 +118,11 @@ no more than 200 words each. Fetch full evidence only for the strongest plausibl
 retain concise claim excerpts plus URLs locally instead of echoing entire pages. Read source
 content needed to assess independence, ownership, context, and qualifications. Never replace
 fetched evidence with snippets to save tokens.
+
+Reserve at least four of the configured search queries for one 90-day broadening query per lane
+if the 60-day search yields no qualifier. Do not spend that reserve chasing one candidate.
+Close an unresolved candidate after two targeted searches without a fetchable primary source;
+record the gap and move on. Prefer fetching a promising known URL to issuing another broad query.
 
 Across both windows, use at most the search/fetch counts in `config/runtime.json`. Keep a compact
 counter ledger in `.local/usage.json` with observed searches, fetches, workers, score cycles,
