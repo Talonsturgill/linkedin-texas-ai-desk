@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-09",
+  "window_days": 90,
+  "no_target_this_cycle": true,
+  "_validation_note": "No candidate cleared every gate for ship. Phase 2 ran the 60-day pass, found no candidate with a named decision owner plus fetched primary and independent sources, then broadened once to 90 days as the routine allows. The strongest candidate, Galaxy Digital's McGregor acquisition announced July 28th, 2026, had a fetched company release and an independent Bloomberg Law summary, but its rubric score was 7.61 against the 8.0 ship threshold. Its corroboration is a paywalled summary, no tenant is named, and the purchase price is undisclosed. Reaching 8.0 would require inflating scores or new evidence that was not fetched, so the run converts to a no-target result. The score report and unshipped post were kept under .local/unshipped and are not part of the committed artifact.",
+  "_window_note": "60-day pass (2026-08-10 to 2026-10-09) and 90-day broadening pass (2026-07-11 to 2026-10-09) were both run. The 21-day subject cooldown and permanent subject-decision blocklist were checked against .local/history.json.",
+  "_image_note": "No post was written and no artwork was generated, so the ImageGen and fallback question does not apply to this run.",
+  "dropped_candidates": [
+    {
+      "subject": "Mike Novogratz (Galaxy Digital Inc.)",
+      "decision": "Acquired about 500 acres in McGregor, McLennan County, Texas, under a development agreement with the City of McGregor; announced July 28th, 2026",
+      "drop_reason": "Rubric score 7.61 is below the 8.0 ship threshold. Corroboration is a paywalled Bloomberg Law summary, no McGregor tenant is named, the purchase price is undisclosed, and no city or utility official was fetched. Scores could not be raised honestly without new evidence.",
+      "sources": [
+        {
+          "url": "https://www.stocktitan.net/news/GLXY/galaxy-expands-data-center-footprint-with-acquisition-of-500-acre-qb3233eyu986.html",
+          "title": "Galaxy Expands Data Center Footprint with Acquisition of 500 Acre Campus in McGregor, Texas",
+          "publisher": "Galaxy Digital Inc. release (PRNewswire, reproduced by StockTitan)"
+        },
+        {
+          "url": "https://news.bgov.com/texas-brief/galaxy-buys-500-acre-data-center-site-in-mcgregor-tx",
+          "title": "Galaxy Buys 500-Acre Data Center Site in McGregor, TX",
+          "publisher": "Bloomberg Law (Texas Brief)"
+        },
+        {
+          "url": "https://www.theenergymag.com/news/market-news/galaxy-digital-500-acre-texas-ai-data-center-campus",
+          "title": "Galaxy Digital Acquires 500-Acre Site for Second Texas AI Data Center",
+          "publisher": "TheEnergyMag"
+        }
+      ]
+    },
+    {
+      "subject": "Public Utility Commission of Texas (large-load rule, Project 58481)",
+      "decision": "Adopted 16 TAC 25.194 on September 18th, 2026",
+      "drop_reason": "No named commissioner or chair was verified as the decision owner. The PUC Interchange filing returned HTTP 402, and the coverage found names no commissioner. The governor-directed audit also involves an elected official, so the public-policy lane was not used.",
+      "sources": [
+        {
+          "url": "https://www.bwenergylaw.com/blog/2026/09/texas-expands-data-center-scrutiny-permit-hold-final-large-load-rules-and-new-ercot-audit-requirements/",
+          "title": "Texas Expands Data Center Scrutiny: Permit Hold, Final Large-Load Rules, and New ERCOT Audit Requirements",
+          "publisher": "BW Energy Law blog"
+        }
+      ]
+    },
+    {
+      "subject": "Crusoe (Jayton and Childress filings)",
+      "decision": "Filed plans for two buildings in Jayton, Kent County, Texas, in early October 2026",
+      "drop_reason": "No named Crusoe executive was verified as the decision owner. The primary Data Center Dynamics article returned HTTP 403. Texas TDLR filings name Childress DC3, LLC as owner and do not name Crusoe. The Kent County tax-zone vote was tabled with no date set.",
+      "sources": [
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/crusoe-files-for-48bn-data-center-campus-in-jayton-texas/",
+          "title": "Crusoe files for $4.8bn data center campus in Jayton, Texas",
+          "publisher": "Data Center Dynamics"
+        },
+        {
+          "url": "https://datacenters.cutrerlabs.com/intel/2026-10-kent-county-crusoe-tax-zone-vote-tabled/",
+          "title": "Kent County commissioners table a vote on a tax reinvestment zone tied to a Crusoe data center application",
+          "publisher": "Cutrer Labs"
+        }
+      ]
+    },
+    {
+      "subject": "Min Suh (Mousterian Corporation)",
+      "decision": "Engineering contract with Samsung Heavy Industries for a 50 MW floating data center",
+      "drop_reason": "The contract was signed July 22nd, 2026, which is outside the 60-day window. The August 3rd Samsung Heavy Industries release is a later disclosure, not the decision date. The CEO title was not confirmed from a fetched primary source.",
+      "sources": [
+        {
+          "url": "https://pgjonline.com/news/2026/august/mousterian-and-samsung-heavy-industries-sign-contract-for-floating-data-center-deployment",
+          "title": "Mousterian and Samsung Heavy Industries sign contract for floating data center deployment",
+          "publisher": "Power & Gas Journal"
+        }
+      ]
+    }
+  ],
+  "_source_notes": {
+    "blockspace": "Could not be fetched (HTTP 403). Not used.",
+    "sec_edgar": "Galaxy 8-K filings dated July 2026 were listed by index but their text was not checked for McGregor. Not used."
+  }
+}
