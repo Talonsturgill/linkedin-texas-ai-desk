@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
-import math
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
@@ -15,6 +14,8 @@ import yaml
 from PIL import Image
 
 from check_post import validate_post
+from check_score import validate_score
+from prose_rules import check_prose
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_GATES = {
@@ -83,10 +84,13 @@ def validate(out_dir: Path) -> dict:
         errors.append(f"dossier window_days must be one of {sorted(allowed_windows)}")
 
     if dossier.get("no_target_this_cycle") is True:
+        if dossier.get("window_days") != state["broadening_window_days"]:
+            errors.append("no-target requires the completed broadening window")
         if dossier.get("selected_subject") or dossier.get("selected_decision"):
             errors.append("no-target dossier cannot include a selected subject or decision")
         if not dossier.get("_validation_note"):
             errors.append("no-target dossier lacks _validation_note")
+        errors.extend(check_prose(str(dossier.get("_validation_note", ""))))
         dropped = dossier.get("dropped_candidates")
         if not isinstance(dropped, list) or not dropped:
             errors.append("no-target dossier needs a nonempty dropped_candidates list")
@@ -224,15 +228,10 @@ def validate(out_dir: Path) -> dict:
             errors.append(f"score JSON invalid: {exc}")
             score = {}
         rubric = yaml.safe_load((ROOT / "config/rubric.yaml").read_text(encoding="utf-8"))["rubric"]
-        if not score.get("ship"):
-            errors.append("score report does not mark the post shippable")
-        if float(score.get("weighted_total", -1)) < float(rubric["ship_threshold"]):
-            errors.append("score report is below the configured ship threshold")
-        if score.get("hard_failures"):
-            errors.append("score report contains hard failures")
-        reported_weights = [row.get("weight") for row in score.get("criteria", [])]
-        if reported_weights and not math.isclose(sum(reported_weights), 1.0, abs_tol=1e-9):
-            errors.append("score criterion weights do not sum to 1.0")
+        errors.extend(validate_score(score, rubric))
+        for row in score.get("criteria", []):
+            if isinstance(row, dict):
+                errors.extend(check_prose(str(row.get("notes", ""))))
 
     image_path = out_dir / "post_image.png"
     if require_file(image_path, errors):
@@ -257,6 +256,9 @@ def validate(out_dir: Path) -> dict:
                 errors.append(f"image metadata missing {key}")
         if meta.get("kicker") != "TEXAS DESK":
             errors.append("image metadata kicker must be TEXAS DESK")
+        if meta.get("source") != "imagegen":
+            errors.append("profile requires ImageGen artwork; fallback is needs-attention")
+        errors.extend(check_prose(str(meta.get("headline", ""))))
 
     return {
         "ok": not errors,

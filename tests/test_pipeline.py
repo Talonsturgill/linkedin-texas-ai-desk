@@ -22,6 +22,10 @@ from qa_check import validate as validate_artwork  # noqa: E402
 from render_fallback import background  # noqa: E402
 from compose_cover import compose  # noqa: E402
 from validate_run import validate as validate_run  # noqa: E402
+from check_score import validate_score  # noqa: E402
+from prose_rules import check_prose  # noqa: E402
+from runtime_check import assess  # noqa: E402
+from gmail_account import resolve_account  # noqa: E402
 
 
 def base_dossier() -> dict:
@@ -116,8 +120,8 @@ def valid_post() -> str:
         (
             "That is a defensible execution choice because the pilot has a named owner, a defined place, "
             "and a result that local operators can inspect. It also shifts part of the burden from a "
-            "research team to people responsible for daily service. Their experience matters as much as "
-            "a benchmark produced before deployment."
+            "research team to people responsible for daily service. Their experience should guide the "
+            "pilot alongside a benchmark produced before deployment."
         ),
         (
             "The constraint is evidence. The announcement establishes the pilot and its ownership, but it "
@@ -229,6 +233,11 @@ class PipelineTests(unittest.TestCase):
                     "weighted_total": 9.0,
                     "threshold": 8.0,
                     "hard_failures": [],
+                    "hard_fail_checks": {
+                        row["name"]: True for row in yaml.safe_load(
+                            (ROOT / "config/rubric.yaml").read_text()
+                        )["rubric"]["hard_fail_checks"]
+                    },
                     "criteria": criteria,
                 }),
                 encoding="utf-8",
@@ -240,6 +249,76 @@ class PipelineTests(unittest.TestCase):
             )
             report = validate_run(target)
             self.assertTrue(report["ok"], report["errors"])
+            meta_path = target / "post_image.png.meta.json"
+            meta = json.loads(meta_path.read_text())
+            meta["source"] = "fallback"
+            meta_path.write_text(json.dumps(meta))
+            self.assertIn("profile requires ImageGen artwork; fallback is needs-attention",
+                          validate_run(target)["errors"])
+
+    def test_runtime_fails_closed_before_research(self) -> None:
+        runtime = json.loads((ROOT / "config/runtime.json").read_text())
+        states = {name: "available" for name in runtime["required_capabilities"]}
+        self.assertTrue(assess(states, runtime)["ok"])
+        for missing in ("unavailable", "unknown"):
+            states["imagegen"] = missing
+            result = assess(states, runtime)
+            self.assertEqual(result["state"], "needs-attention")
+            self.assertEqual(result["missing"], ["imagegen"])
+            self.assertIsNone(result["measured_cost_usd"])
+
+    def test_connected_account_requires_trusted_matching_metadata(self) -> None:
+        self.assertEqual(resolve_account({"profile": {"emailAddress": "editor@example.com"}})["email"],
+                         "editor@example.com")
+        self.assertEqual(resolve_account({"connector_view_urls": [
+            "https://mail.google.com/mail/?authuser=editor%40example.com"]})["email"],
+            "editor@example.com")
+        for evidence in (
+            {"session_email": "editor@example.com"},
+            {"connector_view_urls": ["https://example.com/?authuser=editor@example.com"]},
+            {"connector_view_urls": ["https://mail.google.com/mail/?authuser=0"]},
+            {"profile": {"emailAddress": "editor@example.com"}, "connector_view_urls": [
+                "https://mail.google.com/mail/?authuser=another@example.com"]},
+        ):
+            with self.assertRaises(ValueError):
+                resolve_account(evidence)
+
+    def test_personal_rule_is_case_insensitive_and_whole_word(self) -> None:
+        for word in ("matter", "MATTERS", "Mattered", "mattering"):
+            self.assertTrue(check_prose("The word is " + word + "."))
+        self.assertEqual(check_prose("Material choices and antimatter research."), [])
+        self.assertEqual(check_prose("Source https://example.org/matter/report"), [])
+        bad = valid_post().replace("The constraint is evidence.", "This MATTERS.")
+        self.assertIn("prohibited whole word: matters",
+                      validate_post(bad, base_dossier(), self.brand)["errors"])
+
+    def test_email_rejects_prohibited_editor_prose(self) -> None:
+        with self.assertRaises(ValueError):
+            render_html(post="Clean post.", image_url="", dossier=base_dossier(),
+                        score={}, date="October 9th, 2026", branch="test", commit="a" * 40,
+                        editor_note="This matters.")
+
+    def test_score_recomputes_and_requires_complete_rubric(self) -> None:
+        rubric = yaml.safe_load((ROOT / "config/rubric.yaml").read_text())["rubric"]
+        good = {
+            "ship": True, "weighted_total": 9.0, "threshold": 8.0,
+            "hard_failures": [],
+            "hard_fail_checks": {row["name"]: True for row in rubric["hard_fail_checks"]},
+            "criteria": [{**row, "score": 9, "notes": "Verified in dossier."}
+                         for row in rubric["criteria"]],
+        }
+        self.assertEqual(validate_score(good, rubric), [])
+        for mutate in (
+            lambda s: s.update(weighted_total=10),
+            lambda s: s.update(criteria=[]),
+            lambda s: s.update(hard_fail_checks={}),
+            lambda s: s["criteria"][0].update(score=float("nan")),
+            lambda s: s["criteria"][0].update(weight=1),
+            lambda s: s["criteria"][0].update(score=11),
+        ):
+            candidate = json.loads(json.dumps(good))
+            mutate(candidate)
+            self.assertTrue(validate_score(candidate, rubric))
 
     def test_no_target_package_requires_drop_evidence(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

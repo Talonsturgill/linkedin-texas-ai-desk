@@ -10,6 +10,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from prose_rules import require_prose
 
 CSS = """
 body{margin:0;padding:24px;background:#08060f;color:#191530;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -57,6 +58,13 @@ def source_rows(dossier: dict) -> list[dict]:
 
 def render_html(*, post: str, image_url: str, dossier: dict, score: dict,
                 date: str, branch: str, commit: str, editor_note: str) -> str:
+    require_prose(post)
+    require_prose(editor_note)
+    require_prose(str(dossier.get("_validation_note", "")))
+    for row in score.get("criteria", []):
+        require_prose(str(row.get("notes", "")))
+    for row in dossier.get("dropped_candidates", []):
+        require_prose(str(row.get("drop_reason", "")))
     no_target = dossier.get("no_target_this_cycle") is True
     source_items = []
     for row in source_rows(dossier):

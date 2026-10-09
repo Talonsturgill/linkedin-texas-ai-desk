@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import math
+import json
 import re
 import sys
 from pathlib import Path
@@ -30,6 +31,33 @@ def validate() -> list[str]:
     rubric = load_yaml("config/rubric.yaml")["rubric"]
     state = load_yaml("config/state.yaml")
     sources = load_yaml("config/sources.yaml")
+    runtime = json.loads((ROOT / "config/runtime.json").read_text())
+    settings = json.loads((ROOT / ".claude/settings.json").read_text())
+    if runtime.get("effort") != "medium" or settings.get("env", {}).get(
+            "CLAUDE_CODE_EFFORT_LEVEL") != runtime.get("effort"):
+        errors.append("Claude runtime and repository effort must both be medium")
+    if runtime.get("model_display_name") != "Haiku 5.5":
+        errors.append("routine model contract must remain Haiku 5.5")
+    if set(runtime.get("required_capabilities", [])) != {
+            "github", "gmail_draft_readback", "web", "imagegen"}:
+        errors.append("runtime must require all four delivery capabilities")
+    for key in ("max_search_queries", "max_source_fetches", "max_candidates"):
+        if type(runtime.get(key)) is not int or runtime[key] <= 0:
+            errors.append(f"runtime {key} must be a positive integer")
+    if runtime.get("discovery_workers") != 0 or runtime.get("max_score_cycles") != 2:
+        errors.append("runtime discovery and revision limits differ from the prompt")
+    skill_dir = ROOT / ".agents/skills/texas-desk-artwork"
+    skill = (skill_dir / "SKILL.md").read_text()
+    parts = skill.split("---", 2)
+    manifest = yaml.safe_load(parts[1]) if len(parts) == 3 else {}
+    if not isinstance(manifest, dict) or manifest.get("name") != "texas-desk-artwork" or not manifest.get("description"):
+        errors.append("artwork skill requires its name and description frontmatter")
+    for script in ("compose_cover.py", "qa_check.py", "render_fallback.py"):
+        if not (skill_dir / "scripts" / script).is_file():
+            errors.append(f"artwork skill script missing: {script}")
+    if "/Users/" in (ROOT / "AGENTS.md").read_text() or "/Users/" in (
+            ROOT / "prompts/ROUTINE_PROMPT.txt").read_text():
+        errors.append("entry instructions cannot require a Mac-only path")
 
     weights = [row.get("weight") for row in rubric.get("criteria", [])]
     if not weights or not all(isinstance(v, (int, float)) for v in weights):
@@ -82,7 +110,7 @@ def validate() -> list[str]:
     if "never send" not in trigger.lower():
         errors.append("thin trigger must state the draft-only boundary")
 
-    # Product files must not retain operational Alaska or Claude Routine instructions.
+    # Reject unrelated product remnants, not valid Claude runtime instructions.
     scan_paths = [ROOT / "config", ROOT / "prompts", ROOT / "references",
                   ROOT / ".agents" / "skills"]
     for base in scan_paths:
@@ -103,7 +131,7 @@ def validate() -> list[str]:
 def main() -> int:
     try:
         errors = validate()
-    except (KeyError, ValueError) as exc:
+    except (KeyError, ValueError, OSError) as exc:
         errors = [str(exc)]
     if errors:
         print("FAIL: configuration")

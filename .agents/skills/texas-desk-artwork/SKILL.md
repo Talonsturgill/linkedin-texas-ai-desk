@@ -6,8 +6,8 @@ description: Create the story-specific 1080 by 1080 Texas Desk LinkedIn cover af
 # Texas Desk Artwork
 
 Create one original editorial image that illustrates the selected decision. The final cover must
-be a real generated raster composition, not a procedural template, unless the built-in image tool
-fails twice.
+be a real generated raster composition. Missing ImageGen or two failed attempts ends the run
+as needs-attention; a procedural template does not satisfy the current delivery contract.
 
 ## Inputs
 
@@ -68,19 +68,12 @@ invent infrastructure, insignia, documents, people, dollar figures, or place-spe
      --image out/post_image.png --date "<MONTH DTH, YYYY>" --column "TEXAS DESK"
    ```
 
-## Fallback
+## Unavailable tool or failed generation
 
-Use the fallback only after two built-in ImageGen failures or when the tool is unavailable. Run:
-
-```bash
-python3 .agents/skills/texas-desk-artwork/scripts/render_fallback.py \
-  --headline "<headline>" --role "<role>" --date "<date>" \
-  --place "<place>" --coords "<coords>" \
-  --prompt-file out/image_prompt.txt --out out/post_image.png
-```
-
-Record `ImageGen unavailable after two attempts; deterministic fallback used` in the Gmail editor
-note. Never silently present the fallback as generated artwork.
+Stop as needs-attention when the built-in tool is unavailable or two attempts fail. Report the
+actual observation and attempt count in the unsent status draft. Do not claim two failed calls
+when the tool was absent. The legacy fallback renderer is retained for historical fixtures only;
+never use it to satisfy the current generated-artwork requirement.
 
 For the brand rationale and visual exclusions, read
 [`references/visual-system.md`](references/visual-system.md).
