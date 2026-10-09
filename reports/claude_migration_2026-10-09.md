@@ -38,3 +38,38 @@ Documentation used for runtime behavior:
 [model and effort configuration](https://code.claude.com/docs/en/model-config),
 [session usage estimates](https://code.claude.com/docs/en/costs), and
 [routine completion semantics](https://code.claude.com/docs/en/routines).
+
+## Saved routine and live verification
+
+The saved Claude routine (now named Texas Desk) points to
+`codex/texas-desk-claude-2026-10-09`. The two verification runs fetched runtime commit
+`90e23d3238fa872d62db1a376f3a67d3fb5e037f`. The documentation connector was removed,
+Gmail retained, and Auto-fix pull requests turned off. A dedicated Texas Desk cloud environment
+uses Trusted network access and `CLAUDE_CODE_EFFORT_LEVEL=medium`, with no new credentials.
+The existing Wednesday 4:04 AM Eastern schedule was retained. The duplicate legacy Codex
+schedule was confirmed PAUSED after migration.
+
+Two fresh Claude runs reached needs-attention before web research. The first created one
+exact-subject status draft. The second found and updated that same draft, without creating
+another status draft. It requested Gmail `FULL_CONTENT` readback and reported an exact subject,
+matching body, DRAFT label, and no SENT label. Account resolution succeeded from the connector's
+authenticated view URL before either write. The earlier no-target draft has a different subject
+and was preserved. No profile image, LinkedIn post, sent email, or merge was produced.
+
+| Session | Outcome | UI cost estimate | API / active | Cache read / write | Context |
+| --- | --- | --- | --- | --- | --- |
+| Baseline | No-target after research | $0.76 | 6m 45s / 6m 45s | 5.8M / 110.5k | 199k |
+| Updated contract | ImageGen preflight failure; status draft created | $0.03 | 38s / 49s | 836.1k / 93k | 93k |
+| Repeat | Same status draft updated; narrow effort diagnostic | $0.03 | 39s / 52s | 950.9k / 60.9k | 89.2k |
+
+These are different workloads. The verified saving is avoiding research after a known capability
+failure, not a measured reduction for an equivalent completed profile. Full profile cost and
+artwork delivery remain unmeasured.
+
+There is an unresolved effort-display mismatch. The runtime receipt confirmed the environment
+value `medium`, but both fresh native controls displayed High. Manually setting the completed
+second session to Medium did not carry into the third session. Do not claim proven Medium
+operation or attribute these savings to effort. The serving effort was not independently exposed.
+Built-in ImageGen was absent in both fresh tool inventories, so autonomous profile delivery is
+still blocked. Web tool presence was verified; live source fetching under the new environment
+was not exercised because the capability check stopped the run first.
