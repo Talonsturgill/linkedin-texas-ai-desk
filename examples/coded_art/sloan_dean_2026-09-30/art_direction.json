@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "source": "coded",
+  "example_kind": "historical_visual_acceptance (not current news)",
+  "story_id": "sloan_dean_2026-09-30",
+  "date": "SEPTEMBER 30TH, 2026",
+  "role": "FOUNDER",
+  "headline": "The hotel is the test",
+  "place": "DALLAS",
+  "coordinates": "",
+  "decision_anchor": "hotel operations",
+  "mechanism": "AI Hospitality Group chose direct hotel management agreements with operating responsibility over licensing its technology to existing operators. The picture separates the solid operating path from the dotted licensing branch and leaves the ground plot as an empty outline, because the fetched reporting names no Texas pilot hotel.",
+  "style_family": "halftone_duotone",
+  "composition": "vertical_tower_diagonal_split",
+  "palette_key": "caliche_bluebonnet_duotone",
+  "palette": [
+    "#E4D8C3",
+    "#4E5FA8",
+    "#0F0C1C"
+  ],
+  "material": "riso_ink",
+  "silhouette": "narrow dot-screen tower with a solid operating entry and a dotted licensing branch",
+  "light_model": "overhead_flat",
+  "ground_tone": "dark",
+  "focal_band": [
+    180,
+    680
+  ],
+  "art_text": [],
+  "visual_anchors": [
+    {
+      "id": "B1",
+      "claim_index": 2,
+      "claim": "AIHG chose direct hotel management agreements with operating responsibility rather than licensing its technology to existing operators.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html"
+      ],
+      "drawn_as": "brass key whose teeth engage the staffing sector of the operating cutaway"
+    },
+    {
+      "id": "B2",
+      "claim_index": 3,
+      "claim": "AI agents coordinate work across existing hotel systems; the company describes a human guest-facing team.",
+      "source_urls": [
+        "https://aihg.com/"
+      ],
+      "drawn_as": "cutaway disc with staffing, scheduling and guest service sectors, and workflow cards on a brass wire to the bell"
+    },
+    {
+      "id": "B3",
+      "claim_index": 8,
+      "claim": "The fetched reporting names no Texas pilot hotel. Texas relevance is the Dallas company and its commercialization choice, not verified local hotel deployment.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html"
+      ],
+      "drawn_as": "conceptual key and reception bell with no map, street or located property"
+    }
+  ],
+  "gaps_respected": [
+    "No Texas pilot hotel is named or drawn; the empty plot marks that gap.",
+    "Operating claims are executive testimony, not audited results; nothing is depicted as achieved."
+  ],
+  "renderer": {
+    "file": "artwork.py",
+    "sha256": "aae613353d6f57053b1b90890f1ad6f90cdbd0e8f37800a6a25917f728ff0db8",
+    "size": [
+      1080,
+      1080
+    ],
+    "seed": 2026,
+    "supersample": 2
+  },
+  "dossier_sha256": "c9199520706b2db0f9c58593e5ba75087b85d60184d4f146bfa35a14140a78cd",
+  "visual_review": {
+    "reviewed_post_image_sha256": "79b13b101e8ecd7741e0ec9fba3fd5ea92eca89cea46e68a0c08ad54057fe591",
+    "reviewed_art_base_sha256": "a9d2b7e61d9c127ad397426670f5afae410129a8f66be92985e6c9b65c8dba97",
+    "full_size_checked": true,
+    "thumbnail_300_checked": true,
+    "checks": {
+      "anchors_visible": true,
+      "focal_object_in_180_680_band": true,
+      "distinctive_material_object": true,
+      "visible_story_action": true,
+      "art_carries_story_before_headline": true,
+      "no_generic_server_or_texas_outline": true,
+      "no_clipping_or_artifacts": true,
+      "decision_readable": true
+    },
+    "findings": "Inspected full-size cover and 300 px thumbnail. Art reads before the headline; focal object sits in 180..680."
+  }
+}

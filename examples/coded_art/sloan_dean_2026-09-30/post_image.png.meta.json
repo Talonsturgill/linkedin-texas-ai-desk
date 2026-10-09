@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "date": "SEPTEMBER 30TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "The hotel is the test",
+  "place": "DALLAS",
+  "coordinates": "",
+  "source": "coded",
+  "palette": [
+    "#E4D8C3",
+    "#4E5FA8",
+    "#0F0C1C"
+  ],
+  "composition": "vertical_tower_diagonal_split",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "pillow+numpy coded art",
+    "deterministic typography overlay"
+  ],
+  "base_sha256": "a9d2b7e61d9c127ad397426670f5afae410129a8f66be92985e6c9b65c8dba97",
+  "rendered_at_utc": "2026-10-09T22:09:53.357179+00:00",
+  "canvas": [
+    1080,
+    1080
+  ],
+  "style_family": "halftone_duotone",
+  "palette_key": "caliche_bluebonnet_duotone",
+  "material": "riso_ink",
+  "silhouette": "narrow dot-screen tower with a solid operating entry and a dotted licensing branch",
+  "light_model": "overhead_flat",
+  "renderer_sha256": "aae613353d6f57053b1b90890f1ad6f90cdbd0e8f37800a6a25917f728ff0db8",
+  "dossier_sha256": "c9199520706b2db0f9c58593e5ba75087b85d60184d4f146bfa35a14140a78cd",
+  "seed": 2026,
+  "ground_tone": "dark"
+}
