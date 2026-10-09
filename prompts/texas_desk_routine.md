@@ -47,7 +47,14 @@ in Texas.
    to ignored `.local/gmail_account_evidence.json` with either `profile.emailAddress` or
    `connector_view_urls`, then run `python3 scripts/gmail_account.py --evidence
    .local/gmail_account_evidence.json`. Missing or conflicting metadata blocks every draft write.
-   Record available, unavailable, or unknown truthfully:
+   Verify web by fetching one primary source page and one independent reporting page from
+   `config/sources.yaml`; count both in the fetch ledger. Tool presence or a successful search
+   alone is insufficient. If a host fails, try one alternate host in that source class. If the
+   proxy explicitly denies these source hosts, record the capability failure and stop probing
+   further hosts. The cloud environment must use the scoped public-host list in
+   `config/claude_source_domains.txt` plus the default package-manager domains; setup is documented
+   in `references/claude_cloud_setup.md`. Do not bypass access controls or change network policy
+   from inside the routine. Record available, unavailable, or unknown truthfully:
 
    ```bash
    python3 scripts/runtime_check.py --github <STATE> --gmail-draft-readback <STATE> \

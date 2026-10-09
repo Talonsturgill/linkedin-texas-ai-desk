@@ -8,6 +8,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 import yaml
 
@@ -33,7 +34,7 @@ def validate() -> list[str]:
     sources = load_yaml("config/sources.yaml")
     runtime = json.loads((ROOT / "config/runtime.json").read_text())
     settings = json.loads((ROOT / ".claude/settings.json").read_text())
-    if runtime.get("effort") != "medium" or settings.get("env", {}).get(
+    if settings.get("effortLevel") != "medium" or runtime.get("effort") != "medium" or settings.get("env", {}).get(
             "CLAUDE_CODE_EFFORT_LEVEL") != runtime.get("effort"):
         errors.append("Claude runtime and repository effort must both be medium")
     if runtime.get("model_display_name") != "Haiku 5.5":
@@ -94,6 +95,13 @@ def validate() -> list[str]:
         errors.append("automation branch prefix must start with codex/")
     if state.get("recipient_source") != "gmail_profile":
         errors.append("recipient must come from the connected Gmail profile")
+
+    allowed_domains = set((ROOT / "config/claude_source_domains.txt").read_text().split())
+    if not allowed_domains or any("*" in host or "/" in host for host in allowed_domains):
+        errors.append("Claude source domains must be explicit public hostnames")
+    seed_hosts = {urlparse(row["url"]).hostname for rows in sources.get("seed_sources", {}).values() for row in rows}
+    for host in sorted(seed_hosts - allowed_domains):
+        errors.append(f"source host missing from Claude environment contract: {host}")
 
     policy = sources.get("source_policy", {})
     for key in ("primary_required", "independent_corroborator_required",
