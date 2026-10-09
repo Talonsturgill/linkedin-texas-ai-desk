@@ -4,8 +4,10 @@ Read `AGENTS.md`, then the versioned `prompts/texas_desk_routine.md` once. The a
 checkout is the workspace; never assume a Mac home-directory path exists in cloud.
 
 Use Haiku 5.5 at medium effort for the routine. Read `config/runtime.json` and run its
-capability gate before web research. Missing ImageGen is a needs-attention result,
-not permission to substitute a template or to label the run no-target.
+capability gate before web research; the `coded_art` capability comes from `scripts/art_smoke.py`.
+A failed artwork render after its budget is a needs-attention result, not permission to substitute
+a template or to label the run no-target. Author only `out/artwork.py` and `out/art_direction.json`,
+run `scripts/build_art.py`, record your real visual review, then run the artwork gate.
 
 Never send email, post to LinkedIn, merge, push main, print the connected mailbox,
 or commit private connector data. Keep delivery receipts under ignored `.local/`.

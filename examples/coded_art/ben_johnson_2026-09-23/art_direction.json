@@ -9,19 +9,20 @@
   "place": "AUSTIN",
   "coordinates": "",
   "decision_anchor": "Scaffold's seed round",
-  "mechanism": "Scaffold will use seed proceeds to expand AI that structures construction documents and coordinates purchase orders and schedules across existing builder, contractor and supplier systems. The picture keeps each plan sheet in place, carries markup across dashed bridges rather than replacing any sheet, and ends the schedule bar with no completion marker because the dossier sets no completion deadline.",
+  "mechanism": "Scaffold will use seed proceeds to expand AI that structures construction documents and coordinates purchase orders and schedules across existing builder, contractor and supplier systems. The picture keeps three sheets in place, a floor plan, a purchase-order grid and a schedule, and runs one continuous copper thread through all of them, so existing records are connected rather than replaced. The schedule's last bar is dashed because the dossier sets no completion deadline.",
   "style_family": "blueprint_linework",
   "composition": "sheet_stack_perspective",
-  "palette_key": "blueprint_panel",
+  "palette_key": "blueprint_panel_copper",
   "palette": [
     "#191530",
+    "#2B2447",
     "#4E5FA8",
     "#EDE6D6",
     "#B4664F",
-    "#2B2447"
+    "#E0956A"
   ],
   "material": "graphite_linework",
-  "silhouette": "four offset plan sheets in steep perspective joined by dashed bridges and an open schedule bar",
+  "silhouette": "three overlapping rotated sheets (floor plan, purchase-order grid, schedule) joined by one continuous copper thread",
   "light_model": "overhead_flat",
   "ground_tone": "dark",
   "focal_band": [
@@ -37,7 +38,7 @@
       "source_urls": [
         "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
       ],
-      "drawn_as": "floor plan sheet at the back, with the copper thread leaving it to reach the purchase order"
+      "drawn_as": "floor plan sheet with the copper thread leaving it to reach the purchase-order grid"
     },
     {
       "id": "C2",
@@ -64,7 +65,7 @@
   ],
   "renderer": {
     "file": "artwork.py",
-    "sha256": "ade3dbe8bde3d1eb423546ed6c6bad821bf7d0e072e8f0eed1caff6daf9108ce",
+    "sha256": "3cec71d651623d24c0dc14c74ed2e9bb69fe62403be3b6eee17e7c783af8d503",
     "size": [
       1080,
       1080
@@ -74,7 +75,7 @@
   },
   "dossier_sha256": "6786cde92d374d8713201b88324c6bd3d83409d5cba8f8aa25b4083ba81c5d45",
   "visual_review": {
-    "reviewed_post_image_sha256": "50ac6b76c972b49e66ea3c69ead6ffac84d6761cd7d0cc5435efb14efacf85d1",
+    "reviewed_post_image_sha256": "60615b8b560af98572ff8b5b9503d18cc6fda1ec328e806a0cae20e32ddfb0bf",
     "reviewed_art_base_sha256": "e6ffb691c6e9ead8bc63b4163692e0a53345a45028fd531809f59ffaac013f21",
     "full_size_checked": true,
     "thumbnail_300_checked": true,
@@ -88,6 +89,6 @@
       "no_clipping_or_artifacts": true,
       "decision_readable": true
     },
-    "findings": "Inspected full-size cover and 300 px thumbnail. Art reads before the headline; focal object sits in 180..680."
+    "findings": "Inspected full-size cover and 300 px thumbnail. Final art shows three overlapping sheets: a floor plan, a purchase-order grid with an ember-filled first row, and a schedule with a dashed open bar; one copper thread runs through all three."
   }
 }

@@ -9,18 +9,21 @@
   "place": "DALLAS",
   "coordinates": "",
   "decision_anchor": "hotel operations",
-  "mechanism": "AI Hospitality Group chose direct hotel management agreements with operating responsibility over licensing its technology to existing operators. The picture separates the solid operating path from the dotted licensing branch and leaves the ground plot as an empty outline, because the fetched reporting names no Texas pilot hotel.",
-  "style_family": "halftone_duotone",
-  "composition": "vertical_tower_diagonal_split",
-  "palette_key": "caliche_bluebonnet_duotone",
+  "mechanism": "AI Hospitality Group chose direct hotel management agreements with operating responsibility rather than licensing its technology to existing operators. The picture stages that choice as a brass hotel key whose teeth engage a teal cutaway of staffing, scheduling and guest service sectors, with a reception bell and workflow cards on a wire. It is conceptual and names no Texas property, because the dossier names no Texas pilot hotel.",
+  "style_family": "enamel_still_life",
+  "composition": "still_life_cluster",
+  "palette_key": "ink_teal_brass",
   "palette": [
-    "#E4D8C3",
-    "#4E5FA8",
-    "#0F0C1C"
+    "#0F0C1C",
+    "#1F5C5A",
+    "#3E8A84",
+    "#B4664F",
+    "#C9A063",
+    "#EDE6D6"
   ],
-  "material": "riso_ink",
-  "silhouette": "narrow dot-screen tower with a solid operating entry and a dotted licensing branch",
-  "light_model": "overhead_flat",
+  "material": "brass_enamel",
+  "silhouette": "brass hotel key diagonal across a sectored teal cutaway disc, a domed reception bell at right, and workflow cards on a brass wire above",
+  "light_model": "lamp_on_table",
   "ground_tone": "dark",
   "focal_band": [
     180,
@@ -62,7 +65,7 @@
   ],
   "renderer": {
     "file": "artwork.py",
-    "sha256": "aae613353d6f57053b1b90890f1ad6f90cdbd0e8f37800a6a25917f728ff0db8",
+    "sha256": "60b908eef7356584e8816c5e93e5f97ef6db1884b61e558d39e1f83b27919a6e",
     "size": [
       1080,
       1080
@@ -72,7 +75,7 @@
   },
   "dossier_sha256": "c9199520706b2db0f9c58593e5ba75087b85d60184d4f146bfa35a14140a78cd",
   "visual_review": {
-    "reviewed_post_image_sha256": "79b13b101e8ecd7741e0ec9fba3fd5ea92eca89cea46e68a0c08ad54057fe591",
+    "reviewed_post_image_sha256": "61a64f5b1f073d2ae73cafb25a8b0ab9a89924ef27e55ac6d42b4da0d0326e91",
     "reviewed_art_base_sha256": "a9d2b7e61d9c127ad397426670f5afae410129a8f66be92985e6c9b65c8dba97",
     "full_size_checked": true,
     "thumbnail_300_checked": true,
@@ -86,6 +89,6 @@
       "no_clipping_or_artifacts": true,
       "decision_readable": true
     },
-    "findings": "Inspected full-size cover and 300 px thumbnail. Art reads before the headline; focal object sits in 180..680."
+    "findings": "Inspected full-size cover and 300 px thumbnail. Final art shows a brass key, a sectored teal cutaway disc with staffing figures, a clock and hooks, a domed brass bell, and workflow cards; no located property is drawn."
   }
 }

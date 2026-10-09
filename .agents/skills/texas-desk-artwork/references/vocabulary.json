@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "extension_rule": "Add a new name here in a reviewed commit with a one-sentence definition. Names are checked for membership only; a renamed copy of an existing picture is still refused by the structural fingerprints and the three-dimension rule in art_gate.py.",
+  "style_families": {
+    "architectural_elevation": "flat front elevation of built or unbuilt structures with frame, pillar and tab",
+    "isometric_cutaway": "isometric projection of a solid with cut faces and shadowed planes",
+    "halftone_duotone": "two-ink dot screen whose density carries the form",
+    "blueprint_linework": "ink and paper plan drawings on a dark panel",
+    "paper_cut_relief": "layered cut paper with shadow between layers",
+    "stratigraphic_section": "horizontal bands of material cut in section",
+    "lightbox_sculpture": "backlit translucent forms with glowing edges",
+    "risograph_layers": "offset-print layers with misregistration",
+    "woodcut_relief": "carved black-and-ink shapes with hatched texture",
+    "enamel_still_life": "lit enamel and brass objects arranged as a still life",
+    "gouache_flat": "matte opaque color fields with soft edges",
+    "stipple_engraving": "dot and line engraving built from fine marks",
+    "collage_torn_paper": "torn-edge paper pieces over a ground"
+  },
+  "compositions": {
+    "horizon_split": "a single horizon line dividing ground from sky",
+    "vertical_tower_diagonal_split": "a tall mass set against a diagonal division",
+    "sheet_stack_perspective": "overlapping sheets receding in perspective",
+    "stepped_terraces": "ascending steps or levels",
+    "radial_convergence": "forms converging on one center",
+    "low_angle_monolith": "one dominant mass seen from below",
+    "still_life_cluster": "several objects arranged around a shared base",
+    "bridge_across_gap": "two anchors with a span between them",
+    "frieze_horizontal": "a long horizontal band of linked figures",
+    "diagonal_cascade": "forms descending along one diagonal",
+    "scatter_field": "irregular objects distributed across the field",
+    "inset_cutaway": "a circular or rectangular cut revealing interior parts"
+  },
+  "materials": {
+    "matte_lacquer": "matte painted surfaces with soft sheen",
+    "riso_ink": "overprinted ink on paper",
+    "graphite_linework": "fine graphite or ink lines",
+    "cut_paper": "cut-edge paper layers",
+    "limestone_relief": "carved mineral surface",
+    "glazed_ceramic": "glossy glaze with specular highlights",
+    "brass_enamel": "polished brass with enamel inlay",
+    "woodblock_ink": "ink on carved wood",
+    "gouache_matte": "opaque matte paint",
+    "torn_paper": "torn-edge paper"
+  },
+  "light_models": {
+    "low_raking_sun": "low sun across the surface",
+    "backlit_haze": "light from behind through haze",
+    "lamp_on_table": "a single lamp over a table",
+    "moon_on_water": "cool reflected light",
+    "overhead_flat": "even overhead light",
+    "window_side_light": "daylight from one side of a room",
+    "storm_green_light": "green-tinted diffuse light before weather"
+  }
+}

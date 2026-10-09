@@ -19,7 +19,6 @@ from check_config import validate as validate_config  # noqa: E402
 from check_post import validate_post  # noqa: E402
 from history_scan import summarize  # noqa: E402
 from qa_check import validate as validate_artwork  # noqa: E402
-from render_fallback import background  # noqa: E402
 from compose_cover import compose  # noqa: E402
 from validate_run import validate as validate_run  # noqa: E402
 from check_score import validate_score  # noqa: E402
@@ -242,29 +241,24 @@ class PipelineTests(unittest.TestCase):
                 }),
                 encoding="utf-8",
             )
-            shutil.copy(ROOT / "examples/texas_desk_cover.png", target / "post_image.png")
-            shutil.copy(
-                ROOT / "examples/texas_desk_cover.png.meta.json",
-                target / "post_image.png.meta.json",
+            report = validate_run(target, history_root=str(ROOT))
+            self.assertFalse(report["ok"])
+            self.assertTrue(report["errors"], "profile without coded artwork must not pass")
+            self.assertTrue(
+                all("post_image" in error or "artwork" in error or "missing" in error
+                    for error in report["errors"]),
+                report["errors"],
             )
-            report = validate_run(target)
-            self.assertTrue(report["ok"], report["errors"])
-            meta_path = target / "post_image.png.meta.json"
-            meta = json.loads(meta_path.read_text())
-            meta["source"] = "fallback"
-            meta_path.write_text(json.dumps(meta))
-            self.assertIn("profile requires ImageGen artwork; fallback is needs-attention",
-                          validate_run(target)["errors"])
 
     def test_runtime_fails_closed_before_research(self) -> None:
         runtime = json.loads((ROOT / "config/runtime.json").read_text())
         states = {name: "available" for name in runtime["required_capabilities"]}
         self.assertTrue(assess(states, runtime)["ok"])
         for missing in ("unavailable", "unknown"):
-            states["imagegen"] = missing
+            states["coded_art"] = missing
             result = assess(states, runtime)
             self.assertEqual(result["state"], "needs-attention")
-            self.assertEqual(result["missing"], ["imagegen"])
+            self.assertEqual(result["missing"], ["coded_art"])
             self.assertIsNone(result["measured_cost_usd"])
 
     def test_connected_account_requires_trusted_matching_metadata(self) -> None:
@@ -340,29 +334,33 @@ class PipelineTests(unittest.TestCase):
                 "no-target dossier needs a nonempty dropped_candidates list", report["errors"]
             )
 
-    def test_fallback_renderer_and_artwork_gate(self) -> None:
+    def test_coded_compose_requires_provenance(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary)
             base = target / "base.png"
-            prompt = target / "prompt.txt"
-            final = target / "final.png"
-            background().save(base, "PNG", optimize=True)
-            prompt.write_text("Fallback test prompt.\n", encoding="utf-8")
+            base.write_bytes((ROOT / "examples/coded_art/fermi_tensorwave_2026-10-07/art_base.png").read_bytes())
+            with self.assertRaises(ValueError):
+                compose(
+                    base_path=base, headline="Coded provenance", role="RESEARCH",
+                    date="SEPTEMBER 2ND, 2026", place="TRAVIS COUNTY", coords="",
+                    source="coded", out_path=target / "final.png",
+                )
+            with self.assertRaises(ValueError):
+                compose(
+                    base_path=base, headline="Coded provenance", role="RESEARCH",
+                    date="SEPTEMBER 2ND, 2026", place="TRAVIS COUNTY", coords="",
+                    source="fallback", out_path=target / "final.png",
+                )
+            fixture = ROOT / "examples/coded_art/fermi_tensorwave_2026-10-07"
             compose(
-                base_path=base,
-                headline="Robotics Meets The Real Shift",
-                role="RESEARCH",
-                date="SEPTEMBER 2ND, 2026",
-                place="TRAVIS COUNTY",
-                coords="30 N 97 W",
-                prompt_file=prompt,
-                source="fallback",
-                out_path=final,
+                base_path=fixture / "art_base.png", headline="Coded provenance", role="OPERATOR",
+                date="OCTOBER 7TH, 2026", place="CARSON COUNTY", coords="", source="coded",
+                out_path=target / "final.png", art_direction=fixture / "art_direction.json",
+                renderer=fixture / "artwork.py", dossier=fixture / "desk_dossier.json",
             )
-            self.assertEqual(
-                validate_artwork(final, "SEPTEMBER 2ND, 2026", "TEXAS DESK"), []
-            )
-
+            meta = json.loads((target / "final.png.meta.json").read_text())
+            self.assertEqual(meta["source"], "coded")
+            self.assertEqual(validate_artwork(target / "final.png", "OCTOBER 7TH, 2026", "TEXAS DESK"), [])
 
 if __name__ == "__main__":
     unittest.main()

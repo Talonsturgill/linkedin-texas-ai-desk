@@ -39,7 +39,7 @@ def validate() -> list[str]:
     if runtime.get("model_display_name") != "Haiku 5.5":
         errors.append("routine model contract must remain Haiku 5.5")
     if set(runtime.get("required_capabilities", [])) != {
-            "github", "gmail_draft_readback", "web", "imagegen"}:
+            "github", "gmail_draft_readback", "web", "coded_art"}:
         errors.append("runtime must require all four delivery capabilities")
     for key in ("max_search_queries", "max_source_fetches", "max_candidates"):
         if type(runtime.get(key)) is not int or runtime[key] <= 0:
@@ -52,7 +52,7 @@ def validate() -> list[str]:
     manifest = yaml.safe_load(parts[1]) if len(parts) == 3 else {}
     if not isinstance(manifest, dict) or manifest.get("name") != "texas-desk-artwork" or not manifest.get("description"):
         errors.append("artwork skill requires its name and description frontmatter")
-    for script in ("compose_cover.py", "qa_check.py", "render_fallback.py"):
+    for script in ("compose_cover.py", "qa_check.py", "art_kit.py", "art_gate.py", "render_art.py", "build_art.py"):
         if not (skill_dir / "scripts" / script).is_file():
             errors.append(f"artwork skill script missing: {script}")
     if "/Users/" in (ROOT / "AGENTS.md").read_text() or "/Users/" in (

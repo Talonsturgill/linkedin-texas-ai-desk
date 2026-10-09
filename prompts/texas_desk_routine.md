@@ -24,8 +24,9 @@ in Texas.
   only process, execution, implementation, or measurable accountability. Set the dossier's
   `editorial_mode` to `neutral_accountability` and `assessment` to `not_applicable`.
 - Create or update a Gmail draft. Never send it.
-- Use actual built-in ImageGen artwork. If it is unavailable or fails twice, finish as
-  needs-attention with an unsent status draft. Never substitute procedural artwork silently or
+- Use original, story-specific coded artwork that Claude authors in `out/artwork.py` and renders in
+  this environment. If the render fails twice, finish as needs-attention with an unsent status draft.
+  Never substitute a shared template silently or
   treat an infrastructure failure as an editorial no-target result.
 
 ## Phase 1 — Preflight and isolation
@@ -36,7 +37,8 @@ in Texas.
    `September 2nd, 2026`.
 3. Resolve the attached checkout with `git rev-parse --show-toplevel`; do not search a Mac path
    in cloud. Confirm the Git remote, GitHub authentication, Gmail create/update/readback, web
-   access, and actual built-in ImageGen capability without printing credentials. Discover only
+   access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing Pillow
+   or numpy from `requirements.txt`) without printing credentials. Discover only
    tools needed by this routine. Before marking Gmail available, resolve the connected recipient
    from its profile. If that connector has no profile tool, use its own authenticated `viewUrl`
    metadata from a read-only draft listing with an email-valued `authuser`. Never infer the
@@ -49,7 +51,7 @@ in Texas.
 
    ```bash
    python3 scripts/runtime_check.py --github <STATE> --gmail-draft-readback <STATE> \
-     --web <STATE> --imagegen <STATE>
+     --web <STATE> --coded-art <STATE>
    ```
 
    Unknown is a failed preflight. Stop before history, scouts, searches, or art when it fails.
@@ -210,16 +212,20 @@ Do not label incomplete verification as a completed no-target search.
 Invoke the repository skill `$texas-desk-artwork`. This is mandatory for a profile run.
 
 1. Read `.agents/skills/texas-desk-artwork/SKILL.md` once. Derive one visual metaphor from the verified decision and its real Texas setting.
-2. Save the exact no-text ImageGen brief to `out/image_prompt.txt`.
-3. Generate a new square raster with built-in ImageGen and save the selected result as
-   `out/art_base.png`.
+2. Author `out/artwork.py` (a story-specific renderer built from `scripts/art_kit.py` primitives)
+   and `out/art_direction.json` (identity, registered vocabulary values, mechanism, three anchors bound
+   to verbatim dossier claims, sourced art text, gaps respected, ground tone).
+3. Run `python3 .agents/skills/texas-desk-artwork/scripts/build_art.py --story-dir out`. It renders
+   within the attempt budget, updates the renderer, dossier and base hashes, recomposes
+   `out/post_image.png` and its sidecar, writes `out/thumb_300.png`, and resets any visual review
+   whose pixels changed. It never marks a check true.
 4. Inspect it. Make one targeted regeneration only if a concrete visual defect exists.
 5. Apply exact publication typography with the skill's compositor to create
    `out/post_image.png` and `out/post_image.png.meta.json`.
 6. Inspect the final cover at full size and thumbnail size, then run the skill's QA command.
 
-Missing ImageGen or two failed attempts means needs-attention. Preserve the verified dossier
-and report the tool failure in the unsent status draft; do not ship substitute artwork.
+Two failed renders, or an exhausted attempt budget, mean needs-attention. Preserve the verified
+dossier and report the failure in the unsent status draft; do not ship substitute artwork.
 
 ## Phase 7 — Validate, commit, and publish the artifacts
 
@@ -237,10 +243,12 @@ All checks must pass. Review `git diff` and `git status`. Stage only the intende
 - `out/final_post.md`
 - `out/post_check.json`
 - `out/score_report.json`
-- `out/image_prompt.txt`
+- `out/artwork.py`
+- `out/art_direction.json`
 - `out/art_base.png`
 - `out/post_image.png`
 - `out/post_image.png.meta.json`
+- `out/thumb_300.png`
 
 The `out` directory is ignored, so use explicit `git add -f` paths. Commit once with the message
 `Texas Desk: YYYY-MM-DD`. Do not add an AI attribution trailer. Push the run branch and verify that
@@ -292,7 +300,7 @@ Read back the draft and verify:
 ## Completion report
 
 Report the run mode, selected subject and decision or no-target reason, branch, exact commit, draft
-pull-request URL if created, image source (`imagegen` or `none`), permanent image URL if any,
+pull-request URL if created, image source (`coded` or `none`), permanent image URL if any,
 validation results, and Gmail draft state. Keep the connected email address and private draft
 identifiers in ignored local receipts only. Include observed counters and actual token usage
 when the runtime exposes it; otherwise say usage unavailable. Context occupancy and account-wide

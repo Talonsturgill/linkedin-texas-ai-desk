@@ -1,79 +1,69 @@
 ---
 name: texas-desk-artwork
-description: Create the story-specific 1080 by 1080 Texas Desk LinkedIn cover after a verified post is final. Use built-in ImageGen for the original artwork, then apply the exact Texas AI Docket wordmark, kicker, headline, date, and place with the deterministic compositor. Do not use for research, post writing, logos, or unrelated TexasAIDocket carousel work.
+description: Author a story-specific coded 1080 by 1080 Texas Desk LinkedIn cover after the copy passes. Write per-story Pillow and numpy artwork code, verify its provenance and variety, then apply exact Texas AI Docket publication type with the deterministic compositor. Use for every profile cover; do not use for research, copy, logos, or unrelated carousels.
 ---
 
-# Texas Desk Artwork
+# Texas Desk Artwork (coded)
 
-Create one original editorial image that illustrates the selected decision. The final cover must
-be a real generated raster composition. Missing ImageGen or two failed attempts ends the run
-as needs-attention; a procedural template does not satisfy the current delivery contract.
+Every profile cover is original code-authored editorial art that Claude renders in this
+environment. There is no image-generation dependency. The story is carried by the art before the
+headline. Historical ImageGen covers remain as honest legacy examples and are never relabeled.
 
-## Inputs
+## Workflow
 
-Read these before generating:
+1. Read `out/final_post.md`, `out/desk_dossier.json`, `config/brand.yaml`, and
+   `references/acceptance.md`. Pick the decision's physical mechanism and one medium that suits it.
+2. Choose a style family, composition, material, light model, and palette from the vocabularies in
+   `scripts/art_gate.py`. The three visual anchors must each bind to a verbatim dossier
+   `verified_facts` claim and its fetched source URL. Respect gaps: draw no unverified property,
+   campus, output figure, or completed step.
+3. Author `out/artwork.py` (per story) from `scripts/art_kit.py` primitives; see
+   `references/drawing-recipes.md`. Keep every drawn word a dated or named dossier string, listed in
+   `art_text`. Author `out/art_direction.json` (schema_version 2, identity fields, vocabulary values,
+   mechanism, three visual anchors, art_text, gaps_respected, ground_tone).
+4. Run the one deterministic build: `python3 .agents/skills/texas-desk-artwork/scripts/build_art.py --story-dir out`.
+   It renders within the two-attempt budget, updates renderer and dossier hashes, recomposes
+   `out/post_image.png` and its sidecar from the direction, writes `out/thumb_300.png`, and resets a
+   visual review whose pixels changed. It never marks a check true.
+5. Inspect `out/post_image.png` at full size and `out/thumb_300.png`. Record the real review in
+   `visual_review` (reviewed SHA-256 values, the two inspection flags, and each check you actually
+   verified, with findings that describe the final pixels).
+6. Run the gate: `python3 .agents/skills/texas-desk-artwork/scripts/art_gate.py --out-dir out --date <ISO>`
+   (validate_run runs the same gate). It recomputes every hash, re-renders `artwork.py`, recomposes
+   the final cover and compares pixels, checks anchors, labels and identity against the dossier, and
+   enforces variety against committed branch history.
 
-- `out/final_post.md`
-- `out/desk_dossier.json`
-- `config/brand.yaml`
+## Hard rules
 
-The dossier supplies the story, location, verified visual facts, and headline constraints. Do not
-invent infrastructure, insignia, documents, people, dollar figures, or place-specific details.
+- New profile covers require `source: coded`. `imagegen` metadata is legacy and valid only for
+  historical examples under `examples/`.
+- Focal objects stay in the unobstructed band y = 180..680. Compositor dark zones are the top strip
+  (0..170) and the headline zone (700 downward); a `light` ground tone adds a stronger top strip
+  and darkens from 660 down.
+- No arbitrary file-size floor. Polished vector-like art is valid. The ceiling is 5 MB.
+- No procedural template is a substitute cover. Each story gets its own `artwork.py`. Reuse
+  primitives, never whole scenes, across stories.
+- Variety: a new cover must differ from the previous published cover in at least three of six
+  dimensions (style family, composition, palette, material, silhouette, light), must not repeat a
+  style family or composition from the last 14 days or the last three covers, and must not match any
+  of those covers' structure (grayscale gradient hash distance above 40 of 256, and spatial edge
+  orientation similarity below 0.92). Fingerprints use only the typography-free band y = 340..540, so
+  relabeling or recoloring does not evade the check.
+- Two artwork render attempts per ordinary run. An engineering pass may pass `--limit` explicitly.
+- Never describe a skipped check as passed. The visual review must be recorded against current
+  hashes, so any later change to the image or the base invalidates it.
 
-## Primary path
+## Files
 
-1. Write `out/image_prompt.txt` as a compact production brief using this order:
-
-   - `Use case: stylized-concept`
-   - `Asset type: square LinkedIn editorial cover background`
-   - `Primary request:` one visual metaphor for the verified decision
-   - `Scene/backdrop:` the dossier's real Texas region and material world
-   - `Subject:` the decision's mechanism, consequence, or physical setting
-   - `Style/medium:` one specific editorial medium
-   - `Composition/framing:` one focal point, generous quiet bands at top and bottom for later type
-   - `Lighting/mood:` matched to the evidence, not generic drama
-   - `Color palette:` two to six story-appropriate inks grounded in the Texas AI Docket palette
-   - `Constraints:` square, no words, no letters, no numbers, no logos, no watermarks, no UI,
-     no generated portrait or likeness of the profiled person
-   - `Avoid:` boots, cowboy hats, longhorns, tourist Texas silhouettes, decorative oil derricks,
-     generic glowing brains, circuit-board faces, handshakes, and red used as decoration
-
-2. Invoke the built-in `$imagegen` path with that brief. Generate a brand-new square raster image.
-   Do not use CLI or an API key. Save or copy the selected result into `out/art_base.png`.
-3. Inspect `out/art_base.png` at full size. Reject extra text, logos, watermarks, false geography,
-   visual clichés, distorted people, or a weak focal hierarchy. Make one targeted regeneration
-   when a concrete defect is visible. A second failed built-in generation ends the primary path.
-4. Keep the image itself free of typography. Exact copy is added deterministically:
-
-   ```bash
-   python3 .agents/skills/texas-desk-artwork/scripts/compose_cover.py \
-     --base out/art_base.png \
-     --headline "<one or two short lines>" \
-     --role "<FOUNDER|OPERATOR|PUBLIC|RESEARCH>" \
-     --date "<MONTH DTH, YYYY>" \
-     --place "<REAL PLACE OR STATEWIDE>" \
-     --coords "<VERIFIED COORDINATES OR EMPTY>" \
-     --prompt-file out/image_prompt.txt \
-     --source imagegen \
-     --out out/post_image.png
-   ```
-
-5. Inspect the composed cover at full size and as a 300-pixel thumbnail. The headline must be
-   exact and legible, the artwork must remain the focal event, and the mark must read as quiet
-   publication furniture.
-6. Run the technical gate:
-
-   ```bash
-   python3 .agents/skills/texas-desk-artwork/scripts/qa_check.py \
-     --image out/post_image.png --date "<MONTH DTH, YYYY>" --column "TEXAS DESK"
-   ```
-
-## Unavailable tool or failed generation
-
-Stop as needs-attention when the built-in tool is unavailable or two attempts fail. Report the
-actual observation and attempt count in the unsent status draft. Do not claim two failed calls
-when the tool was absent. The legacy fallback renderer is retained for historical fixtures only;
-never use it to satisfy the current generated-artwork requirement.
-
-For the brand rationale and visual exclusions, read
-[`references/visual-system.md`](references/visual-system.md).
+- `scripts/art_kit.py` primitives: supersampled canvas, masks, sheen, bevel, shadows, hatch, halftone,
+  arcs, rotated rectangles, sourced text.
+- `scripts/compose_cover.py` exact typography and compositor bands.
+- `scripts/art_gate.py` provenance, anchors, art text, visual review, variety, attempt budget.
+- `scripts/build_art.py` the one ordered build: budgeted render, hashes, compose, thumbnail, review reset.
+- `scripts/render_art.py` budgeted render plus base verification.
+- `scripts/qa_check.py` technical image and sidecar check.
+- `references/acceptance.md` visual acceptance checklist (read before reviewing).
+- `references/drawing-recipes.md` primitives and recipes (read before drawing).
+- `references/visual-system.md` brand palette and Texas-specific rules.
+- `references/vocabulary.json` registered style, composition, material and light names with definitions.
+- `assets/` is not used; the brand fonts live in the repository's `assets/fonts` with a checksum manifest.

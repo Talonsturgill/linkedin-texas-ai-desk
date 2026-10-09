@@ -43,15 +43,19 @@ Use Python 3.11 or newer.
 python3 -m pip install -r requirements.txt
 python3 -m unittest discover -s tests -v
 python3 scripts/check_config.py
+python3 scripts/art_smoke.py
 ```
 
 `check_config.py` validates the local artwork skill manifest and referenced scripts on both
-Mac and Linux. No external home-directory validator is required.
+Mac and Linux. Brand fonts ship in `assets/fonts` with a checksum manifest; art never falls back to
+system fonts. No external home-directory validator is required.
 
 For Claude cloud, read `CLAUDE.md` and `config/runtime.json`. Verify required capabilities
-before research with `scripts/runtime_check.py`. Missing ImageGen is needs-attention; do not
-substitute procedural artwork for the user's required generated image. Use the attached Git
-checkout instead of a hard-coded local path. Read each contract once and keep tool output compact.
+before research with `scripts/runtime_check.py`, using the `coded_art` state from
+`python3 scripts/art_smoke.py` (it repairs missing Pillow or numpy from `requirements.txt` and
+renders a verified smoke image). A failed render after the two-attempt budget is needs-attention.
+Artwork is original code-authored per story (`out/artwork.py`), never a shared template. Use the
+attached Git checkout instead of a hard-coded local path. Read each contract once and keep tool output compact.
 
 Newly authored copy, image headlines, and email notes must not contain the whole words
 `matter`, `matters`, `mattered`, or `mattering`, case-insensitively. Source evidence and URLs

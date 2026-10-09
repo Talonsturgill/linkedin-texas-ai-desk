@@ -14,6 +14,12 @@ from pathlib import Path
 
 
 def _kit() -> None:
+    import os
+
+    override = os.environ.get("TEXAS_DESK_KIT")
+    if override:
+        sys.path.insert(0, override)
+        return
     for parent in Path(__file__).resolve().parents:
         candidate = parent / ".agents/skills/texas-desk-artwork/scripts"
         if candidate.is_dir():

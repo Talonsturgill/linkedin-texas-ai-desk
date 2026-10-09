@@ -2,12 +2,21 @@
   "schema_version": 1,
   "model_display_name": "Haiku 5.5",
   "effort": "medium",
-  "required_capabilities": ["github", "gmail_draft_readback", "web", "imagegen"],
+  "required_capabilities": [
+    "github",
+    "gmail_draft_readback",
+    "web",
+    "coded_art"
+  ],
   "max_search_queries": 16,
   "max_source_fetches": 24,
   "max_candidates": 6,
   "max_score_cycles": 2,
   "max_image_attempts": 2,
   "discovery_workers": 0,
-  "terminal_states": ["profile", "no-target", "needs-attention"]
+  "terminal_states": [
+    "profile",
+    "no-target",
+    "needs-attention"
+  ]
 }

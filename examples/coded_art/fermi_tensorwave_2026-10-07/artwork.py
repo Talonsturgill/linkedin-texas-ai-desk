@@ -12,13 +12,15 @@ import argparse
 import sys
 from pathlib import Path
 
-FONT_CANDIDATES = [
-    "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
-    "/System/Library/Fonts/Supplemental/Georgia Bold.ttf",
-]
 
 
 def _kit() -> None:
+    import os
+
+    override = os.environ.get("TEXAS_DESK_KIT")
+    if override:
+        sys.path.insert(0, override)
+        return
     for parent in Path(__file__).resolve().parents:
         candidate = parent / ".agents/skills/texas-desk-artwork/scripts"
         if candidate.is_dir():
@@ -28,9 +30,9 @@ def _kit() -> None:
 
 
 _kit()
-from art_kit import Canvas, rect_points, shade  # noqa: E402
+from art_kit import Canvas, pinned_font, rect_points, shade  # noqa: E402
 
-SEREIF = next(p for p in FONT_CANDIDATES if Path(p).is_file())
+SEREIF = pinned_font("Fraunces.ttf")
 CAPTION = "#0F0C1C"
 CARD = "#EDE6D6"
 BRASS = [(0.0, "#5C3D1E"), (0.4, "#E0B878"), (0.6, "#FFF3D0"), (1.0, "#4A2E14")]

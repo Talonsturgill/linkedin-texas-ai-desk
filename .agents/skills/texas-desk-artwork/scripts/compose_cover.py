@@ -16,27 +16,16 @@ import datetime as dt
 import hashlib
 import json
 import math
-import urllib.request
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 SIZE = 1080
 FOCAL_BAND = (180, 680)
 SCRIPT_DIR = Path(__file__).resolve().parent
-FONT_DIR = SCRIPT_DIR / "fonts"
-FONT_URLS = {
-    "Fraunces.ttf": "https://github.com/google/fonts/raw/main/ofl/fraunces/Fraunces%5BSOFT%2CWONK%2Copsz%2Cwght%5D.ttf",
-    "JetBrainsMono.ttf": "https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/JetBrainsMono-Medium.ttf",
-}
-FALLBACK_SERIF = [
-    "/System/Library/Fonts/Supplemental/Georgia Bold.ttf",
-    "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
-]
-FALLBACK_MONO = [
-    "/System/Library/Fonts/Supplemental/Courier New Bold.ttf",
-    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",
-]
 ROLES = {"FOUNDER", "OPERATOR", "PUBLIC", "RESEARCH"}
 SOURCES = {"coded", "imagegen"}  # imagegen is legacy: historical examples only
 
@@ -49,31 +38,11 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def ensure_font(filename: str, fallbacks: list[str]) -> str:
-    FONT_DIR.mkdir(parents=True, exist_ok=True)
-    destination = FONT_DIR / filename
-    if destination.is_file() and destination.stat().st_size > 1000:
-        return str(destination)
-    try:
-        request = urllib.request.Request(FONT_URLS[filename], headers={"User-Agent": "TexasDesk/1"})
-        with urllib.request.urlopen(request, timeout=25) as response:
-            data = response.read()
-        if len(data) > 1000:
-            destination.write_bytes(data)
-            return str(destination)
-    except Exception:
-        pass
-    for candidate in fallbacks:
-        if Path(candidate).is_file():
-            return candidate
-    raise RuntimeError(f"No usable font found for {filename}")
-
-
 def font_pair() -> tuple[str, str]:
-    return (
-        ensure_font("Fraunces.ttf", FALLBACK_SERIF),
-        ensure_font("JetBrainsMono.ttf", FALLBACK_MONO),
-    )
+    """Pinned publication fonts: the same bytes on every machine, verified before use."""
+    from art_kit import pinned_font
+
+    return pinned_font("Fraunces.ttf"), pinned_font("JetBrainsMono.ttf")
 
 
 def tracked_width(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont,

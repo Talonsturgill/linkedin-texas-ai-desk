@@ -11,12 +11,12 @@
   "palette": [
     "#2B2447",
     "#8C5A3C",
-    "#E4D8C3",
     "#B4664F",
-    "#E0956A",
-    "#4E5FA8"
+    "#E4D8C3",
+    "#E0B878",
+    "#EDE6D6"
   ],
-  "composition": "horizon_split",
+  "composition": "bridge_across_gap",
   "motifs": [
     "story-specific focal metaphor",
     "single Lone Star"
@@ -25,18 +25,18 @@
     "pillow+numpy coded art",
     "deterministic typography overlay"
   ],
-  "base_sha256": "3e39e8524f26feb617bd4d24398a6e48c5f06d29c99631cda77544665ad435f4",
-  "rendered_at_utc": "2026-10-09T22:09:31.355059+00:00",
+  "base_sha256": "c5e5587a31b788e786c23ed6f99d5d6358d5910670aa9d7e04ff39ae60474f98",
+  "rendered_at_utc": "2026-10-09T22:26:38.283057+00:00",
   "canvas": [
     1080,
     1080
   ],
-  "style_family": "isometric_cutaway",
-  "palette_key": "dusk_lacquer",
+  "style_family": "architectural_elevation",
+  "palette_key": "dusk_lacquer_brass",
   "material": "matte_lacquer",
-  "silhouette": "flat parcel slab with one half-open pivot gate and three unfilled terrace steps",
+  "silhouette": "two lacquered pillars over unbuilt pads, joined by a brass calendar tab with a dashed span and two paper date leaves",
   "light_model": "low_raking_sun",
-  "renderer_sha256": "d9f668e627e7926f27cec93948b31fb5651041a551a22298045e4af6f222a39b",
+  "renderer_sha256": "006c1184a708e7273af8e1737bbd6ef7e3207e804a19559423bae7860acbc4c7",
   "dossier_sha256": "94232184853b409421d1b7a0854e23d3f8ae38684baf58adb3e29c34c4eea8c4",
   "seed": 1701,
   "ground_tone": "dark"

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Coded-art provenance, anchor, visual-review, and variety gate for Texas Desk covers.
+"""Coded-art provenance, consistency, label, visual-review, and variety gate for Texas Desk covers.
 
-The gate recomputes everything. It never trusts a stored boolean: hashes are recomputed from
-files, artwork.py is re-rendered to confirm the base pixels, and variety fingerprints are
-recomputed from committed history read with git.
+The gate recomputes rather than trusting stored booleans: file hashes, the base image (by
+re-rendering artwork.py), the final cover (by recomposing it from the bound base, direction
+manifest, and dossier, then comparing pixels), anchors and labels against the dossier, and variety
+against committed dated history read with git. A failing git read is an error, never empty history.
 """
 
 from __future__ import annotations
@@ -23,35 +24,43 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+HERE = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[4]
+for path in (HERE, ROOT / "scripts"):
+    if str(path) not in sys.path:
+        sys.path.insert(0, str(path))
+
 SIZE = 1080
 MAX_BYTES = 5 * 1024 * 1024
 FINGERPRINT_BAND = (0, 340, 1080, 540)  # no overlay, no typography: see compose_cover.py
 DHASH_NEAR = 40  # of 256 bits; at or below this distance the structure is the same picture
-EDGE_NEAR = 0.92  # cosine of orientation histograms; at or above this the structure is the same
+EDGE_NEAR = 0.92  # cosine of spatial orientation histograms; at or above this the structure matches
 WINDOW_DAYS = 14
 RECENT_COVERS = 3
 MIN_CHANGED_DIMENSIONS = 3
 ATTEMPT_LIMIT = 2
 DIMENSIONS = ("style_family", "composition", "palette_key", "material", "silhouette", "light_model")
-STYLE_FAMILIES = {
-    "isometric_cutaway", "halftone_duotone", "blueprint_linework", "paper_cut_relief",
-    "stratigraphic_section", "lightbox_sculpture",
-}
-COMPOSITIONS = {
-    "stepped_terraces", "vertical_tower_diagonal_split", "sheet_stack_perspective",
-    "horizon_split", "radial_convergence", "low_angle_monolith",
-}
-MATERIALS = {"matte_lacquer", "riso_ink", "graphite_linework", "cut_paper", "limestone_relief", "glazed_ceramic"}
-LIGHT_MODELS = {"low_raking_sun", "backlit_haze", "lamp_on_table", "moon_on_water", "overhead_flat"}
+VOCABULARY = json.loads((HERE.parent / "references/vocabulary.json").read_text(encoding="utf-8"))
+STYLE_FAMILIES = set(VOCABULARY["style_families"])
+COMPOSITIONS = set(VOCABULARY["compositions"])
+MATERIALS = set(VOCABULARY["materials"])
+LIGHT_MODELS = set(VOCABULARY["light_models"])
+ROLES = {"FOUNDER", "OPERATOR", "PUBLIC", "RESEARCH"}
 REQUIRED_META = ["date", "kicker", "role", "headline", "place", "source", "base_sha256",
                  "renderer_sha256", "dossier_sha256", "style_family", "composition", "palette",
                  "material", "silhouette", "light_model", "seed"]
 CHECK_KEYS = ("anchors_visible", "focal_object_in_180_680_band", "distinctive_material_object",
               "visible_story_action", "art_carries_story_before_headline",
               "no_generic_server_or_texas_outline", "no_clipping_or_artifacts", "decision_readable")
-ROOT = Path(__file__).resolve().parents[4]
-REF_PATTERN = re.compile(r"refs/remotes/origin/codex/texas-desk-(\d{4}-\d{2}-\d{2})(?:-(\d{2}))?")
+REF_PATTERN = re.compile(r"refs/remotes/origin/codex/texas-desk-(\d{4}-\d{2}-\d{2})(?:-(\d+))?")
 HEX = re.compile(r"#[0-9A-Fa-f]{6}")
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
+          "September", "October", "November", "December"]
+PHRASE = re.compile(r"^(%s) (\d{1,2})(st|nd|rd|th)$" % "|".join(MONTHS))
+
+
+class HistoryError(RuntimeError):
+    """Raised when committed history cannot be read; the gate must fail closed."""
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -62,9 +71,25 @@ def sha256_file(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 
 
+# ----- dates and labels --------------------------------------------------------
+def display_date(iso: str) -> str:
+    """ISO run date to publication form, e.g. 2026-10-07 to OCTOBER 7TH, 2026."""
+    day = dt.date.fromisoformat(iso)
+    suffix = "TH" if 11 <= day.day % 100 <= 13 else {1: "ST", 2: "ND", 3: "RD"}.get(day.day % 10, "TH")
+    return f"{MONTHS[day.month - 1].upper()} {day.day}{suffix}, {day.year}"
+
+
+def expected_label(phrase: str) -> str | None:
+    """Only month-and-day phrases may be abbreviated in art: SEP 30 for September 30th."""
+    match = PHRASE.fullmatch(phrase.strip())
+    if not match:
+        return None
+    return f"{match.group(1)[:3].upper()} {int(match.group(2))}"
+
+
 # ----- fingerprints ----------------------------------------------------------
 def fingerprint(image: Image.Image) -> dict:
-    """Structure-only fingerprint of the typography-free band: gradient hash and edge orientation."""
+    """Structure-only fingerprint of the typography-free band: gradient hash and spatial edges."""
     band = image.convert("L").crop(FINGERPRINT_BAND)
     small = np.asarray(band.resize((17, 16), Image.Resampling.LANCZOS), dtype=np.int16)
     bits = (small[:, 1:] > small[:, :-1]).flatten()
@@ -83,8 +108,7 @@ def fingerprint(image: Image.Image) -> dict:
     flat = np.concatenate(cells)
     total = float(flat.sum())
     flat = (flat / total).tolist() if total > 0 else [0.0] * 96
-    edge = [round(v, 6) for v in flat]
-    return {"dhash": dhash, "edge": edge}
+    return {"dhash": dhash, "edge": [round(v, 6) for v in flat]}
 
 
 def dhash_distance(a: str, b: str) -> int:
@@ -102,21 +126,32 @@ def _entry(*, ref: str, date: str, png: bytes, meta: dict | None, manifest: dict
     meta = meta or {}
     manifest = manifest or {}
     fp = fingerprint(Image.open(io.BytesIO(png)))
-    values = {}
-    for key in DIMENSIONS:
-        values[key] = manifest.get(key, meta.get(key))
+    values = {key: manifest.get(key, meta.get(key)) for key in DIMENSIONS}
     legacy = meta.get("source") == "imagegen" or not manifest
-    return {"ref": ref, "date": date, "legacy": bool(legacy), **values, **fp}
+    return {"ref": ref, "date": date, "suffix": 0, "legacy": bool(legacy), **values, **fp}
 
 
-def _git(repo: Path, *args: str) -> bytes | None:
+def _git(repo: Path, *args: str, required: bool = False) -> bytes | None:
     result = subprocess.run(["git", "-C", str(repo), *args], capture_output=True)
-    return result.stdout if result.returncode == 0 else None
+    if result.returncode != 0:
+        if required:
+            raise HistoryError(f"git {' '.join(args)} failed: {result.stderr.decode(errors='replace').strip()}")
+        return None
+    return result.stdout
+
+
+def _sort_key(entry: dict) -> tuple[str, int]:
+    return entry["date"], int(entry["suffix"])
 
 
 def load_history(repo: Path, run_date: str, exclude_branch: str | None = None) -> list[dict]:
-    """Read every strictly earlier dated Texas Desk cover from committed remote branches."""
-    refs = (_git(repo, "for-each-ref", "--format=%(refname)", "refs/remotes/origin/codex/texas-desk-*") or b"").decode()
+    """Every committed dated Texas Desk cover on origin dated on or before run_date.
+
+    Same-day earlier runs with numeric suffixes (-2 ... -10) are included and sorted numerically.
+    The current run's branch is excluded by name. Any failing git read raises HistoryError.
+    """
+    refs = _git(repo, "for-each-ref", "--format=%(refname)",
+                "refs/remotes/origin/codex/texas-desk-*", required=True).decode()
     entries = []
     for ref in refs.split():
         match = REF_PATTERN.fullmatch(ref)
@@ -124,29 +159,29 @@ def load_history(repo: Path, run_date: str, exclude_branch: str | None = None) -
             continue
         date = match.group(1)
         branch = ref.removeprefix("refs/remotes/origin/")
-        if date >= run_date or branch == exclude_branch:
+        if date > run_date or branch == exclude_branch:
             continue
-        png = _git(repo, "show", f"{ref}:out/post_image.png")
-        if png is None:
-            continue
+        png = _git(repo, "show", f"{ref}:out/post_image.png", required=True)
         meta_raw = _git(repo, "show", f"{ref}:out/post_image.png.meta.json")
         manifest_raw = _git(repo, "show", f"{ref}:out/art_direction.json")
-        entries.append(_entry(
+        entry = _entry(
             ref=ref, date=date, png=png,
             meta=json.loads(meta_raw) if meta_raw else None,
             manifest=json.loads(manifest_raw) if manifest_raw else None,
-        ))
-    return sorted(entries, key=lambda e: (e["date"], e["ref"]))
+        )
+        entry["suffix"] = int(match.group(2) or 1)
+        entries.append(entry)
+    return sorted(entries, key=_sort_key)
 
 
 def select_history(entries: list[dict], run_date: str) -> tuple[list[dict], dict | None]:
     """Last 14 days plus the most recent published covers; returns (compared set, previous cover)."""
     run = dt.date.fromisoformat(run_date)
-    prior = [e for e in entries if e["date"] < run_date]
-    windowed = [e for e in prior if (run - dt.date.fromisoformat(e["date"])).days <= WINDOW_DAYS]
-    recent = prior[-RECENT_COVERS:]
+    ordered = sorted((e for e in entries if e["date"] <= run_date), key=_sort_key)
+    windowed = [e for e in ordered if (run - dt.date.fromisoformat(e["date"])).days <= WINDOW_DAYS]
+    recent = ordered[-RECENT_COVERS:]
     selected = {e["ref"]: e for e in windowed + recent}
-    previous = prior[-1] if prior else None
+    previous = ordered[-1] if ordered else None
     return list(selected.values()), previous
 
 
@@ -161,9 +196,9 @@ def compare(candidate: dict, history: list[dict], previous: dict | None) -> list
             )
     for item in history:
         name = item["ref"]
-        if candidate["style_family"] and candidate["style_family"] == item.get("style_family"):
+        if candidate.get("style_family") and candidate["style_family"] == item.get("style_family"):
             errors.append(f"variety: style family repeats {name}")
-        if candidate["composition"] and candidate["composition"] == item.get("composition"):
+        if candidate.get("composition") and candidate["composition"] == item.get("composition"):
             errors.append(f"variety: composition repeats {name}")
         distance = dhash_distance(candidate["dhash"], item["dhash"])
         if distance <= DHASH_NEAR:
@@ -174,7 +209,7 @@ def compare(candidate: dict, history: list[dict], previous: dict | None) -> list
     return errors
 
 
-# ----- coded provenance -------------------------------------------------------
+# ----- provenance and consistency --------------------------------------------
 def _dossier_urls(dossier: dict) -> set[str]:
     decision = dossier.get("selected_decision", {})
     urls = {decision.get("primary_source", {}).get("url", "")}
@@ -218,20 +253,47 @@ def validate_anchors(manifest: dict, dossier: dict) -> list[str]:
     return errors
 
 
-def validate_art_text(manifest: dict, dossier: dict) -> list[str]:
-    """Any words drawn into the art must be dated or named strings found verbatim in a dossier fact."""
+def validate_art_text(manifest: dict, dossier: dict, artwork_source: str) -> list[str]:
+    """Each drawn label must be the supported abbreviation of a dossier phrase and appear in artwork.py."""
     errors = []
     facts = dossier.get("verified_facts", [])
     for entry in manifest.get("art_text", []):
-        index = entry.get("claim_index")
-        phrase = entry.get("source_phrase", "")
         text = str(entry.get("text", ""))
+        index = entry.get("claim_index")
+        phrase = str(entry.get("source_phrase", ""))
         if not isinstance(index, int) or not 0 <= index < len(facts):
             errors.append(f"art text {text!r} does not reference a dossier fact")
-        elif not phrase or phrase not in facts[index].get("claim", ""):
+            continue
+        if phrase not in facts[index].get("claim", ""):
             errors.append(f"art text {text!r} source phrase is not verbatim in dossier fact {index}")
-        if not text or len(text) > 16:
-            errors.append(f"art text {text!r} must be a short sourced label")
+        if expected_label(phrase) != text:
+            errors.append(f"art text {text!r} is not the supported label for {phrase!r}")
+        if f'"{text}"' not in artwork_source:
+            errors.append(f"art text {text!r} is not drawn by artwork.py")
+    return errors
+
+
+def validate_identity(manifest: dict, meta: dict, dossier: dict) -> list[str]:
+    """Headline, role, place, date, coordinates and decision anchor must agree across all records."""
+    from prose_rules import check_prose
+
+    errors = []
+    subject = dossier.get("selected_subject", {})
+    decision = dossier.get("selected_decision", {})
+    for key in ("headline", "role", "place", "date", "coordinates"):
+        if manifest.get(key) != meta.get(key):
+            errors.append(f"manifest and metadata disagree on {key}")
+    if meta.get("role") not in ROLES:
+        errors.append("role must be FOUNDER, OPERATOR, PUBLIC, or RESEARCH")
+    if meta.get("role") != str(subject.get("role_category", "")).upper():
+        errors.append("role does not match the dossier role_category")
+    if meta.get("place") != subject.get("place_label"):
+        errors.append("place does not match the dossier place_label")
+    if meta.get("date") != display_date(str(dossier.get("run_date", ""))):
+        errors.append("date does not match the dossier run_date in publication form")
+    if manifest.get("decision_anchor") != decision.get("decision_anchor"):
+        errors.append("decision_anchor does not match the dossier")
+    errors.extend(check_prose(str(meta.get("headline", ""))))
     return errors
 
 
@@ -246,6 +308,26 @@ def recompute_base(out_dir: Path) -> str | None:
         if result.returncode != 0 or not target.is_file():
             return None
         return sha256_file(target)
+
+
+def recompose_matches(out_dir: Path, manifest: dict) -> str | None:
+    """Recompose the final cover from bound inputs and compare pixels. Returns an error or None."""
+    import compose_cover
+
+    with tempfile.TemporaryDirectory() as temporary:
+        target = Path(temporary) / "final.png"
+        compose_cover.compose(
+            base_path=out_dir / "art_base.png", headline=manifest["headline"], role=manifest["role"],
+            date=manifest["date"], place=manifest["place"], coords=manifest.get("coordinates", ""),
+            source="coded", out_path=target, art_direction=out_dir / "art_direction.json",
+            renderer=out_dir / "artwork.py", dossier=out_dir / "desk_dossier.json",
+        )
+        rebuilt = np.asarray(Image.open(target).convert("RGB"))
+    with Image.open(out_dir / "post_image.png") as current:
+        existing = np.asarray(current.convert("RGB"))
+    if rebuilt.shape != existing.shape or not np.array_equal(rebuilt, existing):
+        return "final cover does not match a recomposition from the bound base, direction, and dossier"
+    return None
 
 
 def validate_art(out_dir: Path, dossier: dict, date: str, column: str, *,
@@ -289,6 +371,7 @@ def validate_art(out_dir: Path, dossier: dict, date: str, column: str, *,
         errors.append(f"metadata date {meta.get('date')!r} does not match {date!r}")
     if meta.get("kicker") != column:
         errors.append(f"metadata kicker {meta.get('kicker')!r} does not match {column!r}")
+    errors.extend(validate_identity(manifest, meta, dossier))
 
     renderer_sha = sha256_file(out_dir / "artwork.py")
     dossier_sha = sha256_file(out_dir / "desk_dossier.json")
@@ -303,13 +386,13 @@ def validate_art(out_dir: Path, dossier: dict, date: str, column: str, *,
         if meta.get(key) != manifest.get(key):
             errors.append(f"metadata {key} does not match the art direction manifest")
     if manifest.get("style_family") not in STYLE_FAMILIES:
-        errors.append("style_family is outside the coded vocabulary")
+        errors.append("style_family is outside the registered vocabulary (references/vocabulary.json)")
     if manifest.get("composition") not in COMPOSITIONS:
-        errors.append("composition is outside the coded vocabulary")
+        errors.append("composition is outside the registered vocabulary")
     if manifest.get("material") not in MATERIALS:
-        errors.append("material is outside the coded vocabulary")
+        errors.append("material is outside the registered vocabulary")
     if manifest.get("light_model") not in LIGHT_MODELS:
-        errors.append("light_model is outside the coded vocabulary")
+        errors.append("light_model is outside the registered vocabulary")
     if not str(manifest.get("silhouette", "")).strip():
         errors.append("silhouette is required")
     palette = manifest.get("palette", [])
@@ -320,9 +403,9 @@ def validate_art(out_dir: Path, dossier: dict, date: str, column: str, *,
     if manifest.get("renderer", {}).get("size") != [SIZE, SIZE]:
         errors.append("renderer must declare a 1080 by 1080 size")
 
-    dossier_data = json.loads((out_dir / "desk_dossier.json").read_text(encoding="utf-8"))
-    errors.extend(validate_anchors(manifest, dossier_data))
-    errors.extend(validate_art_text(manifest, dossier_data))
+    artwork_source = (out_dir / "artwork.py").read_text(encoding="utf-8")
+    errors.extend(validate_anchors(manifest, dossier))
+    errors.extend(validate_art_text(manifest, dossier, artwork_source))
 
     review = manifest.get("visual_review", {})
     if review.get("reviewed_post_image_sha256") != sha256_file(final):
@@ -342,10 +425,13 @@ def validate_art(out_dir: Path, dossier: dict, date: str, column: str, *,
             errors.append("artwork.py failed to re-render during recomputation")
         elif rebuilt != base_sha:
             errors.append("recomputed base hash differs from art_base.png; artwork.py does not reproduce it")
+        if rebuilt is not None and not any(e.startswith("stale provenance") for e in errors):
+            mismatch = recompose_matches(out_dir, manifest)
+            if mismatch:
+                errors.append(mismatch)
 
     candidate = {key: manifest.get(key) for key in DIMENSIONS}
     candidate.update(final_fp)
-    candidate["style_family"] = manifest.get("style_family")
     run_iso = str(dossier.get("run_date", ""))
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", run_iso):
         return errors + ["dossier run_date must be an ISO date for the variety window"]
@@ -370,15 +456,20 @@ def record_attempt(usage_path: Path, limit: int = ATTEMPT_LIMIT) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out-dir", default="out")
-    parser.add_argument("--date", required=True)
+    parser.add_argument("--date", required=True, help="ISO run date")
     parser.add_argument("--column", default="TEXAS DESK")
     parser.add_argument("--repo", default=str(ROOT))
     parser.add_argument("--run-branch")
     args = parser.parse_args()
     out_dir = Path(args.out_dir).resolve()
     dossier = json.loads((out_dir / "desk_dossier.json").read_text(encoding="utf-8"))
-    history = load_history(Path(args.repo), args.date, args.run_branch)
-    errors = validate_art(out_dir, dossier, args.date, args.column, history=history)
+    meta = json.loads((out_dir / "post_image.png.meta.json").read_text(encoding="utf-8"))
+    try:
+        history = load_history(Path(args.repo), args.date, args.run_branch)
+    except HistoryError as exc:
+        print(json.dumps({"ok": False, "errors": [str(exc)], "history_compared": 0}, indent=2))
+        return 1
+    errors = validate_art(out_dir, dossier, meta.get("date", ""), args.column, history=history)
     print(json.dumps({"ok": not errors, "errors": errors, "history_compared": len(history)}, indent=2))
     return 0 if not errors else 1
 

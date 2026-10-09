@@ -8,6 +8,8 @@ at SUPERSAMPLE times that resolution and is reduced with LANCZOS in finish().
 
 from __future__ import annotations
 
+import hashlib
+import json
 import math
 from pathlib import Path
 
@@ -16,6 +18,26 @@ from PIL import Image, ImageDraw, ImageFilter
 
 SIZE = 1080
 SUPERSAMPLE = 2
+ASSET_FONTS = Path(__file__).resolve().parents[4] / "assets/fonts"
+
+
+def pinned_font(name: str) -> str:
+    """Return a bundled font after verifying its SHA-256 against assets/fonts/manifest.json.
+
+    The brand fonts (Fraunces, JetBrains Mono) are OFL-licensed bytes committed under the repository's
+    assets/fonts. No network fetch and no system-font substitution is ever attempted.
+    """
+    manifest = json.loads((ASSET_FONTS / "manifest.json").read_text(encoding="utf-8"))
+    entry = manifest.get("files", {}).get(name)
+    if entry is None:
+        raise RuntimeError(f"{name} is not listed in assets/fonts/manifest.json")
+    path = ASSET_FONTS / name
+    if not path.is_file():
+        raise RuntimeError(f"{name} is missing from assets/fonts")
+    data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() != entry["sha256"] or len(data) != entry["bytes"]:
+        raise RuntimeError(f"{name} does not match its pinned SHA-256 and size")
+    return str(path)
 
 
 def color(value: str) -> np.ndarray:
