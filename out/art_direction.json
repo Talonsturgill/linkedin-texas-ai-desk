@@ -8,7 +8,7 @@
   "place": "TEXAS STATEWIDE",
   "coordinates": "",
   "decision_anchor": "front of the line",
-  "mechanism": "ERCOT placed large-load eligibility verification ahead of the Batch Zero interconnection study, asking the Commission to excuse the August 7th classification deadline so classification could follow verification. The picture stages that sequence as a queue of cards on a brass rail, with the front card lifted into a verification gate. Cards that do not pass drop off the rail beneath the gate, and a seal tab stands for the December filing. It is conceptual and names no located property.",
+  "mechanism": "In August ERCOT described placing large-load eligibility verification ahead of the Batch Zero interconnection study, and asked the Commission to excuse the August 7th classification deadline so classification could follow verification. The picture stages that sequence as a queue of cards on a brass rail, with the front card lifted into a verification gate. Cards that do not pass drop off the rail beneath the gate, and a seal tab stands for the December filing. It is conceptual and names no located property.",
   "style_family": "blueprint_linework",
   "composition": "frieze_horizontal",
   "palette_key": "ink_bluebonnet_brass",
@@ -33,16 +33,16 @@
     {
       "id": "B1",
       "claim_index": 3,
-      "claim": "The August 7, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) would be excused, allowing conditional classification by August 31, 2026 so eligibility verification could come first.",
+      "claim": "In its August 10th, 2026 filing, ERCOT requested that the August 7th, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) be excused, with conditional classification by August 31, 2026 so eligibility verification could come first.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
       ],
-      "drawn_as": "the queue front card is lifted toward the gate, standing for the excused classification deadline and conditional classification that follows verification"
+      "drawn_as": "the front card is lifted toward the gate, standing for the requested excusal of the classification deadline and the conditional classification that would follow verification"
     },
     {
       "id": "B2",
       "claim_index": 5,
-      "claim": "Large loads that do not pass verification or do not respond will be disqualified from Batch Zero.",
+      "claim": "ERCOT's August presentation states that large loads that do not pass verification or do not respond will be disqualified from Batch Zero.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
       ],
@@ -51,12 +51,12 @@
     {
       "id": "B3",
       "claim_index": 4,
-      "claim": "ERCOT plans to file the Batch Zero Eligibility Verification Report by December 10, 2026.",
+      "claim": "ERCOT said in August it planned to file the Batch Zero Eligibility Verification Report by December 10, 2026.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf",
         "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
       ],
-      "drawn_as": "a brass seal tab on the right gate post stands for the December verification report, with no date drawn"
+      "drawn_as": "a brass seal tab on the right gate post stands for the verification report ERCOT said in August it planned, with no date drawn"
     }
   ],
   "gaps_respected": [
@@ -74,7 +74,7 @@
     "seed": 2026,
     "supersample": 2
   },
-  "dossier_sha256": "5ff81bb6fe44244b052d1cd365a95a36b8ad045e4a10dae33756149e17ba5e18",
+  "dossier_sha256": "d7f1426b32b6eb7bcf41fd7072d4729ad7afa1c58e3027476a45ccd019e6a602",
   "visual_review": {
     "reviewed_post_image_sha256": "bb7169e90d28e7de8e93dff9bf3f8026f66fb952daafd388bf3a7475d71121b4",
     "reviewed_art_base_sha256": "5a7df0f64193ee922523f1709e5f86470ddcf52265b2b531410efea2a653687c",

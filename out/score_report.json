@@ -4,7 +4,7 @@
       "name": "Hook strength",
       "weight": 0.1,
       "score": 7.5,
-      "notes": "Two short opening lines name Seely, ERCOT, and the anchor front of the line; unchanged from cycle 1, a plainer hook than a headline would be."
+      "notes": "Unchanged score. The hook now names Seely as accountable for the operational sequence and the anchor front of the line, without crediting him with the governor's policy choice."
     },
     {
       "name": "Subject and decision significance for Texas",
@@ -16,7 +16,7 @@
       "name": "Identity and decision fidelity",
       "weight": 0.14,
       "score": 8.5,
-      "notes": "Title from Utility Dive Aug 21, decision date Aug 20 from the ERCOT presentation, Tribune quote and dates match the dossier."
+      "notes": "Unchanged score. Title now taken from ERCOT's executives page, decision dated August 20th, 2026, and the August statements are tensed as stated in August."
     },
     {
       "name": "Source quality and independence",
@@ -28,7 +28,7 @@
       "name": "Structural read",
       "weight": 0.13,
       "score": 8.0,
-      "notes": "Cycle 2 edit: explains the classification mechanism, the alternative ERCOT declined, and the verification gate before studies, all sourced in the ERCOT record."
+      "notes": "Unchanged score. The mechanism stands on the ERCOT classification record. The alternative is now a labelled pre-directive baseline from the Tribune, with no claim that the August 7th deadline remained available after the directive."
     },
     {
       "name": "Concrete next check",
@@ -58,7 +58,7 @@
       "name": "Credibility and proportionality",
       "weight": 0.05,
       "score": 8.0,
-      "notes": "Claims stay within fetched statements; the ownership caveat is stated in the dossier and not overstated in the post."
+      "notes": "Unchanged score. The August 7th overclaim is removed, and the ownership limit to the operational sequence is stated in the dossier and the copy."
     }
   ],
   "weighted_total": 8.02,
@@ -77,5 +77,5 @@
   "threshold": 8.0,
   "ship": true,
   "cycles": 2,
-  "cycle_note": "Cycle 1 recomputed 7.915, below threshold. Cycle 2 made two real edits (structural mechanism sentence, specific closing question) and re-scored; the hook score was not changed."
+  "cycle_note": "Editorial QA correction: notes and copy changed, no scores changed. Total unchanged at the recomputed value; the margin over the threshold is narrow and is stated, not enlarged."
 }

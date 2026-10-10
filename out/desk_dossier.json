@@ -5,22 +5,25 @@
   "no_target_this_cycle": false,
   "selected_subject": {
     "full_name": "Chad Seely",
-    "role": "Senior Vice President of Regulatory Policy and General Counsel and Chief Compliance Officer",
+    "role": "Senior Vice President, Regulatory Policy, General Counsel, Chief Compliance Officer, and Corporate Secretary",
     "organization": "ERCOT",
     "role_category": "operator",
     "texas_tie": "ERCOT, the grid operator for most of Texas, and the Batch Zero large-load interconnection queue overseen by the Public Utility Commission of Texas",
     "place_label": "TEXAS STATEWIDE",
     "coordinates": "",
     "role_source": {
-      "url": "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/",
-      "title": "ERCOT aims to complete Texas governor's data center audit by December",
-      "publisher": "Utility Dive"
+      "url": "https://www.ercot.com/about/governance/executives",
+      "title": "ERCOT executives",
+      "publisher": "ERCOT",
+      "claims_supported": [
+        "Chad Seely is listed with the title in the role field."
+      ]
     },
     "verbatim_quotes": [
       {
         "text": "moving that verification process now to the front of the line before we begin the interconnection study process",
         "url": "https://www.texastribune.org/2026/08/14/texas-data-center-approval-pause-ercot-power-grid/",
-        "context": "Chad Seely, ERCOT, quoted by the Texas Tribune on August 14th, 2026 describing the verification sequence"
+        "context": "Chad Seely, ERCOT, quoted by the Texas Tribune on August 14th, 2026 describing the verification sequence stated that month"
       },
       {
         "text": "We will not have the study done by April 9, 2027.",
@@ -30,14 +33,14 @@
     ]
   },
   "selected_decision": {
-    "what_happened": "ERCOT, responding to Governor Abbott's August 3rd, 2026 directive for a comprehensive verification and audit of data centers in the interconnection process, paused the Batch Zero study process, asked the Public Utility Commission to excuse the August 7th, 2026 classification deadline and allow conditional classification by August 31, 2026 so eligibility could be verified first, and set a December 10th, 2026 target for filing the Batch Zero Eligibility Verification Report. Seely said verification would come before the interconnection study begins and that the April 9, 2027 study deadline would be missed.",
+    "what_happened": "In August 2026, ERCOT responded to Governor Abbott's August 3rd directive for a comprehensive verification and audit of data centers in the interconnection process. ERCOT's August 20th presentation described a verification step ahead of the Batch Zero interconnection study, an August 10th filing requesting conditional classification, and a December 10th target for a verification report. Seely described that operational sequence in August. The governor's directive is a separate decision and is not attributed to Seely.",
     "decision_anchor": "front of the line",
     "date": "2026-08-20",
-    "owner_evidence": "Chad Seely, ERCOT senior vice president of regulatory policy and general counsel, is the named ERCOT executive who set out the verification-first sequence, the request for information timing, and the December 10th filing goal in public statements reported on August 14th and August 21st, 2026. The ERCOT August 20th, 2026 presentation is the operational record of the plan; it does not name Seely, so his ownership rests on the independent reporting of his statements.",
-    "alternative_available": "ERCOT could have kept the August 7th, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) and classified large loads before the eligibility verification was complete, instead of asking the Commission to delay classification to August 31, 2026.",
-    "ai_nexus": "Batch Zero is ERCOT's study of large loads, mostly data centers and AI computing campuses, requesting grid connection in Texas. The verification gate decides which of those loads keep their place in the interconnection study. Under the Batch Zero rules, ERCOT sorts each large load into base load, studied load, or a load that does not qualify, and the verification gate governs that sorting.",
-    "texas_consequence": "The audit covers about 250 to 300 projects, most of them data centers, representing about 200 gigawatts of future demand. Large loads that do not pass verification or do not respond are disqualified from Batch Zero. Developers seeking grid connection and the utilities that serve them face the timeline, and the study deadline of April 9, 2027 will be missed by ERCOT's own account.",
-    "next_check": "ERCOT's Batch Zero Eligibility Verification Report, which ERCOT plans to file with the Public Utility Commission by December 10, 2026, and the new Batch Zero study timeline that ERCOT says it has not yet set.",
+    "owner_evidence": "Chad Seely is listed by ERCOT as senior vice president of regulatory policy and general counsel. Independent reporting attributes to him the operational sequence ERCOT described in August: verification before the interconnection study, the request-for-information timing, the December 10th filing target, and the April 9th, 2027 study deadline that ERCOT said it would not meet. The ERCOT August 20th presentation is the operational record and does not name him. Ownership here is limited to that operational sequence, not the governor's policy choice.",
+    "alternative_available": "Pre-directive baseline, as reported by The Texas Tribune on August 14th, 2026: verification sat inside ERCOT's existing review queue rather than at the top of it, and the governor's directive moved it to the top. The ERCOT presentation records the August 7th, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) as the rule ERCOT's August 10th filing asked the Commission to excuse. This describes the prior plan. It does not claim the August 7th deadline remained available after the directive.",
+    "ai_nexus": "Batch Zero is ERCOT's one-time study of large loads, defined as 75 MW or greater, mostly data centers, requesting grid connection in Texas. Under the Batch Zero rules, ERCOT sorts each large load into base load, studied load, or a load that does not qualify, and the verification gate governs that sorting.",
+    "texas_consequence": "The Texas Tribune reported that the audit covers about 250 to 300 projects, most of them data centers, representing about 200 gigawatts of future demand. ERCOT's August presentation states that large loads that do not pass verification, or do not respond, will be disqualified from Batch Zero. The affected parties are the developers of those queued loads seeking grid connection in Texas.",
+    "next_check": "ERCOT said in August it planned to file the Batch Zero Eligibility Verification Report with the Public Utility Commission by December 10th, 2026. The April 9th, 2027 Batch Zero study deadline is one ERCOT said it would not meet, with no new timeline set as of the August reporting.",
     "public_policy_or_electoral": true,
     "primary_source": {
       "url": "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf",
@@ -49,9 +52,9 @@
         "Governor Abbott's August 3rd directive asked for a comprehensive verification and audit of data centers.",
         "ERCOT issued a Market Notice on August 3, 2026 pausing the Batch Zero study process.",
         "ERCOT filed on August 10, 2026 for good cause exceptions to PGRR 145.",
-        "The August 7, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) would be excused, with conditional classification by August 31, 2026.",
-        "ERCOT will file the Batch Zero Eligibility Verification Report by December 10, 2026.",
-        "Large loads that do not pass verification or do not respond will be disqualified from Batch Zero."
+        "In its August filing, ERCOT requested that the August 7, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) be excused, with conditional classification by August 31, 2026.",
+        "ERCOT said in August it planned to file the Batch Zero Eligibility Verification Report by December 10, 2026.",
+        "ERCOT's August presentation states that large loads that do not pass verification or do not respond will be disqualified from Batch Zero."
       ]
     },
     "corroborating_sources": [
@@ -63,10 +66,10 @@
         "source_type": "independent_reporting",
         "independent_of_subject": true,
         "claims_supported": [
-          "Chad Seely is senior vice president of regulatory policy and general counsel and chief compliance officer at ERCOT.",
-          "Seely said ERCOT expected to start sending requests for information as early as the end of the month and into the first part of September.",
-          "Seely said ERCOT will not have the Batch Zero study done by April 9, 2027.",
-          "Seely said the goal is to head toward a December 10 filing."
+          "Chad Seely is senior vice president of regulatory policy and general counsel at ERCOT.",
+          "Seely said in August that ERCOT expected to start sending requests for information as early as the end of August and into early September.",
+          "Seely said in August that ERCOT will not have the Batch Zero study done by April 9, 2027.",
+          "Seely said in August that the goal was a December 10 filing."
         ]
       },
       {
@@ -77,9 +80,10 @@
         "source_type": "independent_reporting",
         "independent_of_subject": true,
         "claims_supported": [
-          "Seely said verification would come before the interconnection study begins.",
+          "Seely said in August that verification would come before the interconnection study begins.",
           "The audit covers about 250 to 300 projects, most of them data centers, representing about 200 gigawatts of demand.",
-          "Projects that fail the audit are to be denied grid connection."
+          "Projects that fail the audit are to be denied grid connection.",
+          "The governor's order moved these checks to the top of ERCOT's existing review queue."
         ]
       }
     ]
@@ -88,17 +92,17 @@
     "editorial_mode": "neutral_accountability",
     "assessment": "not_applicable",
     "evidence_for": [
-      "ERCOT's August 20th, 2026 presentation sets out a dated verification process with a December 10th, 2026 filing.",
-      "Seely's statements, reported by two independent outlets, match the sequence in ERCOT's record.",
-      "ERCOT's presentation states that the verification gate precedes final classification, giving the process a stated reason."
+      "ERCOT's August 20th, 2026 presentation sets out a dated verification process with a December 10th, 2026 filing target.",
+      "Seely's statements, reported by two independent outlets in August, match the sequence in ERCOT's record.",
+      "ERCOT's presentation states that the verification gate precedes final classification and gives its reason."
     ],
     "evidence_against": [
-      "Seely said ERCOT is still working on a new Batch Zero timeline, so the schedule beyond December is not set.",
+      "Seely said in August that ERCOT was still working on a new Batch Zero timeline, so the schedule after December had not been set as of that reporting.",
       "The ERCOT presentation does not name Seely, so individual ownership rests on the reporting of his statements.",
-      "The governor's directive, the PUCT rule, and ERCOT's filings are separate decisions, and this profile covers only ERCOT's sequencing choice."
+      "The governor's directive, the separate PUCT rule, and ERCOT's filings are separate decisions. This profile covers only ERCOT's sequencing."
     ],
-    "structural_read": "The decision moves the grid's largest pending load requests through an audit before the interconnection study, and it converts a classification deadline into a conditional classification with a later verification report. The public record shows the sequence and the dates. It does not show how many projects will pass.",
-    "forward_implication": "Whether the verification report lands by December 10th, 2026, and whether it discloses the criteria used to disqualify projects, will show whether the process is measurable in time for the study that ERCOT says it will not finish by April 9th, 2027.",
+    "structural_read": "The sequence moves the largest pending large-load requests through a verification step before the interconnection study, and it turns the classification deadline into a conditional classification. The public record from August shows the sequence and its dates. It does not show how many projects will pass.",
+    "forward_implication": "Whether the report due by December 10th, 2026 is filed on time and discloses the disqualification criteria will show whether the sequence is measurable before the April 9th, 2027 study deadline that ERCOT said it would not meet.",
     "conflict_screen": "clear"
   },
   "required_post_phrases": [
@@ -127,38 +131,38 @@
       ]
     },
     {
-      "claim": "The August 7, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) would be excused, allowing conditional classification by August 31, 2026 so eligibility verification could come first.",
+      "claim": "In its August 10th, 2026 filing, ERCOT requested that the August 7th, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) be excused, with conditional classification by August 31, 2026 so eligibility verification could come first.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
       ]
     },
     {
-      "claim": "ERCOT plans to file the Batch Zero Eligibility Verification Report by December 10, 2026.",
+      "claim": "ERCOT said in August it planned to file the Batch Zero Eligibility Verification Report by December 10, 2026.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf",
         "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
       ]
     },
     {
-      "claim": "Large loads that do not pass verification or do not respond will be disqualified from Batch Zero.",
+      "claim": "ERCOT's August presentation states that large loads that do not pass verification or do not respond will be disqualified from Batch Zero.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
       ]
     },
     {
-      "claim": "Chad Seely is senior vice president of regulatory policy and general counsel and chief compliance officer at ERCOT.",
+      "claim": "Chad Seely is listed by ERCOT as Senior Vice President, Regulatory Policy, General Counsel, Chief Compliance Officer, and Corporate Secretary.",
       "source_urls": [
-        "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
+        "https://www.ercot.com/about/governance/executives"
       ]
     },
     {
-      "claim": "Seely said verification would come before the interconnection study begins.",
+      "claim": "Seely said in August that verification would come before the interconnection study begins.",
       "source_urls": [
         "https://www.texastribune.org/2026/08/14/texas-data-center-approval-pause-ercot-power-grid/"
       ]
     },
     {
-      "claim": "The audit covers about 250 to 300 projects, most of them data centers, representing about 200 gigawatts of future demand.",
+      "claim": "The Texas Tribune reported that the audit covers about 250 to 300 projects, most of them data centers, representing about 200 gigawatts of future demand.",
       "source_urls": [
         "https://www.texastribune.org/2026/08/14/texas-data-center-approval-pause-ercot-power-grid/"
       ]
@@ -170,25 +174,37 @@
       ]
     },
     {
-      "claim": "Seely said ERCOT will not have the Batch Zero study done by April 9, 2027.",
+      "claim": "Seely said in August that ERCOT will not have the Batch Zero study done by April 9, 2027.",
       "source_urls": [
         "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
       ]
     },
     {
-      "claim": "Seely said ERCOT expected to start sending requests for information as early as the end of August and into early September 2026, with possible additional rounds in October and November.",
+      "claim": "Seely said in August that ERCOT expected to start sending requests for information as early as the end of August and into early September 2026, with possible additional rounds in October and November.",
       "source_urls": [
         "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
       ]
     },
     {
-      "claim": "Seely said ERCOT is still working on a new Batch Zero timeline.",
+      "claim": "Seely said in August that ERCOT was still working on a new Batch Zero timeline.",
       "source_urls": [
         "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
       ]
     },
     {
-      "claim": "ERCOT sorts each large load under the Batch Zero rules into base load, studied load, or load that does not qualify for Batch Zero.",
+      "claim": "ERCOT's August presentation says that under the Batch Zero rules ERCOT sorts each large load into base load, studied load, or load that does not qualify for Batch Zero.",
+      "source_urls": [
+        "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
+      ]
+    },
+    {
+      "claim": "The Texas Tribune reported that the governor's order moved these checks to the top of ERCOT's existing review queue, which is the pre-directive baseline for verification.",
+      "source_urls": [
+        "https://www.texastribune.org/2026/08/14/texas-data-center-approval-pause-ercot-power-grid/"
+      ]
+    },
+    {
+      "claim": "ERCOT's August presentation lists the Batch Zero study's 75 MW or greater large-load definition.",
       "source_urls": [
         "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
       ]

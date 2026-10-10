@@ -2,9 +2,9 @@
   "ok": true,
   "errors": [],
   "metrics": {
-    "body_words": 408,
-    "total_chars": 2546,
-    "hook_chars": 164,
+    "body_words": 423,
+    "total_chars": 2627,
+    "hook_chars": 207,
     "hashtags": [
       "#TexasGrid",
       "#ERCOT",

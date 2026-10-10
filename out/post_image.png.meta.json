@@ -26,7 +26,7 @@
     "deterministic typography overlay"
   ],
   "base_sha256": "5a7df0f64193ee922523f1709e5f86470ddcf52265b2b531410efea2a653687c",
-  "rendered_at_utc": "2026-10-10T00:21:01.981339+00:00",
+  "rendered_at_utc": "2026-10-10T00:32:50.078115+00:00",
   "canvas": [
     1080,
     1080
@@ -37,7 +37,7 @@
   "silhouette": "a row of six cream cards on a brass rail, the front card lifted into a brass gate with a bluebonnet panel, a dropped card below the gate and a brass seal tab on the right post",
   "light_model": "overhead_flat",
   "renderer_sha256": "5948a61432e17e4713894455e78a96ddfb7bdf2ad87ae0cbf9a0fb59f09924ea",
-  "dossier_sha256": "5ff81bb6fe44244b052d1cd365a95a36b8ad045e4a10dae33756149e17ba5e18",
+  "dossier_sha256": "d7f1426b32b6eb7bcf41fd7072d4729ad7afa1c58e3027476a45ccd019e6a602",
   "seed": 2026,
   "ground_tone": "dark"
 }
