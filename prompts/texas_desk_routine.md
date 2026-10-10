@@ -35,23 +35,6 @@ in Texas.
    Reuse those readings for later phases. Defer the artwork skill until the copy passes.
 2. Determine `TODAY` and the display date in America/Chicago. The display date must use the form
    `September 2nd, 2026`.
-   Calculate both inclusive window start dates with date arithmetic, not mental calendar math:
-
-   ```bash
-   python3 - <<'PY'
-   from datetime import datetime, timedelta
-   from zoneinfo import ZoneInfo
-   import yaml
-   state = yaml.safe_load(open('config/state.yaml'))
-   today = datetime.now(ZoneInfo(state['timezone'])).date()
-   print('run_date:', today)
-   for key in ('decision_window_days', 'broadening_window_days'):
-       print(key, 'starts:', today - timedelta(days=state[key]))
-   PY
-   ```
-
-   Reject a known out-of-window decision before spending a source fetch on it. An article's
-   recent publication date does not make an older decision recent.
 3. Resolve the attached checkout with `git rev-parse --show-toplevel`; do not search a Mac path
    in cloud. Confirm the Git remote, GitHub authentication, Gmail create/update/readback, web
    access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing Pillow,
@@ -121,6 +104,25 @@ silently ignoring missing images on genuine profile branches.
 Do not subscribe to PR activity or start a post-run monitoring loop. Stop after the terminal report.
 
 ## Phase 2 — Discover candidates
+
+After the preflight bootstrap has installed the required dependencies, calculate the search bounds.
+Calculate both inclusive window start dates with date arithmetic, not mental calendar math:
+
+```bash
+python3 - <<'PY'
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+import yaml
+state = yaml.safe_load(open('config/state.yaml'))
+today = datetime.now(ZoneInfo(state['timezone'])).date()
+print('run_date:', today)
+for key in ('decision_window_days', 'broadening_window_days'):
+    print(key, 'starts:', today - timedelta(days=state[key]))
+PY
+```
+
+Reject a known out-of-window decision before spending a source fetch on it. An article's
+recent publication date does not make an older decision recent.
 
 Search the default 60-day window before considering anything older. Cover these four lanes so the
 selection is not driven by a single news cycle:
