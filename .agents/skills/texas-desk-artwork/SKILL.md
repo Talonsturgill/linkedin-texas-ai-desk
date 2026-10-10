@@ -19,7 +19,9 @@ headline. Historical ImageGen covers remain as honest legacy examples and are ne
    `verified_facts` claim and its fetched source URL. Respect gaps: draw no unverified property,
    campus, output figure, or completed step.
 3. Author `out/artwork.py` (per story) from `scripts/art_kit.py` primitives; see
-   `references/drawing-recipes.md`. Keep every drawn word a dated or named dossier string, listed in
+   `references/drawing-recipes.md` and `references/direction-schema.md`. The latter is the complete
+   authoring contract; use it instead of reading validator and compositor source on ordinary runs.
+   Keep every drawn label a supported sourced date abbreviation, listed in
    `art_text`. Author `out/art_direction.json` (schema_version 2, identity fields, vocabulary values,
    mechanism, three visual anchors, art_text, gaps_respected, ground_tone).
 4. Run the one deterministic build: `python3 .agents/skills/texas-desk-artwork/scripts/build_art.py --story-dir out`.
