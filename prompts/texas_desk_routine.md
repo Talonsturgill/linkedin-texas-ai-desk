@@ -291,6 +291,13 @@ python3 scripts/check_config.py
 
 All checks must pass. Review `git diff` and `git status`. Stage only the intended daily artifacts:
 
+The complete render regression suite has taken about 148 seconds in Claude cloud. Allow at least
+600 seconds for that process; a tool's short foreground wait should yield a background session,
+not kill the command. Do not wrap the suite in `timeout 110` or infer success from the last log
+lines. Retain the full log locally and check the test process's actual exit status. A timeout is
+not a test pass. Retry an infrastructure timeout once with the documented allowance; do not rerun
+already passing suites merely to obtain another success message.
+
 - `out/desk_dossier.json`
 - `out/final_post.md`
 - `out/post_check.json`
