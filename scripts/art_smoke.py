@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Preflight the coded-art renderer: repair missing Python dependencies, then render a smoke image.
+"""Preflight the coded-art renderer: match tested dependencies, then render a smoke image.
 
-A missing Pillow or numpy is repairable setup (installed from requirements.txt), not an artwork
+A missing or drifted dependency is repairable setup (installed from requirements.txt), not an artwork
 provider blocker. The result is coded_art=available only after a real render verifies its size.
 """
 
@@ -9,7 +9,10 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import importlib.metadata
+import importlib.util
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -20,13 +23,26 @@ REQUIREMENTS = ROOT / "requirements.txt"
 
 
 def ensure_dependencies() -> list[str]:
-    """Import Pillow and numpy; install from requirements.txt if either is missing."""
+    """Repair missing or drifted distributions before importing rendering modules."""
     missing = []
-    for module in ("PIL", "numpy", "yaml"):
+    modules = {"Pillow": "PIL", "numpy": "numpy", "PyYAML": "yaml"}
+    pins = {}
+    for line in REQUIREMENTS.read_text().splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        match = re.fullmatch(r"([A-Za-z0-9_-]+)==([0-9.]+)", line.strip())
+        if not match:
+            raise ValueError("render dependencies must use exact tested version pins")
+        pins[match[1]] = match[2]
+    if set(pins) != set(modules):
+        raise ValueError("render dependency pins are incomplete")
+    for package, module in modules.items():
         try:
-            importlib.import_module(module)
-        except ImportError:
-            missing.append(module)
+            installed = importlib.metadata.version(package)
+        except importlib.metadata.PackageNotFoundError:
+            installed = None
+        if installed != pins[package] or importlib.util.find_spec(module) is None:
+            missing.append(package)
     if not missing:
         return []
     subprocess.run(
@@ -34,8 +50,9 @@ def ensure_dependencies() -> list[str]:
         check=True, timeout=600,
     )
     importlib.invalidate_caches()
-    for module in missing:
-        importlib.import_module(module)
+    for package in modules:
+        if importlib.metadata.version(package) != pins[package]:
+            raise RuntimeError("dependency repair did not install the tested version")
     return missing
 
 
@@ -47,6 +64,7 @@ def smoke(output: Path) -> dict:
     output.parent.mkdir(parents=True, exist_ok=True)
     width, height = smoke_render(output)
     from PIL import Image  # noqa: E402
+    from PIL import features  # noqa: E402
 
     with Image.open(output) as image:
         ok = image.format == "PNG" and image.size == (128, 128) and image.mode == "RGB"
@@ -55,6 +73,8 @@ def smoke(output: Path) -> dict:
         "size": [width, height],
         "dependencies_repaired": repaired,
         "renderer": "pillow+numpy",
+        "versions": {name: importlib.metadata.version(name) for name in ("Pillow", "numpy", "PyYAML")},
+        "libraries": {name: features.version(name) for name in ("freetype2", "zlib", "raqm")},
     }
 
 

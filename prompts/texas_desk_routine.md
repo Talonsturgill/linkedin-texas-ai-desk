@@ -37,7 +37,7 @@ in Texas.
    `September 2nd, 2026`.
 3. Resolve the attached checkout with `git rev-parse --show-toplevel`; do not search a Mac path
    in cloud. Confirm the Git remote, GitHub authentication, Gmail create/update/readback, web
-   access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing Pillow,
+   access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing or drifted Pillow,
    numpy, or PyYAML from `requirements.txt`) without printing credentials. Discover only
    tools needed by this routine. Before marking Gmail available, resolve the connected recipient
    from its profile. If that connector has no profile tool, use its own authenticated `viewUrl`
