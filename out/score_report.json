@@ -46,7 +46,7 @@
       "name": "LinkedIn readability",
       "weight": 0.06,
       "score": 8.0,
-      "notes": "Short paragraphs, 408 body words, within the 3000 character cap."
+      "notes": "Short paragraphs, 424 body words (check_post count), within the 3000 character cap."
     },
     {
       "name": "Specific engagement question",
