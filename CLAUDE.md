@@ -13,3 +13,5 @@ record your real visual review, then run the artwork gate.
 Never send email, post to LinkedIn, merge, push main, print the connected mailbox,
 or commit private connector data. Keep delivery receipts under ignored `.local/`.
 Follow the versioned editorial, source, image, validation, and draft readback gates.
+For Gmail profile delivery, use the tested small attachment protocol in
+`references/claude_gmail_delivery.md` and verify stored MIME with `scripts/gmail_delivery.py`.

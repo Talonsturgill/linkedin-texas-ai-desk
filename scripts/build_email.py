@@ -57,7 +57,8 @@ def source_rows(dossier: dict) -> list[dict]:
 
 
 def render_html(*, post: str, image_url: str, dossier: dict, score: dict,
-                date: str, branch: str, commit: str, editor_note: str) -> str:
+                date: str, branch: str, commit: str, editor_note: str,
+                attachment_preview: bool = False) -> str:
     require_prose(post)
     require_prose(editor_note)
     require_prose(str(dossier.get("_validation_note", "")))
@@ -111,10 +112,15 @@ def render_html(*, post: str, image_url: str, dossier: dict, score: dict,
                 'alt="Texas Desk LinkedIn cover"></a>'
                 f'<div class="link">Open or save the image · <a href="{safe(image_url)}">{safe(image_url)}</a></div></div>'
             )
+            if attachment_preview:
+                image = ('<p>The attached cover is a 160-pixel preview. '
+                         f'<a href="{safe(image_url)}">Download the full-resolution PNG for LinkedIn</a>.</p>')
         content = f'<h2>Copy this for LinkedIn</h2><pre class="post">{safe(post)}</pre>{image}'
 
     note_class = "note warning" if not score.get("ship", no_target) else "note"
-    return f"""<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>
+    # Claude's connector strips styles; omit the unused CSS from that bounded tool payload.
+    css = "" if attachment_preview else CSS
+    return f"""<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>
 <div class="wrap"><div class="mast"><h1>TEXAS AI DOCKET · TEXAS DESK</h1>
 <p>{safe(date)} · branch {safe(branch)}</p></div><div class="body">
 {content}
@@ -150,6 +156,8 @@ def main() -> int:
     parser.add_argument("--commit", required=True)
     parser.add_argument("--to", required=True)
     parser.add_argument("--editor-note", default="No unresolved issues.")
+    parser.add_argument("--attachment-preview", action="store_true",
+                        help="Claude Gmail delivery: attach a real cover preview and retain the full PNG link")
     parser.add_argument("--out", required=True)
     args = parser.parse_args()
 
@@ -174,6 +182,7 @@ def main() -> int:
         branch=args.branch,
         commit=args.commit,
         editor_note=args.editor_note,
+        attachment_preview=args.attachment_preview,
     )
     payload = build_payload(to=args.to, subject=subject, html_body=body)
     Path(args.out).write_text(
