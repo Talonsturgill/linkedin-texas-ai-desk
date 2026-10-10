@@ -30,7 +30,8 @@ headline. Historical ImageGen covers remain as honest legacy examples and are ne
    visual review whose pixels changed. It never marks a check true.
 5. Inspect `out/post_image.png` at full size and `out/thumb_300.png`. Record the real review in
    `visual_review` (reviewed SHA-256 values, the two inspection flags, and each check you actually
-   verified, with findings that describe the final pixels).
+   verified, with findings that describe the final pixels). Confirm the named style, material,
+   composition, and lighting describe those pixels; changing names cannot create variety.
 6. Run the gate: `python3 .agents/skills/texas-desk-artwork/scripts/art_gate.py --out-dir out --date <ISO>`
    (validate_run runs the same gate). It recomputes every hash, re-renders `artwork.py`, recomposes
    the final cover and compares pixels, checks anchors, labels and identity against the dossier, and

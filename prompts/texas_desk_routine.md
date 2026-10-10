@@ -227,11 +227,16 @@ Write `out/final_post.md` from the verified dossier and the voice in `config/bra
 - Lead with the decision. Limit biography to two sentences.
 - Name the person's organization, the decision date, the Texas place or jurisdiction, the real
   alternative, the consequence, and the next check.
+- State past plans in the past tense as of their source date. Do not describe an August target
+  as an upcoming event in an October post. Distinguish a documented pre-directive process from
+  an option that remained available after a binding directive; do not invent discretion.
 - Use a clear evidence-led execution assessment for private, operational, and research decisions.
 - Use neutral accountability framing for public-policy decisions. Never tell readers which policy,
   party, candidate, or electoral outcome to support.
 - Use short paragraphs and plain language. No first person, emoji, links, em dash, en dash, double
   hyphen, colon, semicolon, curly quotes, invented quotation, or banned phrase.
+- State the concrete consequence directly. Do not replace prohibited generic importance wording
+  with a synonym such as "this is important to the state".
 - Every numeral must already appear in the dossier. Prefer writing a number as a word when a
   numeral is not necessary.
 - End the body with a specific question, followed by a separate line containing exactly three
@@ -289,14 +294,18 @@ python3 -m unittest discover -s tests -v
 python3 scripts/check_config.py
 ```
 
-All checks must pass. Review `git diff` and `git status`. Stage only the intended daily artifacts:
-
 The complete render regression suite has taken about 148 seconds in Claude cloud. Allow at least
 600 seconds for that process; a tool's short foreground wait should yield a background session,
 not kill the command. Do not wrap the suite in `timeout 110` or infer success from the last log
 lines. Retain the full log locally and check the test process's actual exit status. A timeout is
 not a test pass. Retry an infrastructure timeout once with the documented allowance; do not rerun
 already passing suites merely to obtain another success message.
+Within the same run, a copy, dossier, score-note, or artwork repair requires the affected post,
+score, provenance, and full package gates again. Reuse that run's successful unit-suite result
+when no runtime code, tests, configuration, dependencies, or fonts changed; record its tested
+commit and the content-only diff. This does not permit reusing a failed or timed-out suite.
+
+All checks must pass. Review `git diff` and `git status`. Stage only the intended daily artifacts:
 
 - `out/desk_dossier.json`
 - `out/final_post.md`
@@ -325,6 +334,12 @@ email draft. A local file, branch URL, or unverified URL is not sufficient.
 
 Build the HTML payload only after the remote artifact is verified:
 
+For Claude's Gmail connector, read `references/claude_gmail_delivery.md`. Its verified format is
+an actual 160-pixel JPEG attachment plus a full-resolution immutable PNG download link. The
+connector strips HTML image tags, so do not spend retries on remote inline images. Create the
+bounded preview with `scripts/gmail_delivery.py preview` and add `--attachment-preview` below.
+The attachment is a review thumbnail; LinkedIn uses the full PNG.
+
 ```bash
 python3 scripts/build_email.py \
   --post-md out/final_post.md \
@@ -352,9 +367,17 @@ Read back the draft and verify:
 - exact subject
 - recipient is the connected account
 - LinkedIn copy is complete and escaped safely
-- permanent image is visible and also linked
+- the actual attached preview decodes to the expected bytes and the permanent full PNG is linked
 - sources, score, editor note, branch, and commit are present
-- labels include DRAFT and exclude SENT; the readback body matches the saved payload
+- labels include DRAFT and exclude SENT; the stored visible text and canonical links match the saved payload
+
+For a Claude profile, require `scripts/gmail_delivery.py verify` against the actual RAW MIME and
+metadata response. See the connector reference for arguments. CSS stripping and Google URL
+wrappers are allowed; missing copy, altered destinations, missing/corrupt attachments, and wrong
+recipient or labels are failures. Keep all private inputs and the receipt in ignored `.local/`.
+Use at most two delivery attempts, including the initial write. A failed byte comparison must
+never be described as delivered. Remove a corrupt attachment from the same draft, clearly label
+the failed delivery, preserve the full PNG link, and finish needs-attention if both attempts fail.
 
 ## Completion report
 
