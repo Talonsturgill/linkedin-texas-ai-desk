@@ -34,14 +34,26 @@ experiments on each run. No new service, key, OAuth flow, or send endpoint is ne
    Every update must include the attachment; omitted/empty attachment arrays remove it.
 
 4. Request RAW MIME and metadata for that same draft. Save the actual responses under `.local/`;
-   prefer the tool's saved-result file when available. Do not reconstruct expected output or
-   fabricate labels. The RAW file may be JSON containing one `raw` field or the base64url field
-   itself. The metadata JSON must contain one actual `labels`, `labelIds`, or `label_ids` list.
+   prefer the tool's saved-result file when available. In the tested Claude cloud runtime the
+   current project's session JSONL under `~/.claude/projects/` contains the actual tool response.
+   Read only this session and this draft, never unrelated sessions or credential files. Extract it:
+
+   ```bash
+   python3 scripts/extract_gmail_tool_result.py <CURRENT_SESSION_JSONL> <PRIVATE_DRAFT_ID> \
+     .local/gmail_raw.json --require-raw
+   ```
+
+   The current RAW response includes `labelIds`, so use that same extracted file for both
+   `--raw` and `--metadata` below. The extractor binds results to the requested draft and latest
+   read call, refuses stale success after a failed read, writes owner-only files, and prints no
+   account or draft identifier. Never manually transcribe RAW: the test showed that can corrupt
+   MIME even when the actual stored draft is valid. Do not reconstruct expected output or
+   fabricate labels. Alternate connectors may supply RAW and labels in separate actual receipts.
 
    ```bash
    python3 scripts/gmail_delivery.py verify \
      --payload .local/gmail_payload.json --raw .local/gmail_raw.json \
-     --metadata .local/gmail_readback.json --preview .local/texas-desk-cover-preview.jpg \
+     --metadata .local/gmail_raw.json --preview .local/texas-desk-cover-preview.jpg \
      --report .local/gmail_delivery_validation.json
    ```
 
@@ -52,9 +64,14 @@ experiments on each run. No new service, key, OAuth flow, or send endpoint is ne
 
 5. One repair is allowed after the initial write. Reuse the approved image and compact payload;
    do not repeat research, art generation, or the unit suite for an attachment transport retry.
+   If only the attachment failed and the stored body already passes, update only the attachment:
+   the tested connector preserves omitted body fields, but removes omitted attachments. This
+   avoids copying the full HTML again. Still read and verify the complete final MIME afterward.
    If repair fails, remove a broken attachment, accurately label the existing draft's delivery
    failure, retain the valid full PNG link, and report needs-attention. Never send. Never expose
    account addresses, draft identifiers, RAW mail, or private payloads in public artifacts.
 
-This attachment path passed once in the cloud test. The byte check is required on every future
-run because a language model copying base64 is not a guaranteed binary transport.
+This attachment path passed in the cloud test, failed during later long-context engineering
+updates, and passed again on the first attempt after compaction. Keep tool packets compact and
+avoid accumulating implementation/debug output in ordinary runs. The byte check is required on
+every future run because a language model copying base64 is not a guaranteed binary transport.
