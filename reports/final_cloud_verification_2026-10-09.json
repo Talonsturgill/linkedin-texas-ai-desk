@@ -1,0 +1,66 @@
+{
+  "report": "final_cloud_verification_2026-10-09",
+  "branch": "codex/texas-desk-2026-10-09-3",
+  "tested_release_sha": "b8991ce66feaa143fa24c56a94eee312e8f22d18",
+  "artifact_uri_commit": "e9ed3b431dbcd85affd35c4d3fbf488c9277c249",
+  "commands": [
+    {
+      "command": "python3 scripts/art_smoke.py",
+      "exit_status": 0,
+      "result": "coded_art available; Pillow 12.3.0, numpy 2.4.6, PyYAML 6.0.1; no dependency repair"
+    },
+    {
+      "command": "python3 scripts/check_config.py",
+      "exit_status": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py'",
+      "exit_status": 0,
+      "result": "Ran 63 tests in 138.690s, OK",
+      "tests": 63
+    },
+    {
+      "command": "python3 scripts/extract_gmail_tool_result.py <transcript> <draft> <out> --require-raw",
+      "exit_status": 0,
+      "result": "latest get_draft RAW extracted; label_ids DRAFT only"
+    },
+    {
+      "command": "python3 scripts/gmail_delivery.py verify (release, existing payload and preview)",
+      "exit_status": 0,
+      "result": "ok true, errors []"
+    }
+  ],
+  "image_hashes": {
+    "post_image_png_sha256": "bb7169e90d28e7de8e93dff9bf3f8026f66fb952daafd388bf3a7475d71121b4",
+    "post_image_png_bytes": 1015086,
+    "post_image_png_dimensions": [
+      1080,
+      1080
+    ],
+    "preview_jpeg_sha256": "84fa505e8a088e3117916ffed29f58fa5f088fb486d6f9dd1d467522421b424d",
+    "preview_jpeg_bytes": 2410,
+    "preview_jpeg_dimensions": [
+      160,
+      160
+    ]
+  },
+  "draft_only": {
+    "draft_only": true,
+    "sent": false,
+    "labels_draft_only": true,
+    "verifier_ok": true
+  },
+  "session_token_usage": {
+    "scope": "session telemetry from message.usage, unique assistant message.id, max per field per id; not billed dollars or savings",
+    "usage_records": 476,
+    "unique_message_ids": 165,
+    "models": [
+      "claude-haiku-5-5"
+    ],
+    "input_tokens": 332,
+    "output_tokens": 269154,
+    "cache_write_tokens": 609539,
+    "cache_read_tokens": 41883318
+  }
+}

@@ -290,7 +290,7 @@ Run:
 
 ```bash
 python3 scripts/validate_run.py --out-dir out --report .local/run_validation.json
-python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -q
 python3 scripts/check_config.py
 ```
 

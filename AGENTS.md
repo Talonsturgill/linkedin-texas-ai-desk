@@ -41,7 +41,7 @@ Use Python 3.11 or newer.
 
 ```bash
 python3 -m pip install -r requirements.txt
-python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -q
 python3 scripts/check_config.py
 python3 scripts/art_smoke.py
 ```
