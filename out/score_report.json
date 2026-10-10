@@ -1,0 +1,81 @@
+{
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 7.5,
+      "notes": "Unchanged score. The hook now names Seely as accountable for the operational sequence and the anchor front of the line, without crediting him with the governor's policy choice."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 7.5,
+      "notes": "A grid-queue sequencing decision covering about 200 gigawatts of demand is consequential, but it is a process choice rather than a single headline decision."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 8.5,
+      "notes": "Unchanged score. Title now taken from ERCOT's executives page, decision dated August 20th, 2026, and the August statements are tensed as stated in August."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 8.0,
+      "notes": "Primary ERCOT presentation plus two independent outlets; the presentation does not name Seely, so individual ownership is carried by reporting of his statements."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 8.0,
+      "notes": "Unchanged score. The mechanism stands on the ERCOT classification record. The alternative is now a labelled pre-directive baseline from the Tribune, with no claim that the August 7th deadline remained available after the directive."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 9.0,
+      "notes": "Names the December 10th, 2026 verification report and the disqualification criteria as the checkable item."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 8.0,
+      "notes": "Neutral accountability voice, no first person, no advocacy, no rating."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 8.0,
+      "notes": "Short paragraphs, 424 body words (check_post count), within the 3000 character cap."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 8.0,
+      "notes": "Cycle 2 edit: asks whether the December filing names the disqualification criteria so a developer can check its own load."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 8.0,
+      "notes": "Unchanged score. The August 7th overclaim is removed, and the ownership limit to the operational sequence is stated in the dossier and the copy."
+    }
+  ],
+  "weighted_total": 8.02,
+  "hard_fail_checks": {
+    "identity_and_texas_tie": true,
+    "recent_decision_and_owner": true,
+    "primary_plus_independent": true,
+    "fact_trace": true,
+    "not_a_puff_piece": true,
+    "political_neutrality": true,
+    "linkedin_constraints": true,
+    "house_style": true,
+    "no_invented_quotes": true
+  },
+  "hard_failures": [],
+  "threshold": 8.0,
+  "ship": true,
+  "cycles": 2,
+  "cycle_note": "Editorial QA correction: notes and copy changed, no scores changed. Total unchanged at the recomputed value; the margin over the threshold is narrow and is stated, not enlarged."
+}

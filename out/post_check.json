@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "body_words": 424,
+    "total_chars": 2636,
+    "hook_chars": 207,
+    "hashtags": [
+      "#TexasGrid",
+      "#ERCOT",
+      "#TexasDataCenters"
+    ],
+    "tag_line": "#TexasGrid #ERCOT #TexasDataCenters"
+  }
+}

@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 
 import yaml
+from prose_rules import check_prose
 
 WORD_RE = re.compile(r"\b[A-Za-z0-9]+(?:'[A-Za-z0-9]+)?\b")
 NUMBER_RE = re.compile(r"(?<![A-Za-z])\$?\d[\d,]*(?:\.\d+)?")
@@ -74,7 +75,7 @@ def dossier_numbers(dossier: dict) -> set[str]:
 
 
 def validate_post(post_text: str, dossier: dict, config: dict) -> dict:
-    errors: list[str] = []
+    errors: list[str] = check_prose(post_text)
     body, tags, tag_line = split_post(post_text)
     platform = config["platform"]
     house = config["house_rules"]

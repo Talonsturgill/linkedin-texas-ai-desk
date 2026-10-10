@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "source": "coded",
+  "example_kind": "historical_visual_acceptance (not current news)",
+  "story_id": "ben_johnson_2026-09-23",
+  "date": "SEPTEMBER 23RD, 2026",
+  "role": "FOUNDER",
+  "headline": "Ben Johnson's bet on shared records",
+  "place": "AUSTIN",
+  "coordinates": "",
+  "decision_anchor": "Scaffold's seed round",
+  "mechanism": "Scaffold will use seed proceeds to expand AI that structures construction documents and coordinates purchase orders and schedules across existing builder, contractor and supplier systems. The picture keeps three sheets in place, a floor plan, a purchase-order grid and a schedule, and runs one continuous copper thread through all of them, so existing records are connected rather than replaced. The schedule's last bar is dashed because the dossier sets no completion deadline.",
+  "style_family": "blueprint_linework",
+  "composition": "sheet_stack_perspective",
+  "palette_key": "blueprint_panel_copper",
+  "palette": [
+    "#191530",
+    "#2B2447",
+    "#4E5FA8",
+    "#EDE6D6",
+    "#B4664F",
+    "#E0956A"
+  ],
+  "material": "graphite_linework",
+  "silhouette": "three overlapping rotated sheets (floor plan, purchase-order grid, schedule) joined by one continuous copper thread",
+  "light_model": "overhead_flat",
+  "ground_tone": "dark",
+  "focal_band": [
+    180,
+    680
+  ],
+  "art_text": [],
+  "visual_anchors": [
+    {
+      "id": "C1",
+      "claim_index": 7,
+      "claim": "HousingWire reports that AI structures data from scanned documents and that schedule changes can affect billing and job costs.",
+      "source_urls": [
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
+      ],
+      "drawn_as": "floor plan sheet with the copper thread leaving it to reach the purchase-order grid"
+    },
+    {
+      "id": "C2",
+      "claim_index": 6,
+      "claim": "The existing product connects existing systems rather than requiring their replacement. Manual entry and another separate application are source-described alternatives.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed"
+      ],
+      "drawn_as": "one continuous copper thread through all three sheets, with no sheet replaced"
+    },
+    {
+      "id": "C3",
+      "claim_index": 4,
+      "claim": "Proceeds are intended to expand engineering and coverage of builder, contractor and supplier systems. No hiring quota or completion deadline is given.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed"
+      ],
+      "drawn_as": "schedule bar that runs out in dashes with no completion marker"
+    }
+  ],
+  "gaps_respected": [
+    "No hiring quota or completion deadline is given; the schedule bar has no end marker.",
+    "Performance figures are company-reported and unaudited; no result is drawn."
+  ],
+  "renderer": {
+    "file": "artwork.py",
+    "sha256": "3cec71d651623d24c0dc14c74ed2e9bb69fe62403be3b6eee17e7c783af8d503",
+    "size": [
+      1080,
+      1080
+    ],
+    "seed": 2309,
+    "supersample": 2
+  },
+  "dossier_sha256": "6786cde92d374d8713201b88324c6bd3d83409d5cba8f8aa25b4083ba81c5d45",
+  "visual_review": {
+    "reviewed_post_image_sha256": "60615b8b560af98572ff8b5b9503d18cc6fda1ec328e806a0cae20e32ddfb0bf",
+    "reviewed_art_base_sha256": "e6ffb691c6e9ead8bc63b4163692e0a53345a45028fd531809f59ffaac013f21",
+    "full_size_checked": true,
+    "thumbnail_300_checked": true,
+    "checks": {
+      "anchors_visible": true,
+      "focal_object_in_180_680_band": true,
+      "distinctive_material_object": true,
+      "visible_story_action": true,
+      "art_carries_story_before_headline": true,
+      "no_generic_server_or_texas_outline": true,
+      "no_clipping_or_artifacts": true,
+      "decision_readable": true
+    },
+    "findings": "Inspected full-size cover and 300 px thumbnail. Final art shows three overlapping sheets: a floor plan, a purchase-order grid with an ember-filled first row, and a schedule with a dashed open bar; one copper thread runs through all three."
+  }
+}
