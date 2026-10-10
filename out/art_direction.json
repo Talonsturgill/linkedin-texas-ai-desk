@@ -9,7 +9,7 @@
   "coordinates": "",
   "decision_anchor": "front of the line",
   "mechanism": "In August ERCOT described placing large-load eligibility verification ahead of the Batch Zero interconnection study, and asked the Commission to excuse the August 7th classification deadline so classification could follow verification. The picture stages that sequence as a queue of cards on a brass rail, with the front card lifted into a verification gate. Cards that do not pass drop off the rail beneath the gate, and a seal tab stands for the December filing. It is conceptual and names no located property.",
-  "style_family": "blueprint_linework",
+  "style_family": "paper_cut_relief",
   "composition": "frieze_horizontal",
   "palette_key": "ink_bluebonnet_brass",
   "palette": [
@@ -20,7 +20,7 @@
     "#E4D8C3",
     "#E0956A"
   ],
-  "material": "graphite_linework",
+  "material": "cut_paper",
   "silhouette": "a row of six cream cards on a brass rail, the front card lifted into a brass gate with a bluebonnet panel, a dropped card below the gate and a brass seal tab on the right post",
   "light_model": "overhead_flat",
   "ground_tone": "dark",

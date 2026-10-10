@@ -14,6 +14,6 @@ Under the audit, projects that fail verification are to be denied grid connectio
 
 This is a public grid process, so the test is accountability. Did the schedule hold, and did the criteria get disclosed? In August ERCOT said it expected to send requests for information in late August and early September, with possible further rounds in October and November. Seely also said in August that ERCOT was still working on a new Batch Zero timeline.
 
-The next check is the Batch Zero Eligibility Verification Report that ERCOT said in August it planned to file by December 10th, 2026. Will the December filing name the disqualification criteria, so a developer can check its own load against them before the April 9th, 2027 study deadline?
+The next check is the Batch Zero Eligibility Verification Report that ERCOT said in August it planned to file by December 10th, 2026. Will the December filing name the disqualification criteria, so a developer can check its own load against them before the original April 9th, 2027 study deadline?
 
 #TexasGrid #ERCOT #TexasDataCenters

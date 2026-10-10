@@ -26,14 +26,14 @@
     "deterministic typography overlay"
   ],
   "base_sha256": "5a7df0f64193ee922523f1709e5f86470ddcf52265b2b531410efea2a653687c",
-  "rendered_at_utc": "2026-10-10T00:32:50.078115+00:00",
+  "rendered_at_utc": "2026-10-10T00:47:01.307833+00:00",
   "canvas": [
     1080,
     1080
   ],
-  "style_family": "blueprint_linework",
+  "style_family": "paper_cut_relief",
   "palette_key": "ink_bluebonnet_brass",
-  "material": "graphite_linework",
+  "material": "cut_paper",
   "silhouette": "a row of six cream cards on a brass rail, the front card lifted into a brass gate with a bluebonnet panel, a dropped card below the gate and a brass seal tab on the right post",
   "light_model": "overhead_flat",
   "renderer_sha256": "5948a61432e17e4713894455e78a96ddfb7bdf2ad87ae0cbf9a0fb59f09924ea",
