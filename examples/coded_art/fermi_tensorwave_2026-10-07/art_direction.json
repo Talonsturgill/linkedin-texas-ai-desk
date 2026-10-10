@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "source": "coded",
+  "example_kind": "historical_visual_acceptance (not current news)",
+  "story_id": "fermi_tensorwave_2026-10-07",
+  "date": "OCTOBER 7TH, 2026",
+  "role": "OPERATOR",
+  "headline": "More time for TensorWave",
+  "place": "CARSON COUNTY",
+  "coordinates": "",
+  "decision_anchor": "TensorWave closing extension",
+  "mechanism": "Fermi extended the first TensorWave lease closing from September 30th to October 31st, 2026 at Project Matador in Carson County. The lease takes effect only after guaranties, construction funding and other closing conditions are satisfied or waived, so the picture shows a brass calendar tab with SEP 30 and OCT 31 leaves bridging two pillars, its middle span dashed and the pad between them unbuilt. No completed or powered campus is drawn.",
+  "style_family": "architectural_elevation",
+  "composition": "bridge_across_gap",
+  "palette_key": "dusk_lacquer_brass",
+  "palette": [
+    "#2B2447",
+    "#8C5A3C",
+    "#B4664F",
+    "#E4D8C3",
+    "#E0B878",
+    "#EDE6D6"
+  ],
+  "material": "matte_lacquer",
+  "silhouette": "two lacquered pillars over unbuilt pads, joined by a brass calendar tab with a dashed span and two paper date leaves",
+  "light_model": "low_raking_sun",
+  "ground_tone": "dark",
+  "focal_band": [
+    180,
+    680
+  ],
+  "art_text": [
+    {
+      "text": "SEP 30",
+      "claim_index": 1,
+      "source_phrase": "September 30th"
+    },
+    {
+      "text": "OCT 31",
+      "claim_index": 1,
+      "source_phrase": "October 31st"
+    }
+  ],
+  "visual_anchors": [
+    {
+      "id": "A1",
+      "claim_index": 5,
+      "claim": "Project Matador is in the Texas Panhandle on Texas Tech University System ground-leased land in Carson County.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+      ],
+      "drawn_as": "two lacquered pillars over unbuilt pads, with the outlined empty pad between them marking ground not built"
+    },
+    {
+      "id": "A2",
+      "claim_index": 1,
+      "claim": "Fermi disclosed the signed TensorWave closing extension on September 22nd, 2026; the deadline changed from September 30th to October 31st, 2026. A separate amendment execution date is not established.",
+      "source_urls": [
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ],
+      "drawn_as": "brass calendar tab with SEP 30 and OCT 31 date leaves at its two ends"
+    },
+    {
+      "id": "A3",
+      "claim_index": 4,
+      "claim": "The amendment leaves the remaining terms unchanged. Effectiveness requires satisfaction or waiver of closing conditions including work letters, guaranties, operations schedules, service-level agreement, board approvals and construction financing.",
+      "source_urls": [
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ],
+      "drawn_as": "dashed brass span across the middle of the tab, marking closing conditions not yet satisfied"
+    }
+  ],
+  "gaps_respected": [
+    "Lease extension is conditional; no completed closing or guaranty is drawn.",
+    "No powered campus, racks or completed construction are drawn; the 222 MW figure is contracted scope, not depicted output."
+  ],
+  "renderer": {
+    "file": "artwork.py",
+    "sha256": "006c1184a708e7273af8e1737bbd6ef7e3207e804a19559423bae7860acbc4c7",
+    "size": [
+      1080,
+      1080
+    ],
+    "seed": 1701,
+    "supersample": 2
+  },
+  "dossier_sha256": "94232184853b409421d1b7a0854e23d3f8ae38684baf58adb3e29c34c4eea8c4",
+  "visual_review": {
+    "reviewed_post_image_sha256": "ad64a58b8361e150d4733c42966a388673c18f2b42e09ce601e400558d700d97",
+    "reviewed_art_base_sha256": "c5e5587a31b788e786c23ed6f99d5d6358d5910670aa9d7e04ff39ae60474f98",
+    "full_size_checked": true,
+    "thumbnail_300_checked": true,
+    "checks": {
+      "anchors_visible": true,
+      "focal_object_in_180_680_band": true,
+      "distinctive_material_object": true,
+      "visible_story_action": true,
+      "art_carries_story_before_headline": true,
+      "no_generic_server_or_texas_outline": true,
+      "no_clipping_or_artifacts": true,
+      "decision_readable": true
+    },
+    "findings": "Inspected full-size cover and 300 px thumbnail. Final art shows two lacquered pillars, a brass calendar tab with SEP 30 and OCT 31 leaves, a dashed middle span and outlined unbuilt pads; no pivot gate, terrace, or campus is drawn."
+  }
+}

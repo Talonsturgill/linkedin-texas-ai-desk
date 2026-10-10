@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "date": "SEPTEMBER 23RD, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "Ben Johnson's bet on shared records",
+  "place": "AUSTIN",
+  "coordinates": "",
+  "source": "coded",
+  "palette": [
+    "#191530",
+    "#2B2447",
+    "#4E5FA8",
+    "#EDE6D6",
+    "#B4664F",
+    "#E0956A"
+  ],
+  "composition": "sheet_stack_perspective",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "pillow+numpy coded art",
+    "deterministic typography overlay"
+  ],
+  "base_sha256": "e6ffb691c6e9ead8bc63b4163692e0a53345a45028fd531809f59ffaac013f21",
+  "rendered_at_utc": "2026-10-09T22:26:43.664113+00:00",
+  "canvas": [
+    1080,
+    1080
+  ],
+  "style_family": "blueprint_linework",
+  "palette_key": "blueprint_panel_copper",
+  "material": "graphite_linework",
+  "silhouette": "three overlapping rotated sheets (floor plan, purchase-order grid, schedule) joined by one continuous copper thread",
+  "light_model": "overhead_flat",
+  "renderer_sha256": "3cec71d651623d24c0dc14c74ed2e9bb69fe62403be3b6eee17e7c783af8d503",
+  "dossier_sha256": "6786cde92d374d8713201b88324c6bd3d83409d5cba8f8aa25b4083ba81c5d45",
+  "seed": 2309,
+  "ground_tone": "dark"
+}

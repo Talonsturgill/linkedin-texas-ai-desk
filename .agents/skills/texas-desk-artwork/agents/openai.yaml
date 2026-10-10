@@ -1,4 +1,4 @@
 interface:
   display_name: "Texas Desk Artwork"
-  short_description: "Generate and finish a Texas Desk LinkedIn cover"
-  default_prompt: "Use $texas-desk-artwork to create the final story-specific cover from the verified Texas Desk post and dossier."
+  short_description: "Author and verify a coded Texas Desk LinkedIn cover"
+  default_prompt: "Use $texas-desk-artwork to author the coded, story-specific cover from the verified Texas Desk post and dossier."

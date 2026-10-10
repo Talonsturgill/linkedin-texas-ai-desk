@@ -19,13 +19,15 @@ It intentionally contains only the Desk column rather than the Alaska repository
 
 The workflow never sends the email and never posts to LinkedIn.
 
-## ImageGen proof
+## Coded artwork
 
-The normal artwork path uses Codex's built-in ImageGen to create a new story-specific raster, then
-adds exact publication copy with a deterministic compositor. This checked-in proof was generated
-through that path, not by the emergency fallback:
+Each profile cover is original art written as code for its story (`out/artwork.py`), rendered with
+Pillow and numpy, and finished with exact publication type. The gate recomputes provenance, base and
+final pixels, anchors and labels, and variety against committed history. Historical acceptance covers
+live in `examples/coded_art/`. The older ImageGen example `examples/texas_desk_cover.png` remains
+legacy and is never used for new profiles.
 
-![Texas Desk ImageGen proof](examples/texas_desk_cover.png)
+![Texas Desk coded cover: Fermi and TensorWave](examples/coded_art/fermi_tensorwave_2026-10-07/post_image.png)
 
 ## Repository map
 
@@ -47,17 +49,15 @@ python3 -m unittest discover -s tests -v
 python3 scripts/check_config.py
 ```
 
-To exercise only the emergency fallback during development:
+To build one story's cover after authoring its `artwork.py` and `art_direction.json`:
 
 ```bash
-python3 .agents/skills/texas-desk-artwork/scripts/render_fallback.py \
-  --role "RESEARCH" \
-  --headline "Robotics Leaves The Lab" \
-  --date "SEPTEMBER 2ND, 2026" \
-  --place "TRAVIS COUNTY" \
-  --coords "30°16′N · 97°45′W" \
-  --out out/post_image.png
+python3 .agents/skills/texas-desk-artwork/scripts/build_art.py --story-dir out
+python3 .agents/skills/texas-desk-artwork/scripts/art_gate.py --out-dir out --date 2026-10-07
 ```
+
+The build renders within the attempt budget, updates hashes, recomposes the cover, writes
+`out/thumb_300.png`, and resets any visual review whose pixels changed. It never marks a check true.
 
 ## Scheduled operation
 

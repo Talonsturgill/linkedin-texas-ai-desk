@@ -1,3 +1,4 @@
-Pillow>=10.4,<13
-numpy>=1.26,<3
-PyYAML>=6,<7
+# Versions from the successful Claude Linux render and delivery test.
+Pillow==12.3.0
+numpy==2.4.6
+PyYAML==6.0.1
