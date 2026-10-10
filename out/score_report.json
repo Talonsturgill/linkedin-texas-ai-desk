@@ -1,0 +1,81 @@
+{
+  "criteria": [
+    {
+      "name": "Hook strength",
+      "weight": 0.1,
+      "score": 7.5,
+      "notes": "Two short opening lines name Seely, ERCOT, and the anchor front of the line; unchanged from cycle 1, a plainer hook than a headline would be."
+    },
+    {
+      "name": "Subject and decision significance for Texas",
+      "weight": 0.16,
+      "score": 7.5,
+      "notes": "A grid-queue sequencing decision covering about 200 gigawatts of demand is consequential, but it is a process choice rather than a single headline decision."
+    },
+    {
+      "name": "Identity and decision fidelity",
+      "weight": 0.14,
+      "score": 8.5,
+      "notes": "Title from Utility Dive Aug 21, decision date Aug 20 from the ERCOT presentation, Tribune quote and dates match the dossier."
+    },
+    {
+      "name": "Source quality and independence",
+      "weight": 0.14,
+      "score": 8.0,
+      "notes": "Primary ERCOT presentation plus two independent outlets; the presentation does not name Seely, so individual ownership is carried by reporting of his statements."
+    },
+    {
+      "name": "Structural read",
+      "weight": 0.13,
+      "score": 8.0,
+      "notes": "Cycle 2 edit: explains the classification mechanism, the alternative ERCOT declined, and the verification gate before studies, all sourced in the ERCOT record."
+    },
+    {
+      "name": "Concrete next check",
+      "weight": 0.08,
+      "score": 9.0,
+      "notes": "Names the December 10th, 2026 verification report and the disqualification criteria as the checkable item."
+    },
+    {
+      "name": "Texas AI Docket voice",
+      "weight": 0.1,
+      "score": 8.0,
+      "notes": "Neutral accountability voice, no first person, no advocacy, no rating."
+    },
+    {
+      "name": "LinkedIn readability",
+      "weight": 0.06,
+      "score": 8.0,
+      "notes": "Short paragraphs, 408 body words, within the 3000 character cap."
+    },
+    {
+      "name": "Specific engagement question",
+      "weight": 0.04,
+      "score": 8.0,
+      "notes": "Cycle 2 edit: asks whether the December filing names the disqualification criteria so a developer can check its own load."
+    },
+    {
+      "name": "Credibility and proportionality",
+      "weight": 0.05,
+      "score": 8.0,
+      "notes": "Claims stay within fetched statements; the ownership caveat is stated in the dossier and not overstated in the post."
+    }
+  ],
+  "weighted_total": 8.02,
+  "hard_fail_checks": {
+    "identity_and_texas_tie": true,
+    "recent_decision_and_owner": true,
+    "primary_plus_independent": true,
+    "fact_trace": true,
+    "not_a_puff_piece": true,
+    "political_neutrality": true,
+    "linkedin_constraints": true,
+    "house_style": true,
+    "no_invented_quotes": true
+  },
+  "hard_failures": [],
+  "threshold": 8.0,
+  "ship": true,
+  "cycles": 2,
+  "cycle_note": "Cycle 1 recomputed 7.915, below threshold. Cycle 2 made two real edits (structural mechanism sentence, specific closing question) and re-scored; the hook score was not changed."
+}

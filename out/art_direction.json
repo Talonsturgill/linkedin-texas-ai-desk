@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "source": "coded",
+  "story_id": "chad_seely_2026-08-20",
+  "date": "OCTOBER 9TH, 2026",
+  "role": "OPERATOR",
+  "headline": "Verification comes first",
+  "place": "TEXAS STATEWIDE",
+  "coordinates": "",
+  "decision_anchor": "front of the line",
+  "mechanism": "ERCOT placed large-load eligibility verification ahead of the Batch Zero interconnection study, asking the Commission to excuse the August 7th classification deadline so classification could follow verification. The picture stages that sequence as a queue of cards on a brass rail, with the front card lifted into a verification gate. Cards that do not pass drop off the rail beneath the gate, and a seal tab stands for the December filing. It is conceptual and names no located property.",
+  "style_family": "blueprint_linework",
+  "composition": "frieze_horizontal",
+  "palette_key": "ink_bluebonnet_brass",
+  "palette": [
+    "#0F0C1C",
+    "#4E5FA8",
+    "#7F8FD0",
+    "#C9A063",
+    "#E4D8C3",
+    "#E0956A"
+  ],
+  "material": "graphite_linework",
+  "silhouette": "a row of six cream cards on a brass rail, the front card lifted into a brass gate with a bluebonnet panel, a dropped card below the gate and a brass seal tab on the right post",
+  "light_model": "overhead_flat",
+  "ground_tone": "dark",
+  "focal_band": [
+    180,
+    680
+  ],
+  "art_text": [],
+  "visual_anchors": [
+    {
+      "id": "B1",
+      "claim_index": 3,
+      "claim": "The August 7, 2026 classification deadline in Planning Guide section 9.3.1(2)(a) would be excused, allowing conditional classification by August 31, 2026 so eligibility verification could come first.",
+      "source_urls": [
+        "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
+      ],
+      "drawn_as": "the queue front card is lifted toward the gate, standing for the excused classification deadline and conditional classification that follows verification"
+    },
+    {
+      "id": "B2",
+      "claim_index": 5,
+      "claim": "Large loads that do not pass verification or do not respond will be disqualified from Batch Zero.",
+      "source_urls": [
+        "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf"
+      ],
+      "drawn_as": "cards that do not pass verification drop off the rail below the gate with a dashed outline"
+    },
+    {
+      "id": "B3",
+      "claim_index": 4,
+      "claim": "ERCOT plans to file the Batch Zero Eligibility Verification Report by December 10, 2026.",
+      "source_urls": [
+        "https://www.ercot.com/files/docs/2026/08/20/Batch-Zero-Verification-and-Audit-PUCT-Presentation.pdf",
+        "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
+      ],
+      "drawn_as": "a brass seal tab on the right gate post stands for the December verification report, with no date drawn"
+    }
+  ],
+  "gaps_respected": [
+    "No Texas location, campus, map or property is drawn; the setting is conceptual.",
+    "No number of projects, gigawatts or passing count is drawn; the cards are a stand-in, not a count.",
+    "The December filing is conditional, so the seal tab is shown unfilled and no completed filing is depicted."
+  ],
+  "renderer": {
+    "file": "artwork.py",
+    "sha256": "5948a61432e17e4713894455e78a96ddfb7bdf2ad87ae0cbf9a0fb59f09924ea",
+    "size": [
+      1080,
+      1080
+    ],
+    "seed": 2026,
+    "supersample": 2
+  },
+  "dossier_sha256": "5ff81bb6fe44244b052d1cd365a95a36b8ad045e4a10dae33756149e17ba5e18",
+  "visual_review": {
+    "reviewed_post_image_sha256": "bb7169e90d28e7de8e93dff9bf3f8026f66fb952daafd388bf3a7475d71121b4",
+    "reviewed_art_base_sha256": "5a7df0f64193ee922523f1709e5f86470ddcf52265b2b531410efea2a653687c",
+    "full_size_checked": true,
+    "thumbnail_300_checked": true,
+    "checks": {
+      "anchors_visible": true,
+      "focal_object_in_180_680_band": true,
+      "distinctive_material_object": true,
+      "visible_story_action": true,
+      "art_carries_story_before_headline": true,
+      "no_generic_server_or_texas_outline": true,
+      "no_clipping_or_artifacts": true,
+      "decision_readable": true
+    },
+    "findings": "Inspected the full-size cover and the 300 px thumbnail for the final pixels. A brass gate with a bluebonnet panel stands on the right over a queue of six cream cards on a brass rail. The front card is lifted into the gate (B1). A dashed card drops below the gate (B2). A small brass seal tab sits on the right post (B3) and is small but visible at 300 px. The orange tick in the gate reads as a pass mark, which stays inside the verification sequence and does not indicate endorsement of any policy. No Texas location, count or figure is drawn. The one defect, the dropped card crossing the 680 px focal limit, was repaired in attempt 2 and the review is recorded against the repaired pixels."
+  }
+}
