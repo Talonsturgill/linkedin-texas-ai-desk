@@ -164,6 +164,21 @@ def load_history(repo: Path, run_date: str, exclude_branch: str | None = None) -
         branch = ref.removeprefix("refs/remotes/origin/")
         if date > run_date or branch == exclude_branch:
             continue
+        # Status-only branches are explicit terminal receipts, not missing profile covers.
+        status_raw = _git(repo, "show", f"{ref}:out/run_status.json")
+        if status_raw:
+            try:
+                status = json.loads(status_raw)
+            except (ValueError, UnicodeError) as exc:
+                raise HistoryError(f"invalid history terminal receipt at {ref}") from exc
+            if not isinstance(status, dict):
+                raise HistoryError(f"invalid history terminal receipt at {ref}")
+            if status.get("terminal_state") == "needs-attention":
+                if (status.get("schema_version") != 1 or status.get("run_date") != date
+                        or status.get("profile_created") is not False
+                        or status.get("cover_approved") is not False):
+                    raise HistoryError(f"invalid needs-attention receipt at {ref}")
+                continue
         # Honest no-target artifacts have a dossier and deliberately have no cover.
         dossier_raw = _git(repo, "show", f"{ref}:out/desk_dossier.json")
         if dossier_raw:

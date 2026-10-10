@@ -95,6 +95,12 @@ Apply the same exact-subject deduplication, connected-recipient check, full body
 DRAFT/no-SENT verification used in Phase 8. State the failed capability, contract commit, and
 checks actually completed; include no post or substitute image. Never send it.
 
+If committing a needs-attention status artifact, include public `out/run_status.json` with
+`schema_version: 1`, `terminal_state: "needs-attention"`, the ISO `run_date`,
+`profile_created: false`, and `cover_approved: false`. Keep mailbox data and draft identifiers
+out of it. This explicit receipt lets future artwork history skip an unapproved run without
+silently ignoring missing images on genuine profile branches.
+
 Do not subscribe to PR activity or start a post-run monitoring loop. Stop after the terminal report.
 
 ## Phase 2 — Discover candidates

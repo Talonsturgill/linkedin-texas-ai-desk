@@ -338,7 +338,13 @@ class HistoryOrderingTests(unittest.TestCase):
         for ref_branch, source in names:
             git("checkout", "-q", "-B", ref_branch, "main")
             (repo / "out").mkdir(exist_ok=True)
-            if source in {"no_target", "missing_profile_image"}:
+            if source in {"needs_attention", "invalid_status"}:
+                (repo / "out/run_status.json").write_text(json.dumps({
+                    "schema_version": 1, "terminal_state": "needs-attention",
+                    "run_date": ref_branch.removeprefix("codex/texas-desk-")[:10],
+                    "profile_created": False, "cover_approved": source == "invalid_status",
+                }))
+            elif source in {"no_target", "missing_profile_image"}:
                 (repo / "out/desk_dossier.json").write_text(json.dumps({
                     "no_target_this_cycle": source == "no_target",
                     "run_date": ref_branch.removeprefix("codex/texas-desk-")[:10],
@@ -385,6 +391,19 @@ class HistoryOrderingTests(unittest.TestCase):
         ])
         with self.assertRaises(gate.HistoryError):
             gate.load_history(broken, "2026-10-09")
+
+    def test_status_only_branches_do_not_block_future_artwork(self) -> None:
+        repo = self._repo_with_refs([
+            ("codex/texas-desk-2026-10-07", STORIES[0]),
+            ("codex/texas-desk-2026-10-09-2", "needs_attention"),
+        ])
+        history = gate.load_history(repo, "2026-10-09")
+        self.assertEqual([entry["date"] for entry in history], ["2026-10-07"])
+
+    def test_status_receipt_cannot_hide_an_approved_cover(self) -> None:
+        repo = self._repo_with_refs([("codex/texas-desk-2026-10-09-2", "invalid_status")])
+        with self.assertRaisesRegex(gate.HistoryError, "invalid needs-attention receipt"):
+            gate.load_history(repo, "2026-10-09")
 
     def test_current_branch_is_excluded_without_explicit_override(self) -> None:
         branch = "codex/texas-desk-2026-10-07-2"
