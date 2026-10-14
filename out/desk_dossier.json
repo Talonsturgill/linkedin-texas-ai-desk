@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-14",
+  "window_days": 90,
+  "no_target_this_cycle": true,
+  "_validation_note": "The 60-day window was searched across all four lanes, founder, operator, public and research, and each lane was then broadened once to 90 days. No candidate passed the gates. Five fetched or attempted candidates were dropped. Two were dropped because the decision fell outside the window or was not owned by a non-electoral person in the window. One was dropped because its decision status was contested and no primary minutes were fetched. One was dropped because the only dated primary coverage could not be fetched. One was dropped because the proxy did not allow the page. Search and fetch counters for this run are recorded in the local usage ledger. A no-target result is reported because coverage was actually completed.",
+  "dropped_candidates": [
+    {
+      "subject": "Hays County Commissioners Court and the Hays County Sheriff's Office",
+      "decision": "Commissioners Court approval of budget funding that would let a proposed ten-year, roughly $4.5 million Axon AI Era agreement begin, with Draft One AI report writing held back pending a further court vote",
+      "drop_reason": "Decision status is contested in the evidence set. The CBS Austin article fetched on September 14, 2026 describes a September 9 budget approval, and search reporting describes a September 15 reallocation that dropped the contract, so the decision cannot be stated as a single verified outcome. No primary court minutes were fetched. The only named official is a dissenting county judge, so the decision owner gate is not met. Failed gates: decision status, decision owner, fetched primary source.",
+      "sources": [
+        {
+          "url": "https://cbsaustin.com/news/local/hays-county-commissioners-approve-funding-for-proposed-45m-axon-contract",
+          "title": "Hays County commissioners approve funding for proposed $4.5M Axon contract",
+          "publisher": "CBS Austin",
+          "published_at": "2026-09-14",
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "subject": "Freddy Kuo",
+      "decision": "Foxlink Group opened its first North American AI factory in AllianceTexas, Fort Worth, a printed circuit board assembly plant with about 900 jobs at full capacity",
+      "drop_reason": "The decision date is the July 14, 2026 ribbon cutting, which falls before the 90-day window start of July 16, 2026. The August production start is a schedule milestone, not a new in-window decision. The fetched article names no city or state approvals and no alternative site, so the alternative and consequence gates are also weak. Failed gates: decision inside window.",
+      "sources": [
+        {
+          "url": "https://communityimpact.com/keller-roanoke-northeast-fort-worth/development/taiwanese-company-foxlink-group-to-bring-900-jobs-to-north-fort-worth/",
+          "title": "Taiwanese company Foxlink Group to bring 900 jobs to north Fort Worth",
+          "publisher": "Community Impact",
+          "published_at": "2026-07-24",
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "subject": "Mike Morath, Michael Strange and Andrew Hodge of the Texas Education Agency",
+      "decision": "TEA leaders connected Texas school districts with an Alpha School AI tool pilot without State Board of Education approval, including a one-page pilot explainer for districts",
+      "drop_reason": "The dated decisions fall outside the window. The outreach emails date from 2025, the explainer is undated after April 2026, and the pilot approvals were reported in mid-June 2026. The only August 2026 item is a TEA statement that it found no documentation of an 1882 partnership, which is a position rather than a decision. The owner evidence is strong, but the specific in-window decision gate is not met. Failed gates: decision inside window.",
+      "sources": [
+        {
+          "url": "https://www.texastribune.org/2026/10/01/alpha-school-ai-texas-public-schools-mike-morath/",
+          "title": "Texas Tribune and ProPublica investigation on Alpha School AI and TEA",
+          "publisher": "The Texas Tribune",
+          "published_at": "2026-10-01",
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "subject": "Greg Abbott",
+      "decision": "Gubernatorial directives that pause grid approvals for new data center projects pending a water and power audit and, in a later letter, halt state permits for data center projects",
+      "drop_reason": "The owner is an elected official whose directives are central to an active political debate, and the routine limits public-lane decisions to non-electoral owners, so this candidate is excluded under the political neutrality rule. Separately, the sources disagree on the directive date, an August announcement versus a September 21 permit letter. No governor's office primary was fetched. The KERA article redirected to a generic index, and the KBTX article was not on the allowed source list. Failed gates: primary source, decision date, political neutrality.",
+      "sources": [
+        {
+          "url": "https://www.keranews.org/texas-news/2026-08-07/donald-trump-texas-data-centers-greg-abbott",
+          "title": "Attempted fetch, redirected to a generic news index",
+          "publisher": "KERA",
+          "published_at": "2026-08-07",
+          "fetched": false
+        },
+        {
+          "url": "https://www.kbtx.com/2026/09/22/abbott-pauses-data-center-permits-pending-water-power-review/",
+          "title": "Attempted fetch, host not on the allowed source list",
+          "publisher": "KBTX",
+          "published_at": "2026-09-22",
+          "fetched": false
+        }
+      ]
+    }
+  ],
+  "search_and_fetch_ledger": {
+    "searches_observed": 23,
+    "fetch_attempts": 10,
+    "fetch_successes": 5,
+    "coverage": {
+      "window_60_day": {"start": "2026-08-15", "lanes_completed": ["founder", "operator", "public", "research"]},
+      "window_90_day": {"start": "2026-07-16", "lanes_completed": ["founder", "operator", "public", "research"]}
+    }
+  }
+}
