@@ -3,7 +3,7 @@
   "run_date": "2026-10-14",
   "window_days": 90,
   "no_target_this_cycle": true,
-  "_validation_note": "The 60-day window was searched across all four lanes, founder, operator, public and research, and each lane was then broadened once to 90 days. No candidate passed the gates. Five fetched or attempted candidates were dropped. Two were dropped because the decision fell outside the window or was not owned by a non-electoral person in the window. One was dropped because its decision status was contested and no primary minutes were fetched. One was dropped because the only dated primary coverage could not be fetched. One was dropped because the proxy did not allow the page. Search and fetch counters for this run are recorded in the local usage ledger. A no-target result is reported because coverage was actually completed.",
+  "_validation_note": "The 60-day window was searched across all four lanes, founder, operator, public and research, and each lane was then broadened once to 90 days. No candidate passed the gates. Four candidates were dropped. Two were dropped because no in-window decision was established. One was dropped because its decision status was contested and no primary minutes were fetched. One was dropped because its owner is an elected official in an active political debate and no primary source was fetched. Search and fetch counters for this run are recorded in the local usage ledger. A no-target result is reported because coverage was actually completed.",
   "dropped_candidates": [
     {
       "subject": "Hays County Commissioners Court and the Hays County Sheriff's Office",
