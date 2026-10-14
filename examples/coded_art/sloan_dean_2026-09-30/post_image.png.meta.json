@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "date": "SEPTEMBER 30TH, 2026",
+  "column": "Texas Desk",
+  "kicker": "TEXAS DESK",
+  "role": "FOUNDER",
+  "headline": "The hotel is the test",
+  "place": "DALLAS",
+  "coordinates": "",
+  "source": "coded",
+  "palette": [
+    "#0F0C1C",
+    "#1F5C5A",
+    "#3E8A84",
+    "#B4664F",
+    "#C9A063",
+    "#EDE6D6"
+  ],
+  "composition": "still_life_cluster",
+  "motifs": [
+    "story-specific focal metaphor",
+    "single Lone Star"
+  ],
+  "technique_stack": [
+    "pillow+numpy coded art",
+    "deterministic typography overlay"
+  ],
+  "base_sha256": "a9d2b7e61d9c127ad397426670f5afae410129a8f66be92985e6c9b65c8dba97",
+  "rendered_at_utc": "2026-10-09T22:30:42.538061+00:00",
+  "canvas": [
+    1080,
+    1080
+  ],
+  "style_family": "enamel_still_life",
+  "palette_key": "ink_teal_brass",
+  "material": "brass_enamel",
+  "silhouette": "brass hotel key diagonal across a sectored teal cutaway disc, a domed reception bell at right, and workflow cards on a brass wire above",
+  "light_model": "lamp_on_table",
+  "renderer_sha256": "60b908eef7356584e8816c5e93e5f97ef6db1884b61e558d39e1f83b27919a6e",
+  "dossier_sha256": "c9199520706b2db0f9c58593e5ba75087b85d60184d4f146bfa35a14140a78cd",
+  "seed": 2026,
+  "ground_tone": "dark"
+}

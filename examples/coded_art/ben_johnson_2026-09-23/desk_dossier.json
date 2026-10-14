@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-23",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Ben Johnson",
+    "role": "Co-Founder and CEO",
+    "organization": "Scaffold",
+    "role_category": "founder",
+    "texas_tie": "Austin headquarters and open engineering roles; an existing San Antonio customer workflow is documented separately.",
+    "place_label": "AUSTIN",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://getscaffold.com/about",
+      "title": "About Us",
+      "publisher": "Scaffold",
+      "source_type": "primary",
+      "claims_supported": [
+        "Ben Johnson is co-founder and CEO",
+        "Shared-data product approach"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Ben Johnson announced seed funding to expand Scaffold's engineering team and its AI coordination across existing homebuilder, contractor and supplier systems.",
+    "decision_anchor": "Scaffold's seed round",
+    "date": "2026-09-15",
+    "owner_evidence": "Johnson personally bylined the dated primary announcement as co-founder and CEO, explains the product choice there, and gives a separate HousingWire interview about execution. The financing announcement is the dated decision; the underlying architecture predates it.",
+    "alternative_available": "Expand a separate application requiring a new workflow, or leave cross-portal data entry to people. The primary describes both alternatives; no rejected financing offer is invented.",
+    "ai_nexus": "AI structures construction documents and coordinates purchase orders and scheduling across existing systems.",
+    "texas_consequence": "Funds engineering expansion at an Austin company that currently advertises Austin roles. Existing San Antonio customer workflow establishes a local use case, with performance unverified independently.",
+    "next_check": "Track filled Austin engineering roles and added system coverage. Seek the first expanded customer cohort's first 60 days of error, staff-time and cost data. This is an editorial measurement proposal, not a company-promised reporting date.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+      "title": "Scaffold Raises $15 Million to Connect the Systems That Run Residential Construction",
+      "publisher": "Scaffold",
+      "source_type": "primary",
+      "claims_supported": [
+        "September 15 seed announcement bylined Ben Johnson",
+        "Funding expands engineering team and supported systems",
+        "Existing software remains in use",
+        "Performance figures are company-reported"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false,
+      "published_at": "2026-09-15"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.housingwire.com/articles/scaffold-raises-seed-round/",
+        "title": "Scaffold raises $14.85 million, targets fragmented homebuilder data",
+        "publisher": "HousingWire / The Builder's Daily",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "Funding and current CEO role",
+          "Original interview on scanned documents and implementation burden",
+          "Smaller trade firms face an adoption-cost test"
+        ],
+        "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+        "independent_of_subject": true,
+        "published_at": "2026-09-15"
+      },
+      {
+        "url": "https://getscaffold.com/careers",
+        "title": "Careers",
+        "publisher": "Scaffold",
+        "source_type": "primary",
+        "claims_supported": [
+          "In-person Austin team",
+          "Open machine-learning, data and implementation engineering roles"
+        ],
+        "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+        "independent_of_subject": false
+      },
+      {
+        "url": "https://getscaffold.com/resources/hollywood-crawford-runs-on-scaffold",
+        "title": "Hollywood Crawford Runs On Scaffold",
+        "publisher": "Scaffold",
+        "source_type": "primary",
+        "claims_supported": [
+          "San Antonio garage-door company uses builder-portal to ServiceTitan coordination",
+          "Exceptions referred to staff",
+          "Vendor-hosted customer case study, not independently audited"
+        ],
+        "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+        "independent_of_subject": false,
+        "published_at": "2026-06-02"
+      }
+    ],
+    "supporting_sources": [
+      {
+        "url": "https://getscaffold.com/careers",
+        "title": "Careers",
+        "publisher": "Scaffold",
+        "source_type": "primary",
+        "claims_supported": [
+          "In-person Austin team",
+          "Open machine-learning, data and implementation engineering roles"
+        ],
+        "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+        "independent_of_subject": false
+      },
+      {
+        "url": "https://getscaffold.com/resources/hollywood-crawford-runs-on-scaffold",
+        "title": "Hollywood Crawford Runs On Scaffold",
+        "publisher": "Scaffold",
+        "source_type": "primary",
+        "claims_supported": [
+          "San Antonio garage-door company uses builder-portal to ServiceTitan coordination",
+          "Exceptions referred to staff",
+          "Vendor-hosted customer case study, not independently audited"
+        ],
+        "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+        "independent_of_subject": false,
+        "published_at": "2026-06-02"
+      },
+      {
+        "url": "https://getscaffold.com/about",
+        "title": "About Us",
+        "publisher": "Scaffold",
+        "source_type": "primary",
+        "claims_supported": [
+          "Ben Johnson is co-founder and CEO",
+          "Shared-data product approach"
+        ],
+        "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+        "independent_of_subject": false
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "Dated, personally owned financing expansion and concrete open Austin roles.",
+      "The product works across existing systems and has a named Texas case study."
+    ],
+    "evidence_against": [
+      "Customer implementation remains substantial in Johnson's original interview.",
+      "Performance is vendor-reported and not independently audited; customer cost, hiring quota and expansion timetable remain undisclosed."
+    ],
+    "structural_read": "The architecture addresses the handoff between construction systems. Keeping existing tools can reduce migration work, but can still require significant implementation and error handling.",
+    "forward_implication": "Evaluate net staff time and cost after deployment, including exceptions, rather than treating capital raised or investor endorsements as operational proof.",
+    "conflict_screen": "clear",
+    "conflict_screen_detail": "No compensation, endorsement arrangement or political advocacy appears in the assignment or fetched reporting. Company and investor accounts are labeled interested evidence. HousingWire is a separate trade newsroom with a named staff reporter and original interview; no subject control or sponsorship is indicated on the article."
+  },
+  "required_post_phrases": [
+    "Ben Johnson",
+    "Scaffold's seed round"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Ben Johnson is Scaffold co-founder and CEO; Scaffold is based in Austin, Texas.",
+      "source_urls": [
+        "https://getscaffold.com/about",
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
+      ]
+    },
+    {
+      "claim": "The funding announcement was published September 15th, 2026 and personally bylined Ben Johnson.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed"
+      ]
+    },
+    {
+      "claim": "Scaffold says the seed round is $15 million; HousingWire reports $14.85 million. About $15 million preserves this precision difference.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
+      ]
+    },
+    {
+      "claim": "Navitas Capital led the round. D.R. Horton, Pulte and Builders FirstSource are among its investors.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
+      ]
+    },
+    {
+      "claim": "Proceeds are intended to expand engineering and coverage of builder, contractor and supplier systems. No hiring quota or completion deadline is given.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed"
+      ]
+    },
+    {
+      "claim": "The careers page lists machine-learning, data and implementation engineering roles in Austin and states that work is in person.",
+      "source_urls": [
+        "https://getscaffold.com/careers"
+      ]
+    },
+    {
+      "claim": "The existing product connects existing systems rather than requiring their replacement. Manual entry and another separate application are source-described alternatives.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+        "https://getscaffold.com/about"
+      ]
+    },
+    {
+      "claim": "HousingWire reports that AI structures data from scanned documents and that schedule changes can affect billing and job costs.",
+      "source_urls": [
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
+      ]
+    },
+    {
+      "claim": "Scaffold's June 2 case study describes Hollywood Crawford, a San Antonio garage-door business, connecting builder portals to ServiceTitan and routing exceptions to staff.",
+      "source_urls": [
+        "https://getscaffold.com/resources/hollywood-crawford-runs-on-scaffold"
+      ]
+    },
+    {
+      "claim": "The San Antonio case is background evidence of an existing workflow, not an outcome caused by the September funding.",
+      "source_urls": [
+        "https://getscaffold.com/resources/hollywood-crawford-runs-on-scaffold",
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed"
+      ]
+    },
+    {
+      "claim": "HousingWire independently interviewed Johnson, who acknowledged a substantial customer implementation; its reporting questions adoption economics for smaller trade firms.",
+      "source_urls": [
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/"
+      ]
+    },
+    {
+      "claim": "Company-reported gains are described over the first 60 days. The fetched pages supply no independent performance audit or Texas-wide results.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+        "https://www.housingwire.com/articles/scaffold-raises-seed-round/",
+        "https://getscaffold.com/resources/hollywood-crawford-runs-on-scaffold"
+      ]
+    },
+    {
+      "claim": "Windsor America is both a customer and an investor. Investor testimonials cannot serve as independent validation.",
+      "source_urls": [
+        "https://getscaffold.com/resources/scaffold-raises-15m-series-seed"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "Current about page confirms role.",
+    "recent_decision": "September 15 announcement is eight days before this September 23 run.",
+    "decision_owner": "Personal byline plus original interview; no claim he alone negotiated financing.",
+    "texas_ai_consequence": "Austin hiring and existing San Antonio use case; no unsupported statewide job or housing-price claims.",
+    "primary_source": "Company announcement fetched in this run; GlobeNewswire is a duplicate primary release, not independent evidence.",
+    "independent_corroboration": "Tyler Williams' separate interview contains implementation caveats and competitor context absent from the release.",
+    "position_or_accountability_read": "Mixed operational assessment distinguishes funded expansion from verified customer outcomes.",
+    "not_recent_repeat": "Freshly fetched remote history has six permanent decision pairs and five cooling subjects. Ben Johnson appears in neither.",
+    "conflict_clear": "Source interests labeled; no sponsored or electoral endorsement.",
+    "political_neutrality": "Private financing/product implementation story; no candidate, party or policy preference."
+  },
+  "challenge_pass": {
+    "result": "pass",
+    "identity": "Current company role agrees with September independent reporting.",
+    "decision_date": "Use financing announcement date, not product invention date.",
+    "ownership": "Byline and CEO interview establish accountable ownership without inventing a board vote.",
+    "geography": "Hiring is in Austin; San Antonio deployment is older background.",
+    "independence": "Original named-reporter interview, not syndication. Performance remains a company claim.",
+    "alternative": "Source-explicit software replacement or manual coordination; no invented alternate investor.",
+    "history": "Subject and exact decision absent from all fetched prior runs.",
+    "political_neutrality": "No electoral content.",
+    "precision": "Preserve $15 million versus $14.85 million source precision in dossier; post says about $15 million."
+  },
+  "source_fetches": [
+    {
+      "url": "https://getscaffold.com/resources/scaffold-raises-15m-series-seed",
+      "title": "Scaffold Raises $15 Million to Connect the Systems That Run Residential Construction",
+      "publisher": "Scaffold",
+      "source_type": "primary",
+      "claims_supported": [
+        "September 15 seed announcement bylined Ben Johnson",
+        "Funding expands engineering team and supported systems",
+        "Existing software remains in use",
+        "Performance figures are company-reported"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false,
+      "published_at": "2026-09-15"
+    },
+    {
+      "url": "https://www.housingwire.com/articles/scaffold-raises-seed-round/",
+      "title": "Scaffold raises $14.85 million, targets fragmented homebuilder data",
+      "publisher": "HousingWire / The Builder's Daily",
+      "source_type": "independent_reporting",
+      "claims_supported": [
+        "Funding and current CEO role",
+        "Original interview on scanned documents and implementation burden",
+        "Smaller trade firms face an adoption-cost test"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": true,
+      "published_at": "2026-09-15"
+    },
+    {
+      "url": "https://getscaffold.com/about",
+      "title": "About Us",
+      "publisher": "Scaffold",
+      "source_type": "primary",
+      "claims_supported": [
+        "Ben Johnson is co-founder and CEO",
+        "Shared-data product approach"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false
+    },
+    {
+      "url": "https://getscaffold.com/careers",
+      "title": "Careers",
+      "publisher": "Scaffold",
+      "source_type": "primary",
+      "claims_supported": [
+        "In-person Austin team",
+        "Open machine-learning, data and implementation engineering roles"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false
+    },
+    {
+      "url": "https://getscaffold.com/resources/hollywood-crawford-runs-on-scaffold",
+      "title": "Hollywood Crawford Runs On Scaffold",
+      "publisher": "Scaffold",
+      "source_type": "primary",
+      "claims_supported": [
+        "San Antonio garage-door company uses builder-portal to ServiceTitan coordination",
+        "Exceptions referred to staff",
+        "Vendor-hosted customer case study, not independently audited"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false,
+      "published_at": "2026-06-02"
+    },
+    {
+      "url": "https://www.globenewswire.com/news-release/2026/09/15/3362272/0/en/scaffold-raises-15-million-to-connect-the-systems-that-run-residential-construction.html",
+      "title": "Scaffold funding release",
+      "publisher": "Scaffold via GlobeNewswire",
+      "source_type": "primary",
+      "claims_supported": [
+        "Duplicate primary announcement, not independent"
+      ],
+      "fetched_at": "2026-09-23T12:06:01.893061+00:00",
+      "independent_of_subject": false,
+      "published_at": "2026-09-15"
+    }
+  ],
+  "visual_facts": {
+    "place": "Austin",
+    "mechanism": "Different construction records align into a common job record while existing tools remain.",
+    "allowed_metaphor": "Abstract paper strips forming one residential timber-frame outline. Conceptual illustration, not an actual jobsite or software screenshot.",
+    "excluded_claims": "No invented office, landmark, literal site plan, portrait, customer logo or quantified improvement."
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Jason Les",
+      "decision": "August 10 announcement of a 191 MW AI data center lease at Rockdale",
+      "drop_reason": "Not selected after comparison. Older than Scaffold funding; fetched independent coverage relies heavily on issuer disclosures and the proposed alternative needed further verification. No gate was waived.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810xex99d1.htm",
+          "title": "Riot Q2 2026 results, Exhibit 99.1",
+          "publisher": "Riot via SEC"
+        },
+        {
+          "url": "https://blockspace.media/insight/riot-platforms-signs-ai-lease-rockdale-2026/",
+          "title": "Riot Rockdale lease and Q2 earnings",
+          "publisher": "Blockspace"
+        },
+        {
+          "url": "https://www.datacenterdynamics.com/en/news/riot-platforms-agrees-191mw-20-year-lease-agreement-with-anthropic-worth-91bn-report/",
+          "title": "Riot Platforms agrees 191MW lease",
+          "publisher": "Data Center Dynamics"
+        }
+      ]
+    },
+    {
+      "subject": "Ryan Holt",
+      "decision": "Waco September 15 C-THRU firefighter equipment procurement",
+      "drop_reason": "Scout fetched independent meeting reporting and official agenda PDF bytes, but did not read primary text. Source-supported available alternative not established. Not cleared for publication.",
+      "sources": [
+        {
+          "url": "https://insider.govtech.com/texas/news/waco-approves-4-2m-in-technology-agreements",
+          "title": "Waco approves technology agreements",
+          "publisher": "Government Technology"
+        },
+        {
+          "url": "https://wacotexas.primegov.com/Public/CompiledDocument/14920",
+          "title": "September 15 Waco agenda PDF, fetched but not parsed",
+          "publisher": "City of Waco"
+        }
+      ]
+    },
+    {
+      "subject": "David Keathly",
+      "decision": "UNT interdisciplinary AI bachelor's curriculum and fall launch",
+      "drop_reason": "August announcement and late-July catalog release are in-window, but original curriculum decision date is unverified; reporting says development began about eighteen months earlier.",
+      "sources": [
+        {
+          "url": "https://news.unt.edu/news/2026/new-degree-programs-give-unt-students-more-ways-to-explore-emerging-fields.html",
+          "title": "New degree programs give UNT students more ways to explore emerging fields",
+          "publisher": "University of North Texas"
+        },
+        {
+          "url": "https://www.keranews.org/news/2026-08-06/unt-ai-artificial-intelligence-undergraduate-degree-program?_amp=true",
+          "title": "UNT AI undergraduate degree reporting",
+          "publisher": "KERA"
+        },
+        {
+          "url": "https://engineering.unt.edu/people/david-keathly.html",
+          "title": "David Keathly faculty page",
+          "publisher": "University of North Texas"
+        }
+      ]
+    },
+    {
+      "subject": "Jakoah Brgoch",
+      "decision": "UH September 1 GAMBIT AI magnet research program",
+      "drop_reason": "Primary and original HPM interview exist, but HPM is licensed to UH System. KWBU syndication adds no separate reporting. Organizational independence not established.",
+      "sources": [
+        {
+          "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
+          "title": "DOE grant for permanent magnets",
+          "publisher": "University of Houston"
+        },
+        {
+          "url": "https://www.kwbu.org/news-from-across-texas/2026-09-09/uh-rice-professors-receive-nearly-3m-grant-from-department-of-energy-to-build-better-magnets-with-ai?_amp=true",
+          "title": "UH and Rice receive magnet research grant",
+          "publisher": "Houston Public Media via KWBU"
+        }
+      ]
+    }
+  ],
+  "selection_reason": "Fresh founder-owned expansion supported by primary, independent interview, Austin jobs and a specific Texas customer workflow. Provides a sector beyond the recent infrastructure profiles.",
+  "discovery_lanes_completed": [
+    "founder",
+    "operator",
+    "public",
+    "research"
+  ]
+}

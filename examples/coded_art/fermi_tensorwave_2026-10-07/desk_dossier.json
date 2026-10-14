@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-07",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Lee McIntire",
+    "role": "Chief Executive Officer",
+    "organization": "Fermi Inc.",
+    "role_category": "operator",
+    "texas_tie": "Project Matador AI campus on TTU ground-leased land in Carson County, Texas Panhandle",
+    "place_label": "CARSON COUNTY",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://fermiamerica.com/executive-leadership/",
+      "title": "Executive Leadership",
+      "publisher": "Fermi America",
+      "source_type": "primary",
+      "claims_supported": [
+        "Current CEO Lee McIntire"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Fermi disclosed a signed amendment extending its TensorWave first-tenant lease closing from September 30 to October 31, 2026 while guaranty negotiations and other closing conditions remained unresolved.",
+    "decision_anchor": "TensorWave closing extension",
+    "date": "2026-09-22",
+    "date_scope": "Public disclosure date of a signed amendment; separate execution date not established.",
+    "owner_evidence": "The current CEO explicitly claims ownership of the extension in the issuer statement. Profile concerns this September choice, not the August lease signed before his CEO appointment.",
+    "alternative_available": "Retain the original September 30 closing deadline, with either party able to terminate if conditions were unmet. This option is documented in the SEC filing; no claim of an available replacement tenant or an immediate unilateral exit before the deadline.",
+    "ai_nexus": "Conditional first tenant for an AI data-center campus; TensorWave provides AI cloud infrastructure.",
+    "texas_consequence": "Keeps the first Carson County tenant agreement pending while guaranty and construction funding are pursued; TTU remains ground landlord with its own year-end notice conditions.",
+    "next_check": "October 31, 2026 closing, extension or termination disclosure, with guarantor, construction funding and any condition waivers identified. December 31 TTU notice is a separate checkpoint.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550",
+      "title": "Fermi and TensorWave Agree to Extend Closing Date to October 31, 2026",
+      "publisher": "Fermi Inc. via ACCESS Newswire",
+      "source_type": "primary",
+      "claims_supported": [
+        "September 22 disclosure of signed deadline amendment",
+        "McIntire ownership and remaining guaranty negotiations",
+        "222 MW, other terms unchanged, conditions and termination risk"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false,
+      "published_at": "2026-09-22"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://americanbuildout.com/fermi-proxy-project-matador-advances-as-tenant-deal-board-fight-linger/",
+        "title": "Fermi Proxy: Project Matador Advances as Tenant Deal, Board Fight Linger",
+        "publisher": "American Buildout",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "October 3 reporting describes lease as unclosed",
+          "Compares latest proxy, lease, ground lease and financing disclosures"
+        ],
+        "fetched_at": "2026-10-07",
+        "independent_of_subject": true,
+        "author": "Ed Moltzen",
+        "independence_basis": "Founder/editor identified on fetched About page. Original comparison of October proxy, earlier filings, lease risks and site progress; no observed sponsored label or subject control. Not a release reprint. No claim to have independently inspected private financing agreements.",
+        "published_at": "2026-10-03"
+      },
+      {
+        "url": "https://financefeeds.com/fermi-tensorwave-lease-closing-october-31-deadlines/",
+        "title": "Fermi Delays $6.5B TensorWave Lease Close to Oct. 31",
+        "publisher": "FinanceFeeds",
+        "source_type": "independent_analysis",
+        "claims_supported": [
+          "September deadline amendment corroborated",
+          "Original comparison with distinct debt and ground-lease tests"
+        ],
+        "fetched_at": "2026-10-07",
+        "independent_of_subject": true,
+        "author": "Tobi Opeyemi Amure",
+        "independence_basis": "Separately controlled financial publisher with named byline, linked SEC analysis and disclosure gaps beyond the release. Publisher policy separates sponsored content. Its notice-to-proceed verb is corrected to the SEC wording; stock commentary excluded.",
+        "published_at": "2026-09-23"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+        "title": "Fermi Inc. Form 10-Q for the quarter ended June 30, 2026",
+        "publisher": "Fermi Inc. through SEC EDGAR",
+        "source_type": "primary",
+        "claims_supported": [
+          "Original September 30 closing subject to extension",
+          "Either party termination right if conditions unmet",
+          "Carson County TTU ground lease and notice conditions",
+          "Expected late 2027 to first quarter 2028 phased delivery"
+        ],
+        "fetched_at": "2026-10-07",
+        "independent_of_subject": false,
+        "published_at": "2026-08-14"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026089340/ea0302016-8k_fermi.htm",
+        "title": "Fermi Inc. Form 8-K reporting CEO appointment",
+        "publisher": "Fermi Inc. through SEC EDGAR",
+        "source_type": "primary",
+        "claims_supported": [
+          "August 11 CEO appointment; original August 9 lease predates appointment"
+        ],
+        "fetched_at": "2026-10-07",
+        "independent_of_subject": false
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "The signed amendment preserves additional time for the same customer while retaining other contractual terms.",
+      "The company disclosed a specific revised deadline and enumerated conditions."
+    ],
+    "evidence_against": [
+      "A deadline change does not establish completed guaranty or construction finance.",
+      "The first customer remains conditional in the latest reviewed reporting, while the ground lease has a separate deadline."
+    ],
+    "structural_read": "The operational task is to turn a conditional tenant agreement into funded construction. More negotiating time preserves that path but does not establish completion.",
+    "forward_implication": "Assess the next disclosure by what was executed, financed or waived, and separate lease closing from later building delivery.",
+    "conflict_screen": "clear",
+    "conflict_screen_note": "No known editorial payment or relationship appears in the task record. Issuer sources are labeled interested evidence. Independent bylined publishers show no observed subject control or sponsored label; this screen is limited to visible disclosures. No stock recommendation, political advocacy, or shareholder-vote recommendation."
+  },
+  "required_post_phrases": [
+    "Lee McIntire",
+    "TensorWave closing extension"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Lee McIntire is Chief Executive Officer of Fermi Inc., which operates as Fermi America.",
+      "source_urls": [
+        "https://fermiamerica.com/executive-leadership/",
+        "https://www.sec.gov/Archives/edgar/data/2071778/000121390026089340/ea0302016-8k_fermi.htm",
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "Fermi disclosed the signed TensorWave closing extension on September 22nd, 2026; the deadline changed from September 30th to October 31st, 2026. A separate amendment execution date is not established.",
+      "source_urls": [
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "Fermi Campus 1 LLC is the landlord and TensorWave TEX1 LLC is the tenant. This is the first customer lease at Project Matador; TensorWave is an AI cloud provider.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "The original closing deadline was subject to extension. Either party may terminate if conditions are not satisfied. Keeping the original deadline was an available contractual path, not evidence of an immediate termination decision.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+      ]
+    },
+    {
+      "claim": "The amendment leaves the remaining terms unchanged. Effectiveness requires satisfaction or waiver of closing conditions including work letters, guaranties, operations schedules, service-level agreement, board approvals and construction financing.",
+      "source_urls": [
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "Project Matador is in the Texas Panhandle on Texas Tech University System ground-leased land in Carson County.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "Fermi must receive a notice to proceed from TTU by December 31st, 2026 before vertical data-center construction; TTU may terminate if notice is not received. Conditions include a first tenant of at least 200 MW and first-phase financing.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+      ]
+    },
+    {
+      "claim": "The TensorWave lease covers 222 MW of total facility power after the final phase. That figure is contracted scope rather than current operating output.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "American Buildout reported on October 3rd, 2026 that the lease had yet to close. No later closing or completed guaranty is established by the current-run reviewed disclosures.",
+      "source_urls": [
+        "https://americanbuildout.com/fermi-proxy-project-matador-advances-as-tenant-deal-board-fight-linger/",
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550"
+      ]
+    },
+    {
+      "claim": "The SEC filing targets delivery in phases from late 2027 into the first quarter of 2028.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+      ]
+    },
+    {
+      "claim": "The guarantor identity and completed project financing are not established by the reviewed disclosures. October 31 is a disclosure checkpoint; it does not guarantee closing or completed buildings.",
+      "source_urls": [
+        "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550",
+        "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+        "https://americanbuildout.com/fermi-proxy-project-matador-advances-as-tenant-deal-board-fight-linger/"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "Current company directory and filed appointment identify McIntire.",
+    "recent_decision": "September 22 disclosed signed amendment is 15 days before run.",
+    "decision_owner": "CEO explicitly owns extension in issuer statement.",
+    "texas_ai_consequence": "AI tenant at Carson County campus, with TTU ground lease conditions.",
+    "primary_source": "Dated issuer amendment announcement and SEC filing fetched.",
+    "independent_corroboration": "American Buildout and FinanceFeeds add original document comparisons; issuer syndication is not counted.",
+    "position_or_accountability_read": "Mixed execution assessment of additional time and unresolved conditions.",
+    "not_recent_repeat": "Eight historical pairs and two cooling subjects checked; no McIntire or extension match.",
+    "conflict_clear": "Visible source and editorial relationship screen recorded with limits.",
+    "political_neutrality": "Only private lease execution assessed; no preferred political or electoral outcome."
+  },
+  "fetched_sources": [
+    {
+      "url": "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/fermi-and-tensorwave-agree-to-extend-closing-date-to-october-31-2026-1225550",
+      "title": "Fermi and TensorWave Agree to Extend Closing Date to October 31, 2026",
+      "publisher": "Fermi Inc. via ACCESS Newswire",
+      "source_type": "primary",
+      "claims_supported": [
+        "September 22 disclosure of signed deadline amendment",
+        "McIntire ownership and remaining guaranty negotiations",
+        "222 MW, other terms unchanged, conditions and termination risk"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false,
+      "published_at": "2026-09-22"
+    },
+    {
+      "url": "https://fermiamerica.com/executive-leadership/",
+      "title": "Executive Leadership",
+      "publisher": "Fermi America",
+      "source_type": "primary",
+      "claims_supported": [
+        "Current CEO Lee McIntire"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+      "title": "Fermi Inc. Form 10-Q for the quarter ended June 30, 2026",
+      "publisher": "Fermi Inc. through SEC EDGAR",
+      "source_type": "primary",
+      "claims_supported": [
+        "Original September 30 closing subject to extension",
+        "Either party termination right if conditions unmet",
+        "Carson County TTU ground lease and notice conditions",
+        "Expected late 2027 to first quarter 2028 phased delivery"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false,
+      "published_at": "2026-08-14"
+    },
+    {
+      "url": "https://americanbuildout.com/fermi-proxy-project-matador-advances-as-tenant-deal-board-fight-linger/",
+      "title": "Fermi Proxy: Project Matador Advances as Tenant Deal, Board Fight Linger",
+      "publisher": "American Buildout",
+      "source_type": "independent_reporting",
+      "claims_supported": [
+        "October 3 reporting describes lease as unclosed",
+        "Compares latest proxy, lease, ground lease and financing disclosures"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": true,
+      "author": "Ed Moltzen",
+      "independence_basis": "Founder/editor identified on fetched About page. Original comparison of October proxy, earlier filings, lease risks and site progress; no observed sponsored label or subject control. Not a release reprint. No claim to have independently inspected private financing agreements.",
+      "published_at": "2026-10-03"
+    },
+    {
+      "url": "https://financefeeds.com/fermi-tensorwave-lease-closing-october-31-deadlines/",
+      "title": "Fermi Delays $6.5B TensorWave Lease Close to Oct. 31",
+      "publisher": "FinanceFeeds",
+      "source_type": "independent_analysis",
+      "claims_supported": [
+        "September deadline amendment corroborated",
+        "Original comparison with distinct debt and ground-lease tests"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": true,
+      "author": "Tobi Opeyemi Amure",
+      "independence_basis": "Separately controlled financial publisher with named byline, linked SEC analysis and disclosure gaps beyond the release. Publisher policy separates sponsored content. Its notice-to-proceed verb is corrected to the SEC wording; stock commentary excluded.",
+      "published_at": "2026-09-23"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026089340/ea0302016-8k_fermi.htm",
+      "title": "Fermi Inc. Form 8-K reporting CEO appointment",
+      "publisher": "Fermi Inc. through SEC EDGAR",
+      "source_type": "primary",
+      "claims_supported": [
+        "August 11 CEO appointment; original August 9 lease predates appointment"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false
+    },
+    {
+      "url": "https://americanbuildout.com/about/",
+      "title": "About American Buildout",
+      "publisher": "American Buildout",
+      "source_type": "publisher_policy",
+      "claims_supported": [
+        "Ed Moltzen is founder and editor"
+      ],
+      "fetched_at": "2026-10-07",
+      "independent_of_subject": false
+    }
+  ],
+  "challenge_pass": {
+    "role": "SEC appointment and current directory agree.",
+    "ownership": "Explicit extension ownership; no attribution of original lease to current CEO.",
+    "date": "Disclosure of signed amendment, not inferred exact execution date.",
+    "texas_ai": "Lease scope and Carson County location verified.",
+    "independence": "Separate editorial document analysis, not wire duplication.",
+    "alternative": "Original deadline and termination provision fetched in SEC.",
+    "repeat": "No matching subject or pair in current branch history.",
+    "neutrality": "Public land relationship described, no policy recommendation.",
+    "corrections": [
+      "Use receive for TTU notice; secondary source says issue.",
+      "Do not claim closing conditions cannot be waived.",
+      "Do not treat signed lease as effective or capacity as delivered.",
+      "No inference about unidentified guarantor or stock value.",
+      "Refer to the fetched filing summary rather than imply access to the executed agreement."
+    ],
+    "copy_review": "Separate scout/editor verified all claims; required edit applied to describe the 10-Q as a filing summary and make the termination deadline explicit."
+  },
+  "dropped_candidates": [
+    {
+      "subject": "Wyatt Smith",
+      "decision": "UpSmith announced a $10 million Series A allocated to engineering and distribution, alongside an inbound AI voice agent and unified customer timeline. Smith personally described expanding engineering, account executives and multibrand customer partnerships.",
+      "drop_reason": "Qualified reserve; Fermi offers a more directly documented contractual alternative and a nearer dated execution check. The UpSmith product alternative requires careful inference from existing scope.",
+      "sources": [
+        {
+          "url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/upsmith-raises-10-million-series-a-to-power-the-people-who-power-1231980",
+          "title": "UpSmith Raises $10 Million Series A to Power the People Who Power America",
+          "publisher": "UpSmith Inc. via ACCESS Newswire"
+        },
+        {
+          "url": "https://dallasinnovates.com/dallas-startup-upsmith-raises-10m-series-a-to-put-ai-to-work-for-home-services-providers/",
+          "title": "Dallas Startup UpSmith Raises $10M Series A to Put AI to Work for Home-Services Providers",
+          "publisher": "Dallas Innovates"
+        }
+      ]
+    },
+    {
+      "subject": "Chris Iconos",
+      "decision": "Mitratech Legal acquisition of BotDojo for agent orchestration, announced September 28, 2026.",
+      "drop_reason": "Primary is strong, but fetched Artificial Lawyer largely reproduces company claims and adds modest analysis. It does not provide sufficient additional independent evidence of operational consequence; UpSmith offers a better original interview. No need to stretch this gate.",
+      "sources": [
+        {
+          "url": "https://mitratech.com/resource-hub/pressreleases/mitratech-acquires-botdojo/",
+          "title": "Mitratech Acquires AI-Native Startup BotDojo",
+          "publisher": "Mitratech"
+        },
+        {
+          "url": "https://www.artificiallawyer.com/2026/09/28/mitratech-buys-botdojo-for-agent-orchestration/",
+          "title": "Mitratech Buys BotDojo For Agent Orchestration",
+          "publisher": "Artificial Lawyer"
+        }
+      ]
+    },
+    {
+      "subject": "Charles Acknin",
+      "decision": "Skyways Austin/Bastrop expansion reported September 18, 2026.",
+      "drop_reason": "Fetched Austin Business Journal only exposes preview and no dated underlying facility decision. Separate September 21 offshore partnership primary names commercial leader Bill Wimberley and German deployment, not Acknin as direct owner of Texas facility choice. Missing exact owner/date/access evidence.",
+      "sources": [
+        {
+          "url": "https://www.bizjournals.com/austin/news/2026/09/18/skyways-drone-aircraft-transportation-autonomous.html",
+          "title": "Sky's the limit for drone transportation company setting roots in Bastrop County",
+          "publisher": "Austin Business Journal"
+        },
+        {
+          "url": "https://www.skyways.com/newsroom/skyways-dsv-commercial-offshore-logistics-partnership",
+          "title": "Skyways Expands Long-Range Autonomous Cargo Capabilities Through a Commercial Offshore Logistics Partnership with DSV",
+          "publisher": "Skyways"
+        }
+      ]
+    },
+    {
+      "subject": "Tony Sauerhoff",
+      "decision": "DIR began sandbox engagements with six state agencies, reported to the board on August 27, 2026.",
+      "drop_reason": "Primary page establishes ongoing statutory implementation, but exact cohort decision date and real alternative are not established. A dated board status report cannot safely be treated as the original decision.",
+      "sources": [
+        {
+          "url": "https://dir.texas.gov/news/ai-texas-dir-implementation-laws-89th-legislature",
+          "title": "AI in Texas: DIR Implementation of Laws from the 89th Legislature",
+          "publisher": "Texas Department of Information Resources"
+        },
+        {
+          "url": "https://dir.texas.gov/ai-and-innovation/public-sector-ai-sandbox-program",
+          "title": "Public Sector AI Sandbox Program",
+          "publisher": "Texas Department of Information Resources"
+        },
+        {
+          "url": "https://insider.govtech.com/texas/news/dir-begins-ai-sandbox-work-with-six-state-agencies",
+          "title": "DIR Begins AI Sandbox Work With Six State Agencies",
+          "publisher": "Government Technology"
+        }
+      ]
+    },
+    {
+      "subject": "Cole Camplese",
+      "decision": "UT described expanded Claude EDU and ChatGPT EDU access and transition away from UT Spark.",
+      "drop_reason": "No genuinely independent fetched corroboration of the decision. Exact decision date is also unclear; discovery showed a July 1 retirement notice, while current URL redirects to tool catalog. September retrospective date is not enough.",
+      "sources": [
+        {
+          "url": "https://tech.utexas.edu/news/advancing-ai-ut-austin",
+          "title": "Advancing AI at UT Austin",
+          "publisher": "UT Austin Enterprise Technology"
+        },
+        {
+          "url": "https://tech.utexas.edu/news/et-talk-podcast-episode-17",
+          "title": "ET Talk Podcast Episode 17",
+          "publisher": "UT Austin Enterprise Technology"
+        },
+        {
+          "url": "https://spark.utexas.edu/",
+          "title": "AI services tool catalog after redirect",
+          "publisher": "UT Austin Enterprise Technology"
+        }
+      ]
+    },
+    {
+      "subject": "Kinshuk",
+      "decision": "UNT announced a $20 million donor commitment to convert the College of Information to an AI and advanced analytics college with six permanent endowments.",
+      "drop_reason": "KERA/Denton Record-Chronicle discovery is independently bylined but current fetch returns 403; no substitution with snippets. Individual decision ownership and alternative are also underdocumented.",
+      "sources": [
+        {
+          "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
+          "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
+          "publisher": "UNT"
+        },
+        {
+          "url": "https://northtexan.unt.edu/issues/2026-fall/bold-investment-in-the-future.html",
+          "title": "A Bold Investment in the Future",
+          "publisher": "UNT North Texan"
+        }
+      ]
+    },
+    {
+      "subject": "Tyler Page",
+      "decision": "Cipher amended Barber Lake lease September 24 with additional AI-lab term and cost-reimbursement terms.",
+      "drop_reason": "Strong current primary but independent results found were mostly issuer rewrites, automated price commentary or weak-source analysis; did not clear independent corroboration to the same confidence as McIntire.",
+      "sources": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/09/25/3369064/0/en/cipher-digital-expands-barber-lake-lease-term-to-over-9-billion.html",
+          "title": "Cipher Digital Expands Barber Lake Lease Term to 20 Years, Increasing Revenue to Over $9 Billion",
+          "publisher": "Cipher Digital via GlobeNewswire",
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "subject": "Chase Lochmiller",
+      "decision": "September 28 disclosure that Crusoe develops Google's Armstrong County campus with co-located wind and closed-loop cooling.",
+      "drop_reason": "Release describes construction begun June 2025. Current publication is not sufficient evidence that site, power, or cooling choice occurred within the 60-day window.",
+      "sources": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/09/28/3370313/0/en/crusoe-developing-data-center-campus-in-armstrong-county-texas.html",
+          "title": "Crusoe Developing Data Center Campus in Armstrong County, Texas",
+          "publisher": "Crusoe via GlobeNewswire",
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "subject": "Darrick Horton or Marius Haas",
+      "decision": "Original August 10 Fermi/TensorWave first-tenant announcement.",
+      "drop_reason": "September extension is a sharper current decision with an explicit accountable operator and a documented real alternative. Keep original announcement only as context; no need to profile broad campus ambition.",
+      "sources": [
+        {
+          "url": "https://www.tradingview.com/news/reuters.com,2026-08-11:newsml_RSK0598Qa:0-rcs-fermi-inc-correction-fermi-announces-agreement-w-tensorwave/",
+          "title": "CORRECTION FROM SOURCE: Fermi Announces Binding Lease Agreement with TensorWave",
+          "publisher": "Fermi via ACCESS/RNS, hosted by TradingView",
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "subject": "Christopher M. Jermaine",
+      "decision": "Rice announced a standalone Master of Artificial Intelligence with an internship requirement.",
+      "drop_reason": "Backup only. Personal ownership remains inferred from department chair role and on-record explanation; prefer stronger owner evidence.",
+      "sources": [
+        {
+          "url": "https://news.rice.edu/news/2026/rice-launch-master-artificial-intelligence-program-fall-2027",
+          "title": "Rice to launch Master of Artificial Intelligence program in fall 2027",
+          "publisher": "Rice University"
+        }
+      ]
+    },
+    {
+      "subject": "Dan Stanzione",
+      "decision": "TACC collaborating with SDSC on NAIRR Operations Center.",
+      "drop_reason": "Drop. Fetched sources are the partner and funding agency; no independent corroboration found and Texas owner authority less explicit than national PI.",
+      "sources": [
+        {
+          "url": "https://www.sdsc.edu/news/2026/PR20260901-NAIRR-OC.html",
+          "title": "Strengthening America’s AI Ecosystem with the Launch of the NSF NAIRR Operations Center",
+          "publisher": "San Diego Supercomputer Center"
+        }
+      ]
+    },
+    {
+      "subject": "Pamela Holland Obiomon",
+      "decision": "COMMAND-AI research center and associated doctoral development announced.",
+      "drop_reason": "Drop. Real alternative and next operational milestone not established; independent verification is thin.",
+      "sources": [
+        {
+          "url": "https://www.pvamu.edu/blog/pvamu-awarded-nearly-10-million-to-advance-artificial-intelligence-for-national-defense/",
+          "title": "PVAMU awarded nearly $10 million to advance artificial intelligence for national defense",
+          "publisher": "Prairie View A&M University"
+        }
+      ]
+    }
+  ],
+  "selection_rationale": "Contract amendment gives the clearest decision-owner link, documented alternative and near-term check among screened lanes.",
+  "visual_facts": [
+    "Conceptual editorial art, not a depiction of built facilities.",
+    "Carson County Texas Panhandle setting; low open horizon.",
+    "A partly extended span symbolizes more negotiating time while an unresolved gap symbolizes conditions still open.",
+    "No actual site layout, portrait, logo, plant design or completed facility is asserted."
+  ],
+  "discovery_lanes_completed": [
+    "founder",
+    "operator",
+    "public",
+    "research"
+  ]
+}

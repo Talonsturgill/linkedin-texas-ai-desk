@@ -24,21 +24,57 @@ in Texas.
   only process, execution, implementation, or measurable accountability. Set the dossier's
   `editorial_mode` to `neutral_accountability` and `assessment` to `not_applicable`.
 - Create or update a Gmail draft. Never send it.
-- Use actual built-in ImageGen artwork as the primary visual path. A procedural image is allowed
-  only after two failed ImageGen attempts or when the built-in tool is unavailable, and that
-  fallback must be disclosed in the editor note.
+- Use original, story-specific coded artwork that Claude authors in `out/artwork.py` and renders in
+  this environment. If the render fails twice, finish as needs-attention with an unsent status draft.
+  Never substitute a shared template silently or
+  treat an infrastructure failure as an editorial no-target result.
 
 ## Phase 1 — Preflight and isolation
 
-1. Read this file, the five contracts above, `AGENTS.md`, and
-   `.agents/skills/texas-desk-artwork/SKILL.md` completely.
+1. Read this file, the five contracts above, `AGENTS.md`, and `config/runtime.json` once.
+   Reuse those readings for later phases. Defer the artwork skill until the copy passes.
 2. Determine `TODAY` and the display date in America/Chicago. The display date must use the form
    `September 2nd, 2026`.
-3. Confirm the current repository, Git remote, GitHub authentication, Gmail draft capability, web
-   access, and built-in ImageGen capability without printing credentials.
+3. Resolve the attached checkout with `git rev-parse --show-toplevel`; do not search a Mac path
+   in cloud. Confirm the Git remote, GitHub authentication, Gmail create/update/readback, web
+   access, and the coded-art capability (`python3 scripts/art_smoke.py`, which repairs missing or drifted Pillow,
+   numpy, or PyYAML from `requirements.txt`) without printing credentials. Discover only
+   tools needed by this routine. Before marking Gmail available, resolve the connected recipient
+   from its profile. If that connector has no profile tool, use its own authenticated `viewUrl`
+   metadata from a read-only draft listing with an email-valued `authuser`. Never infer the
+   recipient from the session user, personal account, message From/To fields, or message-body
+   links. Never create a probe draft to discover the account. Normalize only trusted metadata
+   to ignored `.local/gmail_account_evidence.json` with either `profile.emailAddress` or
+   `connector_view_urls`, then run `python3 scripts/gmail_account.py --evidence
+   .local/gmail_account_evidence.json`. Missing or conflicting metadata blocks every draft write.
+   Verify web by fetching one primary source page and one independent reporting page from
+   `config/sources.yaml`; count both in the fetch ledger. Tool presence or a successful search
+   alone is insufficient. If a host fails, try one alternate host in that source class. If the
+   proxy explicitly denies these source hosts, record the capability failure and stop probing
+   further hosts. The cloud environment must use the scoped public-host list in
+   `config/claude_source_domains.txt` plus the default package-manager domains; setup is documented
+   in `references/claude_cloud_setup.md`. Do not bypass access controls or change network policy
+   from inside the routine. Record available, unavailable, or unknown truthfully:
+
+   ```bash
+   python3 scripts/runtime_check.py --github <STATE> --gmail-draft-readback <STATE> \
+     --web <STATE> --coded-art <STATE>
+   ```
+
+   Unknown is a failed preflight. Stop before history, scouts, searches, or art when it fails.
+   Create or update the needs-attention draft if Gmail is usable, read it back as DRAFT with no
+   SENT label, and report the blocker. Do not run an entire research cycle to rediscover it.
+   Use Haiku 5.5 at medium effort. Verify the actual session control if exposed; configuration
+   alone is not runtime evidence. Do not raise effort or change models automatically.
 4. Refuse to overwrite unrelated work. Fetch `origin` and start from `origin/main` only when the
-   working tree is clean. Create a unique branch named `codex/texas-desk-YYYY-MM-DD`, adding `-2`,
+   working tree is clean. If the saved routine explicitly selects a release branch, use that
+   exact fetched branch instead and record its contract commit in the local runtime receipt.
+   Create a unique branch named `codex/texas-desk-YYYY-MM-DD`, adding `-2`,
    `-3`, and so on when that name already exists locally or remotely.
+   The release branch is only the contract source: never use it as the run's working branch.
+   Run `git switch -c <UNIQUE_DATED_BRANCH> <EXACT_RELEASE_REF>` before history or discovery,
+   then verify `git branch --show-current`. No profile or no-target delivery may omit its
+   dated artifact branch, artifact commit, and push verification.
 5. Fetch remote run branches, then build the history file:
 
    ```bash
@@ -48,15 +84,45 @@ in Texas.
      --out .local/history.json
    ```
 
-6. Retrieve the connected Gmail profile once. Use its email address only in the connector call and
-   ignored `.local/gmail_payload.json`. Never place the address or a draft identifier in tracked
+6. Reuse the verified `.local/gmail_account.json` from preflight. Use its email address only in
+   connector calls and ignored `.local/` payloads and receipts. Never place the address or a draft identifier in tracked
    files, terminal summaries, commits, or the final task report.
 
-If a required capability other than ImageGen is unavailable, preserve any completed local evidence
-and report the exact missing boundary. If Gmail remains available, create a failure-status draft
-whose subject begins `Texas AI Docket — Texas Desk — Needs Attention —` and never send it.
+If any required capability is unavailable, preserve any completed local evidence
+and report the exact missing boundary. If Gmail remains available, create or update one status draft
+with the exact subject `Texas AI Docket — Texas Desk — Needs Attention — <DISPLAY_DATE>`.
+Apply the same exact-subject deduplication, connected-recipient check, full body readback, and
+DRAFT/no-SENT verification used in Phase 8. State the failed capability, contract commit, and
+checks actually completed; include no post or substitute image. Never send it.
+
+If committing a needs-attention status artifact, include public `out/run_status.json` with
+`schema_version: 1`, `terminal_state: "needs-attention"`, the ISO `run_date`,
+`profile_created: false`, and `cover_approved: false`. Keep mailbox data and draft identifiers
+out of it. This explicit receipt lets future artwork history skip an unapproved run without
+silently ignoring missing images on genuine profile branches.
+
+Do not subscribe to PR activity or start a post-run monitoring loop. Stop after the terminal report.
 
 ## Phase 2 — Discover candidates
+
+After the preflight bootstrap has installed the required dependencies, calculate the search bounds.
+Calculate both inclusive window start dates with date arithmetic, not mental calendar math:
+
+```bash
+python3 - <<'PY'
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+import yaml
+state = yaml.safe_load(open('config/state.yaml'))
+today = datetime.now(ZoneInfo(state['timezone'])).date()
+print('run_date:', today)
+for key in ('decision_window_days', 'broadening_window_days'):
+    print(key, 'starts:', today - timedelta(days=state[key]))
+PY
+```
+
+Reject a known out-of-window decision before spending a source fetch on it. An article's
+recent publication date does not make an older decision recent.
 
 Search the default 60-day window before considering anything older. Cover these four lanes so the
 selection is not driven by a single news cycle:
@@ -70,8 +136,27 @@ selection is not driven by a single news cycle:
 - research — a named Texas research leader who chose a program, center, partnership, dataset,
   deployment, or translation path
 
-When agent delegation is available, use one scout per lane and require compact structured returns.
-Otherwise search the lanes sequentially. Each candidate return must include the full name, current
+Use one editor for all four lanes by default; do not launch four full-context scout sessions.
+Batch independent discovery queries and deduplicate URLs before fetching. Start with one query
+per lane, then use targeted queries only for unresolved gates. Keep at most six candidate packets,
+no more than 200 words each. Fetch full evidence only for the strongest plausible candidates;
+retain concise claim excerpts plus URLs locally instead of echoing entire pages. Read source
+content needed to assess independence, ownership, context, and qualifications. Never replace
+fetched evidence with snippets to save tokens.
+
+Reserve at least four of the configured search queries for one 90-day broadening query per lane
+if the 60-day search yields no qualifier. Do not spend that reserve chasing one candidate.
+Close an unresolved candidate after two targeted searches without a fetchable primary source;
+record the gap and move on. Prefer fetching a promising known URL to issuing another broad query.
+
+Across both windows, use at most the search/fetch counts in `config/runtime.json`. Keep a compact
+counter ledger in `.local/usage.json` with observed searches, fetches, workers, score cycles,
+image attempts, and repairs. Stop when a limit is reached. If required coverage or verification
+is incomplete, finish needs-attention, not no-target. A no-target result requires actual completed
+60-day and 90-day lane coverage. A qualified candidate ends further discovery after the initial
+four-lane pass. Do one challenge pass and retain the existing two-cycle edit ceiling.
+
+Each candidate return must include the full name, current
 role, organization, Texas tie, exact decision, decision date, evidence of ownership, AI nexus,
 alternative available, affected Texans or entities, next measurable check, primary URL,
 independent URL, and a reason to drop or keep.
@@ -79,6 +164,15 @@ independent URL, and a reason to drop or keep.
 Use the source tiers and exclusions in `config/sources.yaml`. Favor actual filings, agendas,
 contracts, grant notices, regulatory documents, company records, and complete institutional
 announcements over reposts and summaries. Fetch every page that supports the final candidate.
+
+Assess ownership across the evidence set. A primary record may establish the institutional action
+while independent meeting reporting identifies the named executive who explains or operates that
+specific implementation. An unsigned presentation alone does not disprove operational ownership.
+Require affirmative evidence tying the person to the implementation, beyond their title or a
+generic spokesperson quote. Keep the distinction between the authority that directed a policy
+and the operator accountable for carrying it out; never attribute the former's choice to the latter.
+When this evidence is nearly complete, use a remaining targeted fetch to resolve it before
+abandoning the lead or reopening a previously rejected candidate without new evidence.
 
 Drop a candidate immediately when any of these is missing:
 
@@ -133,11 +227,16 @@ Write `out/final_post.md` from the verified dossier and the voice in `config/bra
 - Lead with the decision. Limit biography to two sentences.
 - Name the person's organization, the decision date, the Texas place or jurisdiction, the real
   alternative, the consequence, and the next check.
+- State past plans in the past tense as of their source date. Do not describe an August target
+  as an upcoming event in an October post. Distinguish a documented pre-directive process from
+  an option that remained available after a binding directive; do not invent discretion.
 - Use a clear evidence-led execution assessment for private, operational, and research decisions.
 - Use neutral accountability framing for public-policy decisions. Never tell readers which policy,
   party, candidate, or electoral outcome to support.
 - Use short paragraphs and plain language. No first person, emoji, links, em dash, en dash, double
   hyphen, colon, semicolon, curly quotes, invented quotation, or banned phrase.
+- State the concrete consequence directly. Do not replace prohibited generic importance wording
+  with a synonym such as "this is important to the state".
 - Every numeral must already appear in the dossier. Prefer writing a number as a word when a
   numeral is not necessary.
 - End the body with a specific question, followed by a separate line containing exactly three
@@ -154,30 +253,36 @@ Repair every failure. Do not override the gate.
 
 ## Phase 5 — Score and edit
 
-Create `out/score_report.json` from `config/rubric.yaml`. Record every hard-fail result and every
+Create `out/score_report.json` from `config/rubric.yaml`. Record every hard-fail result as a named boolean in `hard_fail_checks` and every
 weighted criterion with a score from 0 through 10 and a short evidence-based note. Calculate the
 weighted total exactly. `ship` may be true only when all hard fails pass and the total is at least
 the configured threshold.
 
 Run at most two score-edit cycles. Re-run `scripts/check_post.py` after every edit. If the package
-cannot pass after two cycles, change the package to a no-target run rather than ship weak or
-unsupported copy.
+cannot pass after two cycles, finish needs-attention with the failed gate and preserved evidence.
+Do not label incomplete verification as a completed no-target search.
 
 ## Phase 6 — Render the actual artwork
 
 Invoke the repository skill `$texas-desk-artwork`. This is mandatory for a profile run.
 
-1. Derive one visual metaphor from the verified decision and its real Texas setting.
-2. Save the exact no-text ImageGen brief to `out/image_prompt.txt`.
-3. Generate a new square raster with built-in ImageGen and save the selected result as
-   `out/art_base.png`.
-4. Inspect it. Make one targeted regeneration only if a concrete visual defect exists.
-5. Apply exact publication typography with the skill's compositor to create
-   `out/post_image.png` and `out/post_image.png.meta.json`.
-6. Inspect the final cover at full size and thumbnail size, then run the skill's QA command.
+1. Read `.agents/skills/texas-desk-artwork/SKILL.md` once. Derive one visual metaphor from the verified decision and its real Texas setting.
+2. Author `out/artwork.py` (a story-specific renderer built from `scripts/art_kit.py` primitives)
+   and `out/art_direction.json` (identity, registered vocabulary values, mechanism, three anchors bound
+   to verbatim dossier claims, sourced art text, gaps respected, ground tone).
+3. Run `python3 .agents/skills/texas-desk-artwork/scripts/build_art.py --story-dir out`. It renders
+   within the attempt budget, updates the renderer, dossier and base hashes, recomposes
+   `out/post_image.png` and its sidecar, writes `out/thumb_300.png`, and resets any visual review
+   whose pixels changed. It never marks a check true.
+4. Inspect the completed cover and thumbnail. Make one targeted repair and rebuild only if a
+   concrete visual defect exists. The build already applies publication typography.
+5. Record the real visual review against the current base and final image hashes in the direction
+   manifest. Check every required visual criterion and describe the actual final pixels.
+6. Run the skill's QA and artwork gate commands. Never recompose after recording the review without
+   checking the new output and its hashes again.
 
-Do not replace ImageGen with the fallback because the fallback is faster. Use it only under the
-failure rule in the skill and disclose it in the Gmail editor note.
+Two failed renders, or an exhausted attempt budget, mean needs-attention. Preserve the verified
+dossier and report the failure in the unsent status draft; do not ship substitute artwork.
 
 ## Phase 7 — Validate, commit, and publish the artifacts
 
@@ -185,9 +290,20 @@ Run:
 
 ```bash
 python3 scripts/validate_run.py --out-dir out --report .local/run_validation.json
-python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -q
 python3 scripts/check_config.py
 ```
+
+The complete render regression suite has taken about 148 seconds in Claude cloud. Allow at least
+600 seconds for that process; a tool's short foreground wait should yield a background session,
+not kill the command. Do not wrap the suite in `timeout 110` or infer success from the last log
+lines. Retain the full log locally and check the test process's actual exit status. A timeout is
+not a test pass. Retry an infrastructure timeout once with the documented allowance; do not rerun
+already passing suites merely to obtain another success message.
+Within the same run, a copy, dossier, score-note, or artwork repair requires the affected post,
+score, provenance, and full package gates again. Reuse that run's successful unit-suite result
+when no runtime code, tests, configuration, dependencies, or fonts changed; record its tested
+commit and the content-only diff. This does not permit reusing a failed or timed-out suite.
 
 All checks must pass. Review `git diff` and `git status`. Stage only the intended daily artifacts:
 
@@ -195,10 +311,12 @@ All checks must pass. Review `git diff` and `git status`. Stage only the intende
 - `out/final_post.md`
 - `out/post_check.json`
 - `out/score_report.json`
-- `out/image_prompt.txt`
+- `out/artwork.py`
+- `out/art_direction.json`
 - `out/art_base.png`
 - `out/post_image.png`
 - `out/post_image.png.meta.json`
+- `out/thumb_300.png`
 
 The `out` directory is ignored, so use explicit `git add -f` paths. Commit once with the message
 `Texas Desk: YYYY-MM-DD`. Do not add an AI attribution trailer. Push the run branch and verify that
@@ -216,6 +334,12 @@ email draft. A local file, branch URL, or unverified URL is not sufficient.
 
 Build the HTML payload only after the remote artifact is verified:
 
+For Claude's Gmail connector, read `references/claude_gmail_delivery.md`. Its verified format is
+an actual 160-pixel JPEG attachment plus a full-resolution immutable PNG download link. The
+connector strips HTML image tags, so do not spend retries on remote inline images. Create the
+bounded preview with `scripts/gmail_delivery.py preview` and add `--attachment-preview` below.
+The attachment is a review thumbnail; LinkedIn uses the full PNG.
+
 ```bash
 python3 scripts/build_email.py \
   --post-md out/final_post.md \
@@ -232,7 +356,9 @@ python3 scripts/build_email.py \
 
 For no-target mode, omit `--post-md`, `--image-url`, and `--score`.
 
-List existing Gmail drafts before writing. Match the exact subject for the run date. When one match
+Find existing Gmail drafts using an exact-subject/date query when the connector supports it.
+Otherwise list every page of draft headers. Fetch bodies only for exact matches, not the whole
+mailbox. Match the exact subject for the run date. When one match
 exists, update that draft. When none exists, create one. When multiple exact matches exist, update
 the newest and report the duplicate count. Never call a send endpoint.
 
@@ -241,13 +367,26 @@ Read back the draft and verify:
 - exact subject
 - recipient is the connected account
 - LinkedIn copy is complete and escaped safely
-- permanent image is visible and also linked
+- the actual attached preview decodes to the expected bytes and the permanent full PNG is linked
 - sources, score, editor note, branch, and commit are present
-- the draft remains unsent
+- labels include DRAFT and exclude SENT; the stored visible text and canonical links match the saved payload
+
+For a Claude profile, require `scripts/gmail_delivery.py verify` against the actual RAW MIME and
+metadata response. See the connector reference for arguments. CSS stripping and Google URL
+wrappers are allowed; missing copy, altered destinations, missing/corrupt attachments, and wrong
+recipient or labels are failures. Keep all private inputs and the receipt in ignored `.local/`.
+Use at most two delivery attempts, including the initial write. A failed byte comparison must
+never be described as delivered. Remove a corrupt attachment from the same draft, clearly label
+the failed delivery, preserve the full PNG link, and finish needs-attention if both attempts fail.
 
 ## Completion report
 
 Report the run mode, selected subject and decision or no-target reason, branch, exact commit, draft
-pull-request URL if created, image source (`imagegen` or disclosed `fallback`), permanent image URL,
-validation results, and Gmail draft identifier. Keep the connected email address private. State
+pull-request URL if created, image source (`coded` or `none`), permanent image URL if any,
+validation results, and Gmail draft state. Keep the connected email address and private draft
+identifiers in ignored local receipts only. Include observed counters and actual token usage
+when the runtime exposes it; otherwise say usage unavailable. Context occupancy and account-wide
+subscription percentages are not billed tokens or measured run cost. Finish in one of three
+states: profile, no-target, or needs-attention. A green session status alone proves none of these.
+State
 explicitly that the email is a draft and nothing was sent, posted, or merged.

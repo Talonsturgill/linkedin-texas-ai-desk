@@ -41,11 +41,25 @@ Use Python 3.11 or newer.
 
 ```bash
 python3 -m pip install -r requirements.txt
-python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -q
 python3 scripts/check_config.py
-python3 /Users/t/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
-  .agents/skills/texas-desk-artwork
+python3 scripts/art_smoke.py
 ```
+
+`check_config.py` validates the local artwork skill manifest and referenced scripts on both
+Mac and Linux. Brand fonts ship in `assets/fonts` with a checksum manifest; art never falls back to
+system fonts. No external home-directory validator is required.
+
+For Claude cloud, read `CLAUDE.md` and `config/runtime.json`. Verify required capabilities
+before research with `scripts/runtime_check.py`, using the `coded_art` state from
+`python3 scripts/art_smoke.py` (it repairs missing or drifted Pillow, numpy, or PyYAML from `requirements.txt` and
+renders a verified smoke image). A failed render after the two-attempt budget is needs-attention.
+Artwork is original code-authored per story (`out/artwork.py`), never a shared template. Use the
+attached Git checkout instead of a hard-coded local path. Read each contract once and keep tool output compact.
+
+Newly authored copy, image headlines, and email notes must not contain the whole words
+`matter`, `matters`, `mattered`, or `mattering`, case-insensitively. Source evidence and URLs
+are exempt. The post, package, and email gates enforce this rule.
 
 For a completed profile run, also execute:
 

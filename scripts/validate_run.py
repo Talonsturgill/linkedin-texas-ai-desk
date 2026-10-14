@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
-import math
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
@@ -15,6 +14,8 @@ import yaml
 from PIL import Image
 
 from check_post import validate_post
+from check_score import validate_score
+from prose_rules import check_prose
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_GATES = {
@@ -62,7 +63,7 @@ def require_file(path: Path, errors: list[str]) -> bool:
     return True
 
 
-def validate(out_dir: Path) -> dict:
+def validate(out_dir: Path, history_root: str | None = None, run_branch: str | None = None) -> dict:
     errors: list[str] = []
     dossier_path = out_dir / "desk_dossier.json"
     if not require_file(dossier_path, errors):
@@ -83,10 +84,13 @@ def validate(out_dir: Path) -> dict:
         errors.append(f"dossier window_days must be one of {sorted(allowed_windows)}")
 
     if dossier.get("no_target_this_cycle") is True:
+        if dossier.get("window_days") != state["broadening_window_days"]:
+            errors.append("no-target requires the completed broadening window")
         if dossier.get("selected_subject") or dossier.get("selected_decision"):
             errors.append("no-target dossier cannot include a selected subject or decision")
         if not dossier.get("_validation_note"):
             errors.append("no-target dossier lacks _validation_note")
+        errors.extend(check_prose(str(dossier.get("_validation_note", ""))))
         dropped = dossier.get("dropped_candidates")
         if not isinstance(dropped, list) or not dropped:
             errors.append("no-target dossier needs a nonempty dropped_candidates list")
@@ -224,15 +228,15 @@ def validate(out_dir: Path) -> dict:
             errors.append(f"score JSON invalid: {exc}")
             score = {}
         rubric = yaml.safe_load((ROOT / "config/rubric.yaml").read_text(encoding="utf-8"))["rubric"]
-        if not score.get("ship"):
-            errors.append("score report does not mark the post shippable")
-        if float(score.get("weighted_total", -1)) < float(rubric["ship_threshold"]):
-            errors.append("score report is below the configured ship threshold")
-        if score.get("hard_failures"):
-            errors.append("score report contains hard failures")
-        reported_weights = [row.get("weight") for row in score.get("criteria", [])]
-        if reported_weights and not math.isclose(sum(reported_weights), 1.0, abs_tol=1e-9):
-            errors.append("score criterion weights do not sum to 1.0")
+        errors.extend(validate_score(score, rubric))
+        for row in score.get("criteria", []):
+            if isinstance(row, dict):
+                errors.extend(check_prose(str(row.get("notes", ""))))
+
+    artwork_dir = ROOT / ".agents/skills/texas-desk-artwork/scripts"
+    if str(artwork_dir) not in sys.path:
+        sys.path.insert(0, str(artwork_dir))
+    import art_gate  # noqa: E402
 
     image_path = out_dir / "post_image.png"
     if require_file(image_path, errors):
@@ -251,17 +255,23 @@ def validate(out_dir: Path) -> dict:
         except json.JSONDecodeError as exc:
             errors.append(f"image metadata invalid: {exc}")
             meta = {}
-        for key in ("date", "kicker", "headline", "style_family", "palette",
-                    "composition", "motifs", "seed"):
-            if meta.get(key) in (None, "", []):
-                errors.append(f"image metadata missing {key}")
         if meta.get("kicker") != "TEXAS DESK":
             errors.append("image metadata kicker must be TEXAS DESK")
+        errors.extend(check_prose(str(meta.get("headline", ""))))
+        history_repo = Path(history_root).resolve() if history_root else ROOT
+        history = art_gate.load_history(history_repo, str(dossier.get("run_date", "")), run_branch)
+        errors.extend(art_gate.validate_art(
+            out_dir, dossier, str(meta.get("date", "")), "TEXAS DESK", history=history,
+        ))
+        report_history = len(history)
+    else:
+        report_history = 0
 
     return {
         "ok": not errors,
         "errors": errors,
         "mode": "profile",
+        "history_compared": report_history,
         "post_metrics": post_report.get("metrics", {}),
     }
 
@@ -270,8 +280,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out-dir", default="out")
     parser.add_argument("--report")
+    parser.add_argument("--history-root", default=str(ROOT),
+                        help="repository whose origin/codex/texas-desk-* branches supply variety history")
+    parser.add_argument("--run-branch", help="this run's branch, excluded from its own history")
     args = parser.parse_args()
-    result = validate(Path(args.out_dir))
+    result = validate(Path(args.out_dir), args.history_root, args.run_branch)
     rendered = json.dumps(result, indent=2, ensure_ascii=False)
     if args.report:
         Path(args.report).write_text(rendered + "\n", encoding="utf-8")

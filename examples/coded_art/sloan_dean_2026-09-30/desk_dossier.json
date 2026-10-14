@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-30",
+  "window_days": 60,
+  "no_target_this_cycle": false,
+  "selected_subject": {
+    "full_name": "Sloan Dean",
+    "role": "Founder and Chief Executive Officer",
+    "organization": "AI Hospitality Group",
+    "role_category": "founder",
+    "texas_tie": "Dallas headquarters and AI commercialization; no Texas pilot property verified.",
+    "place_label": "DALLAS",
+    "coordinates": "",
+    "role_source": {
+      "url": "https://aihg.com/",
+      "title": "AIHG team and operating model",
+      "publisher": "AI Hospitality Group",
+      "source_type": "primary",
+      "claims_supported": [
+        "Current founder and chief executive role; coordination across existing systems"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": false
+    },
+    "verbatim_quotes": []
+  },
+  "selected_decision": {
+    "what_happened": "Sloan Dean launched AI Hospitality Group as a Dallas-based hotel operator that uses AI under direct management agreements, accepting operating responsibility rather than licensing software to other operators.",
+    "decision_anchor": "hotel operations",
+    "date": "2026-09-21",
+    "owner_evidence": "Named founder/CEO in current team page, issuer launch and independent interviews describing his business-model choice.",
+    "alternative_available": "License the AI technology to existing hotel operators, the explicit alternative in the launch release.",
+    "ai_nexus": "Administrative agents coordinate existing hotel systems under an AI-enabled operating model.",
+    "texas_consequence": "A Dallas company commits seed capital to AI commercialization and assumes hotel operating responsibilities; local deployment and local employment outcomes are unverified.",
+    "next_check": "First management takeovers planned later in 2026. Seek named properties and baseline-adjusted operating, staffing and guest results; these requested disclosures are editorial checks, not promised publication dates.",
+    "public_policy_or_electoral": false,
+    "primary_source": {
+      "url": "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+      "title": "AI Hospitality Group launch announcement",
+      "publisher": "AI Hospitality Group via PR Newswire",
+      "source_type": "primary",
+      "claims_supported": [
+        "September 21 launch, Dallas headquarters, founder role, $7.5 million seed round, direct-management choice and pilot measures"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": false,
+      "published_at": "2026-09-21"
+    },
+    "corroborating_sources": [
+      {
+        "url": "https://www.hoteldive.com/news/ai-hospitality-group-operating-company-launch/830995/",
+        "title": "Execs at new AI Hospitality Group give inside look at operating company",
+        "publisher": "Hotel Dive / Informa TechTarget",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "Jenna Graber original interviews with Dean, Dahya and Moore; profit-linked fees, workforce reduction plans and pilot context"
+        ],
+        "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+        "independent_of_subject": true,
+        "published_at": "2026-09-22"
+      },
+      {
+        "url": "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/",
+        "title": "HB Exclusive: Sloan Dean launches AI Hospitality Group",
+        "publisher": "Hotel Business",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "Gregg Wallis original interview on deliberate venture-capital choice, systems integration and intended full-service hotel focus"
+        ],
+        "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+        "independent_of_subject": true,
+        "published_at": "2026-09-21"
+      },
+      {
+        "url": "https://skift.com/2026/09/21/ex-remington-ceo-is-building-an-ai-native-hotel-operator-exclusive/",
+        "title": "Ex-Remington CEO Is Building an AI-Native Hotel Operator: Exclusive",
+        "publisher": "Skift",
+        "source_type": "independent_reporting",
+        "claims_supported": [
+          "Publicly readable lead reports Dallas headquarters and first hotel management planned later in 2026; paywalled remainder excluded"
+        ],
+        "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+        "independent_of_subject": true,
+        "published_at": "2026-09-21"
+      }
+    ],
+    "supporting_sources": [
+      {
+        "url": "https://aihg.com/",
+        "title": "AIHG team and operating model",
+        "publisher": "AI Hospitality Group",
+        "source_type": "primary",
+        "claims_supported": [
+          "Current founder and chief executive role; coordination across existing systems"
+        ],
+        "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+        "independent_of_subject": false
+      }
+    ]
+  },
+  "analysis": {
+    "editorial_mode": "execution_assessment",
+    "assessment": "mixed",
+    "evidence_for": [
+      "Direct management gives the Dallas business control over implementation and responsibility for execution.",
+      "Existing systems remain; pilots specify measurable workflow checks."
+    ],
+    "evidence_against": [
+      "Workforce reductions form part of the plan; guest-service gains remain unproved.",
+      "No independent audit or verified Texas deployment appears in the fetched record."
+    ],
+    "structural_read": "Control over operations can align implementation and financial responsibility, but transfers the burden of service quality and workforce changes to the operator.",
+    "forward_implication": "Judge net operating results alongside staffing and guest outcomes, using disclosed baselines, rather than treating fundraising or pilot access as proof.",
+    "conflict_screen": "clear",
+    "conflict_screen_detail": "No relationship or compensation is disclosed in the assignment. Hotel Dive is owned by Informa TechTarget and labels original executive interviews. Hotel Business also supplies separate interview material. No sponsorship label or subject control found on these articles. Partner/adviser and investor testimonials excluded as independent proof."
+  },
+  "required_post_phrases": [
+    "Sloan Dean",
+    "hotel operations"
+  ],
+  "verified_facts": [
+    {
+      "claim": "Sloan Dean is founder and CEO of Dallas-headquartered AI Hospitality Group.",
+      "source_urls": [
+        "https://aihg.com/",
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/"
+      ]
+    },
+    {
+      "claim": "The public launch date was September 21st, 2026; seed funding was $7.5 million.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/"
+      ]
+    },
+    {
+      "claim": "AIHG chose direct hotel management agreements with operating responsibility rather than licensing its technology to existing operators.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/"
+      ]
+    },
+    {
+      "claim": "AI agents coordinate work across existing hotel systems; the company describes a human guest-facing team.",
+      "source_urls": [
+        "https://aihg.com/"
+      ]
+    },
+    {
+      "claim": "Dean told Hotel Dive that compensation is linked to profit and that the model would reduce middle-management roles.",
+      "source_urls": [
+        "https://www.hoteldive.com/news/ai-hospitality-group-operating-company-launch/830995/"
+      ]
+    },
+    {
+      "claim": "Hotel Dive explicitly interviewed Dean, Dahya and Moore. Their operating claims remain executive testimony, not independently audited results.",
+      "source_urls": [
+        "https://www.hoteldive.com/news/ai-hospitality-group-operating-company-launch/830995/"
+      ]
+    },
+    {
+      "claim": "Hotel Business reports Dean deliberately sought venture funding for technology investment and initially favors complex full-service hotels.",
+      "source_urls": [
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/"
+      ]
+    },
+    {
+      "claim": "Announced design partnerships involve The Ameswell Hotel in California and two Parable properties; the described Parable portfolio spans California and Hawaii.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/"
+      ]
+    },
+    {
+      "claim": "The fetched reporting names no Texas pilot hotel. Texas relevance is the Dallas company and its commercialization choice, not verified local hotel deployment.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+        "https://www.hoteldive.com/news/ai-hospitality-group-operating-company-launch/830995/",
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/"
+      ]
+    },
+    {
+      "claim": "The release names hiring time, sales proposal response speed and revenue forecast accuracy as pilot measures.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html"
+      ]
+    },
+    {
+      "claim": "The accessible Skift lead says the first managed hotels are planned for later in 2026. Design partnerships are not proof of completed management takeovers.",
+      "source_urls": [
+        "https://skift.com/2026/09/21/ex-remington-ceo-is-building-an-ai-native-hotel-operator-exclusive/"
+      ]
+    },
+    {
+      "claim": "No independent operating audit, published management contract or staff-transition plan is supplied in the fetched pages.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+        "https://www.hoteldive.com/news/ai-hospitality-group-operating-company-launch/830995/",
+        "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/",
+        "https://aihg.com/",
+        "https://skift.com/2026/09/21/ex-remington-ceo-is-building-an-ai-native-hotel-operator-exclusive/"
+      ]
+    },
+    {
+      "claim": "Ameswell and Parable representatives have advisory roles; investor and partner endorsements are interested evidence.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html"
+      ]
+    },
+    {
+      "claim": "Seed proceeds are intended for platform expansion and onboarding managed hotels, not proof of completed expenditure.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html"
+      ]
+    }
+  ],
+  "gate_results": {
+    "named_subject": true,
+    "recent_decision": true,
+    "decision_owner": true,
+    "texas_ai_consequence": true,
+    "primary_source": true,
+    "independent_corroboration": true,
+    "position_or_accountability_read": true,
+    "not_recent_repeat": true,
+    "conflict_clear": true,
+    "political_neutrality": true
+  },
+  "gate_evidence": {
+    "named_subject": "Current team page agrees with independent reporting.",
+    "recent_decision": "September 21 launch is nine days before run date.",
+    "decision_owner": "Founder explains his selected operating and capital model in independent interviews.",
+    "texas_ai_consequence": "Dallas company, capital and operating accountability; Texas hotel rollout not asserted.",
+    "primary_source": "Full issuer release fetched this run; labeled subject-controlled.",
+    "independent_corroboration": "Named reporters at Hotel Dive and Hotel Business add original interviews beyond the release.",
+    "position_or_accountability_read": "Mixed execution assessment separates model design from measured results.",
+    "not_recent_repeat": "Sloan Dean absent from two cooling subjects and seven permanently covered pairs in freshly fetched history.",
+    "conflict_clear": "No known assignment conflict; interested testimonials labeled and excluded as independent proof.",
+    "political_neutrality": "Private operating decision; no candidate, party or policy advocacy."
+  },
+  "challenge_pass": {
+    "result": "pass",
+    "identity": "Current primary role matches fresh independent interviews.",
+    "ownership": "Accountable founder decision, without claiming a specific signed contract or board vote.",
+    "date": "Dated public launch, not invention of AI architecture or beginning of pilot tests.",
+    "geography": "Ameswell pilot is in California. Two unnamed pilot properties belong to Parable, whose described portfolio spans California and Hawaii. No Texas pilot is identified.",
+    "independence": "Hotel Dive reports conversations with three executives and original workforce detail; this corroborates the decision, not achieved benefits.",
+    "alternative": "Explicit licensing alternative from primary.",
+    "history": "No match in fetched history.",
+    "political_neutrality": "No electoral preference.",
+    "gaps": "No audited gains, disclosed contract or transition plan. Skift use limited to its public lead.",
+    "capital_use": "Proceeds are planned for platform expansion and onboarding; spending completion is not established."
+  },
+  "source_fetches": [
+    {
+      "url": "https://www.prnewswire.com/news-releases/industry-veteran-sloan-dean-launches-ai-hospitality-group-the-first-ai-native-hotel-operating-company-302884262.html",
+      "title": "AI Hospitality Group launch announcement",
+      "publisher": "AI Hospitality Group via PR Newswire",
+      "source_type": "primary",
+      "claims_supported": [
+        "September 21 launch, Dallas headquarters, founder role, $7.5 million seed round, direct-management choice and pilot measures"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": false,
+      "published_at": "2026-09-21"
+    },
+    {
+      "url": "https://www.hoteldive.com/news/ai-hospitality-group-operating-company-launch/830995/",
+      "title": "Execs at new AI Hospitality Group give inside look at operating company",
+      "publisher": "Hotel Dive / Informa TechTarget",
+      "source_type": "independent_reporting",
+      "claims_supported": [
+        "Jenna Graber original interviews with Dean, Dahya and Moore; profit-linked fees, workforce reduction plans and pilot context"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": true,
+      "published_at": "2026-09-22"
+    },
+    {
+      "url": "https://hotelbusiness.com/hb-exclusive-sloan-dean-launches-ai-hospitality-group/",
+      "title": "HB Exclusive: Sloan Dean launches AI Hospitality Group",
+      "publisher": "Hotel Business",
+      "source_type": "independent_reporting",
+      "claims_supported": [
+        "Gregg Wallis original interview on deliberate venture-capital choice, systems integration and intended full-service hotel focus"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": true,
+      "published_at": "2026-09-21"
+    },
+    {
+      "url": "https://aihg.com/",
+      "title": "AIHG team and operating model",
+      "publisher": "AI Hospitality Group",
+      "source_type": "primary",
+      "claims_supported": [
+        "Current founder and chief executive role; coordination across existing systems"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": false
+    },
+    {
+      "url": "https://skift.com/2026/09/21/ex-remington-ceo-is-building-an-ai-native-hotel-operator-exclusive/",
+      "title": "Ex-Remington CEO Is Building an AI-Native Hotel Operator: Exclusive",
+      "publisher": "Skift",
+      "source_type": "independent_reporting",
+      "claims_supported": [
+        "Publicly readable lead reports Dallas headquarters and first hotel management planned later in 2026; paywalled remainder excluded"
+      ],
+      "fetched_at": "2026-09-30T11:48:20.644204+00:00",
+      "independent_of_subject": true,
+      "published_at": "2026-09-21"
+    }
+  ],
+  "dropped_candidates": [
+    {
+      "subject": "Lon Squyres",
+      "decision": "Jacinto City data-center permit safeguards",
+      "drop_reason": "Exact adoption and decision date unresolved. Independent accounts conflict; linked ordinance has blank adoption/signature fields and proposed values.",
+      "sources": [
+        {
+          "url": "https://www.jacintocity-tx.gov/city-manager-emc-lon-squyres/",
+          "title": "City manager biography",
+          "publisher": "Jacinto City",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://drive.google.com/file/d/1jcn0kdLakGQyd1tyum4ccLNLou24B6Ok/view?usp=sharing",
+          "title": "Proposed Ordinance 2026-6",
+          "publisher": "Jacinto City",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://www.northchannelstar.com/2026/09/jacinto-city-weighs-guardrails-after-marathon-data-center-town-hall/",
+          "title": "Jacinto City weighs guardrails",
+          "publisher": "North Channel Star",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://couriertexas.com/news/jacinto-city-data-center/",
+          "title": "Jacinto City data center reporting",
+          "publisher": "Courier Texas",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://abc13.com/story/gov-greg-abbott-directs-texas-commission-environmental-quality-halt-data-center-permits-office-says/19855560/?trk=article-ssr-frontend-pulse_little-text-block",
+          "title": "Texas data-center permitting report",
+          "publisher": "ABC13",
+          "fetched_in_current_run": true
+        }
+      ]
+    },
+    {
+      "subject": "Guha Balakrishnan",
+      "decision": "Rice GenCams research program",
+      "drop_reason": "No fetched independent original corroboration. Rice announcement and award-text reproductions do not satisfy independence; award and announcement dates differ.",
+      "sources": [
+        {
+          "url": "https://news.rice.edu/news/2026/rice-project-aims-reinvent-cameras-generative-ai",
+          "title": "Rice GenCams announcement",
+          "publisher": "Rice University",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://govtribe.com/award/federal-grant-award/project-grant-2601419",
+          "title": "Grant record reproduction",
+          "publisher": "GovTribe",
+          "fetched_in_current_run": true
+        }
+      ]
+    },
+    {
+      "subject": "Rebecca Richards-Kortum",
+      "decision": "Access BreastDX rural diagnostic translation",
+      "drop_reason": "No independent original corroboration found; exact funding decision date and study schedule remain unverified.",
+      "sources": [
+        {
+          "url": "https://news.rice.edu/news/2026/rice360-project-aims-bring-faster-breast-cancer-diagnosis-rural-texas",
+          "title": "Access BreastDX announcement",
+          "publisher": "Rice University",
+          "fetched_in_current_run": true
+        }
+      ]
+    },
+    {
+      "subject": "Fred Thiel",
+      "decision": "MARA Matagorda purchase-agreement amendment",
+      "drop_reason": "Filing establishes amendment, but does not establish Thiel personally owns the specific choice; counsel signature alone cannot establish executive decision ownership.",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1507605/000095014226002607/eh260835247_8k.htm",
+          "title": "MARA Form 8-K",
+          "publisher": "SEC EDGAR",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://theenergymag.com/news/2026-09-27/mara-matagorda-texas-data-center-revise",
+          "title": "MARA revises Matagorda transaction",
+          "publisher": "TheEnergyMag",
+          "fetched_in_current_run": true
+        }
+      ]
+    }
+  ],
+  "visual_facts": {
+    "place": "Dallas",
+    "mechanism": "A hotel operator takes responsibility for an AI-coordinated back office and human guest service.",
+    "allowed_metaphor": "Conceptual cutaway reception desk with interlocking administrative paper forms underneath, an open human-service counter above. Abstract hotel setting, not a real property.",
+    "excluded_claims": "No actual Dallas hotel, skyline landmark, portrait, brand logo, performance chart or staffing count."
+  },
+  "selection_reason": "Fresh founder-owned Dallas commercialization choice supported by primary and multiple original interviews. Consequences and evidence gaps allow a proportionate execution assessment.",
+  "considered_candidates": [
+    {
+      "subject": "William Lin",
+      "lane": "operator",
+      "status": "deferred_for_selection",
+      "reason": "Strong Socorro manufacturing evidence; exact timing of the alternative leasing/overseas-capacity choice needs clarification. Dean offers a fresher, explicitly dated business-model choice with a stated licensing alternative.",
+      "sources": [
+        {
+          "url": "https://www.wiwynn.com/news/amazon-wiwynn-data-center-manufacturing-jobs-texas",
+          "title": "Socorro expansion announcement",
+          "publisher": "Wiwynn",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://english.cw.com.tw/article/article.action?id=5018",
+          "title": "Original Socorro factory reporting by Yishan Chen",
+          "publisher": "CommonWealth",
+          "fetched_in_current_run": true
+        },
+        {
+          "url": "https://kvia.com/news/2026/09/09/amazon-and-wiwynn-say-their-expansion-into-socorro-will-open-around-1000-new-jobs/",
+          "title": "Socorro expansion coverage",
+          "publisher": "KVIA",
+          "fetched_in_current_run": true
+        }
+      ]
+    }
+  ],
+  "discovery_lanes": {
+    "founder": "Sloan Dean selected after full challenge.",
+    "operator": "William Lin retained as a future lead; Fred Thiel dropped for ownership gap.",
+    "public": "Lon Squyres dropped for unresolved primary/independent date conflict.",
+    "research": "Guha Balakrishnan and Rebecca Richards-Kortum dropped for independent-corroboration gaps."
+  },
+  "window_broadening": "Not needed; a candidate cleared the initial 60-day window.",
+  "editor_review": {
+    "result": "pass_after_repairs",
+    "repairs": [
+      "Changed capital use from completed/current expenditure to intended use.",
+      "Clarified unnamed Parable pilot locations and prospective first takeovers."
+    ],
+    "remaining_limits": [
+      "Texas relevance is Dallas company commercialization, not in-state hotel outcomes.",
+      "No independent operating audit."
+    ],
+    "copy_frozen_sha256": "a9f2e68e60e77ba0281d39194f0f165df3a56a765357fd30977c6348df6f2efe"
+  },
+  "artwork_review": {
+    "source": "imagegen",
+    "attempts": 1,
+    "base_review": "pass; conceptual illustrated reception bell and back-office mechanism, no generated lettering or real-property claim",
+    "full_size_review": "pass; exact headline, date, place and masthead legible; bell and working mechanism remain visible",
+    "thumbnail_review": "pass at 300 pixels; distinct bell silhouette and legible headline",
+    "technical_qa": "pass; 1080 by 1080 PNG",
+    "headline": "The hotel is the test"
+  }
+}

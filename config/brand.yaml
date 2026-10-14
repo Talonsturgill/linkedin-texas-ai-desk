@@ -50,6 +50,7 @@ house_rules:
   paragraph_sentences: [1, 4]
   numbers: "Every numeral in post copy must already appear in the verified dossier."
   sources: "Every factual claim must trace to a fetched source."
+  prohibited_whole_words: ["matter", "matters", "mattered", "mattering"]
 
 banned_phrases:
   - "game-changer"
